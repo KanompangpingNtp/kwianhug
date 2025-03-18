@@ -1,8 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var dataTable = $('#data_table').DataTable({
         lengthMenu: [
-            [20, 50, 100, -1],
-            [20, 50, 100, 'ทั้งหมด']
+            // [20, 50, 100, -1],
+            // [20, 50, 100, 'ทั้งหมด']
+            [10, 40, 80, -1],
+            [10, 40, 80, 'ทั้งหมด']
         ],
         language: {
             processing: "กำลังดำเนินการ...",
@@ -25,9 +27,9 @@ $(document).ready(function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const dateColumns = document.querySelectorAll('.date-column');
-    dateColumns.forEach(function(cell) {
+    dateColumns.forEach(function (cell) {
         const dateText = cell.textContent.trim();
         const dateParts = dateText.split('-');
         if (dateParts.length === 3) {
