@@ -23,7 +23,7 @@ use App\Http\Controllers\notice_board\AdminNoticeBoardController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.home.app');
 });
 
 Route::middleware(['check.auth'])->group(function () {
