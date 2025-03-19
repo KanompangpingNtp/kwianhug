@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\activity\AdminActivityController;
 use App\Http\Controllers\press_release\AdminPressReleaseController;
@@ -13,6 +12,7 @@ use App\Http\Controllers\notice_board\AdminNoticeBoardController;
 use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
 use App\Http\Controllers\awards_of_pride\AdminAwardsofPrideController;
 use App\Http\Controllers\personnel\AdminPersonnelController;
+use App\Http\Controllers\AuthController;
 
 use App\Http\Controllers\TestController;
 
@@ -113,7 +113,7 @@ Route::middleware(['check.auth'])->group(function () {
 });
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
-Route::post('/login', [AuthController::class, 'login'])->name('Login');
+Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/showRegistrationForm', [AuthController::class, 'showRegistrationForm'])->name('showRegistrationForm');
 Route::post('/register', [AuthController::class, 'register'])->name('register');

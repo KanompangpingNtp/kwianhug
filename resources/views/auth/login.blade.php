@@ -40,7 +40,7 @@
                             </ul>
                         </div>
                         @endif
-                        <form action="{{route('Login')}}" method="POST">
+                        <form action="{{route('authenticate')}}" method="POST">
                             @csrf
 
                             <div class="mb-3">
