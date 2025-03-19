@@ -1,15 +1,15 @@
 @extends('admin.layouts.app')
-@section('title', 'Dashboard')
+@section('title', 'แนะนำสถานที่ท่องเที่ยว')
 @section('content')
 <div class="row">
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>จัดการแนะนำสถานที่ท่องเที่ยว</h4>
+                <h4>แนะนำสถานที่ท่องเที่ยว</h4>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
-                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     สร้าง
                 </button>
 

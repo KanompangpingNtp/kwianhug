@@ -61,6 +61,13 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="{{route('ManagePersonnel')}}" style="text-decoration: none;">
+                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
+                            บุคลากร
+                        </a>
+                    </li>
+
                     {{-- <li>
                         <a style="text-decoration: none;"><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
