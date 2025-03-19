@@ -77,9 +77,9 @@
                             <td> {{ $postDetail->title_name ?? 'N/A' }} </td>
                             <td>
                                 @foreach ($postDetail->pdfs as $pdf)
-                                <a href="{{ asset('storage/' . $pdf->post_pdf_file) }}" target="_blank">
-                                    {{ basename($pdf->post_pdf_file) }}
-                                </a><br>
+                                <a href="{{ asset('storage/' . $pdf->post_pdf_file) }}" target="_blank" style="text-decoration: none;">
+                                    <i class="bi bi-file-earmark-pdf" style="font-size: 1.2rem; color: red;"></i> <!-- แสดงไอคอน PDF -->
+                                </a>
                                 @endforeach
                             </td>
                             <td class="text-center">
@@ -87,9 +87,9 @@
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
                                 <form action="{{ route('ProcurementResultsDelete', $postDetail->id) }}" method="POST" style="display:inline;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
                                 </form>
                             </td>
                         </tr>
@@ -127,14 +127,14 @@
                                         <label class="form-label">ไฟล์ PDF ที่มีอยู่ (หากต้องการเปลี่ยนไฟล์เดิมให้เลือกไฟล์ที่มีอยู่แล้วตรงนี้ และอัพโหลดไฟล์ใหม่)</label>
                                         <div>
                                             @foreach ($postDetail->pdfs as $pdf)
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="delete_files[]" value="{{ $pdf->id }}" id="deleteFile{{ $pdf->id }}">
-                                                    <label class="form-check-label" for="deleteFile{{ $pdf->id }}">
-                                                        <a href="{{ asset('storage/' . $pdf->post_pdf_file) }}" target="_blank">
-                                                            {{ basename($pdf->post_pdf_file) }}
-                                                        </a>
-                                                    </label>
-                                                </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="delete_files[]" value="{{ $pdf->id }}" id="deleteFile{{ $pdf->id }}">
+                                                <label class="form-check-label" for="deleteFile{{ $pdf->id }}">
+                                                    <a href="{{ asset('storage/' . $pdf->post_pdf_file) }}" target="_blank">
+                                                        {{ basename($pdf->post_pdf_file) }}
+                                                    </a>
+                                                </label>
+                                            </div>
                                             @endforeach
                                         </div>
                                     </div>
@@ -166,5 +166,3 @@
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js" defer></script>
-
-

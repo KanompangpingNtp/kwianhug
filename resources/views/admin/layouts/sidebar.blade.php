@@ -18,14 +18,24 @@
             <div class="menu_section">
                 <h3>เมนู</h3>
                 <ul class="nav side-menu">
-                    <li><a href="{{route('ActivityHome')}}" style="text-decoration: none;">
+                    <li>
+                        <a href="{{route('NoticeBoardHome')}}" style="text-decoration: none;">
+                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
+                            จัดการป้ายประกาศ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('ActivityHome')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
                             จัดการกิจกรรม
-                        </a></li>
-                    <li><a href="{{route('PressReleaseHome')}}" style="text-decoration: none;">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('PressReleaseHome')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
                             จัดการข่าวประชาสัมพันธ์
-                        </a></li>
+                        </a>
+                    </li>
 
                     <!-- Dropdown Menu -->
                     <li>
@@ -37,11 +47,6 @@
                             <li><a href="{{route('ProcurementReportHome')}}" style="text-decoration: none;">รายงานผลจัดซื้อจัดจ้าง</a></li>
                         </ul>
                     </li>
-
-                    <li><a href="{{route('NoticeBoardHome')}}" style="text-decoration: none;">
-                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
-                            จัดการป้ายประกาศ
-                        </a></li>
 
                     {{-- <li>
                         <a style="text-decoration: none;"><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
