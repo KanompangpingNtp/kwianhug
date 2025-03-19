@@ -21,19 +21,25 @@
                     <li>
                         <a href="{{route('NoticeBoardHome')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
-                            จัดการป้ายประกาศ
+                            ป้ายประกาศ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('AwardsofPrideHome')}}" style="text-decoration: none;">
+                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
+                            รางวัลแห่งความภาคภูมิใจ
                         </a>
                     </li>
                     <li>
                         <a href="{{route('ActivityHome')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
-                            จัดการกิจกรรม
+                            กิจกรรม
                         </a>
                     </li>
                     <li>
                         <a href="{{route('PressReleaseHome')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
-                            จัดการข่าวประชาสัมพันธ์
+                            ข่าวประชาสัมพันธ์
                         </a>
                     </li>
 
@@ -46,6 +52,13 @@
                             <li><a href="{{route('AveragePriceHome')}}" style="text-decoration: none;">ประกาศราคากลาง</a></li>
                             <li><a href="{{route('ProcurementReportHome')}}" style="text-decoration: none;">รายงานผลจัดซื้อจัดจ้าง</a></li>
                         </ul>
+                    </li>
+
+                    <li>
+                        <a href="{{route('TouristAttractionPage')}}" style="text-decoration: none;">
+                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
+                            แนะนำสถานที่ท่องเที่ยว
+                        </a>
                     </li>
 
                     {{-- <li>

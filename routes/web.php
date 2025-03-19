@@ -10,6 +10,8 @@ use App\Http\Controllers\procurement_results\AdminProcurementResultsController;
 use App\Http\Controllers\average_price\AdminAveragePriceController;
 use App\Http\Controllers\procurement_report\AdminProcurementReportController;
 use App\Http\Controllers\notice_board\AdminNoticeBoardController;
+use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
+use App\Http\Controllers\awards_of_pride\AdminAwardsofPrideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,6 +73,17 @@ Route::middleware(['check.auth'])->group(function () {
     Route::get('/NoticeBoard/page', [AdminNoticeBoardController::class, 'NoticeBoardHome'])->name('NoticeBoardHome');
     Route::post('/NoticeBoard/create', [AdminNoticeBoardController::class, 'NoticeBoardCreate'])->name('NoticeBoardCreate');
     Route::delete('/NoticeBoard/delete{id}', [AdminNoticeBoardController::class, 'NoticeBoardDelete'])->name('NoticeBoardDelete');
+
+    //admin TouristAttraction
+    Route::get('/TouristAttraction/page', [AdminTouristAttractionController::class, 'TouristAttractionPage'])->name('TouristAttractionPage');
+    Route::post('/TouristAttraction/create', [AdminTouristAttractionController::class, 'TouristAttractionCreate'])->name('TouristAttractionCreate');
+    Route::delete('/TouristAttraction/delete/{id}', [AdminTouristAttractionController::class, 'TouristAttractionDelete'])->name('TouristAttractionDelete');
+    Route::put('/TouristAttraction/update/{id}', [AdminTouristAttractionController::class, 'TouristAttractionUpdate'])->name('TouristAttractionUpdate');
+
+    //admin NoticeBoard
+    Route::get('/AwardsofPride/page', [AdminAwardsofPrideController::class, 'AwardsofPrideHome'])->name('AwardsofPrideHome');
+    Route::post('/AwardsofPride/create', [AdminAwardsofPrideController::class, 'AwardsofPrideCreate'])->name('AwardsofPrideCreate');
+    Route::delete('/AwardsofPride/delete{id}', [AdminAwardsofPrideController::class, 'AwardsofPrideDelete'])->name('AwardsofPrideDelete');
 });
 
 Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

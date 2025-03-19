@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\notice_board;
+namespace App\Http\Controllers\awards_of_pride;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -9,22 +9,22 @@ use App\Models\PostDetail;
 use App\Models\PostPhoto;
 use Illuminate\Support\Facades\Storage;
 
-class AdminNoticeBoardController extends Controller
+class AdminAwardsofPrideController extends Controller
 {
-    public function NoticeBoardHome()
+    public function AwardsofPrideHome()
     {
         $postTypes = PostType::all();
 
-        $postTypeId = $postTypes->firstWhere('type_name', 'ป้ายประกาศ')->id;
+        $postTypeId = $postTypes->firstWhere('type_name', 'รางวัลแห่งความภาคภูมิใจ')->id;
 
         $postDetails = PostDetail::with('postType', 'pdfs')
             ->where('post_type_id', $postTypeId)
             ->get();
 
-        return view('admin.post.notice_board.page', compact('postDetails', 'postTypes'));
+        return view('admin.post.awards_of_pride.page', compact('postDetails', 'postTypes'));
     }
 
-    public function NoticeBoardCreate(Request $request)
+    public function AwardsofPrideCreate(Request $request)
     {
         $request->validate([
             'post_type_id' => 'required|exists:post_types,id',
@@ -67,7 +67,7 @@ class AdminNoticeBoardController extends Controller
         return redirect()->back()->with('success', 'โพสถูกเพิ่มแล้ว!');
     }
 
-    public function NoticeBoardDelete($id)
+    public function AwardsofPrideDelete($id)
     {
         $postDetail = PostDetail::find($id);
 

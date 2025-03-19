@@ -16,13 +16,13 @@ class PostTypeSeeder extends Seeder
         $data = [
             ['type_name' => 'ข่าวประชาสัมพันธ์'],
             ['type_name' => 'กิจกรรม'],
-
+            ['type_name' => 'ป้ายประกาศ'],
+            ['type_name' => 'รางวัลแห่งความภาคภูมิใจ'],
             ['type_name' => 'ประกาศจัดซื้อจัดจ้าง'],
             ['type_name' => 'ผลประกาศจัดซื้อจัดจ้าง'],
             ['type_name' => 'ประกาศราคากลาง'],
             ['type_name' => 'รายงานผลจัดซื้อจัดจ้าง'],
-
-            ['type_name' => 'ป้ายประกาศ'],
+            ['type_name' => 'แนะนำสถานที่ท่องเที่ยว'],
         ];
 
         foreach ($data as $item) {
