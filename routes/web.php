@@ -22,9 +22,9 @@ use App\Http\Controllers\notice_board\AdminNoticeBoardController;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home.app');
-});
+// Route::get('/', function () {
+//     return view('pages.home.app');
+// });
 
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
@@ -73,7 +73,7 @@ Route::middleware(['check.auth'])->group(function () {
     Route::delete('/NoticeBoard/delete{id}', [AdminNoticeBoardController::class, 'NoticeBoardDelete'])->name('NoticeBoardDelete');
 });
 
-Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
+Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/login', [AuthController::class, 'login'])->name('Login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/showRegistrationForm', [AuthController::class, 'showRegistrationForm'])->name('showRegistrationForm');
