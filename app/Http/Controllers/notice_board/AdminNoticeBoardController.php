@@ -19,6 +19,7 @@ class AdminNoticeBoardController extends Controller
 
         $postDetails = PostDetail::with('postType', 'pdfs')
             ->where('post_type_id', $postTypeId)
+            ->orderBy('date', 'desc')
             ->get();
 
         return view('admin.post.notice_board.page', compact('postDetails', 'postTypes'));

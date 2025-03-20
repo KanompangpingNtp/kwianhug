@@ -19,6 +19,7 @@ class AdminAwardsofPrideController extends Controller
 
         $postDetails = PostDetail::with('postType', 'pdfs')
             ->where('post_type_id', $postTypeId)
+            ->orderBy('date', 'desc')
             ->get();
 
         return view('admin.post.awards_of_pride.page', compact('postDetails', 'postTypes'));

@@ -18,7 +18,7 @@ class AdminProcurementController extends Controller
         $postTypeId = $postTypes->firstWhere('type_name', 'ประกาศจัดซื้อจัดจ้าง')->id;
         $postDetails = PostDetail::with('postType', 'pdfs')
             ->where('post_type_id', $postTypeId)
-            ->orderBy('created_at', 'desc')
+            ->orderBy('date', 'desc')
             ->get();
 
         return view('admin.post.procurement_announcement.page', compact('postDetails', 'postTypes'));
