@@ -167,13 +167,13 @@
             <div class="col-xl-6 col-lg-6 mt-4 mt-lg-0">
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <div class="bg-video-section2 p-2 video-container">
-                        <iframe src="https://www.youtube.com/embed/VCHbhpQZgTU" 
+                        <iframe src="https://www.youtube.com/embed/VCHbh"
                             frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
                     </div>
-                    
+
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">
                         <i class="fas fa-video text-dark"></i> VDO เพิ่มเติม
                     </a>
