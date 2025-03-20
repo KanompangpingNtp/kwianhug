@@ -136,7 +136,7 @@
             max-width: 45%;
             /* ขยาย QR code เมื่อขนาดเกิน */
             transition: all 0.3s ease-in-out;
-            
+
             /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
         }
 
@@ -151,47 +151,34 @@
                     ข่าวกิจกรรม
                 </div>
                 <div class="bg-card-layout p-2 pt-3 row w-100 justify-content-center align-items-center">
-                    @for ($i = 0; $i < 4; $i++)
-                        <a href="#"
-                            class="col-xl-6 d-flex flex-column flex-sm-row justify-content-center align-items-center align-items-sm-start gap-1 mb-2 p-2 text-decoration-none text-dark hover-card-section4"
-                            style="border-radius: 10px;">
-                            <div class="bg-white" style="border-radius: 10px;">
-                                <img src="{{ asset('pages/home/section-4/Logo.png') }}" alt="logo" 
-                                     style="border-radius: 10px; width: 150px; height: 110px; object-fit: contianer;">
-                            </div>
-                            
-                            <div class="d-flex flex-column justify-content-start align-items-start">
-                                <?php
-                                // Mock ข้อมูล
-                                $text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                                                                               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                                                                               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                                                                               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-                                
-                                // กำหนดจำนวนตัวอักษรสูงสุด
-                                $maxLength = 92;
-                                
-                                // ตัดข้อความตามจำนวนตัวอักษรที่กำหนด
-                                $trimmedText = mb_strlen($text, 'UTF-8') > $maxLength ? mb_substr($text, 0, $maxLength, 'UTF-8') . '...' : $text;
+                    @foreach ($activity->take(4) as $item)
+                    <a href="#" class="col-xl-6 d-flex flex-column flex-sm-row justify-content-center align-items-center align-items-sm-start gap-1 mb-2 p-2 text-decoration-none text-dark hover-card-section4" style="border-radius: 10px;">
+                        <div class="bg-white" style="border-radius: 10px;">
+                            <!-- ตรวจสอบว่า $item->photos[0] มีข้อมูลหรือไม่ -->
+                            <img src="{{ $item->photos->where('post_photo_status', 1)->isNotEmpty() ? asset('storage/' . $item->photos->where('post_photo_status', 1)->first()->post_photo_file) : asset('pages/home/section-4/Logo.png') }}"
+                            alt="logo" style="border-radius: 10px; width: 150px; height: 110px; object-fit: contianer;">
+                        </div>
+
+                        <div class="d-flex flex-column justify-content-start align-items-start">
+                            <?php
+                                    $text = $item->title_name;
+                                    $maxLength = 92;
+                                    $trimmedText = mb_strlen($text, 'UTF-8') > $maxLength ? mb_substr($text, 0, $maxLength, 'UTF-8') . '...' : $text;
                                 ?>
-
-                                <div style="background: linear-gradient(to bottom, #f8f8f8af, #f8f8f8af); border-radius:10px; font-size:16px;"
-                                    class="p-2 lh-sm">
-                                    <?php echo $trimmedText; ?>
-                                </div>
-
-
-                                <div class="d-flex justify-content-start align-items-center mt-1 px-2 py-1"
-                                    style="background: linear-gradient(to bottom, #f8f8f8af, #f8f8f8af); border-radius:10px; font-size:16px;">
-                                    <img src="{{ asset('pages/home/section-4/alarm.png') }}" alt="clock">dd-mm-yyyy
-                                </div>
+                            <div style="background: linear-gradient(to bottom, #f8f8f8af, #f8f8f8af); border-radius:10px; font-size:16px;" class="p-2 lh-sm">
+                                <?php echo $trimmedText; ?>
                             </div>
-                        </a>
-                    @endfor
+
+                            <div class="d-flex justify-content-start align-items-center mt-1 px-2 py-1" style="background: linear-gradient(to bottom, #f8f8f8af, #f8f8f8af); border-radius:10px; font-size:16px;">
+                                <img src="{{ asset('pages/home/section-4/alarm.png') }}" alt="clock">{{ \Carbon\Carbon::parse($item->date)->format('d-m-Y') }}
+
+                            </div>
+                        </div>
+                    </a>
+                    @endforeach
                 </div>
-                <a href="#" class="bg-btn-section4">ดูกิจกรรมทั้งหมด <img
-                        src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer"
-                        style="width: 35px;"></a>
+
+                <a href="#" class="bg-btn-section4">ดูกิจกรรมทั้งหมด <img src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer" style="width: 35px;"></a>
                 <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center mt-5 gap-5">
                     <div class="bg-e-libraly p-3 d-flex flex-column justify-content-start align-items-center">
                         <div class="d-flex justify-content-between align-items-center gap-2">
@@ -205,18 +192,16 @@
                         <img src="{{ asset('pages/home/section-4/book.png') }}" alt="book" style="width: 20rem;">
                     </div>
                     <div class="d-flex flex-column justify-content-start align-items-start">
-                        <a href="#"
-                            class="bg-orange-section4 text-decoration-none d-flex justify-content-center align-items-center  py-2 px-5 text-white lh-1 text-center mb-5">
+                        <a href="#" class="bg-orange-section4 text-decoration-none d-flex justify-content-center align-items-center  py-2 px-5 text-white lh-1 text-center mb-5">
                             <div style="white-space: nowrap;">
                                 <span class="fs-2">ONE</span><span class="fs-6"> STOP SERVICE</span><br><span class="text-dark fs-6 fw-bold">ระบบบริการครบวงจร <br> เทศบาลตำบลเกวียนหัก</span>
                             </div>
-                            
+
                             <img src="{{ asset('pages/home/section-4/personal.png') }}" alt="icon">
                         </a>
                         <div class="bg-green-section4 d-flex justify-content-center align-items-center py-3 px-5">
                             <div class="text-start" style="line-height: 0.9;">
-                                <span class="fs-3 fw-bold text-white"
-                                    style="text-shadow:
+                                <span class="fs-3 fw-bold text-white" style="text-shadow:
                 2px 2px 2px rgba(0, 0, 0, 0.8),
                 -2px -2px 2px rgba(0, 0, 0, 0.8),
                 2px -2px 2px rgba(0, 0, 0, 0.8),
@@ -237,11 +222,11 @@
                     </blockquote>
                 </div>
             </div>
-            
+
             <!-- JavaScript SDK ของ Facebook -->
             <div id="fb-root"></div>
             <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"></script>
-            
+
         </div>
     </div>
 </main>

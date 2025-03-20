@@ -23,7 +23,7 @@
             /* เงาขอบด้านซ้ายและล่าง */
         }
 
-        
+
         .bg-btn-view-all-video {
             background: linear-gradient(to bottom, #fd664f, #eba152);
             border-radius: 20px;
@@ -173,14 +173,12 @@
             </div>
             <div class="col-xl-6 col-lg-6 mt-4 mt-lg-0">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="bg-video-section2 p-2 ">
-                        <div class="video-container p-2">
-                            <iframe src="https://www.youtube.com/embed/VCHbhpQZgTU" frameborder="0"
-                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-
+                    <div class="bg-video-section2 p-2 video-container">
+                        <iframe src="https://www.youtube.com/embed/VCHbh"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </div>
 
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">
