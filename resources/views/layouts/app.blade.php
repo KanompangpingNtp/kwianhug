@@ -9,9 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <style>
         @font-face {
             font-family: 'PROMPT';
@@ -41,14 +41,14 @@
         }
 
         .bg-header {
-        background-image: url('{{ asset('navbar/netural.png') }}');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        height: 100vh;
-        
-        /* ใช้ min-height เพื่อให้พื้นที่ครอบคลุมหน้าจอ */
-    }
+            background-image: url('{{ asset('navbar/netural.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+
+            /* ใช้ min-height เพื่อให้พื้นที่ครอบคลุมหน้าจอ */
+        }
 
         .text-title-nav {
             color: #ffffff;
@@ -339,59 +339,76 @@
         }
 
         .bg-runtext {
-        background-image: url('{{ asset('navbar/bg-runtext.png') }}');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 10vh;
-        padding: 1rem;
-        /* ใช้ min-height เพื่อให้พื้นที่ครอบคลุมหน้าจอ */
-    }
-     /* ปุ่มค้นหา */
-     .search-btn {
-        border-radius: 10px 0 0 10px;
-        background: linear-gradient(to bottom, #fb634e, #f28c25);
-        border: 2px solid #f28c25;
-        /* เส้นขอบ */
-        transition: all 0.3s ease-in-out;
-    }
+            background-image: url('{{ asset('navbar/bg-runtext.png') }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 10vh;
+            padding: 1rem;
+            /* ใช้ min-height เพื่อให้พื้นที่ครอบคลุมหน้าจอ */
+        }
 
-    /* เมื่อ hover ที่ปุ่ม */
-    .search-btn:hover {
-        background: linear-gradient(to bottom, #f28c25, #fb634e);
-        /* สลับไล่สี */
-        border-color: #fb634e;
-        /* เปลี่ยนสีขอบ */
-    }
+        /* ปุ่มค้นหา */
+        .search-btn {
+            border-radius: 10px 0 0 10px;
+            background: linear-gradient(to bottom, #fb634e, #f28c25);
+            border: 2px solid #f28c25;
+            /* เส้นขอบ */
+            transition: all 0.3s ease-in-out;
+        }
 
-    /* ช่องค้นหา */
-    .search-input {
-        width: 180px;
-        border-radius: 0 10px 10px 0;
-        border: 2px solid #f28c25;
-        /* เส้นขอบ */
-        transition: border-color 0.3s ease-in-out;
-    }
+        /* เมื่อ hover ที่ปุ่ม */
+        .search-btn:hover {
+            background: linear-gradient(to bottom, #f28c25, #fb634e);
+            /* สลับไล่สี */
+            border-color: #fb634e;
+            /* เปลี่ยนสีขอบ */
+        }
 
-    /* เมื่อ focus ที่ช่องค้นหา */
-    .search-input:focus {
-        border-color: #fb634e;
-        /* เปลี่ยนสีขอบเมื่อพิมพ์ */
-        outline: none;
-        box-shadow: 0px 0px 5px rgba(251, 99, 78, 0.5);
-        /* เงา */
-    }
-    .search-btn-container{
-        width: 20%;
-    }
-    @media (max-width: 1199px) { /* สำหรับหน้าจอที่เล็กกว่า xl */
-    .search-input {
-        width: 100% !important; /* ให้ช่องค้นหาขยายเต็มที่ */
-    }
-    .search-btn-container{
-        width: 100%;
-    }
+        /* ช่องค้นหา */
+        .search-input {
+            width: 180px;
+            border-radius: 0 10px 10px 0;
+            border: 2px solid #f28c25;
+            /* เส้นขอบ */
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        /* เมื่อ focus ที่ช่องค้นหา */
+        .search-input:focus {
+            border-color: #fb634e;
+            /* เปลี่ยนสีขอบเมื่อพิมพ์ */
+            outline: none;
+            box-shadow: 0px 0px 5px rgba(251, 99, 78, 0.5);
+            /* เงา */
+        }
+
+        .search-btn-container {
+            width: 20%;
+        }
+
+        @media (max-width: 1199px) {
+
+            /* สำหรับหน้าจอที่เล็กกว่า xl */
+            .search-input {
+                width: 100% !important;
+                /* ให้ช่องค้นหาขยายเต็มที่ */
+            }
+
+            .search-btn-container {
+                width: 100%;
+            }
+        }
+
+        .icon-hover-effect {
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.icon-hover-effect:hover {
+    transform: scale(1.2); /* ขยายขนาดขึ้น 20% */
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* เพิ่มเงาเรืองแสง */
+}
+
     </style>
 </head>
 
@@ -422,26 +439,27 @@
                                             <img src="{{ asset('navbar/text-normal.png') }}" alt="text-normal">
                                             <img src="{{ asset('navbar/text-plus.png') }}" alt="text-plus">
                                         </div>
-    
+
                                     </div>
                                     <a class="button-blue" href="#">
                                         หน้าหลัก</a>
                                 </div>
-                                <div class="d-flex flex-column justify-content-center align-items-center gap-1 button-img">
+                                <div
+                                    class="d-flex flex-column justify-content-center align-items-center gap-1 button-img">
                                     <img src="{{ asset('navbar/disability.png') }}" alt="btn-disability" width="40"
                                         height="40">
                                     <a class="button-blue" href="#"> เข้าสู่ระบบ</a>
                                 </div>
-    
+
                                 <a class="button-blue" href="#"> ติดต่อเรา</a>
                             </div>
-    
+
                             <div class="bg-black-opacity d-flex justify-content-center align-items-center mt-2">
                                 <div class="text-white d-none d-sm-block">
                                     เปลี่ยนภาษา
                                 </div>
                                 <div id="google_translate_element"></div>
-    
+
                                 <script type="text/javascript">
                                     function googleTranslateElementInit() {
                                         new google.translate.TranslateElement({
@@ -454,29 +472,36 @@
                                 </script>
                                 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
                                 </script>
-    
-    
-                                <a href="#" class="flag-link"><img src="{{ asset('navbar/country/thailand.png') }}"
-                                        alt="Thailand" width="23"></a>
+
+
+                                <a href="#" class="flag-link"><img
+                                        src="{{ asset('navbar/country/thailand.png') }}" alt="Thailand"
+                                        width="23"></a>
                                 <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Brunei.png') }}"
                                         alt="Brunei" width="23"></a>
-                                <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Myanmar.png') }}"
-                                        alt="Myanmar" width="23"></a>
+                                <a href="#" class="flag-link"><img
+                                        src="{{ asset('navbar/country/Myanmar.png') }}" alt="Myanmar"
+                                        width="23"></a>
                                 <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Laos.png') }}"
                                         alt="Laos" width="23"></a>
-                                <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Indonesia.png') }}"
-                                        alt="Indonesia" width="23"></a>
-                                <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Malaysia.png') }}"
-                                        alt="Malaysia" width="23"></a>
+                                <a href="#" class="flag-link"><img
+                                        src="{{ asset('navbar/country/Indonesia.png') }}" alt="Indonesia"
+                                        width="23"></a>
+                                <a href="#" class="flag-link"><img
+                                        src="{{ asset('navbar/country/Malaysia.png') }}" alt="Malaysia"
+                                        width="23"></a>
                                 <a href="#" class="flag-link"><img
                                         src="{{ asset('navbar/country/Philippines.png') }}" alt="Philippines"
                                         width="23"></a>
-                                <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Cambodia.png') }}"
-                                        alt="Cambodia" width="23"></a>
-                                <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Singapore.png') }}"
-                                        alt="Singapore" width="23"></a>
-                                <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Vietnam.png') }}"
-                                        alt="Vietnam" width="23"></a>
+                                <a href="#" class="flag-link"><img
+                                        src="{{ asset('navbar/country/Cambodia.png') }}" alt="Cambodia"
+                                        width="23"></a>
+                                <a href="#" class="flag-link"><img
+                                        src="{{ asset('navbar/country/Singapore.png') }}" alt="Singapore"
+                                        width="23"></a>
+                                <a href="#" class="flag-link"><img
+                                        src="{{ asset('navbar/country/Vietnam.png') }}" alt="Vietnam"
+                                        width="23"></a>
                             </div>
                         </div>
                     </div>
@@ -522,7 +547,7 @@
                                             <li><a class="dropdown-item" href="#">สถานที่สำคัญ</a></li>
                                         </ul>
                                     </li>
-    
+
                                     <!-- 2. บุคลากร -->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
@@ -544,7 +569,7 @@
                                         @endforeach --}}
                                         </ul>
                                     </li>
-    
+
                                     <!-- 3. ผลการดำเนินงาน -->
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
@@ -564,7 +589,7 @@
                                         @endforeach --}}
                                         </ul>
                                     </li>
-    
+
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
                                             href="#" id="authorityDropdown" role="button"
@@ -583,13 +608,13 @@
                                         @endforeach --}}
                                         </ul>
                                     </li>
-    
+
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
                                             href="#" id="developmentPlanDropdown" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="{{ asset('navbar/icon-menu/icon6.png') }}" alt="แผนพัฒนาท้องถิ่น"
-                                                class="navbar-icon">
+                                            <img src="{{ asset('navbar/icon-menu/icon6.png') }}"
+                                                alt="แผนพัฒนาท้องถิ่น" class="navbar-icon">
                                             <div class="navbar-text">แผนพัฒนาท้องถิ่น</div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="developmentPlanDropdown">
@@ -602,13 +627,13 @@
                                         @endforeach --}}
                                         </ul>
                                     </li>
-    
+
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
                                             href="#" id="lawDropdown" role="button" data-bs-toggle="dropdown"
                                             aria-expanded="false">
-                                            <img src="{{ asset('navbar/icon-menu/icon7.png') }}" alt="กฏหมายและกฏระเบียบ"
-                                                class="navbar-icon">
+                                            <img src="{{ asset('navbar/icon-menu/icon7.png') }}"
+                                                alt="กฏหมายและกฏระเบียบ" class="navbar-icon">
                                             <div class="navbar-text">กฏหมายและกฏระเบียบ</div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="lawDropdown">
@@ -621,17 +646,18 @@
                                         @endforeach --}}
                                         </ul>
                                     </li>
-    
+
                                     <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
                                             href="#" id="citizenMenuDropdown" role="button"
                                             data-bs-toggle="dropdown" aria-expanded="false">
-                                            <img src="{{ asset('navbar/icon-menu/icon8.png') }}" alt="เมนูสำหรับประชาชน"
-                                                class="navbar-icon">
+                                            <img src="{{ asset('navbar/icon-menu/icon8.png') }}"
+                                                alt="เมนูสำหรับประชาชน" class="navbar-icon">
                                             <div class="navbar-text">เมนูสำหรับประชาชน</div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="citizenMenuDropdown">
-                                            <li><a class="dropdown-item" href="#">รับเรื่องราวร้องทุกข์ </a></li>
+                                            <li><a class="dropdown-item" href="#">รับเรื่องราวร้องทุกข์ </a>
+                                            </li>
                                             <li><a class="dropdown-item"
                                                     href="#">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
                                             </li>
@@ -645,7 +671,7 @@
                                         @endforeach --}}
                                         </ul>
                                     </li>
-    
+
                                 </ul>
                             </div>
                         </div>
@@ -653,7 +679,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="d-flex flex-column align-items-center justify-content-start">
             {{-- <div class="video-container">
                 <video autoplay loop muted playsinline>
@@ -662,19 +688,24 @@
                 </video>
         
             </div> --}}
-        
-        
+
+
             <div class="bg-runtext w-100 d-flex align-items-center">
                 <div class="container d-flex flex-column-reverse flex-xl-row align-items-center pt-3">
-                    <div class="d-flex align-items-center search-btn-container" style="height: 38px; border-radius:20px;">
-                        <button class="btn text-white search-btn" style="border-top-left-radius:20px; border-bottom-left-radius:20px;">
+                    <div class="d-flex align-items-center search-btn-container"
+                        style="height: 38px; border-radius:20px;">
+                        <button class="btn text-white search-btn"
+                            style="border-top-left-radius:20px; border-bottom-left-radius:20px;">
                             <i class="fa fa-search"></i>
                         </button>
-                        <input type="text" class="form-control search-input flex-grow-1 flex-xl-auto" style="border-top-right-radius:20px; border-bottom-right-radius:20px;" placeholder="ค้นหา...">
+                        <input type="text" class="form-control search-input flex-grow-1 flex-xl-auto"
+                            style="border-top-right-radius:20px; border-bottom-right-radius:20px;"
+                            placeholder="ค้นหา...">
                     </div>
-                    
+
                     <div class="d-flex w-100 mb-2 mb-xl-0">
-                        <div class="px-3 py-1 text-wrap text-white ms-4 me-2 d-none d-md-block text-center" style="background: linear-gradient(to bottom, #f28c25, #fb634e); border-radius:20px; width: 8rem;">
+                        <div class="px-3 py-1 text-wrap text-white ms-4 me-2 d-none d-md-block text-center"
+                            style="background: linear-gradient(to bottom, #f28c25, #fb634e); border-radius:20px; width: 8rem;">
                             วิสัยทัศน์
                         </div>
                         <div class="bg-text w-100">
@@ -688,33 +719,49 @@
                             </div>
                         </div>
                     </div>
-                    
-        
+
+
                 </div>
             </div>
-        
+
             <style>
                 @keyframes marquee {
                     0% {
                         transform: translateX(100%);
                     }
-        
+
                     100% {
                         transform: translateX(-100%);
                     }
                 }
             </style>
-        
-        
+
+
         </div>
     </header>
-
+    <div class="d-flex flex-column justify-content-center align-items-center gap-2 position-fixed top-50 end-0 translate-middle-y me-3 p-3 shadow rounded"
+        id="floatingButtons" style="z-index: 1000; background: linear-gradient(to bottom, #00d0d4bb, #007dfabb);">
+        <a href="#"><img class="icon-hover-effect" src="{{ asset('navbar/up-arrow.png') }}" alt="upload"
+                width="25" height="25"></a>
+        <a href="#"><img class="icon-hover-effect" src="{{ asset('navbar/share.png') }}" alt="chair"
+                width="25" height="25"></a>
+        <a href="#"><img class="icon-hover-effect" src="{{ asset('navbar/chat.png') }}" alt="message"
+                width="25" height="25"></a>
+    </div>
 
     @yield('content')
 
-   
 
 
+    <script>
+        document.getElementById("scrollToTop").addEventListener("click", function(event) {
+            event.preventDefault(); // ป้องกันการโหลดหน้าใหม่
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            }); // เลื่อนขึ้นแบบนุ่มนวล
+        });
+    </script>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

@@ -9,7 +9,7 @@
             padding: 2rem 0rem;
         }
 
-        .title-section2 {
+        .title-section3 {
             font-size: 60px;
             font-weight: bold;
             text-shadow:
@@ -210,6 +210,13 @@
             font-weight: bold;
         }
 
+        @media (max-width: 991px) {
+            .title-orange {
+
+            width: 20rem;
+
+        }
+        }
 
         .hover-effect img{
             transition: all 0.3s ease-in-out;
@@ -228,7 +235,7 @@
         <div class="row w-100">
             <div class="col-xl-8">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="title-section2 text-center">
+                    <div class="title-section3 text-center">
                         ป้ายประกาศ
                     </div>
                     <div class="bg-dark p-2" style="border-radius: 15px;">
@@ -304,7 +311,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-4 d-flex justify-content-center align-items-center mt-3">
+            <div class="col-xl-4 d-flex justify-content-center align-items-center mt-4">
                 <div class="bg-black px-2 py-3 pb-1" style="border-radius: 20px; position: relative;">
                     <div class="title-orange text-center">
                         รางวัลแห่งความภาคภูมิใจ <img src="{{asset('pages/home/section-3/trophy.png')}}" alt="trophy" style="width: 40px;">
