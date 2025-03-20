@@ -23,10 +23,6 @@
             /* เงาขอบด้านซ้ายและล่าง */
         }
 
-        .bg-video-section2 {
-            background: linear-gradient(to bottom, #fd664f, #eba152);
-            border-radius: 20px;
-        }
 
         .bg-btn-view-all-video {
             background: linear-gradient(to bottom, #fd664f, #eba152);
@@ -123,22 +119,33 @@
                 /* ปรับขนาดให้เล็กลง */
             }
         }
+
+        .bg-video-section2 {
+            background: linear-gradient(to bottom, #fd664f, #eba152);
+            border-radius: 20px;
+            width: 100%;
+            height: 370px;
+        }
+
+
         .video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* อัตราส่วน 16:9 */
-    height: 350px;
-}
+            background: linear-gradient(to bottom, #fd664f, #eba152);
+            border-radius: 20px;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* อัตราส่วน 16:9 */
+            height: 350px;
+        }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 

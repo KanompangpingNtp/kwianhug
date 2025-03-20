@@ -31,9 +31,9 @@ use App\Http\Controllers\TestController;
 Route::get('/test', [TestController::class, 'testindex'])->name('testindex');
 Route::get('/test/result/{id}', [TestController::class, 'test'])->name('test');
 
-// Route::get('/index', function () {
-//     return view('pages.home.app');
-// });
+Route::get('/index', function () {
+    return view('pages.home.app');
+});
 
 Route::get('/', [HomePageController::class, 'Home'])->name('Home');
 

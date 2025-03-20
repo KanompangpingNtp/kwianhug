@@ -136,6 +136,7 @@
             max-width: 45%;
             /* ขยาย QR code เมื่อขนาดเกิน */
             transition: all 0.3s ease-in-out;
+
             /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
         }
 

@@ -216,14 +216,14 @@
             </div>
             <div class="bg-black-opacity d-flex flex-column flex-xl-row justify-content-center align-items-center p-0">
                 <div class="row justify-content-center align-items-center my-3">
-                    <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-center mb-4">
+                    <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/1.png') }}" alt="icon" class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
                                 style="white-space: nowrap; overflow: visible; text-overflow: clip;">คู่มือประชาชน</p>
                         </a>
                     </div>
-                    <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-center mb-4">
+                    <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/2.png') }}" alt="icon" class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
@@ -231,7 +231,7 @@
                                 เบี้ยยังชีพผู้สูงอายุ</p>
                         </a>
                     </div>
-                    <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-center mb-4">
+                    <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/3.png') }}" alt="icon" class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
@@ -239,7 +239,7 @@
                             </p>
                         </a>
                     </div>
-                    <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-center mb-4">
+                    <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/4.png') }}" alt="icon" class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
@@ -247,7 +247,7 @@
                                 รับเรื่องร้องเรียน<br>การทุจริตประพฤติมิชอบ</p>
                         </a>
                     </div>
-                    <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-center mb-4">
+                    <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/5.png') }}" alt="icon"
                                 class="d-block mx-auto">
@@ -255,7 +255,7 @@
                                 style="white-space: nowrap; overflow: visible; text-overflow: clip;">กระดานกระทู้</p>
                         </a>
                     </div>
-                    <div class="col-xl-4 col-lg-6 d-flex justify-content-center align-items-center mb-4">
+                    <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/6.png') }}" alt="icon"
                                 class="d-block mx-auto">
