@@ -23,11 +23,7 @@
             /* เงาขอบด้านซ้ายและล่าง */
         }
 
-        .bg-video-section2 {
-            background: linear-gradient(to bottom, #fd664f, #eba152);
-            border-radius: 20px;
-        }
-
+        
         .bg-btn-view-all-video {
             background: linear-gradient(to bottom, #fd664f, #eba152);
             border-radius: 20px;
@@ -123,22 +119,33 @@
                 /* ปรับขนาดให้เล็กลง */
             }
         }
+
+        .bg-video-section2 {
+            background: linear-gradient(to bottom, #fd664f, #eba152);
+            border-radius: 20px;
+            width: 100%;
+            height: 370px;
+        }
+
+
         .video-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* อัตราส่วน 16:9 */
-    height: 350px;
-}
+            background: linear-gradient(to bottom, #fd664f, #eba152);
+            border-radius: 20px;
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* อัตราส่วน 16:9 */
+            height: 350px;
+        }
 
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -166,14 +173,16 @@
             </div>
             <div class="col-xl-6 col-lg-6 mt-4 mt-lg-0">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="bg-video-section2 p-2 video-container">
-                        <iframe src="https://www.youtube.com/embed/VCHbhpQZgTU" 
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                    <div class="bg-video-section2 p-2 ">
+                        <div class="video-container p-2">
+                            <iframe src="https://www.youtube.com/embed/VCHbhpQZgTU" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
                     </div>
-                    
+
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">
                         <i class="fas fa-video text-dark"></i> VDO เพิ่มเติม
                     </a>

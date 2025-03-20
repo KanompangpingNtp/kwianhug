@@ -136,6 +136,7 @@
             max-width: 45%;
             /* ขยาย QR code เมื่อขนาดเกิน */
             transition: all 0.3s ease-in-out;
+            
             /* เพิ่มการเปลี่ยนแปลงที่นุ่มนวล */
         }
 
@@ -155,9 +156,10 @@
                             class="col-xl-6 d-flex flex-column flex-sm-row justify-content-center align-items-center align-items-sm-start gap-1 mb-2 p-2 text-decoration-none text-dark hover-card-section4"
                             style="border-radius: 10px;">
                             <div class="bg-white" style="border-radius: 10px;">
-                                <img src="{{ asset('pages/home/section-4/Logo.png') }}" alt="logo"
-                                    style="border-radius: 10px; width:150px;">
+                                <img src="{{ asset('pages/home/section-4/Logo.png') }}" alt="logo" 
+                                     style="border-radius: 10px; width: 150px; height: 110px; object-fit: contianer;">
                             </div>
+                            
                             <div class="d-flex flex-column justify-content-start align-items-start">
                                 <?php
                                 // Mock ข้อมูล

@@ -739,8 +739,8 @@
 
         </div>
     </header>
-    <div class="d-flex flex-column justify-content-center align-items-center gap-2 position-fixed top-50 end-0 translate-middle-y me-3 p-3 shadow rounded"
-        id="floatingButtons" style="z-index: 1000; background: linear-gradient(to bottom, #00d0d4bb, #007dfabb);">
+    <div class="d-flex flex-column justify-content-center align-items-center gap-2 position-fixed top-50 end-0 translate-middle-y me-3 p-3 shadow"
+        id="floatingButtons" style="z-index: 1000; background: linear-gradient(to bottom, #00d0d4bb, #007dfabb); border-radius:40px;">
         <a href="#"><img class="icon-hover-effect" src="{{ asset('navbar/up-arrow.png') }}" alt="upload"
                 width="25" height="25"></a>
         <a href="#"><img class="icon-hover-effect" src="{{ asset('navbar/share.png') }}" alt="chair"
