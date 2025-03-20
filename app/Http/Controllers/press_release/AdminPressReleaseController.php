@@ -21,7 +21,7 @@ class AdminPressReleaseController extends Controller
         $postTypeId = $postTypes->firstWhere('type_name', 'ข่าวประชาสัมพันธ์')->id;
         $postDetails = PostDetail::with('postType')
             ->where('post_type_id', $postTypeId)
-            ->orderBy('created_at', 'desc') // เรียงข้อมูลจากใหม่ไปเก่า
+            ->orderBy('date', 'desc') // เรียงข้อมูลจากใหม่ไปเก่า
             ->get();
 
         return view('admin.post.press_release.press_release', compact('postDetails', 'postTypes'));

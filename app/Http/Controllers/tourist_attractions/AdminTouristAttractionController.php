@@ -19,6 +19,7 @@ class AdminTouristAttractionController extends Controller
 
         $postDetails = PostDetail::with('postType', 'photos', 'pdfs')
             ->where('post_type_id', $postTypeId)
+            ->orderBy('date', 'desc')
             ->get();
 
         return view('admin.post.tourist_attractions.page', compact('postDetails', 'postTypes'));
