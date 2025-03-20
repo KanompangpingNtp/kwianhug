@@ -38,7 +38,7 @@
     @endif
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3"> <i class="fa-solid fa-database"></i> ระบบจัดการข้อมูล</a>
+        <a class="navbar-brand ps-3"> <i class="fa-solid fa-database me-3"></i>ระบบจัดการข้อมูล</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!" title="Toggle sidebar">
             <i class="fas fa-bars"></i>
@@ -55,11 +55,11 @@
                     <li>
                         <hr class="dropdown-divider" />
                     </li> --}}
-                    <li>
+                    <li style="font-size: 14px;">
                         <form action="{{ route('logout') }}" method="POST" style="display: inline;">
                             @csrf
                             <button type="submit" class="dropdown-item">
-                                ออกจากระบบ<i class="bi bi-door-closed-fill ms-3"></i>
+                                ออกจากระบบ<i class="fa-solid fa-right-from-bracket ms-5"></i>
                             </button>
                         </form>
                     </li>
