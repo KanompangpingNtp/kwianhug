@@ -48,7 +48,7 @@ class AdminProcurementController extends Controller
                 }
 
                 $filename = time() . '_' . $file->getClientOriginalName();
-                $path = $file->storeAs('pdf/procurement_announcement', $filename, 'public');
+                $path = $file->storeAs('pdf', $filename, 'public');
 
                 PostPdf::create([
                     'post_detail_id' => $postDetail->id,
@@ -94,7 +94,7 @@ class AdminProcurementController extends Controller
         if ($request->hasFile('file_post')) {
             foreach ($request->file('file_post') as $file) {
                 $filename = time() . '_' . $file->getClientOriginalName();
-                $path = $file->storeAs('pdf/procurement_announcement', $filename, 'public');
+                $path = $file->storeAs('pdf', $filename, 'public');
 
                 PostPdf::create([
                     'post_detail_id' => $postDetail->id,

@@ -70,7 +70,7 @@ class AdminActivityController extends Controller
 
                 if ($file->getClientOriginalExtension() == 'pdf') {
 
-                    $path = $file->storeAs('pdf/activity', $filename, 'public');
+                    $path = $file->storeAs('pdf', $filename, 'public');
 
                     PostPdf::create([
                         'post_detail_id' => $postDetail->id,
@@ -78,7 +78,7 @@ class AdminActivityController extends Controller
                     ]);
                 } elseif (in_array($file->getClientOriginalExtension(), ['jpg', 'jpeg', 'png'])) {
 
-                    $path = $file->storeAs('photo/activity', $filename, 'public');
+                    $path = $file->storeAs('photo', $filename, 'public');
 
                     PostPhoto::create([
                         'post_detail_id' => $postDetail->id,

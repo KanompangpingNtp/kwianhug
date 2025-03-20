@@ -16,7 +16,7 @@ $(document).ready(function () {
             infoPostFix: "",
             loadingRecords: "กำลังโหลดข้อมูล...",
             zeroRecords: "ไม่พบข้อมูล",
-            emptyTable: "ไม่มีข้อมูลในตาราง",
+            emptyTable: "ไม่มีข้อมูล",
             paginate: {
                 first: "หน้าแรก",
                 previous: "ก่อนหน้า",

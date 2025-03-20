@@ -77,9 +77,9 @@
                             <td> {{ $postDetail->title_name ?? 'N/A' }} </td>
                             <td>
                                 @foreach ($postDetail->pdfs as $pdf)
-                                <a href="{{ asset('storage/' . $pdf->post_pdf_file) }}" target="_blank">
-                                    {{ basename($pdf->post_pdf_file) }}
-                                </a><br>
+                                <a href="{{ asset('storage/' . $pdf->post_pdf_file) }}" target="_blank" style="text-decoration: none;">
+                                    <i class="bi bi-file-earmark-pdf" style="font-size: 1.2rem; color: red;"></i> <!-- แสดงไอคอน PDF -->
+                                </a>
                                 @endforeach
                             </td>
                             <td class="text-center">

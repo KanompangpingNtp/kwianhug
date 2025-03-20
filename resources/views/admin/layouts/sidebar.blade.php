@@ -18,14 +18,30 @@
             <div class="menu_section">
                 <h3>เมนู</h3>
                 <ul class="nav side-menu">
-                    <li><a href="{{route('ActivityHome')}}" style="text-decoration: none;">
+                    <li>
+                        <a href="{{route('NoticeBoardHome')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
-                            จัดการกิจกรรม
-                        </a></li>
-                    <li><a href="{{route('PressReleaseHome')}}" style="text-decoration: none;">
+                            ป้ายประกาศ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('AwardsofPrideHome')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
-                            จัดการข่าวประชาสัมพันธ์
-                        </a></li>
+                            รางวัลแห่งความภาคภูมิใจ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('ActivityHome')}}" style="text-decoration: none;">
+                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
+                            กิจกรรม
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{route('PressReleaseHome')}}" style="text-decoration: none;">
+                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
+                            ข่าวประชาสัมพันธ์
+                        </a>
+                    </li>
 
                     <!-- Dropdown Menu -->
                     <li>
@@ -38,10 +54,19 @@
                         </ul>
                     </li>
 
-                    <li><a href="{{route('NoticeBoardHome')}}" style="text-decoration: none;">
+                    <li>
+                        <a href="{{route('TouristAttractionPage')}}" style="text-decoration: none;">
                             <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
-                            จัดการป้ายประกาศ
-                        </a></li>
+                            แนะนำสถานที่ท่องเที่ยว
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{route('ManagePersonnel')}}" style="text-decoration: none;">
+                            <i class="fa-solid fa-folder" style="font-size: 16px; margin-right:3px;"></i>
+                            บุคลากร
+                        </a>
+                    </li>
 
                     {{-- <li>
                         <a style="text-decoration: none;"><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
