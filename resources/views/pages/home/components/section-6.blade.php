@@ -166,7 +166,7 @@
                 <div class="title-section5 text-center">
                     ประกาศความเคลื่อนไหว
                 </div>
-                <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mt-3">
                     <div class="bg-btn-egp p-2 py-3 text-center lh-sm text-nowrap active" onclick="changeContent('egp', this)">
                         ประกาศ E-GP
                     </div>
