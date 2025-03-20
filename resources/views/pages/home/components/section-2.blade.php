@@ -173,12 +173,15 @@
             </div>
             <div class="col-xl-6 col-lg-6 mt-4 mt-lg-0">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <div class="bg-video-section2 p-2 video-container">
-                        <iframe src="https://www.youtube.com/embed/VCHbh"
+                    <div class="bg-video-section2 p-2 ">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/VCHbh"
                             frameborder="0"
                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen>
                         </iframe>
+                        </div>
+                       
                     </div>
 
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">
@@ -187,7 +190,7 @@
                     <a href="#" class="bg-eservice p-2 mt-5">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="fs-4 fw-bold p-2 "
-                                style="background: linear-gradient(to right, #fe574e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
+                                style="background: linear-gradient(to right, #fe574e,#fc883e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
                                 เทศบาลตำบลเกวียนหัก
                             </div>
                             <div class="bg-dark fw-bold text-white fs-5 p-2"
