@@ -156,7 +156,7 @@
                         <div class="bg-white" style="border-radius: 10px;">
                             <!-- ตรวจสอบว่า $item->photos[0] มีข้อมูลหรือไม่ -->
                             <img src="{{ $item->photos->where('post_photo_status', 1)->isNotEmpty() ? asset('storage/' . $item->photos->where('post_photo_status', 1)->first()->post_photo_file) : asset('pages/home/section-4/Logo.png') }}"
-                            alt="logo" style="border-radius: 10px; width:150px;">
+                            alt="logo" style="border-radius: 10px; width: 150px; height: 110px; object-fit: contianer;">
                         </div>
 
                         <div class="d-flex flex-column justify-content-start align-items-start">
