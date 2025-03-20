@@ -5,7 +5,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>รางวัลแห่งความภาคภูมิใจ</h4>
+                <h3 class="text-center">รางวัลแห่งความภาคภูมิใจ</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -53,22 +53,22 @@
                 <br>
                 <br>
 
-                <table class="table table-striped text-center" id="data_table">
+                <table class="table table-bordered" id="data_table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>ประเภท</th>
-                            <th>ชื่อ</th>
-                            <th>การจัดการ</th>
+                            <th class="text-center">#</th>
+                            <th class="text-center">ประเภท</th>
+                            <th class="text-center">ชื่อ</th>
+                            <th class="text-center">การจัดการ</th>
                         </tr>
                     </thead>
                     <tbody>
                         @forelse ($postDetails as $index => $postDetail)
                         <tr>
-                            <td>{{ $index + 1 }}</td>
-                            <td>{{ $postDetail->postType->type_name ?? 'N/A' }}</td>
+                            <td class="text-center">{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $postDetail->postType->type_name ?? 'N/A' }}</td>
                             <td>{{ $postDetail->topic_name ?? 'N/A' }}</td>
-                            <td>
+                            <td class="text-center">
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#showFile-{{ $postDetail->id }}">
                                     แสดงไฟล์
                                 </button>

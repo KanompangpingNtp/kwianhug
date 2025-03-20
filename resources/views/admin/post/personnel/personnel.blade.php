@@ -5,7 +5,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>จัดการข้อมูลบุคลากร</h4>
+                <h3 class="text-center">จัดการข้อมูลบุคลากร</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">

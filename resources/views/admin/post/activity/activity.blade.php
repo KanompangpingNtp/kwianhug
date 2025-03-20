@@ -5,24 +5,22 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>จัดการกิจกรรม</h4>
+                <h3 class="text-center">จัดการกิจกรรม</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
                 <!-- ปุ่มเปิด Modal -->
-                <button type="button" class="btn btn-primary btn-sm mt-3" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="btn btn-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#myModal">
                     สร้างกิจกรรม
                 </button>
 
                 <!-- The Modal -->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="myModalLabel">สร้างกิจกรรม</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <form action="{{route('ActivityCreate')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
@@ -69,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ปิด</button>
                                     <button type="submit" class="btn btn-primary">บันทึก</button>
                                 </div>
                             </form>
@@ -101,20 +99,29 @@
                             <td>{{ $postDetail->topic_name ?? 'N/A' }}</td>
                             <td>{{ $postDetail->details ?? 'N/A' }}</td>
                             <td class="text-center">
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#FileData-{{ $postDetail->id }}">
-                                    <i class="bi bi-file-image"></i>
-                                </button>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="mb-1 me-1">
+                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#FileData-{{ $postDetail->id }}">
+                                            <i class="bi bi-file-image"></i>
+                                        </button>
+                                    </div>
 
-                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal-{{ $postDetail->id }}">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
+                                    <div class="mb-1 me-1">
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal-{{ $postDetail->id }}">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
 
-                                <form action="{{ route('ActivityDelete', $postDetail->id) }}" method="POST" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
-                                </form>
+                                    <div class="mb-1 me-1">
+                                        <form action="{{ route('ActivityDelete', $postDetail->id) }}" method="POST" style="display:inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
                             </td>
+
                         </tr>
                         @endforeach
                     </tbody>

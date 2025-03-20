@@ -5,7 +5,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>จัดการข้อมูลหน่วยงานย่อย <span class="text-primary">{{ $PersonnelRank->personnel_rank_name }}</span></h4>
+                <h3 class="text-center">จัดการข้อมูลหน่วยงานย่อย <span class="text-primary">{{ $PersonnelRank->personnel_rank_name }}</span></h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">

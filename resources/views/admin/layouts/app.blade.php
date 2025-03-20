@@ -38,7 +38,7 @@
     @endif
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3">Admin Dashbord</a>
+        <a class="navbar-brand ps-3"> <i class="fa-solid fa-database"></i> ระบบจัดการข้อมูล</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!" title="Toggle sidebar">
             <i class="fas fa-bars"></i>
@@ -76,25 +76,25 @@
                         <div class="sb-sidenav-menu-heading">MENU</div>
                         <a class="nav-link" href="{{route('NoticeBoardHome')}}">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-database"></i>
+                                <i class="fa-solid fa-folder"></i>
                             </div>
                             ป้ายประกาศ
                         </a>
                         <a class="nav-link" href="{{route('AwardsofPrideHome')}}">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-database"></i>
+                                <i class="fa-solid fa-folder"></i>
                             </div>
                             รางวัลแห่งความภาคภูมิใจ
                         </a>
                         <a class="nav-link" href="{{route('ActivityHome')}}">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-database"></i>
+                                <i class="fa-solid fa-folder"></i>
                             </div>
                             กิจกรรม
                         </a>
                         <a class="nav-link" href="{{route('PressReleaseHome')}}">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-database"></i>
+                                <i class="fa-solid fa-folder"></i>
                             </div>
                             ข่าวประชาสัมพันธ์
                         </a>
@@ -117,13 +117,13 @@
                         </div>
                         <a class="nav-link" href="{{route('TouristAttractionPage')}}">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-database"></i>
+                                <i class="fa-solid fa-folder"></i>
                             </div>
                             แนะนำสถานที่ท่องเที่ยว
                         </a>
                         <a class="nav-link" href="{{route('ManagePersonnel')}}">
                             <div class="sb-nav-link-icon">
-                                <i class="fa-solid fa-database"></i>
+                                <i class="fa-solid fa-folder"></i>
                             </div>
                             บุคลากร
                         </a>
@@ -133,16 +133,14 @@
         </div>
         <div id="layoutSidenav_content">
             <main>
-                <div class="container-fluid px-4">
-                    <div class="mt-4 text-center"></div>
+                <div class="container-fluid px-4 mt-4 mb-4">
                     @yield('content')
-                    <br>
                 </div>
             </main>
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
                     <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; บริษัท GM SKY สงวนสิทธิ์ 2024</div>
+                        <div class="text-muted">Copyright &copy; บริษัท So Smart Solution สงวนสิทธิ์ 2025</div>
                     </div>
                 </div>
             </footer>
