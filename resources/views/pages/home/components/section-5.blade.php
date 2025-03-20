@@ -160,6 +160,7 @@
         .link-section5-effect:hover p {
             color: white;
         }
+
     </style>
 </head>
 
@@ -169,46 +170,49 @@
             ข่าวประชาสัมพันธ์
         </div>
         <div class="row w-100">
-            @for ($i = 0; $i < 6; $i++)
-                @php
-                    $bgSectionClass = $i < 3 ? 'bg-link-red-section5' : 'bg-link-blue-section5';
-                    $bgDateClass = $i < 3 ? 'bg-red-date' : 'bg-blue-date';
-                @endphp
+            @foreach ($pressRelease->take(6) as $index => $item)
+            @php
+            $bgSectionClass = $index < 3 ? 'bg-link-red-section5' : 'bg-link-blue-section5';
+            $bgDateClass = $index < 3 ? 'bg-red-date' : 'bg-blue-date';
+
+            // ตรวจสอบว่ามีค่าหรือไม่
+            $title = isset($item->title_name) ? $item->title_name : 'หัวข้อเรื่อง';
+
+            // ตัดข้อความ title ให้ยาวไม่เกิน 80 ตัวอักษร
+            $maxLength = 80;
+            $trimmedTitle = mb_strlen($title, 'UTF-8') > $maxLength
+                ? mb_substr($title, 0, $maxLength, 'UTF-8') . '...'
+                : $title;
+
+            // ตรวจสอบว่ามีรูปภาพหรือไม่
+            $imagePath = $item->photos->isNotEmpty()
+                ? asset('storage/' . $item->photos->first()->post_photo_file)
+                : asset('pages/home/section-4/Logo.png');
+
+            // ตัดข้อความเนื้อหา
+            $text = isset($item->details) ? $item->details : '';
+            $trimmedText = mb_strlen($text, 'UTF-8') > $maxLength
+                ? mb_substr($text, 0, $maxLength, 'UTF-8') . '...'
+                : $text;
+            @endphp
 
                 <a href="#" class="col-xl-4 col-lg-6 my-3 text-decoration-none">
                     <div class="{{ $bgSectionClass }} d-flex justify-content-start align-items-start">
-                        <img src="{{ asset('pages/home/section-4/Logo.png') }}" alt="logo" class="circle-img bg-white">
+                        <img src="{{ $imagePath }}" alt="logo" class="circle-img bg-white">
                         <div class="lh-1 fs-5 p-2">
-                            <span class="fw-bold text-black">หัวข้อเรื่อง</span><br>
-                            @php
-                                // Mock ข้อมูล
-                                $text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-
-                                // กำหนดจำนวนตัวอักษรสูงสุด
-                                $maxLength = 80;
-
-                                // ตัดข้อความตามจำนวนตัวอักษรที่กำหนด
-                                $trimmedText =
-                                    mb_strlen($text, 'UTF-8') > $maxLength
-                                        ? mb_substr($text, 0, $maxLength, 'UTF-8') . '...'
-                                        : $text;
-                            @endphp
-                            <span class="fs-6 text-white">{{ $trimmedText }}</span>
+                            <span class="fw-bold text-black" style="font-size: 15px;">{{ $trimmedTitle }}</span><br>
+                            <span class="fs-6 text-white" style="font-size: 15px;">{{ $trimmedText }}</span>
                         </div>
                         <div class="{{ $bgDateClass }} text-white py-1 px-4 fs-6 position-absolute">
-                            dd/mm/yy
+                            {{ \Carbon\Carbon::parse($item->date)->format('d/m/Y') }}
                         </div>
                     </div>
                 </a>
-            @endfor
+                @endforeach
         </div>
         <div class="d-flex justify-content-end align-items-center w-100 my-4">
             <img src="{{ asset('pages/home/section-5/fast-forward.png') }}" alt="fast-forward">
-            <a href="#" class="btn btn-light fs-4 fw-bold py-1 px-4 mx-4"
-                style="border-radius: 25px;">ดูทั้งหมด</a>
+            <a href="#" class="btn btn-light fs-4 fw-bold py-1 px-4 mx-4" style="border-radius: 25px;">ดูทั้งหมด</a>
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="fs-3 fw-bold text-white">
@@ -219,48 +223,40 @@
                     <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/1.png') }}" alt="icon" class="d-block mx-auto">
-                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
-                                style="white-space: nowrap; overflow: visible; text-overflow: clip;">คู่มือประชาชน</p>
+                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1" style="white-space: nowrap; overflow: visible; text-overflow: clip;">คู่มือประชาชน</p>
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/2.png') }}" alt="icon" class="d-block mx-auto">
-                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
-                                style="white-space: nowrap; overflow: visible; text-overflow: clip;">
+                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1" style="white-space: nowrap; overflow: visible; text-overflow: clip;">
                                 เบี้ยยังชีพผู้สูงอายุ</p>
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/3.png') }}" alt="icon" class="d-block mx-auto">
-                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
-                                style="white-space: nowrap; overflow: visible; text-overflow: clip;">เบี้ยยังชีพคนพิการ
+                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1" style="white-space: nowrap; overflow: visible; text-overflow: clip;">เบี้ยยังชีพคนพิการ
                             </p>
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/4.png') }}" alt="icon" class="d-block mx-auto">
-                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
-                                style="white-space: nowrap; overflow: visible; text-overflow: clip;">
+                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1" style="white-space: nowrap; overflow: visible; text-overflow: clip;">
                                 รับเรื่องร้องเรียน<br>การทุจริตประพฤติมิชอบ</p>
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
-                            <img src="{{ asset('pages/home/section-5/5.png') }}" alt="icon"
-                                class="d-block mx-auto">
-                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
-                                style="white-space: nowrap; overflow: visible; text-overflow: clip;">กระดานกระทู้</p>
+                            <img src="{{ asset('pages/home/section-5/5.png') }}" alt="icon" class="d-block mx-auto">
+                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1" style="white-space: nowrap; overflow: visible; text-overflow: clip;">กระดานกระทู้</p>
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
-                            <img src="{{ asset('pages/home/section-5/6.png') }}" alt="icon"
-                                class="d-block mx-auto">
-                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
-                                style="white-space: nowrap; overflow: visible; text-overflow: clip;">คู่มือการปฏิบัติงาน
+                            <img src="{{ asset('pages/home/section-5/6.png') }}" alt="icon" class="d-block mx-auto">
+                            <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1" style="white-space: nowrap; overflow: visible; text-overflow: clip;">คู่มือการปฏิบัติงาน
                             </p>
                         </a>
                     </div>
@@ -268,49 +264,40 @@
 
 
 
-                <div class="bg-white d-flex flex-column justify-content-center align-items-center p-3 my-3 my-xl-0"
-                    style="border-radius: 40px;">
+                <div class="bg-white d-flex flex-column justify-content-center align-items-center p-3 my-3 my-xl-0" style="border-radius: 40px;">
                     <!-- หัวข้อ -->
-                    <div class="d-flex justify-content-between align-items-center py-2 px-4 w-100"
-                        style="background: linear-gradient(to bottom, #fb6849, #f38e2e); border-radius: 40px;">
+                    <div class="d-flex justify-content-between align-items-center py-2 px-4 w-100" style="background: linear-gradient(to bottom, #fb6849, #f38e2e); border-radius: 40px;">
                         <div class="fs-4 fw-bold text-white lh-1">
                             แบบสอบถามความคิดเห็น<br>
                             <span class="fs-5">เทศบาลตำบลเกวียนหัก</span>
                         </div>
-                        <img src="{{ asset('pages/home/section-5/voting-box.png') }}" alt="icon" class="ms-2"
-                            style="width: 50px; height: 50px;">
+                        <img src="{{ asset('pages/home/section-5/voting-box.png') }}" alt="icon" class="ms-2" style="width: 50px; height: 50px;">
                     </div>
 
                     <!-- รายการ Radio Button -->
                     <form action="#" method="POST" class="w-100 mt-3 px-4">
                         @csrf
                         <div class="form-check my-2">
-                            <input class="form-check-input" type="radio" id="option1" name="survey"
-                                value="option1">
+                            <input class="form-check-input" type="radio" id="option1" name="survey" value="option1">
                             <label class="form-check-label" for="option1">ตัวเลือกที่ 1</label>
                         </div>
                         <div class="form-check my-2">
-                            <input class="form-check-input" type="radio" id="option2" name="survey"
-                                value="option2">
+                            <input class="form-check-input" type="radio" id="option2" name="survey" value="option2">
                             <label class="form-check-label" for="option2">ตัวเลือกที่ 2</label>
                         </div>
                         <div class="form-check my-2">
-                            <input class="form-check-input" type="radio" id="option3" name="survey"
-                                value="option3">
+                            <input class="form-check-input" type="radio" id="option3" name="survey" value="option3">
                             <label class="form-check-label" for="option3">ตัวเลือกที่ 3</label>
                         </div>
                         <div class="form-check my-2">
-                            <input class="form-check-input" type="radio" id="option4" name="survey"
-                                value="option4">
+                            <input class="form-check-input" type="radio" id="option4" name="survey" value="option4">
                             <label class="form-check-label" for="option4">ตัวเลือกที่ 4</label>
                         </div>
 
                         <!-- ปุ่ม Submit -->
                         <div class="d-flex justify-content-center mt-3">
-                            <button type="submit" class="btn submit-btn text-white px-4 py-2 fs-5"
-                                style="background: linear-gradient(to bottom, #fb6849, #f38e2e); border-radius: 30px; border: none;">
-                                กดโหวต<img src="{{ asset('pages/home/section-3/icon-pointer.png') }}"
-                                    alt="icon-pointer" style="width: 30px;">
+                            <button type="submit" class="btn submit-btn text-white px-4 py-2 fs-5" style="background: linear-gradient(to bottom, #fb6849, #f38e2e); border-radius: 30px; border: none;">
+                                กดโหวต<img src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer" style="width: 30px;">
                             </button>
                         </div>
                     </form>

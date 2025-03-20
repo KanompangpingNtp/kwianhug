@@ -279,11 +279,11 @@
     <script>
         const mockData = @json($mockData); // แปลงข้อมูลจาก PHP เป็น JSON
         let activeButton = null;
-    
+
         function changeContent(type, element) {
             let contentSection = document.getElementById("contentSection");
             contentSection.innerHTML = ""; // เคลียร์ข้อมูลเก่า
-    
+
             mockData[type].forEach(item => {
                 contentSection.innerHTML += `
                     <a href="#" class="link-section6 text-black">
@@ -298,7 +298,7 @@
                     </a>
                 `;
             });
-    
+
             // เปลี่ยนสีให้หัวข้อที่คลิก
             if (activeButton) {
                 activeButton.classList.remove('active'); // ลบคลาส active ออกจากปุ่มก่อนหน้า
