@@ -5,7 +5,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>รายงานผลจัดซื้อจัดจ้าง</h4>
+                <h3 class="text-center">รายงานผลจัดซื้อจัดจ้าง</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">

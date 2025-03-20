@@ -5,7 +5,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>จัดการรูปกลุ่ม <span class="text-primary">{{ $PersonnelRank->personnel_rank_name }}</span></h4>
+                <h3 class="text-center">จัดการรูปกลุ่ม <span class="text-primary">{{ $PersonnelRank->personnel_rank_name }}</span></h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -50,15 +50,15 @@
                 <table class="table table-bordered" id="data_table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>รูปภาพ</th>
-                            <th>action</th>
+                            <th class="text-center">#</th>
+                            <th class="text-center">รูปภาพ</th>
+                            <th class="text-center">action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($PersonnelGroupPhoto as $index => $photo)
                         <tr>
-                            <td>{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $index + 1 }}</td>
                             <td>
                                 <img src="{{ asset('storage/' . $photo->group_photo_file) }}" alt="รูปบุคลากร" width="100">
                             </td>

@@ -5,7 +5,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>แนะนำสถานที่ท่องเที่ยว</h4>
+                <h3 class="text-center">แนะนำสถานที่ท่องเที่ยว</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">

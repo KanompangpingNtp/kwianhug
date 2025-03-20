@@ -5,19 +5,19 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>รางวัลแห่งความภาคภูมิใจ</h4>
+                <h3 class="text-center">รางวัลแห่งความภาคภูมิใจ</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
                 <button type="button" class="btn btn-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    สร้างป้ายประกาศ
+                    สร้าง
                 </button>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" style="margin-top: 5%;">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">สร้างป้ายประกาศ</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">สร้างรางวัลแห่งความภาคภูมิใจ</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <form action="{{ route('AwardsofPrideCreate') }}" method="POST" enctype="multipart/form-data">
@@ -53,22 +53,22 @@
                 <br>
                 <br>
 
-                <table class="table table-striped text-center" id="data_table">
+                <table class="table table-bordered" id="data_table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>ประเภท</th>
-                            <th>ชื่อ</th>
-                            <th>การจัดการ</th>
+                            <th class="text-center">#</th>
+                            <th class="text-center">ประเภท</th>
+                            <th class="text-center">ชื่อ</th>
+                            <th class="text-center">การจัดการ</th>
                         </tr>
                     </thead>
                     <tbody>
                         @forelse ($postDetails as $index => $postDetail)
                         <tr>
-                            <td>{{ $index + 1 }}</td>
-                            <td>{{ $postDetail->postType->type_name ?? 'N/A' }}</td>
+                            <td class="text-center">{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $postDetail->postType->type_name ?? 'N/A' }}</td>
                             <td>{{ $postDetail->topic_name ?? 'N/A' }}</td>
-                            <td>
+                            <td class="text-center">
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#showFile-{{ $postDetail->id }}">
                                     แสดงไฟล์
                                 </button>

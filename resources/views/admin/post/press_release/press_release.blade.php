@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>จัดการข่าวประชาสัมพันธ์</h4>
+                <h3 class="text-center">จัดการข่าวประชาสัมพันธ์</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -100,19 +100,27 @@
                             <td>{{ $postDetail->topic_name ?? 'N/A' }}</td>
                             <td>{{ $postDetail->details ?? 'N/A' }}</td>
                             <td class="text-center">
-                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#FileData-{{ $postDetail->id }}">
-                                    <i class="bi bi-file-image"></i>
-                                </button>
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <div class="mb-1 me-1">
+                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#FileData-{{ $postDetail->id }}">
+                                            <i class="bi bi-file-image"></i>
+                                        </button>
+                                    </div>
 
-                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal-{{ $postDetail->id }}">
-                                    <i class="bi bi-pencil-square"></i>
-                                </button>
+                                    <div class="mb-1 me-1">
+                                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal-{{ $postDetail->id }}">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </button>
+                                    </div>
 
-                                <form action="{{ route('PressReleaseDelete', $postDetail->id) }}" method="POST" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
-                                </form>
+                                    <div class="mb-1 me-1">
+                                        <form action="{{ route('PressReleaseDelete', $postDetail->id) }}" method="POST" style="display:inline;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')"><i class="bi bi-trash"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
                             </td>
                         </tr>
 

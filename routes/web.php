@@ -13,6 +13,7 @@ use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
 use App\Http\Controllers\awards_of_pride\AdminAwardsofPrideController;
 use App\Http\Controllers\personnel\AdminPersonnelController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\home\HomePageController;
 
 use App\Http\Controllers\TestController;
 
@@ -33,6 +34,8 @@ Route::get('/test/result/{id}', [TestController::class, 'test'])->name('test');
 Route::get('/index', function () {
     return view('pages.home.app');
 });
+
+Route::get('/', [HomePageController::class, 'Home'])->name('Home');
 
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
@@ -112,7 +115,7 @@ Route::middleware(['check.auth'])->group(function () {
     Route::delete('/PersonnelGroupPhotoPage/delete{id}', [AdminPersonnelController::class, 'PersonnelGroupPhotoDelete'])->name('PersonnelGroupPhotoDelete');
 });
 
-Route::get('/', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
+Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
 Route::post('/authenticate', [AuthController::class, 'authenticate'])->name('authenticate');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/showRegistrationForm', [AuthController::class, 'showRegistrationForm'])->name('showRegistrationForm');

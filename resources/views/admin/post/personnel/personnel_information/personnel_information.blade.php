@@ -5,19 +5,19 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                <h4>ข้อมูลบุคลากร</h4>
+                <h3 class="text-center">ข้อมูลบุคลากร</h3>
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>หน่วยงาน</th>
-                            <th>ระดับความสำคัญ (Status)</th>
-                            <th>ตำแหน่ง</th>
-                            <th>ชื่อบุคคล</th>
-                            <th>โทรศัพท์</th>
-                            <th>รูปภาพ</th>
+                            <th class="text-center">หน่วยงาน</th>
+                            <th class="text-center">ระดับความสำคัญ (Status)</th>
+                            <th class="text-center">ตำแหน่ง</th>
+                            <th class="text-center">ชื่อบุคคล</th>
+                            <th class="text-center">โทรศัพท์</th>
+                            <th class="text-center">รูปภาพ</th>
                         </tr>
                     </thead>
                     <tbody>

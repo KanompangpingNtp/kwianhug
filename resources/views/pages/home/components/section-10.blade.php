@@ -28,7 +28,7 @@
             border-image: linear-gradient(to top, #fb6849, #f38e2e) 1;
         }
 
-        
+
 
         .bg-blue-section10 {
             background: linear-gradient(to bottom, #009dde, #00b4a4);
@@ -162,7 +162,7 @@
                         </div>
                         <div class="d-flex justify-content-center align-items-center gap-2 fs-6">
                             <a href="#">เว็บมาสเตอร์</a>
-                            <a href="#">สำหรับแอดมิน</a>
+                            <a href="{{route('showLoginForm')}}">สำหรับแอดมิน</a>
 
                         </div>
                     </div>
