@@ -293,7 +293,7 @@
                             </a>
                             <a href="#" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ3.png') }}" alt="icon">
-                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">กองหลัง</p>
+                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">กองคลัง</p>
                             </a>
                             <a href="#" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ4.png') }}" alt="icon">
