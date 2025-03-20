@@ -238,40 +238,43 @@
                     <div class="title-section3 text-center">
                         ป้ายประกาศ
                     </div>
-                    <div id="carouselAnnouncement" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner" style="border-radius: 15px;">
-                            @php
-                                $firstItem = true;
-                            @endphp
-
-                            @forelse ($noticeBoard as $item)
-                                <div class="carousel-item {{ $firstItem ? 'active' : '' }}">
-                                    <img src="{{ $item->photos->isNotEmpty() ? asset('storage/' . $item->photos->first()->post_photo_file) : asset('pages/home/section-1/bg-1.png') }}"
-                                         class="d-block w-100" alt="{{ $item->title_name ?? 'Slide' }}">
-                                </div>
-                                @php $firstItem = false; @endphp
-                            @empty
-                                <div class="carousel-item active">
-                                    <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Default Slide 1">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
-                                </div>
-                            @endforelse
+                    <div class="bg-dark p-2" style="border-radius: 20px;">
+                        <div id="carouselAnnouncement" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner" style="border-radius: 15px;">
+                                @php
+                                    $firstItem = true;
+                                @endphp
+    
+                                @forelse ($noticeBoard as $item)
+                                    <div class="carousel-item {{ $firstItem ? 'active' : '' }}">
+                                        <img src="{{ $item->photos->isNotEmpty() ? asset('storage/' . $item->photos->first()->post_photo_file) : asset('pages/home/section-1/bg-1.png') }}"
+                                             class="d-block w-100" alt="{{ $item->title_name ?? 'Slide' }}">
+                                    </div>
+                                    @php $firstItem = false; @endphp
+                                @empty
+                                    <div class="carousel-item active">
+                                        <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Default Slide 1">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
+                                    </div>
+                                @endforelse
+                            </div>
+    
+                            <!-- ปุ่ม Previous -->
+                            <button class="carousel-control-prev custom-carousel-btn" type="button"
+                                data-bs-target="#carouselAnnouncement" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            </button>
+    
+                            <!-- ปุ่ม Next -->
+                            <button class="carousel-control-next custom-carousel-btn" type="button"
+                                data-bs-target="#carouselAnnouncement" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            </button>
                         </div>
-
-                        <!-- ปุ่ม Previous -->
-                        <button class="carousel-control-prev custom-carousel-btn" type="button"
-                            data-bs-target="#carouselAnnouncement" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-
-                        <!-- ปุ่ม Next -->
-                        <button class="carousel-control-next custom-carousel-btn" type="button"
-                            data-bs-target="#carouselAnnouncement" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
                     </div>
+                    
 
                     <a href="#" class="bg-btn-section3">ดูทั้งหมด <img
                             src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer"
@@ -298,7 +301,7 @@
                             </a>
                             <a href="#" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ3.png') }}" alt="icon">
-                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">กองหลัง</p>
+                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">กองคลัง</p>
                             </a>
                             <a href="#" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ4.png') }}" alt="icon">
