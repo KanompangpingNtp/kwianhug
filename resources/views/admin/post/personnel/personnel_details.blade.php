@@ -72,7 +72,7 @@
             <br>
             <br>
 
-            <table class="table table-bordered text-center" id="data_table">
+            <table class="table table-bordered" id="data_table">
                 <thead>
                     <tr>
                         <th class="text-center">#</th>
@@ -87,7 +87,7 @@
                 <tbody>
                     @forelse ($PersonnelDetail as $key => $detail)
                     <tr>
-                        <td>{{ $key + 1 }}</td>
+                        <td class="text-center">{{ $key + 1 }}</td>
                         <td>{{ $detail->full_name }}</td>
 
                         <style>
@@ -96,17 +96,17 @@
                             }
                         </style>
 
-                        <td>{!! $detail->department ?? '' !!}</td>
-                        <td>{{ $detail->phone }}</td>
-                        <td>{{ $detail->status }}</td>
-                        <td>
+                        <td class="text-center">{!! $detail->department ?? '' !!}</td>
+                        <td class="text-center">{{ $detail->phone }}</td>
+                        <td class="text-center">{{ $detail->status }}</td>
+                        <td class="text-center">
                             @if ($detail->images->isNotEmpty())
                             <img src="{{ asset('storage/' . $detail->images->first()->post_photo_file) }}" alt="รูปภาพ" style="width: 100px; height: auto;">
                             @else
                             <span class="text-muted">ไม่มีรูปภาพ</span>
                             @endif
                         </td>
-                        <td>
+                        <td class="text-center">
                             <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal{{ $detail->id }}">
                                 <i class="bi bi-pencil-square"></i>
                             </button>

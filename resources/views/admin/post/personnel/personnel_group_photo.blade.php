@@ -50,15 +50,15 @@
                 <table class="table table-bordered" id="data_table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>รูปภาพ</th>
-                            <th>action</th>
+                            <th class="text-center">#</th>
+                            <th class="text-center">รูปภาพ</th>
+                            <th class="text-center">action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($PersonnelGroupPhoto as $index => $photo)
                         <tr>
-                            <td>{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $index + 1 }}</td>
                             <td>
                                 <img src="{{ asset('storage/' . $photo->group_photo_file) }}" alt="รูปบุคลากร" width="100">
                             </td>

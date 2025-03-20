@@ -10,14 +10,14 @@
             </div>
             <div class="x_content">
                 <button type="button" class="btn btn-primary btn-sm mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    สร้างป้ายประกาศ
+                    สร้าง
                 </button>
 
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-lg" style="margin-top: 5%;">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">สร้างป้ายประกาศ</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">สร้างรางวัลแห่งความภาคภูมิใจ</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <form action="{{ route('AwardsofPrideCreate') }}" method="POST" enctype="multipart/form-data">

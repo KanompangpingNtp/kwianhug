@@ -51,25 +51,25 @@
                 <br>
                 <br>
 
-                <table class="table table-bordered text-center" id="data_table">
+                <table class="table table-bordered" id="data_table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>ชื่อหน่วยงาน</th>
-                            <th>ระดับความสำคัญ</th>
-                            <th>การจัดการ</th>
+                            <th class="text-center">#</th>
+                            <th class="text-center">ชื่อหน่วยงาน</th>
+                            <th class="text-center">ระดับความสำคัญ</th>
+                            <th class="text-center">การจัดการ</th>
                         </tr>
                     </thead>
                     <tbody>
                         @forelse ($personnelAgencies as $index => $agency)
                         <tr>
-                            <td>{{ $index + 1 }}</td>
+                            <td class="text-center">{{ $index + 1 }}</td>
                             <td> <a href="{{ route('PersonnelRankDetails', $agency->id) }}">
                                     {{ $agency->personnel_agency_name }}
                                 </a>
                             </td>
-                            <td>{{ $agency->status }}</td>
-                            <td>
+                            <td class="text-center">{{ $agency->status }}</td>
+                            <td class="text-center">
                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editModal{{ $agency->id }}">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
