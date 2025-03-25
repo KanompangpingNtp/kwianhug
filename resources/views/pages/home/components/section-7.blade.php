@@ -154,19 +154,15 @@
 </head>
 
 <main class="bg-page7 d-flex ">
-    <div class="container d-flex flex-column justify-content-center align-items-center px-3">
+    {{-- <div class="container d-flex flex-column justify-content-center align-items-center px-3">
         <div class="title-section7 text-center" style="line-height: 0.8;">
             แนะนำสถานที่ท่องเที่ยว<br><span class="fs-4">เทศบาลตำบลเกวียนหัก</span>
         </div>
 
-        <!-- Slide images and name -->
         <div class="slide-container-section7 d-flex flex-column flex-md-row mt-5" id="slideContainer">
-            <!-- Initial 3 images will be loaded here -->
         </div>
 
-        <!-- Navigation buttons -->
         <div class="navigation-buttons-section7 mt-4">
-            {{-- <button id="prevBtn">Prev</button> --}}
             <img src="{{ asset('pages/home/section-7/pre.png') }}" alt="pre" id="prevBtn">
             <div class="p-1" style=" background: linear-gradient(to top, #ff9640, #ff7800); border-radius:15px;">
                 <div id="nameTour" class="bg-white text-nowrap py-1 px-4 fw-bold" style="border-radius: 10px;">
@@ -174,13 +170,117 @@
                 </div>
             </div>
             <img src="{{ asset('pages/home/section-7/next.png') }}" alt="pre" id="nextBtn">
-            {{-- <button id="nextBtn">Next</button> --}}
         </div>
+        <a href="#" class="bg-btn-section7">ดูทั้งหมด </a>
+    </div> --}}
+    <div class="container d-flex flex-column justify-content-center align-items-center px-3">
+        <div class="title-section7 text-center" style="line-height: 0.8;">
+            แนะนำสถานที่ท่องเที่ยว<br><span class="fs-4">เทศบาลตำบลเกวียนหัก</span>
+        </div>
+
+        <!-- Slide images and name -->
+        <div class="slide-container-section7 d-flex flex-column flex-md-row mt-5" id="slideContainer">
+            <!-- Initial images will be loaded here -->
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="navigation-buttons-section7 mt-4">
+            <img src="{{ asset('pages/home/section-7/pre.png') }}" alt="prev" id="prevBtn">
+            <div class="p-1" style="background: linear-gradient(to top, #ff9640, #ff7800); border-radius:15px;">
+                <div id="nameTour" class="bg-white text-nowrap py-1 px-4 fw-bold" style="border-radius: 10px;">
+                    ชื่อสถานที่
+                </div>
+            </div>
+            <img src="{{ asset('pages/home/section-7/next.png') }}" alt="next" id="nextBtn">
+        </div>
+
         <a href="#" class="bg-btn-section7">ดูทั้งหมด </a>
     </div>
 </main>
 
 <script>
+    let currentIndex = 0;
+
+    const tourImages = @json($touristattraction->map(function($tour) {
+        return [
+            'name' => $tour->topic_name,
+            'images' => $tour->photos->where('post_photo_status', 2)->pluck('post_photo_file')->take(3)->map(function ($file) {
+                return asset("storage/" . $file);
+            })->toArray()
+        ];
+    }));
+
+    function updateTour() {
+        const slideContainer = document.getElementById('slideContainer');
+        const nameTour = document.getElementById('nameTour');
+
+        slideContainer.innerHTML = ''; // ล้างรูปเก่าก่อน
+
+        if (tourImages.length > 0) {
+            const tour = tourImages[currentIndex]; // ดึงข้อมูลของ ID ปัจจุบัน
+
+            if (tour.images.length > 0) {
+                // แสดงแค่ 3 รูปแรกที่มี status=2
+                tour.images.slice(0, 3).forEach((image) => {
+                    const slideItem = document.createElement('div');
+                    slideItem.classList.add('bg-orange-section7');
+
+                    const img = document.createElement('img');
+                    img.src = image; // ใช้ path ที่ได้จาก JSON
+                    img.alt = "Tour Image";
+                    slideItem.appendChild(img);
+
+                    slideContainer.appendChild(slideItem);
+                });
+
+                // อัปเดตชื่อของสถานที่
+                nameTour.textContent = tour.name;
+            } else {
+                showNoData();
+            }
+        } else {
+            showNoData();
+        }
+    }
+
+    function showNoData() {
+        const slideContainer = document.getElementById('slideContainer');
+        const nameTour = document.getElementById('nameTour');
+
+        slideContainer.innerHTML = ''; // ล้างข้อมูลเก่า
+
+        const slideItem = document.createElement('div');
+        slideItem.classList.add('bg-orange-section7');
+
+        const img = document.createElement('img');
+        img.src = `{{ asset('pages/home/section-7/default.png') }}`;
+        img.alt = "No Data Image";
+        slideItem.appendChild(img);
+
+        slideContainer.appendChild(slideItem);
+        nameTour.textContent = "ไม่มีข้อมูล";
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', function() {
+        if (currentIndex + 1 < tourImages.length) {
+            currentIndex++;
+            updateTour();
+        }
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', function() {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateTour();
+        }
+    });
+
+    // โหลดข้อมูลเริ่มต้น
+    updateTour();
+</script>
+
+
+{{-- <script>
     let currentIndex = 0;
     const tourImages = @json($tourImages);
     const imagesPerSlide = 3; // Number of images to show at a time
@@ -233,4 +333,4 @@
 
     // Initial load
     updateTour();
-</script>
+</script> --}}

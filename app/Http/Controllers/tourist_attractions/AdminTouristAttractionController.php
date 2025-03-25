@@ -143,14 +143,16 @@ class AdminTouristAttractionController extends Controller
 
         // จัดการอัปโหลดรูปภาพเพิ่มเติม
         if ($request->hasFile('file_post')) {
-            // ลบรูปภาพเก่าที่เป็น post_photo_status = 2
-            $oldPhotos = PostPhoto::where('post_detail_id', $postDetail->id)->where('post_photo_status', '2')->get();
-            foreach ($oldPhotos as $photo) {
-                Storage::disk('public')->delete($photo->post_photo_file);
-                $photo->delete();
+            // ลบเฉพาะรูปที่ถูกทำเครื่องหมายว่าต้องการลบ
+            if ($request->has('delete_photo')) {
+                $photosToDelete = PostPhoto::whereIn('id', $request->delete_photo)->get();
+                foreach ($photosToDelete as $photo) {
+                    Storage::disk('public')->delete($photo->post_photo_file);
+                    $photo->delete();
+                }
             }
 
-            // บันทึกภาพใหม่
+            // อัปโหลดไฟล์ใหม่
             foreach ($request->file('file_post') as $file) {
                 $filename = time() . '_' . $file->getClientOriginalName();
                 $path = $file->storeAs('photo', $filename, 'public');
@@ -162,6 +164,7 @@ class AdminTouristAttractionController extends Controller
                 ]);
             }
         }
+
 
         return redirect()->back()->with('success', 'แก้ไขโพสเรียบร้อย!');
     }

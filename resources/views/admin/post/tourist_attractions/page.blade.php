@@ -141,6 +141,8 @@
                                 @csrf
                                 @method('PUT')
                                 <div class="modal-body">
+                                    <input type="hidden" name="post_type_id" value="{{ $postDetail->post_type_id }}">
+
                                     <div class="mb-3">
                                         <label for="topic_name-{{ $postDetail->id }}" class="form-label">หัวข้อ</label>
                                         <input type="text" class="form-control" id="topic_name" name="topic_name" value="{{ $postDetail->topic_name }}">
