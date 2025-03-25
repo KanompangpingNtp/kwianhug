@@ -158,28 +158,28 @@
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mt-3">
                     <div id="btnEgpAnnouncement" class="bg-btn-egp p-2 py-3 text-center lh-sm text-nowrap active"
-                        onclick="changeContent('egp', {{ json_encode($egp) }})"
-                        data-link="{{ route('egp', ['id' => ':id']) }}">
+                        {{-- onclick="changeContent('egp', {{ json_encode($egp) }})"
+                        data-link="#"> --}}
                         ประกาศ E-GP
                     </div>
                     <div id="btnProcurementAnnouncement" class="bg-btn-egp p-2 text-center lh-sm"
-                        onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
-                        data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}">
+                        {{-- onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
+                        data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}"> --}}
                         ประกาศจัดซื้อจัดจ้าง
                     </div>
                     <div id="btnProcurementResults" class="bg-btn-egp p-2 text-center lh-sm"
-                        onclick="changeContent('ผลประกาศจัดซื้อจัดจ้างประจำปี', {{ json_encode($procurementResults) }})"
-                        data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}">
+                        {{-- onclick="changeContent('ผลประกาศจัดซื้อจัดจ้างประจำปี', {{ json_encode($procurementResults) }})"
+                        data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}"> --}}
                         ผลประกาศจัดซื้อจัดจ้าง
                     </div>
                     <div id="btnAveragePrice" class="bg-btn-egp p-2 text-center lh-sm"
-                        onclick="changeContent('ประกาศราคากลาง', {{ json_encode($average) }})"
-                        data-link="{{ route('RevenueDetail', ['id' => ':id']) }}">
+                        {{-- onclick="changeContent('ประกาศราคากลาง', {{ json_encode($average) }})"
+                        data-link="{{ route('RevenueDetail', ['id' => ':id']) }}"> --}}
                         ประกาศราคากลาง
                     </div>
                     <div id="btnProcurementReport" class="bg-btn-egp p-2 text-center lh-sm"
-                        onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($resultsprocurement) }})"
-                        data-link="{{ route('btnResultsProcurement', ['id' => ':id']) }}">
+                        {{-- onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($resultsprocurement) }})"
+                        data-link="{{ route('btnResultsProcurement', ['id' => ':id']) }}"> --}}
                         รายงานผลจัดซื้อจัดจ้าง
                     </div>
                 </div>
@@ -276,7 +276,7 @@
             </div> --}}
         </div>
     </div>
-    <script>
+    {{-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             // กำหนดข้อมูลเริ่มต้นของปุ่ม
             let initialData = {
@@ -384,5 +384,5 @@
         function truncateText(text, maxLength) {
             return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
         }
-    </script>
+    </script> --}}
 </main>
