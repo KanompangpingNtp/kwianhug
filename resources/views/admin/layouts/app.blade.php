@@ -81,7 +81,7 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <div class="sb-sidenav-menu-heading">MENU</div>
+                        <div class="sb-sidenav-menu-heading">Content</div>
                         <a class="nav-link" href="{{route('NoticeBoardHome')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
@@ -129,11 +129,25 @@
                             </div>
                             แนะนำสถานที่ท่องเที่ยว
                         </a>
+
+                        <div class="sb-sidenav-menu-heading">Menu</div>
                         <a class="nav-link" href="{{route('ManagePersonnel')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>
                             บุคลากร
+                        </a>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            ผลการดำเนินงาน
+                        </a>
+                        <a class="nav-link" href="#">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            เมนูสำหรับประชาชน
                         </a>
                     </div>
                 </div>
