@@ -1,6 +1,6 @@
 <head>
     <style>
-        .bg-page2 {
+        .bg-page3 {
             background-image: url('{{ asset('pages/home/section-3/bg-3.png') }}');
             background-size: cover;
             background-position: center;
@@ -229,7 +229,7 @@
     </style>
 </head>
 
-<main class="d-flex bg-page2">
+<main class="d-flex bg-page3">
     <div class="container d-flex flex-column justify-content-center align-items-start">
 
         <div class="row w-100">
