@@ -1,29 +1,32 @@
-{{-- @php
+@php
     $egp = [
-        ['id' => 1, 'title_name' => 'ประกาศ E-GP ครั้งที่ 1', 'date' => '2024-03-24'],
-        ['id' => 2, 'title_name' => 'ประกาศ E-GP ครั้งที่ 2', 'date' => '2024-03-23'],
+        ['id' => 1, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-24'],
+        ['id' => 2, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-23'],
+        ['id' => 3, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-22'],
+        ['id' => 4, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-21'],
+        ['id' => 5, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-20'],
     ];
 
-    $procurement = [
-        ['id' => 1, 'title_name' => 'ประกาศจัดซื้อจัดจ้าง 1', 'date' => '2024-03-22'],
-        ['id' => 2, 'title_name' => 'ประกาศจัดซื้อจัดจ้าง 2', 'date' => '2024-03-21'],
-    ];
+    // $procurement = [
+    //     ['id' => 1, 'title_name' => 'ประกาศจัดซื้อจัดจ้าง 1', 'date' => '2024-03-22'],
+    //     ['id' => 2, 'title_name' => 'ประกาศจัดซื้อจัดจ้าง 2', 'date' => '2024-03-21'],
+    // ];
 
-    $procurementResults = [
-        ['id' => 1, 'title_name' => 'ผลประกาศจัดซื้อจัดจ้าง 1', 'date' => '2024-03-20'],
-        ['id' => 2, 'title_name' => 'ผลประกาศจัดซื้อจัดจ้าง 2', 'date' => '2024-03-19'],
-    ];
+    // $procurementResults = [
+    //     ['id' => 1, 'title_name' => 'ผลประกาศจัดซื้อจัดจ้าง 1', 'date' => '2024-03-20'],
+    //     ['id' => 2, 'title_name' => 'ผลประกาศจัดซื้อจัดจ้าง 2', 'date' => '2024-03-19'],
+    // ];
 
-    $average = [
-        ['id' => 1, 'title_name' => 'ประกาศราคากลาง 1', 'date' => '2024-03-18'],
-        ['id' => 2, 'title_name' => 'ประกาศราคากลาง 2', 'date' => '2024-03-17'],
-    ];
+    // $average = [
+    //     ['id' => 1, 'title_name' => 'ประกาศราคากลาง 1', 'date' => '2024-03-18'],
+    //     ['id' => 2, 'title_name' => 'ประกาศราคากลาง 2', 'date' => '2024-03-17'],
+    // ];
 
-    $resultsprocurement = [
-        ['id' => 1, 'title_name' => 'รายงานผลจัดซื้อจัดจ้าง 1', 'date' => '2024-03-16'],
-        ['id' => 2, 'title_name' => 'รายงานผลจัดซื้อจัดจ้าง 2', 'date' => '2024-03-15'],
-    ];
-@endphp --}}
+    // $resultsprocurement = [
+    //     ['id' => 1, 'title_name' => 'รายงานผลจัดซื้อจัดจ้าง 1', 'date' => '2024-03-16'],
+    //     ['id' => 2, 'title_name' => 'รายงานผลจัดซื้อจัดจ้าง 2', 'date' => '2024-03-15'],
+    // ];
+@endphp
 
 <style>
     .bg-page6 {
@@ -158,28 +161,32 @@
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mt-3">
                     <div id="btnEgpAnnouncement" class="bg-btn-egp p-2 py-3 text-center lh-sm text-nowrap active"
-                        {{-- onclick="changeContent('egp', {{ json_encode($egp) }})"
-                        data-link="#"> --}}
+                        onclick="changeContent('egp', {{ json_encode($egp) }})"
+                        data-link="#">
                         ประกาศ E-GP
                     </div>
                     <div id="btnProcurementAnnouncement" class="bg-btn-egp p-2 text-center lh-sm"
-                        {{-- onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
-                        data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}"> --}}
+                        onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
+                        data-link="#">
+                        {{-- data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}"> --}}
                         ประกาศจัดซื้อจัดจ้าง
                     </div>
                     <div id="btnProcurementResults" class="bg-btn-egp p-2 text-center lh-sm"
-                        {{-- onclick="changeContent('ผลประกาศจัดซื้อจัดจ้างประจำปี', {{ json_encode($procurementResults) }})"
-                        data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}"> --}}
+                        onclick="changeContent('ผลประกาศจัดซื้อจัดจ้างประจำปี', {{ json_encode($procurementResults) }})"
+                        data-link="#">
+                        {{-- data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}"> --}}
                         ผลประกาศจัดซื้อจัดจ้าง
                     </div>
                     <div id="btnAveragePrice" class="bg-btn-egp p-2 text-center lh-sm"
-                        {{-- onclick="changeContent('ประกาศราคากลาง', {{ json_encode($average) }})"
-                        data-link="{{ route('RevenueDetail', ['id' => ':id']) }}"> --}}
+                        onclick="changeContent('ประกาศราคากลาง', {{ json_encode($averageprice) }})"
+                        data-link="#">
+                        {{-- data-link="{{ route('RevenueDetail', ['id' => ':id']) }}"> --}}
                         ประกาศราคากลาง
                     </div>
                     <div id="btnProcurementReport" class="bg-btn-egp p-2 text-center lh-sm"
-                        {{-- onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($resultsprocurement) }})"
-                        data-link="{{ route('btnResultsProcurement', ['id' => ':id']) }}"> --}}
+                        onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($procurementreport) }})"
+                        data-link="#">
+                        {{-- data-link="{{ route('btnResultsProcurement', ['id' => ':id']) }}"> --}}
                         รายงานผลจัดซื้อจัดจ้าง
                     </div>
                 </div>
@@ -276,15 +283,15 @@
             </div> --}}
         </div>
     </div>
-    {{-- <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function() {
             // กำหนดข้อมูลเริ่มต้นของปุ่ม
             let initialData = {
                 'egp': @json($egp),
                 'จัดซื้อจัดจ้าง': @json($procurement),
                 'ผลประกาศจัดซื้อจัดจ้างประจำปี': @json($procurementResults),
-                'ประกาศราคากลาง': @json($average),
-                'รายงานผลจัดซื้อจัดจ้าง': @json($resultsprocurement)
+                'ประกาศราคากลาง': @json($averageprice),
+                'รายงานผลจัดซื้อจัดจ้าง': @json($procurementreport)
             };
 
             // ตั้งค่าลิงก์เริ่มต้นให้ปุ่มทั้งหมด
@@ -380,9 +387,8 @@
             });
         }
 
-
         function truncateText(text, maxLength) {
             return text.length > maxLength ? text.substring(0, maxLength) + '...' : text;
         }
-    </script> --}}
+    </script>
 </main>
