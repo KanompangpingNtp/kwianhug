@@ -137,13 +137,31 @@
                             </div>
                             บุคลากร
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('PerformanceResultsType')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>
                             ผลการดำเนินงาน
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="{{route('AuthorityType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            อำนาจหน้าที่
+                        </a>
+                        <a class="nav-link" href="{{route('OperationalPlanType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            แผนพัฒนาท้องถิ่น
+                        </a>
+                        <a class="nav-link" href="{{route('LawsAndRegulationsType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            กฏหมายและกฏระเบียบ
+                        </a>
+                        <a class="nav-link" href="{{route('MenuForPublicType')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>
