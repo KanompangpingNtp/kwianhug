@@ -213,12 +213,12 @@
         @media (max-width: 991px) {
             .title-orange {
 
-            width: 20rem;
+                width: 20rem;
 
-        }
+            }
         }
 
-        .hover-effect img{
+        .hover-effect img {
             transition: all 0.3s ease-in-out;
         }
 
@@ -242,43 +242,38 @@
                         <div id="carouselAnnouncement" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner" style="border-radius: 15px;">
                                 @php
-                                    $firstItem = true;
+                                $firstItem = true;
                                 @endphp
-    
+
                                 @forelse ($noticeBoard as $item)
-                                    <div class="carousel-item {{ $firstItem ? 'active' : '' }}">
-                                        <img src="{{ $item->photos->isNotEmpty() ? asset('storage/' . $item->photos->first()->post_photo_file) : asset('pages/home/section-1/bg-1.png') }}"
-                                             class="d-block w-100" alt="{{ $item->title_name ?? 'Slide' }}">
-                                    </div>
-                                    @php $firstItem = false; @endphp
+                                <div class="carousel-item {{ $firstItem ? 'active' : '' }}">
+                                    <img src="{{ $item->photos->isNotEmpty() ? asset('storage/' . $item->photos->first()->post_photo_file) : asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="{{ $item->title_name ?? 'Slide' }}">
+                                </div>
+                                @php $firstItem = false; @endphp
                                 @empty
-                                    <div class="carousel-item active">
-                                        <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Default Slide 1">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
-                                    </div>
+                                <div class="carousel-item active">
+                                    <img src="{{ asset('pages/home/section-1/bg-1.png') }}" class="d-block w-100" alt="Default Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
+                                </div>
                                 @endforelse
                             </div>
-    
+
                             <!-- ปุ่ม Previous -->
-                            <button class="carousel-control-prev custom-carousel-btn" type="button"
-                                data-bs-target="#carouselAnnouncement" data-bs-slide="prev">
+                            <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carouselAnnouncement" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             </button>
-    
+
                             <!-- ปุ่ม Next -->
-                            <button class="carousel-control-next custom-carousel-btn" type="button"
-                                data-bs-target="#carouselAnnouncement" data-bs-slide="next">
+                            <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#carouselAnnouncement" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             </button>
                         </div>
                     </div>
-                    
 
-                    <a href="#" class="bg-btn-section3">ดูทั้งหมด <img
-                            src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer"
-                            style="width: 35px;"></a>
+
+                    <a href="{{route('NoticeBoardShowData')}}" class="bg-btn-section3">ดูทั้งหมด <img src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer" style="width: 35px;"></a>
                 </div>
             </div>
             <div class="col-xl-4 d-flex justify-content-center align-items-center mt-3">
@@ -328,35 +323,32 @@
                         <div id="carouselTrophy" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner" style="border-radius: 15px;">
                                 @php
-                                    $firstItem = true;
+                                $firstItem = true;
                                 @endphp
 
                                 @forelse ($awardsPride as $item)
-                                    <div class="carousel-item {{ $firstItem ? 'active' : '' }}">
-                                        <img src="{{ $item->photos->isNotEmpty() ? asset('storage/' . $item->photos->first()->post_photo_file) : asset('pages/home/section-2/bg-2.png') }}"
-                                             class="d-block w-100" alt="{{ $item->title_name ?? 'Award Slide' }}">
-                                    </div>
-                                    @php $firstItem = false; @endphp
+                                <div class="carousel-item {{ $firstItem ? 'active' : '' }}">
+                                    <img src="{{ $item->photos->isNotEmpty() ? asset('storage/' . $item->photos->first()->post_photo_file) : asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="{{ $item->title_name ?? 'Award Slide' }}">
+                                </div>
+                                @php $firstItem = false; @endphp
                                 @empty
-                                    <!-- แสดงค่าเริ่มต้นเมื่อไม่มีข้อมูล -->
-                                    <div class="carousel-item active">
-                                        <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('pages/home/section-3/bg-3.png') }}" class="d-block w-100" alt="Default Slide 3">
-                                    </div>
+                                <!-- แสดงค่าเริ่มต้นเมื่อไม่มีข้อมูล -->
+                                <div class="carousel-item active">
+                                    <img src="{{ asset('pages/home/section-2/bg-2.png') }}" class="d-block w-100" alt="Default Slide 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{ asset('pages/home/section-3/bg-3.png') }}" class="d-block w-100" alt="Default Slide 3">
+                                </div>
                                 @endforelse
                             </div>
 
                             <!-- ปุ่ม Previous -->
-                            <button class="carousel-control-prev custom-carousel-btn" type="button"
-                                data-bs-target="#carouselTrophy" data-bs-slide="prev">
+                            <button class="carousel-control-prev custom-carousel-btn" type="button" data-bs-target="#carouselTrophy" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             </button>
 
                             <!-- ปุ่ม Next -->
-                            <button class="carousel-control-next custom-carousel-btn" type="button"
-                                data-bs-target="#carouselTrophy" data-bs-slide="next">
+                            <button class="carousel-control-next custom-carousel-btn" type="button" data-bs-target="#carouselTrophy" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             </button>
                         </div>

@@ -15,6 +15,7 @@ use App\Http\Controllers\procurement_results\ProcurementResultsController;
 use App\Http\Controllers\average_price\AveragePriceController;
 use App\Http\Controllers\procurement_report\ProcurementReportController;
 use App\Http\Controllers\notice_board\AdminNoticeBoardController;
+use App\Http\Controllers\notice_board\NoticeBoardController;
 use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
 use App\Http\Controllers\awards_of_pride\AdminAwardsofPrideController;
 use App\Http\Controllers\personnel\AdminPersonnelController;
@@ -31,7 +32,8 @@ use App\Http\Controllers\laws_and_regulations\AdminLawsAndRegulationsController;
 use App\Http\Controllers\laws_and_regulations\LawsAndRegulationsController;
 use App\Http\Controllers\menu_for_public\AdminMenuForPublicController;
 use App\Http\Controllers\menu_for_public\MenuForPublicController;
-
+use App\Http\Controllers\ITA\AdminITAController;
+use App\Http\Controllers\ITA\ITAController;
 use App\Http\Controllers\TestController;
 
 /*
@@ -47,6 +49,39 @@ use App\Http\Controllers\TestController;
 
 // Route::get('/test', [TestController::class, 'testindex'])->name('testindex');
 // Route::get('/test/result/{id}', [TestController::class, 'test'])->name('test');
+
+// Route::get('/index', function () {
+//     return view('pages.home.app');
+// });
+
+Route::get('/', [HomePageController::class, 'Home'])->name('Home');
+
+//บุคลากร
+Route::get('/agency/detail/{id}', [PersonnelAgencyController::class, 'AgencyShow'])->name('AgencyShow');
+Route::get('/agency/personnel_chart/detail', [PersonnelAgencyController::class, 'Personnel_Chart'])->name('Personnel_Chart');
+
+//ผลการดำเนินงาน
+Route::get('/PerformanceResults/show/section/{id}', [PerformanceResultsController::class, 'PerformanceResultsSectionPages'])->name('PerformanceResultsSectionPages');
+Route::get('/PerformanceResults/show/section/topic/{id}', [PerformanceResultsController::class, 'PerfResultsSubTopicPages'])->name('PerfResultsSubTopicPages');
+Route::get('/PerformanceResults/show/section/topic/details/{id}', [PerformanceResultsController::class, 'PerfResultsShowDetailsPages'])->name('PerfResultsShowDetailsPages');
+
+//อำนาจหน้าที่
+Route::get('/Authority/show/detail/{id}', [AuthorityController::class, 'AuthorityShowDetailsPages'])->name('AuthorityShowDetailsPages');
+
+//แผนงานพัฒนาท้องถิ่น
+Route::get('/OperationalPlan/show/section/{id}', [OperationalPlanController::class, 'OperationalPlanSectionPages'])->name('OperationalPlanSectionPages');
+Route::get('/OperationalPlan/show/section/details/{id}', [OperationalPlanController::class, 'OperationalPlanShowDetailsPages'])->name('OperationalPlanShowDetailsPages');
+
+//กฏหมายและกฏระเบียบ
+Route::get('/LawsAndRegulations/show/section/{id}', [LawsAndRegulationsController::class, 'LawsAndRegulationsSectionPages'])->name('LawsAndRegulationsSectionPages');
+Route::get('/LawsAndRegulations/show/section/details/{id}', [LawsAndRegulationsController::class, 'LawsAndRegulationsShowDetailsPages'])->name('LawsAndRegulationsShowDetailsPages');
+
+//เมนูสำหรับประชาชน
+Route::get('/MenuForPublic/show/section/{id}', [MenuForPublicController::class, 'MenuForPublicSectionPages'])->name('MenuForPublicSectionPages');
+Route::get('/MenuForPublic/show/section/details/{id}', [MenuForPublicController::class, 'MenuForPublicShowDetailsPages'])->name('MenuForPublicShowDetailsPages');
+
+//ita
+Route::get('/ita/page', [ITAController::class, 'itaPage'])->name('itaPage');
 
 //กิจกรรม
 Route::get('/Activity/ShowData', [ActivityController::class, 'ActivityShowData'])->name('ActivityShowData');
@@ -75,35 +110,9 @@ Route::get('/AveragePrice/ShowData', [AveragePriceController::class, 'AveragePri
 Route::get('/ProcurementReport/detail/{id}', [ProcurementReportController::class, 'ProcurementReportDetail'])->name('ProcurementReportDetail');
 Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, 'ProcurementReportShowData'])->name('ProcurementReportShowData');
 
-Route::get('/index', function () {
-    return view('pages.home.app');
-});
-
-Route::get('/', [HomePageController::class, 'Home'])->name('Home');
-
-//บุคลากร
-Route::get('/agency/detail/{id}', [PersonnelAgencyController::class, 'AgencyShow'])->name('AgencyShow');
-Route::get('/agency/personnel_chart/detail', [PersonnelAgencyController::class, 'Personnel_Chart'])->name('Personnel_Chart');
-
-//ผลการดำเนินงาน
-Route::get('/PerformanceResults/show/section/{id}', [PerformanceResultsController::class, 'PerformanceResultsSectionPages'])->name('PerformanceResultsSectionPages');
-Route::get('/PerformanceResults/show/section/topic/{id}', [PerformanceResultsController::class, 'PerfResultsSubTopicPages'])->name('PerfResultsSubTopicPages');
-Route::get('/PerformanceResults/show/section/topic/details/{id}', [PerformanceResultsController::class, 'PerfResultsShowDetailsPages'])->name('PerfResultsShowDetailsPages');
-
-//อำนาจหน้าที่
-Route::get('/Authority/show/detail/{id}', [AuthorityController::class, 'AuthorityShowDetailsPages'])->name('AuthorityShowDetailsPages');
-
-//แผนงานพัฒนาท้องถิ่น
-Route::get('/OperationalPlan/show/section/{id}', [OperationalPlanController::class, 'OperationalPlanSectionPages'])->name('OperationalPlanSectionPages');
-Route::get('/OperationalPlan/show/section/details/{id}', [OperationalPlanController::class, 'OperationalPlanShowDetailsPages'])->name('OperationalPlanShowDetailsPages');
-
-//กฏหมายและกฏระเบียบ
-Route::get('/LawsAndRegulations/show/section/{id}', [LawsAndRegulationsController::class, 'LawsAndRegulationsSectionPages'])->name('LawsAndRegulationsSectionPages');
-Route::get('/LawsAndRegulations/show/section/details/{id}', [LawsAndRegulationsController::class, 'LawsAndRegulationsShowDetailsPages'])->name('LawsAndRegulationsShowDetailsPages');
-
-//เมนูสำหรับประชาชน
-Route::get('/MenuForPublic/show/section/{id}', [MenuForPublicController::class, 'MenuForPublicSectionPages'])->name('MenuForPublicSectionPages');
-Route::get('/MenuForPublic/show/section/details/{id}', [MenuForPublicController::class, 'MenuForPublicShowDetailsPages'])->name('MenuForPublicShowDetailsPages');
+//ป้ายประกาศ
+Route::get('/NoticeBoard/ShowData', [NoticeBoardController::class, 'NoticeBoardShowData'])->name('NoticeBoardShowData');
+Route::get('/NoticeBoard/ShowDetails/{id}', [NoticeBoardController::class, 'NoticeBoardShowDetails'])->name('NoticeBoardShowDetails');
 
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
@@ -255,6 +264,18 @@ Route::middleware(['check.auth'])->group(function () {
     Route::get('/Admin/MenuForPublic/show/section/detail/{id}', [AdminMenuForPublicController::class, 'MenuForPublicShowDetails'])->name('MenuForPublicShowDetails');
     Route::post('/Admin/MenuForPublic/show/section/detail/create/{id}', [AdminMenuForPublicController::class, 'MenuForPublicDetailCreate'])->name('MenuForPublicDetailCreate');
     Route::delete('/Admin/MenuForPublic/show/section/detail/delete/{id}', [AdminMenuForPublicController::class, 'MenuForPublicDetailDelete'])->name('MenuForPublicDetailDelete');
+
+    //ITA
+    Route::get('/Admin/ITA/type/page', [AdminITAController::class, 'AdminITAType'])->name('AdminITAType');
+    Route::post('/Admin/ITA/type/create', [AdminITAController::class, 'ITATypeCreate'])->name('ITATypeCreate');
+    Route::put('/Admin/ITA/type/update/{id}', [AdminITAController::class, 'ITATypeUpdate'])->name('ITATypeUpdate');
+    Route::delete('/Admin/ITA/type/delete/{id}', [AdminITAController::class, 'ITATypeDelete'])->name('ITATypeDelete');
+
+    Route::get('/Admin/ITA/type/detail/page/{id}', [AdminITAController::class, 'AdminITA'])->name('AdminITA');
+    Route::post('/Admin/ITA/create/{id}', [AdminITAController::class, 'ITACreate'])->name('ITACreate');
+    Route::put('/Admin/ITA/update/{id}', [AdminITAController::class, 'ITAUpdate'])->name('ITAUpdate');
+    Route::delete('/Admin/ITA/delete/{id}', [AdminITAController::class, 'ITADelete'])->name('ITADelete');
+    Route::delete('iTALink/{id}', [AdminITAController::class, 'destroy'])->name('ITAlink.destroy');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

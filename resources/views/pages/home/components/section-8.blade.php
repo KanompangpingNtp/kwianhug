@@ -150,19 +150,19 @@
                 <div class="bg-orange-link-section8 p-1 mt-4">
                     <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3"
                         style="border-radius: 10px;">
-                        <a href="#" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
                             หนังสือราชการของสถ.
                         </a>
-                        <a href="#" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/servlet/LawServlet?regType=1" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
                             กฏหมาย ระเบียบ และมติ ก.กลาง
                         </a>
-                        <a href="#" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
                             บทความที่น่าสนใจ
                         </a>
-                        <a href="#" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/visit/it_royal.jsp" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
                             พรบ.และประกาศเกี่ยวกับ
                         </a>

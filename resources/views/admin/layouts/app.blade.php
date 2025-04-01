@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="author" content="" />
     <title>@yield('title') | Dashboard </title>
     <link href="{{asset('dashboard/css/styles.css')}}" rel="stylesheet" />
@@ -129,6 +130,13 @@
                             </div>
                             แนะนำสถานที่ท่องเที่ยว
                         </a>
+                        <a class="nav-link" href="{{route('AdminITAType')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            การประเมินคุณธรรม (ITA)
+                        </a>
+
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
                         <a class="nav-link" href="{{route('ManagePersonnel')}}">
                             <div class="sb-nav-link-icon">

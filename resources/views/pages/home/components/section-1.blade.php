@@ -223,7 +223,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{route('itaPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo4.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">การประเมินคุณธรรม<br>และความโปร่งใส </span>

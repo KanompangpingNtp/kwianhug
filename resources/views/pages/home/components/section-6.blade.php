@@ -163,7 +163,7 @@
                     <div id="btnEgpAnnouncement" class="bg-btn-egp p-2 py-3 text-center lh-sm text-nowrap active"
                         onclick="changeContent('egp', {{ json_encode($egp) }})"
                         data-link="#">
-                        EGP
+                        ประกาศ E-GP
                     </div>
                     <div id="btnProcurementAnnouncement" class="bg-btn-egp p-2 text-center lh-sm"
                         onclick="changeContent('ประกาศจัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
