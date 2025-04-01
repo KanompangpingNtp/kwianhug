@@ -98,7 +98,7 @@
                             <div style="flex: 0 0 100px; height: 100px; overflow: hidden; border-radius: 10px;">
                                 <img src="{{ $post->photos->isNotEmpty() && $post->photos->first()->post_photo_file
                                 ? asset('storage/' . $post->photos->first()->post_photo_file)
-                                : asset('pages/home/section-5/LOGOบางพลวง.png') }}"
+                                : asset('navbar/logo.png') }}"
                          alt="Image {{ $index + 1 }}"
                          style="width: 100%; height: 100%; object-fit: cover;">
 
