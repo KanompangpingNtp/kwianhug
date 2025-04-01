@@ -196,7 +196,7 @@
                 : $text;
             @endphp
 
-                <a href="#" class="col-xl-4 col-lg-6 my-3 text-decoration-none">
+                <a href="{{route('PressReleaseShowDetails',$item->id )}}" class="col-xl-4 col-lg-6 my-3 text-decoration-none">
                     <div class="{{ $bgSectionClass }} d-flex justify-content-start align-items-start">
                         <img src="{{ $imagePath }}" alt="logo" class="circle-img bg-white">
                         <div class="lh-1 fs-5 p-2">

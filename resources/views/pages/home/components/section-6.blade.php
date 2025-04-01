@@ -163,30 +163,26 @@
                     <div id="btnEgpAnnouncement" class="bg-btn-egp p-2 py-3 text-center lh-sm text-nowrap active"
                         onclick="changeContent('egp', {{ json_encode($egp) }})"
                         data-link="#">
-                        ประกาศ E-GP
+                        EGP
                     </div>
                     <div id="btnProcurementAnnouncement" class="bg-btn-egp p-2 text-center lh-sm"
-                        onclick="changeContent('จัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
-                        data-link="#">
-                        {{-- data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}"> --}}
+                        onclick="changeContent('ประกาศจัดซื้อจัดจ้าง', {{ json_encode($procurement) }})"
+                        data-link="{{ route('ProcurementDetail', ['id' => ':id']) }}">
                         ประกาศจัดซื้อจัดจ้าง
                     </div>
                     <div id="btnProcurementResults" class="bg-btn-egp p-2 text-center lh-sm"
-                        onclick="changeContent('ผลประกาศจัดซื้อจัดจ้างประจำปี', {{ json_encode($procurementResults) }})"
-                        data-link="#">
-                        {{-- data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}"> --}}
+                        onclick="changeContent('ผลประกาศจัดซื้อจัดจ้าง', {{ json_encode($procurementResults) }})"
+                        data-link="{{ route('ProcurementResultsDetail', ['id' => ':id']) }}">
                         ผลประกาศจัดซื้อจัดจ้าง
                     </div>
                     <div id="btnAveragePrice" class="bg-btn-egp p-2 text-center lh-sm"
                         onclick="changeContent('ประกาศราคากลาง', {{ json_encode($averageprice) }})"
-                        data-link="#">
-                        {{-- data-link="{{ route('RevenueDetail', ['id' => ':id']) }}"> --}}
+                        data-link="{{ route('AveragePriceDetail', ['id' => ':id']) }}">
                         ประกาศราคากลาง
                     </div>
                     <div id="btnProcurementReport" class="bg-btn-egp p-2 text-center lh-sm"
                         onclick="changeContent('รายงานผลจัดซื้อจัดจ้าง', {{ json_encode($procurementreport) }})"
-                        data-link="#">
-                        {{-- data-link="{{ route('btnResultsProcurement', ['id' => ':id']) }}"> --}}
+                        data-link="{{ route('ProcurementReportDetail', ['id' => ':id']) }}">
                         รายงานผลจัดซื้อจัดจ้าง
                     </div>
                 </div>
@@ -196,7 +192,7 @@
                         id="contentArea">
 
                     </div>
-                    <a href="#" class="text-center fw-bold fs-5 btn btn-light w-100"
+                    <a href="{{route('TreasuryAnnouncementData')}}" class="text-center fw-bold fs-5 btn btn-light w-100"
                         style="border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px">
                         ดูทั้งหมด
                     </a>
