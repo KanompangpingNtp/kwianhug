@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // ตรวจสอบว่าตาราง 'post_types' มีอยู่แล้วหรือไม่
-        if (!Schema::hasTable('post_types')) {
-            Schema::create('post_types', function (Blueprint $table) {
-                $table->id();
-                $table->string('type_name');
-                $table->timestamps();
-            });
-        }
+        Schema::create('post_types', function (Blueprint $table) {
+            $table->id();
+            $table->string('type_name');
+            $table->timestamps();
+        });
     }
-
 
     /**
      * Reverse the migrations.
