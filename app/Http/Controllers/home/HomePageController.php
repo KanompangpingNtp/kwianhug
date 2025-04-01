@@ -5,11 +5,38 @@ namespace App\Http\Controllers\home;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\PostDetail;
+use App\Models\OperationalPlanType;
+use App\Models\LawsRegsType;
+use App\Models\AuthorityType;
+use App\Models\PersonnelAgency;
+use App\Models\PublicMenusType;
+use App\Models\PerfResultsType;
 
 class HomePageController extends Controller
 {
     public function Home()
     {
+        //เมนูผลการดำเนินงานเมนู
+        $PerfResultsMenu = PerfResultsType::all();
+
+        //เมนูอำนาจหน้าที่
+        $AuthorityMenu = AuthorityType::all();
+
+        //เมนูแผนงานพัฒนาท้องถิ่น
+        $OperationalPlanMenu = OperationalPlanType::all();
+
+        //เมนูกฎหมายและกฎระเบียบ
+        $LawsRegsMenu = LawsRegsType::all();
+
+        //เมนูสำหรับประชาชน
+        $PublicMenus = PublicMenusType::all();
+
+        //เมนูบุคลากร
+        $personnelAgencies = PersonnelAgency::with('ranks')
+            ->whereIn('status', [1, 2, 3, 4, 5])
+            ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+            ->get();
+
         //ข่าวประชาสัมพันธ์
         $pressRelease = PostDetail::with('postType', 'videos', 'photos', 'pdfs')
             ->whereHas('postType', function ($query) {
@@ -83,6 +110,12 @@ class HomePageController extends Controller
             ->get();
 
         return view('pages.home.app', compact(
+            'PerfResultsMenu',
+            'AuthorityMenu',
+            'OperationalPlanMenu',
+            'LawsRegsMenu',
+            'PublicMenus',
+            'personnelAgencies',
             'pressRelease',
             'activity',
             'procurement',

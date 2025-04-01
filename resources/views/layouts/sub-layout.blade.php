@@ -306,6 +306,7 @@
             background: none;
             border: none;
         }
+
     </style>
 </head>
 
@@ -314,11 +315,9 @@
     <!-- Content Section -->
     <header class="bg-nav d-flex">
         <div class="container d-flex flex-column justify-content-center align-items-center">
-            <div
-                class="container d-flex flex-column flex-xxl-row justify-content-center justify-content-md-between align-items-center">
+            <div class="container d-flex flex-column flex-xxl-row justify-content-center justify-content-md-between align-items-center">
                 <div class="d-flex justify-content-start align-items-center">
-                    <img src="{{ asset('navbar/logo.png') }}" alt="logo" class="logo d-none d-md-block"
-                        style="margin-right:-35px; z-index: 3;">
+                    <img src="{{ asset('navbar/logo.png') }}" alt="logo" class="logo d-none d-md-block" style="margin-right:-35px; z-index: 3;">
                     <div class="text-title-nav lh-1 text-center text-md-start py-2 px-5">
                         <span class="me-1 maintitle-text">เทศบาลตำบลเกวียนหัก <br> อำเภอขลุง จังหวัดจันทบุรี
                             จังหวัดฉะเชิงเทรา</span><br>
@@ -337,12 +336,11 @@
                                     </div>
 
                                 </div>
-                                <a class="button-blue" href="#">
+                                <a class="button-blue" href="{{route('Home')}}">
                                     หน้าหลัก</a>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center gap-1 button-img">
-                                <img src="{{ asset('navbar/disability.png') }}" alt="btn-disability" width="40"
-                                    height="40">
+                                <img src="{{ asset('navbar/disability.png') }}" alt="btn-disability" width="40" height="40">
                                 <a class="button-blue" href="#"> เข้าสู่ระบบ</a>
                             </div>
 
@@ -360,36 +358,26 @@
                                     new google.translate.TranslateElement({
                                         pageLanguage: 'en', // ภาษาเริ่มต้นของเว็บไซต์
                                         includedLanguages: 'en,th,id,ms,vi,lo,my,kh,ph,sg', // ภาษาในอาเซียน
-                                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                                        autoDisplay: false // ปิดการแสดงผลอัตโนมัติ
+                                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                        , autoDisplay: false // ปิดการแสดงผลอัตโนมัติ
                                     }, 'google_translate_element');
                                 }
+
                             </script>
                             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
                             </script>
 
 
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/thailand.png') }}"
-                                    alt="Thailand" width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Brunei.png') }}"
-                                    alt="Brunei" width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Myanmar.png') }}"
-                                    alt="Myanmar" width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Laos.png') }}"
-                                    alt="Laos" width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Indonesia.png') }}"
-                                    alt="Indonesia" width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Malaysia.png') }}"
-                                    alt="Malaysia" width="23"></a>
-                            <a href="#" class="flag-link"><img
-                                    src="{{ asset('navbar/country/Philippines.png') }}" alt="Philippines"
-                                    width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Cambodia.png') }}"
-                                    alt="Cambodia" width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Singapore.png') }}"
-                                    alt="Singapore" width="23"></a>
-                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Vietnam.png') }}"
-                                    alt="Vietnam" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/thailand.png') }}" alt="Thailand" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Brunei.png') }}" alt="Brunei" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Myanmar.png') }}" alt="Myanmar" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Laos.png') }}" alt="Laos" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Indonesia.png') }}" alt="Indonesia" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Malaysia.png') }}" alt="Malaysia" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Philippines.png') }}" alt="Philippines" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Cambodia.png') }}" alt="Cambodia" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Singapore.png') }}" alt="Singapore" width="23"></a>
+                            <a href="#" class="flag-link"><img src="{{ asset('navbar/country/Vietnam.png') }}" alt="Vietnam" width="23"></a>
                         </div>
                     </div>
                 </div>
@@ -398,9 +386,7 @@
                 <nav class="navbar navbar-expand-lg pb-2 pt-3">
                     <div class="container">
                         <!-- ปุ่ม Toggle สำหรับหน้าจอเล็ก -->
-                        <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler ms-auto border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <!-- เมนูทั้งหมด -->
@@ -408,21 +394,15 @@
                             <ul class="navbar-nav w-100 d-flex flex-wrap justify-content-evenly fw-bold">
                                 <!-- 0. หน้าแรก -->
                                 <li class="nav-item dropdown d-none d-xl-block">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center "
-                                        href="#" id="basicInfoDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon1.png') }}" alt="house"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center " href="{{route('Home')}}" id="basicInfoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon1.png') }}" alt="house" class="navbar-icon">
                                         <div class="navbar-text ">หน้าแรก</div>
                                     </a>
                                 </li>
                                 <!-- 1. ข้อมูลพื้นฐาน -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center "
-                                        href="#" id="basicInfoDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon2.png') }}" alt="house"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center " href="#" id="basicInfoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon2.png') }}" alt="house" class="navbar-icon">
                                         <div class="navbar-text ">ข้อมูลพื้นฐาน</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="basicInfoDropdown">
@@ -438,124 +418,105 @@
 
                                 <!-- 2. บุคลากร -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
-                                        href="#" id="personnelDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon3.png') }}" alt="teamwork"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="personnelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon3.png') }}" alt="teamwork" class="navbar-icon">
                                         <div class="navbar-text">บุคลากร</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="personnelDropdown">
                                         <li><a class="dropdown-item" href="#">โครงสร้างองค์กร</a>
                                         </li>
-                                        {{-- @foreach ($personnelAgencies as $agency)
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('AgencyShow', ['id' => $agency->id]) }}">
-                                            {{ $agency->personnel_agency_name }}
-                                        </a>
-                                    </li>
-                                    @endforeach --}}
+                                        @foreach ($personnelAgencies as $agency)
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('AgencyShow', ['id' => $agency->id]) }}">
+                                                {{ $agency->personnel_agency_name }}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 
                                 <!-- 3. ผลการดำเนินงาน -->
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
-                                        href="#" id="performanceDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon4.png') }}" alt="online survey"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="performanceDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon4.png') }}" alt="online survey" class="navbar-icon">
                                         <div class="navbar-text">ผลการดำเนินงาน</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="performanceDropdown">
-                                        {{-- @foreach ($PerfResultsMenu as $detail)
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('PerformanceResultsSectionPages', ['id' => $detail->id]) }}">
-                                            {{ $detail->type_name }}
-                                        </a>
-                                    </li>
-                                    @endforeach --}}
+                                        @foreach ($PerfResultsMenu as $detail)
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('PerformanceResultsSectionPages', ['id' => $detail->id]) }}">
+                                                {{ $detail->type_name }}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
-                                        href="#" id="authorityDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon5.png') }}" alt="อำนาจหน้าที่"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="authorityDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon5.png') }}" alt="อำนาจหน้าที่" class="navbar-icon">
                                         <div class="navbar-text">อำนาจหน้าที่</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="authorityDropdown">
-                                        {{-- @foreach ($AuthorityDetails as $detail)
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('AuthorityShowDetails', ['id' => $detail->id]) }}">
-                                            {{ $detail->list_details_name }}
-                                        </a>
-                                    </li>
-                                    @endforeach --}}
+                                        @foreach ($AuthorityMenu as $detail)
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('AuthorityShowDetailsPages', ['id' => $detail->id]) }}">
+                                                {{ $detail->type_name }}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
-                                        href="#" id="developmentPlanDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon6.png') }}" alt="แผนพัฒนาท้องถิ่น"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="developmentPlanDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon6.png') }}" alt="แผนพัฒนาท้องถิ่น" class="navbar-icon">
                                         <div class="navbar-text">แผนพัฒนาท้องถิ่น</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="developmentPlanDropdown">
-                                        {{-- @foreach ($OperationalPlanMenu as $detail)
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('OperationalPlanSectionPages', ['id' => $detail->id]) }}">
-                                            {{ $detail->type_name }}
-                                        </a>
-                                    </li>
-                                    @endforeach --}}
+                                        @foreach ($OperationalPlanMenu as $detail)
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('OperationalPlanSectionPages', ['id' => $detail->id]) }}">
+                                                {{ $detail->type_name }}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
-                                        href="#" id="lawDropdown" role="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon7.png') }}" alt="กฏหมายและกฏระเบียบ"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="lawDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon7.png') }}" alt="กฏหมายและกฏระเบียบ" class="navbar-icon">
                                         <div class="navbar-text">กฏหมายและกฏระเบียบ</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="lawDropdown">
-                                        {{-- @foreach ($LawsRegsMenu as $detail)
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('LawsAndRegulationsSectionPages', ['id' => $detail->id]) }}">
-                                            {{ $detail->type_name }}
-                                        </a>
-                                    </li>
-                                    @endforeach --}}
+                                        @foreach ($LawsRegsMenu as $detail)
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('LawsAndRegulationsSectionPages', ['id' => $detail->id]) }}">
+                                                {{ $detail->type_name }}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center"
-                                        href="#" id="citizenMenuDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img src="{{ asset('navbar/icon-menu/icon8.png') }}" alt="เมนูสำหรับประชาชน"
-                                            class="navbar-icon">
+                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center" href="#" id="citizenMenuDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('navbar/icon-menu/icon8.png') }}" alt="เมนูสำหรับประชาชน" class="navbar-icon">
                                         <div class="navbar-text">เมนูสำหรับประชาชน</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="citizenMenuDropdown">
                                         <li><a class="dropdown-item" href="#">รับเรื่องราวร้องทุกข์ </a></li>
-                                        <li><a class="dropdown-item"
-                                                href="#">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
+                                        <li><a class="dropdown-item" href="#">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
                                         </li>
                                         <li><a class="dropdown-item" href="#">แบบสอบถามความพึงพอใจ </a></li>
-                                        {{-- @foreach ($PublicMenus as $detail)
-                                    <li>
-                                        <a class="dropdown-item" href="{{ route('MenuForPublicSectionPages', ['id' => $detail->id]) }}">
-                                            {{ $detail->type_name }}
-                                        </a>
-                                    </li>
-                                    @endforeach --}}
+                                        @foreach ($PublicMenus as $detail)
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('MenuForPublicSectionPages', ['id' => $detail->id]) }}">
+                                                {{ $detail->type_name }}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </li>
 
@@ -568,7 +529,7 @@
 
     </header>
 
-        @include('layouts.components.sub-header.sub-header')
+    @include('layouts.components.sub-header.sub-header')
 
 
     @yield('content')

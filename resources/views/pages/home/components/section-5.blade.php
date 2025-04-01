@@ -212,7 +212,7 @@
         </div>
         <div class="d-flex justify-content-end align-items-center w-100 my-4">
             <img src="{{ asset('pages/home/section-5/fast-forward.png') }}" alt="fast-forward">
-            <a href="#" class="btn btn-light fs-4 fw-bold py-1 px-4 mx-4" style="border-radius: 25px;">ดูทั้งหมด</a>
+            <a href="{{route('PressReleaseShowData')}}" class="btn btn-light fs-4 fw-bold py-1 px-4 mx-4" style="border-radius: 25px;">ดูทั้งหมด</a>
         </div>
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="fs-3 fw-bold text-white">

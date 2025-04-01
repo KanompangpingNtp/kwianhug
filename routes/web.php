@@ -8,10 +8,17 @@ use App\Http\Controllers\procurement\AdminProcurementController;
 use App\Http\Controllers\procurement_results\AdminProcurementResultsController;
 use App\Http\Controllers\average_price\AdminAveragePriceController;
 use App\Http\Controllers\procurement_report\AdminProcurementReportController;
+use App\Http\Controllers\activity\ActivityController;
+use App\Http\Controllers\press_release\PressReleaseController;
+use App\Http\Controllers\procurement\ProcurementController;
+use App\Http\Controllers\procurement_results\ProcurementResultsController;
+use App\Http\Controllers\average_price\AveragePriceController;
+use App\Http\Controllers\procurement_report\ProcurementReportController;
 use App\Http\Controllers\notice_board\AdminNoticeBoardController;
 use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
 use App\Http\Controllers\awards_of_pride\AdminAwardsofPrideController;
 use App\Http\Controllers\personnel\AdminPersonnelController;
+use App\Http\Controllers\personnel\PersonnelAgencyController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\home\HomePageController;
 use App\Http\Controllers\performance_results\AdminPerformanceResultsController;
@@ -38,14 +45,65 @@ use App\Http\Controllers\TestController;
 |
 */
 
-Route::get('/test', [TestController::class, 'testindex'])->name('testindex');
-Route::get('/test/result/{id}', [TestController::class, 'test'])->name('test');
+// Route::get('/test', [TestController::class, 'testindex'])->name('testindex');
+// Route::get('/test/result/{id}', [TestController::class, 'test'])->name('test');
+
+//กิจกรรม
+Route::get('/Activity/ShowData', [ActivityController::class, 'ActivityShowData'])->name('ActivityShowData');
+Route::get('/Activity/ShowDetails/{id}', [ActivityController::class, 'ActivityShowDetails'])->name('ActivityShowDetails');
+
+//ประชาสัมพันธ์
+Route::get('/PressRelease/ShowData', [PressReleaseController::class, 'PressReleaseShowData'])->name('PressReleaseShowData');
+Route::get('/PressRelease/ShowDetails/{id}', [PressReleaseController::class, 'PressReleaseShowDetails'])->name('PressReleaseShowDetails');
+
+//ประกาศของคลัง
+Route::get('/TreasuryAnnouncement/ShowData', [HomePageController::class, 'TreasuryAnnouncementData'])->name('TreasuryAnnouncementData');
+
+//ประกาศจัดซื้อจัดจ้าง
+Route::get('/procurement/detail/{id}', [ProcurementController::class, 'ProcurementDetail'])->name('ProcurementDetail');
+Route::get('/procurement/ShowData', [ProcurementController::class, 'ProcurementShowData'])->name('ProcurementShowData');
+
+//ผลประกาศจัดซื้อจัดจ้าง
+Route::get('/procurement-results/detail/{id}', [ProcurementResultsController::class, 'ProcurementResultsDetail'])->name('ProcurementResultsDetail');
+Route::get('/procurement-results/ShowData', [ProcurementResultsController::class, 'ProcurementResultsShowData'])->name('ProcurementResultsShowData');
+
+//ประกาศราคากลาง
+Route::get('/AveragePrice/detail/{id}', [AveragePriceController::class, 'AveragePriceDetail'])->name('AveragePriceDetail');
+Route::get('/AveragePrice/ShowData', [AveragePriceController::class, 'AveragePriceShowData'])->name('AveragePriceShowData');
+
+//รายงานผลจัดซื้อจัดจ้าง
+Route::get('/ProcurementReport/detail/{id}', [ProcurementReportController::class, 'ProcurementReportDetail'])->name('ProcurementReportDetail');
+Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, 'ProcurementReportShowData'])->name('ProcurementReportShowData');
 
 Route::get('/index', function () {
     return view('pages.home.app');
 });
 
 Route::get('/', [HomePageController::class, 'Home'])->name('Home');
+
+//บุคลากร
+Route::get('/agency/detail/{id}', [PersonnelAgencyController::class, 'AgencyShow'])->name('AgencyShow');
+Route::get('/agency/personnel_chart/detail', [PersonnelAgencyController::class, 'Personnel_Chart'])->name('Personnel_Chart');
+
+//ผลการดำเนินงาน
+Route::get('/PerformanceResults/show/section/{id}', [PerformanceResultsController::class, 'PerformanceResultsSectionPages'])->name('PerformanceResultsSectionPages');
+Route::get('/PerformanceResults/show/section/topic/{id}', [PerformanceResultsController::class, 'PerfResultsSubTopicPages'])->name('PerfResultsSubTopicPages');
+Route::get('/PerformanceResults/show/section/topic/details/{id}', [PerformanceResultsController::class, 'PerfResultsShowDetailsPages'])->name('PerfResultsShowDetailsPages');
+
+//อำนาจหน้าที่
+Route::get('/Authority/show/detail/{id}', [AuthorityController::class, 'AuthorityShowDetailsPages'])->name('AuthorityShowDetailsPages');
+
+//แผนงานพัฒนาท้องถิ่น
+Route::get('/OperationalPlan/show/section/{id}', [OperationalPlanController::class, 'OperationalPlanSectionPages'])->name('OperationalPlanSectionPages');
+Route::get('/OperationalPlan/show/section/details/{id}', [OperationalPlanController::class, 'OperationalPlanShowDetailsPages'])->name('OperationalPlanShowDetailsPages');
+
+//กฏหมายและกฏระเบียบ
+Route::get('/LawsAndRegulations/show/section/{id}', [LawsAndRegulationsController::class, 'LawsAndRegulationsSectionPages'])->name('LawsAndRegulationsSectionPages');
+Route::get('/LawsAndRegulations/show/section/details/{id}', [LawsAndRegulationsController::class, 'LawsAndRegulationsShowDetailsPages'])->name('LawsAndRegulationsShowDetailsPages');
+
+//เมนูสำหรับประชาชน
+Route::get('/MenuForPublic/show/section/{id}', [MenuForPublicController::class, 'MenuForPublicSectionPages'])->name('MenuForPublicSectionPages');
+Route::get('/MenuForPublic/show/section/details/{id}', [MenuForPublicController::class, 'MenuForPublicShowDetailsPages'])->name('MenuForPublicShowDetailsPages');
 
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');

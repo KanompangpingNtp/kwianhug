@@ -178,7 +178,7 @@
                     @endforeach
                 </div>
 
-                <a href="#" class="bg-btn-section4">ดูกิจกรรมทั้งหมด <img src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer" style="width: 35px;"></a>
+                <a href="{{route('ActivityShowData')}}" class="bg-btn-section4">ดูกิจกรรมทั้งหมด <img src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer" style="width: 35px;"></a>
                 <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center mt-5 gap-5">
                     <div class="bg-e-libraly p-3 d-flex flex-column justify-content-start align-items-center">
                         <div class="d-flex justify-content-between align-items-center gap-2">
