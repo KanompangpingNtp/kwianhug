@@ -127,4 +127,73 @@ class TemporaryController extends Controller
             'LawsRegsMenu',
         ));
     }
+
+    public function child_development_pages()
+    {
+        $personnelAgencies = PersonnelAgency::with('ranks')
+        ->whereIn('status', [1, 2, 3, 4, 5])
+        ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+        ->get();
+
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
+
+        return view('users.pages.e-service.child_development_center.page', compact(
+            'personnelAgencies',
+            'PerfResultsMenu',
+            'OperationalPlanMenu',
+            'AuthorityMenu',
+            'PublicMenus',
+            'LawsRegsMenu',
+        ));
+    }
+
+    public function surrender_pages()
+    {
+        $personnelAgencies = PersonnelAgency::with('ranks')
+        ->whereIn('status', [1, 2, 3, 4, 5])
+        ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+        ->get();
+
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
+
+        return view('users.pages.e-service.child_development_center.surrender', compact(
+            'personnelAgencies',
+            'PerfResultsMenu',
+            'OperationalPlanMenu',
+            'AuthorityMenu',
+            'PublicMenus',
+            'LawsRegsMenu',
+        ));
+    }
+
+    public function register_pages()
+    {
+        $personnelAgencies = PersonnelAgency::with('ranks')
+        ->whereIn('status', [1, 2, 3, 4, 5])
+        ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+        ->get();
+
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
+
+        return view('users.pages.e-service.child_development_center.register', compact(
+            'personnelAgencies',
+            'PerfResultsMenu',
+            'OperationalPlanMenu',
+            'AuthorityMenu',
+            'PublicMenus',
+            'LawsRegsMenu',
+        ));
+    }
 }

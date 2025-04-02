@@ -68,6 +68,10 @@ Route::get('/e-service/disability/page', [TemporaryController::class, 'disabilit
 Route::get('/e-service/elderly_allowance/page', [TemporaryController::class, 'elderly_allowance_pages'])->name('elderly_allowance_pages');
 Route::get('/e-service/receive_assistance/page', [TemporaryController::class, 'receive_assistance_pages'])->name('receive_assistance_pages');
 
+Route::get('/e-service/child_development/page', [TemporaryController::class, 'child_development_pages'])->name('child_development_pages');
+Route::get('/e-service/child_development/surrender/page', [TemporaryController::class, 'surrender_pages'])->name('surrender_pages');
+Route::get('/e-service/child_development/register/page', [TemporaryController::class, 'register_pages'])->name('register_pages');
+
 
 Route::get('/', [HomePageController::class, 'Home'])->name('Home');
 

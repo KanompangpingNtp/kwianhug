@@ -116,7 +116,7 @@
 
             <table class="table">
                 <tr>
-                    <td><a href="#">ใบสมัคร ศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
+                    <td><a href="{{route('child_development_pages')}}">ใบสมัคร ศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
                 </tr>
                 <tr>
                     <td><a href="{{route('general_requests_pages')}}">คำร้องยื่นเรื่องราวต่างๆ</a></td>
