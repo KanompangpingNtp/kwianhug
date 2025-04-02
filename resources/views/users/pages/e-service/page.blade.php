@@ -1,0 +1,166 @@
+@extends('layouts.sub-layout')
+@section('content')
+<style>
+    .bg {
+        background-image: url('{{ asset('pages/home/section-5/bg-5.png') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        padding: 2rem 0px;
+    }
+
+    .custom-gradient-shadow {
+        border-radius: 30px;
+        box-shadow:
+            0 4px 15px rgba(0, 123, 255, 0.3),
+            0 0 50px -10px rgba(0, 198, 255, 0.8),
+            0 0 50px -10px rgba(102, 204, 255, 0.8);
+        background-color: #ffffff;
+    }
+
+    /* ปรับแต่งการ์ด */
+    .custom-card {
+        border: none;
+        border-radius: 12px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    /* Hover Effect: ทำให้เด่นขึ้น */
+    .custom-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* กำหนดขนาดรูปภาพให้เท่ากัน */
+    .image-container {
+        width: 100%;
+        height: 220px;
+        /* ปรับความสูงที่ต้องการ */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* ให้รูปภาพเต็มพื้นที่และตัดส่วนที่เกิน */
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    /* Hover Effect: ซูมรูปภาพเบาๆ */
+    .custom-card:hover .image-container img {
+        transform: scale(1.1);
+    }
+
+    /* ปรับแต่งเนื้อหาในการ์ด */
+    .card-body {
+        background: #fff;
+        padding: 15px;
+        border-top: 2px solid #46c700;
+    }
+
+    .card-title {
+        font-size: 30px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0;
+        transition: color 0.3s ease;
+    }
+
+    /* Hover Effect: เปลี่ยนสีข้อความ */
+    .custom-card:hover .card-title {
+        color: #77b329;
+    }
+
+</style>
+<div class="bg py-5">
+    <div class="container py-5 custom-gradient-shadow">
+        <div class=" d-flex flex-column justify-content-center align-items-center p-5 ">
+            <div class="fs-1 fw-bold mb-4 text-center">E-Service</div>
+
+            <style>
+                .table td:hover {
+                    background-color: #53b2e6;
+                    color: white;
+                }
+
+                table {
+                    border-collapse: collapse;
+                }
+
+                table td,
+                table th {
+                    border: none;
+                }
+
+                table tr:nth-child(odd) {
+                    background-color: #7eccec;
+                }
+
+                table tr:nth-child(even) {
+                    background-color: #ffffff;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #333;
+                }
+
+            </style>
+
+            <table class="table">
+                <tr>
+                    <td><a href="#">ใบสมัคร ศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
+                </tr>
+                <tr>
+                    <td><a href="{{route('general_requests_pages')}}">คำร้องยื่นเรื่องราวต่างๆ</a></td>
+                </tr>
+                <tr>
+                    <td><a href="{{route('disability_pages')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ ประจำปี งบประมาณ พ.ศ.2568</a></td>
+                </tr>
+                <tr>
+                    <td><a href="{{route('elderly_allowance_pages')}}">แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">(แบบ ศผส.01) แบบคำขอรับเงินสงเคราะห์ และรับรองผู้รับผิดชอบในการจัดการศพผู้สูงอายุตามประเพณี</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">(แบบ ศผส.02)แบบรับรองการมีคุณสมบัติตามโครงการลงทะเบียนเพื่อสวัสดิการแห่งรัฐ</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">(แบบ ดร.01) คำร้องขอลงทะเบียน เพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">(แบบ ดร.02) แบบรับรองสถานะของครัวเรือน ตารางแสดงจำนวนสมาชิกและรายได้ของครัวเรือน</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">แบบคำขอรับใบอนุญาต/ต่ออายุใบอนุญาต ประกอบกิจการ</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">แบบคำขอแจ้งจัดตั้งสถานที่จำหน่ายอาหารหรือสถานที่สะสมอาหาร</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">แบบแจ้งข้อมูลการรับเงินโอนผ่านระบบ KTB Corporat Online</a></td>
+                </tr>
+
+            </table>
+
+            <div class="d-flex justify-content-center align-items-center text-center mt-5">
+                <a href="#" class="btn btn-primary">
+                    คู่มือการใช้งานระบบ E-Service
+                    <i class="bi bi-file-earmark-pdf"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

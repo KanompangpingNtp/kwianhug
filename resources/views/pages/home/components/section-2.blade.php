@@ -146,6 +146,7 @@
             height: 100%;
             border-radius: 10px;
         }
+
     </style>
 </head>
 
@@ -162,10 +163,8 @@
                         <span class="fs-3 fw-bold">ตำแหน่ง</span><br>
                         <span class="fw-bold">ตำบลเกวียนหัก</span><br>
                         <span>ชื่อ-นามสกุล</span>
-                        <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
-                            style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
-                            <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
-                                style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
+                        <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
+                            <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon" style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
                             999-9999990
                         </a>
                     </div>
@@ -175,13 +174,10 @@
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <div class="bg-video-section2 p-2 ">
                         <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/VCHbh"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen>
-                        </iframe>
+                            <iframe src="https://www.youtube.com/embed/VCHbh" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                            </iframe>
                         </div>
-                       
+
                     </div>
 
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">
@@ -189,12 +185,10 @@
                     </a>
                     <a href="#" class="bg-eservice p-2 mt-5">
                         <div class="d-flex justify-content-between align-items-center">
-                            <div class="fs-4 fw-bold p-2 "
-                                style="background: linear-gradient(to right, #fe574e,#fc883e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
+                            <div class="fs-4 fw-bold p-2 " style="background: linear-gradient(to right, #fe574e,#fc883e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
                                 เทศบาลตำบลเกวียนหัก
                             </div>
-                            <div class="bg-dark fw-bold text-white fs-5 p-2"
-                                style="border-radius: 10px; white-space: nowrap;">
+                            <div class="bg-dark fw-bold text-white fs-5 p-2" style="border-radius: 10px; white-space: nowrap;">
                                 E-SERVICE
                             </div>
                         </div>
@@ -211,11 +205,9 @@
             <div class="col-xl-3 col-lg-12 mt-5 mt-xl-0">
                 <div class="row w-100">
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#"
-                            class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/1.png') }}" alt="icon-banner" class="img-banner">
-                            <div class="lh-1 text-center text-black"
-                                style="text-shadow:
+                            <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
             -3px -3px 5px rgba(255, 255, 255, 0.7),
             3px -3px 5px rgba(255, 255, 255, 0.7),
@@ -227,11 +219,9 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#"
-                            class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/2.png') }}" alt="icon-banner" class="img-banner">
-                            <div class="lh-1 text-center text-black"
-                                style="text-shadow:
+                            <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
             -3px -3px 5px rgba(255, 255, 255, 0.7),
             3px -3px 5px rgba(255, 255, 255, 0.7),
@@ -244,11 +234,9 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#"
-                            class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/3.png') }}" alt="icon-banner" class="img-banner">
-                            <div class="lh-1 text-center text-black"
-                                style="text-shadow:
+                            <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
             -3px -3px 5px rgba(255, 255, 255, 0.7),
             3px -3px 5px rgba(255, 255, 255, 0.7),
@@ -261,11 +249,9 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#"
-                            class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="{{route('eservice_pages')}}" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/4.png') }}" alt="icon-banner" class="img-banner">
-                            <div class="lh-1 text-center text-black"
-                                style="text-shadow:
+                            <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
             -3px -3px 5px rgba(255, 255, 255, 0.7),
             3px -3px 5px rgba(255, 255, 255, 0.7),
@@ -278,11 +264,9 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#"
-                            class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/5.png') }}" alt="icon-banner" class="img-banner">
-                            <div class="lh-1 text-center text-black"
-                                style="text-shadow:
+                            <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
             -3px -3px 5px rgba(255, 255, 255, 0.7),
             3px -3px 5px rgba(255, 255, 255, 0.7),

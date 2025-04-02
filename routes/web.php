@@ -48,6 +48,8 @@ use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryCon
 use App\Http\Controllers\basic_information\community_information\AdminCommunityInformationController;
 use App\Http\Controllers\basic_information\community_information\CommunityInformationController;
 
+use App\Http\Controllers\eservice\temporary\TemporaryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,6 +60,14 @@ use App\Http\Controllers\basic_information\community_information\CommunityInform
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//eservice
+Route::get('/e-service/page', [TemporaryController::class, 'eservice_pages'])->name('eservice_pages');
+Route::get('/e-service/general_requests/page', [TemporaryController::class, 'general_requests_pages'])->name('general_requests_pages');
+Route::get('/e-service/disability/page', [TemporaryController::class, 'disability_pages'])->name('disability_pages');
+Route::get('/e-service/elderly_allowance/page', [TemporaryController::class, 'elderly_allowance_pages'])->name('elderly_allowance_pages');
+Route::get('/e-service/receive_assistance/page', [TemporaryController::class, 'receive_assistance_pages'])->name('receive_assistance_pages');
+
 
 Route::get('/', [HomePageController::class, 'Home'])->name('Home');
 
