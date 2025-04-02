@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="author" content="" />
     <title>@yield('title') | Dashboard </title>
+    <link rel="icon" type="image/png" href="{{ asset('navbar/logo.png') }}">
     <link href="{{asset('dashboard/css/styles.css')}}" rel="stylesheet" />
 
     {{-- bootstrap icon --}}
