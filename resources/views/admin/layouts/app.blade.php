@@ -48,7 +48,7 @@
     @endif
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3"> <i class="fa-solid fa-database me-3"></i>ระบบจัดการข้อมูล</a>
+        <a class="navbar-brand ps-3" href="{{route('AdminIndex')}}"> <i class="fa-solid fa-database me-3"></i>ระบบจัดการข้อมูล</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!" title="Toggle sidebar">
             <i class="fas fa-bars"></i>
