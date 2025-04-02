@@ -26,6 +26,17 @@
                             <div class="modal-body" style="font-size: 15px;">
                                 <p><strong>รายการอัพเดทเมนูใหม่ สามารถคลิกเพื่อดูรายละเอียดได้ทันที</strong></p>
                                 <ul id="menuList">
+                                    <li class="mb-1">เมนูพื้นฐาน
+                                        <ul>
+                                            <li class="mb-1"><a href="{{route('HistoryAdmin')}}">ประวัติความเป็นมา</a></li>
+                                            <li class="mb-1"><a href="{{route('GeneralInformationAdmin')}}">ข้อมูลสภาพทั่วไป</a></li>
+                                            <li class="mb-1"><a href="{{route('CommunityAdmin')}}">ข้อมูลชุมชน</a></li>
+                                            <li class="mb-1"><a href="{{route('CommunityProductsAdmin')}}">ผลิตภัณฑ์ชุมชน</a></li>
+                                            <li class="mb-1"><a href="{{route('ImportantPlacesAdmin')}}">สถานที่สำคัญ</a></li>
+                                            <li class="mb-1"><a href="{{route('LandscapeGalleryAdmin')}}">แกลอรี่ภาพถ่ายภูมิทัศน์</a></li>
+                                        </ul>
+                                    </li>
+                                    <br>
                                     <li class="mb-1"><a href="{{route('AdminITAType')}}">การประเมินคุณธรรม (ITA)</a></li>
                                     <li class="mb-1"><a href="{{route('ManagePersonnel')}}">บุคลากร</a></li>
                                     <li class="mb-1"><a href="{{route('PerformanceResultsType')}}">ผลการดำเนินงาน</a></li>
@@ -33,16 +44,6 @@
                                     <li class="mb-1"><a href="{{route('OperationalPlanType')}}">แผนพัฒนาท้องถิ่น</a></li>
                                     <li class="mb-1"><a href="{{route('LawsAndRegulationsType')}}">กฏหมายและกฏระเบียบ</a></li>
                                     <li class="mb-1"><a href="{{route('MenuForPublicType')}}">เมนูสำหรับประชาชน</a></li>
-
-                                    {{-- <li class="mb-1">เมนูพื้นฐาน
-                                        <ul>
-                                            <li class="mb-1">ประวัติความเป็นมา</li>
-                                            <li class="mb-1">ข้อมูลสภาพทั่วไป</li>
-                                            <li class="mb-1">ผลิตภัณฑ์ชุมชน</li>
-                                            <li class="mb-1">สถานที่สำคัญ</li>
-                                            <li class="mb-1">แกลอรี่ภาพถ่ายภูมิทัศน์</li>
-                                        </ul>
-                                    </li> --}}
                                 </ul>
                             </div>
                             <div class="modal-footer">

@@ -139,6 +139,26 @@
                         </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            เมนูพื้นฐาน
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="collapseLayouts2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('HistoryAdmin')}}">ประวัติความเป็นมา</a>
+                                <a class="nav-link" href="{{route('GeneralInformationAdmin')}}">ข้อมูลสภาพทั่วไป</a>
+                                <a class="nav-link" href="{{route('CommunityAdmin')}}">ข้อมูลชุมชน</a>
+                                <a class="nav-link" href="{{route('CommunityProductsAdmin')}}">ผลิตภัณฑ์ชุมชน</a>
+                                <a class="nav-link" href="{{route('ImportantPlacesAdmin')}}">สถานที่สำคัญ</a>
+                                <a class="nav-link" href="{{route('LandscapeGalleryAdmin')}}">แกลอรี่ภาพถ่ายภูมิทัศน์</a>
+                            </nav>
+                        </div>
+
                         <a class="nav-link" href="{{route('ManagePersonnel')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>

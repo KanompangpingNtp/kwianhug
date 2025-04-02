@@ -512,13 +512,13 @@
                                             <div class="navbar-text ">ข้อมูลพื้นฐาน</div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="basicInfoDropdown">
-                                            <li><a class="dropdown-item" href="#">ประวัติความเป็นมา</a>
+                                            <li><a class="dropdown-item" href="{{ route('HistoryPage') }}">ประวัติความเป็นมา</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('GeneralInformationPage') }}">ข้อมูลสภาพทั่วไป</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('CommunityPage') }}">ข้อมูลชุมชน</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('CommunityProductsPage') }}">ผลิตภัณฑ์ชุมชน</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('ImportantPlacesPage') }}">สถานที่สำคัญ</a></li>
+                                            <li><a class="dropdown-item" href="{{ route('LandscapeGalleryPage') }}">แกลอรี่ภาพถ่ายภูมิทัศน์</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="#">วิสัยทัศน์</a></li>
-                                            <li><a class="dropdown-item" href="#">ข้อมูลสภาพทั่วไป</a></li>
-                                            <li><a class="dropdown-item" href="#">ผลิตภัณฑ์ชุมชน/OTOP</a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#">สถานที่สำคัญ</a></li>
                                         </ul>
                                     </li>
 
