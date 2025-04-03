@@ -160,8 +160,8 @@
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal" style="height: 35rem;">
                     <div class="text-center lh-sm mt-4">
-                        <span class="fs-3 fw-bold">ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี</span><br>
-                        <span class="fw-bold">ตำบลเกวียนหัก</span><br>
+                        <span class="fs-4 fw-bold">ปลัดเทศบาลตำบลเกวียนหัก</span><br>
+                        {{-- <span class="fw-bold">ตำบลเกวียนหัก</span><br> --}}
                         <span>นางสาวณัฐณิชา กล่ำแสง</span>
                         <a href="tel:+6639493194" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
                             <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon" style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
