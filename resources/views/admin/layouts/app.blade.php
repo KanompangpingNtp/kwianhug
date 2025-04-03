@@ -159,12 +159,22 @@
                             </nav>
                         </div>
 
-                        <a class="nav-link" href="{{route('ManagePersonnel')}}">
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts3" aria-expanded="false" aria-controls="collapseLayouts3">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>
                             </div>
                             บุคลากร
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
                         </a>
+                        <div class="collapse" id="collapseLayouts3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('OrgStructureAdmin')}}">โครงสร้างองค์กร</a>
+                                <a class="nav-link" href="{{route('ManagePersonnel')}}">ข้อมูลบุคลากร</a>
+                            </nav>
+                        </div>
+
                         <a class="nav-link" href="{{route('PerformanceResultsType')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>

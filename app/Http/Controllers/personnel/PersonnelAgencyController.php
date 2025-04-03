@@ -49,29 +49,29 @@ class PersonnelAgencyController extends Controller
         ));
     }
 
-    // public function Personnel_Chart()
-    // {
-    //     //เมนู
-    //     $personnelAgencies = PersonnelAgency::with('ranks')
-    //         ->whereIn('status', [1, 2, 3, 4, 5])
-    //         ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
-    //         ->get();
-    //     $PerfResultsMenu = PerfResultsType::all();
-    //     $AuthorityMenu = AuthorityType::all();
-    //     $OperationalPlanMenu = OperationalPlanType::all();
-    //     $LawsRegsMenu = LawsRegsType::all();
-    //     $PublicMenus = PublicMenusType::all();
+    public function Personnel_Chart()
+    {
+        //เมนู
+        $personnelAgencies = PersonnelAgency::with('ranks')
+            ->whereIn('status', [1, 2, 3, 4, 5])
+            ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+            ->get();
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
 
-    //     $data = OrgStructure::orderBy('id', 'asc')->first();
+        $data = OrgStructure::orderBy('id', 'asc')->first();
 
-    //     return view('users.pages.agency.personnel_chart', compact(
-    //         'data',
-    //         'PerfResultsMenu',
-    //         'AuthorityMenu',
-    //         'OperationalPlanMenu',
-    //         'LawsRegsMenu',
-    //         'PublicMenus',
-    //         'personnelAgencies'
-    //     ));
-    // }
+        return view('users.pages.agency.personnel_chart', compact(
+            'data',
+            'PerfResultsMenu',
+            'AuthorityMenu',
+            'OperationalPlanMenu',
+            'LawsRegsMenu',
+            'PublicMenus',
+            'personnelAgencies'
+        ));
+    }
 }

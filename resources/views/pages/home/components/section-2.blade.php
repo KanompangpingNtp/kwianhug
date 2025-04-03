@@ -183,7 +183,7 @@
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">
                         <i class="fas fa-video text-dark"></i> VDO เพิ่มเติม
                     </a>
-                    <a href="#" class="bg-eservice p-2 mt-5">
+                    <a href="{{route('eservice_pages')}}" class="bg-eservice p-2 mt-5">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="fs-4 fw-bold p-2 " style="background: linear-gradient(to right, #fe574e,#fc883e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
                                 เทศบาลตำบลเกวียนหัก
@@ -249,7 +249,7 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="{{route('eservice_pages')}}" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/4.png') }}" alt="icon-banner" class="img-banner">
                             <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),

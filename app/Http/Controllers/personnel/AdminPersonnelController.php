@@ -9,6 +9,7 @@ use App\Models\PersonnelRank;
 use App\Models\PersonnelDetail;
 use App\Models\PersonnelImage;
 use App\Models\PersonnelGroupPhoto;
+use App\Models\OrgStructure;
 use Illuminate\Support\Facades\Storage;
 
 class AdminPersonnelController extends Controller
@@ -261,5 +262,47 @@ class AdminPersonnelController extends Controller
         }
 
         return redirect()->back()->with('error', 'ไม่พบข้อมูลที่ต้องการลบ');
+    }
+
+    public function OrgStructureAdmin()
+    {
+        $Data = OrgStructure::all();
+
+        return view('admin.post.personnel.org_structure.page', compact('Data'));
+    }
+
+    public function OrgStructureCreate(Request $request)
+    {
+        $request->validate([
+            'files_add' => 'nullable|file|mimes:jpg,jpeg,png,pdf',
+        ]);
+
+        // dd($request);
+
+        if ($request->hasFile('files_add')) {
+            $file = $request->file('files_add');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $path = $file->storeAs('personnel_group_photo', $filename, 'public');
+
+            OrgStructure::create([
+                'files_path' => $path,
+                'files_type' => $file->getClientOriginalExtension(),
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'สร้างข้อมูลสำเร็จ');
+    }
+
+    public function OrgStructureDelete($id)
+    {
+        $orgStructure = OrgStructure::findOrFail($id);
+
+        if (file_exists(public_path('storage/' . $orgStructure->files_path))) {
+            unlink(public_path('storage/' . $orgStructure->files_path));
+        }
+
+        $orgStructure->delete();
+
+        return redirect()->back()->with('success', 'ลบข้อมูลสำเร็จ');
     }
 }

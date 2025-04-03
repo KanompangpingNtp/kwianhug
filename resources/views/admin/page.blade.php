@@ -38,6 +38,7 @@
                                     </li>
                                     <br>
                                     <li class="mb-1"><a href="{{route('AdminITAType')}}">การประเมินคุณธรรม (ITA)</a></li>
+                                    <li class="mb-1"><a href="{{route('OrgStructureAdmin')}}">โครงสร้างองค์กร</a></li>
                                     <li class="mb-1"><a href="{{route('ManagePersonnel')}}">บุคลากร</a></li>
                                     <li class="mb-1"><a href="{{route('PerformanceResultsType')}}">ผลการดำเนินงาน</a></li>
                                     <li class="mb-1"><a href="{{route('AuthorityType')}}">อำนาจหน้าที่</a></li>
