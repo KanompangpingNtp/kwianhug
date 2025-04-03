@@ -177,7 +177,6 @@
                             <iframe src="https://www.youtube.com/embed/zBZhhrtTNH8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                             </iframe>
                         </div>
-
                     </div>
 
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">

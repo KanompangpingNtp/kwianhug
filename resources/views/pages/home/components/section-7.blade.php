@@ -194,7 +194,7 @@
             <img src="{{ asset('pages/home/section-7/next.png') }}" alt="next" id="nextBtn">
         </div>
 
-        <a href="#" class="bg-btn-section7">ดูทั้งหมด </a>
+        <a href="{{route('TouristAttractionShowData')}}" class="bg-btn-section7">ดูทั้งหมด </a>
     </div>
 </main>
 
