@@ -47,6 +47,10 @@ use App\Http\Controllers\basic_information\landscape_gallery\AdminLandscapeGalle
 use App\Http\Controllers\basic_information\landscape_gallery\LandscapeGalleryController;
 use App\Http\Controllers\basic_information\community_information\AdminCommunityInformationController;
 use App\Http\Controllers\basic_information\community_information\CommunityInformationController;
+use App\Http\Controllers\message_from_pm\AdminMessageFromPMController;
+use App\Http\Controllers\message_from_pm\MessageFromPMController;
+use App\Http\Controllers\executive_intentions\AdminExecutiveIntentionsController;
+use App\Http\Controllers\executive_intentions\ExecutiveIntentionsController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -77,7 +81,6 @@ Route::get('/ReceiveComplaints/form', [TemporaryController::class, 'ReceiveCompl
 
 //รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ
 Route::get('/Satisfaction/form', [TemporaryController::class, 'SatisfactionForm'])->name('SatisfactionForm');
-
 
 Route::get('/', [HomePageController::class, 'Home'])->name('Home');
 
@@ -148,6 +151,12 @@ Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, '
 //ป้ายประกาศ
 Route::get('/NoticeBoard/ShowData', [NoticeBoardController::class, 'NoticeBoardShowData'])->name('NoticeBoardShowData');
 Route::get('/NoticeBoard/ShowDetails/{id}', [NoticeBoardController::class, 'NoticeBoardShowDetails'])->name('NoticeBoardShowDetails');
+
+//สารจากนายก
+Route::get('/message_from_pm/page', [MessageFromPMController::class, 'MessageFromPMPage'])->name('MessageFromPMPage');
+
+//เจตจำนงสุจริตของผู้บริหาร
+Route::get('/executive_intentions/page', [ExecutiveIntentionsController::class, 'ExecutiveIntentionsPage'])->name('ExecutiveIntentionsPage');
 
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
@@ -354,6 +363,16 @@ Route::middleware(['check.auth'])->group(function () {
     Route::get('/OrgStructure/page', [AdminPersonnelController::class, 'OrgStructureAdmin'])->name('OrgStructureAdmin');
     Route::post('/OrgStructure/create', [AdminPersonnelController::class, 'OrgStructureCreate'])->name('OrgStructureCreate');
     Route::delete('/OrgStructure/delete/{id}', [AdminPersonnelController::class, 'OrgStructureDelete'])->name('OrgStructureDelete');
+
+    //MessageFromPM
+    Route::get('/Admin/MessageFromPM/page', [AdminMessageFromPMController::class, 'MessageFromPMAdmin'])->name('MessageFromPMAdmin');
+    Route::post('/Admin/MessageFromPM/create', [AdminMessageFromPMController::class, 'MessageFromPMCreate'])->name('MessageFromPMCreate');
+    Route::delete('/Admin/MessageFromPM/delete/{id}', [AdminMessageFromPMController::class, 'MessageFromPMDelete'])->name('MessageFromPMDelete');
+
+    //ExecutiveIntentions
+    Route::get('/Admin/ExecutiveIntentions/page', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsAdmin'])->name('ExecutiveIntentionsAdmin');
+    Route::post('/Admin/ExecutiveIntentions/create', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsCreate'])->name('ExecutiveIntentionsCreate');
+    Route::delete('/Admin/ExecutiveIntentions/delete/{id}', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsDelete'])->name('ExecutiveIntentionsDelete');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

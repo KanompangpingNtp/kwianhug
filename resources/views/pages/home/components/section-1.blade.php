@@ -203,13 +203,13 @@
         </div>
         <div class="row w-100 mt-5 justify-content-center align-items-center">
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1">
+                <a href="{{route('MessageFromPMPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1">
                     <img src="{{ asset('pages/home/section-1/logo1.png') }}" alt="icon">
                     สารจากนายก
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{route('ExecutiveIntentionsPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo2.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">เจตจำนงสุจริต <br> ของผู้บริหาร</span>

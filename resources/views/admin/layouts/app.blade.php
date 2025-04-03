@@ -140,6 +140,18 @@
                             </div>
                             การประเมินคุณธรรม (ITA)
                         </a>
+                        <a class="nav-link" href="{{route('MessageFromPMAdmin')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            สารจากนายก
+                        </a>
+                        <a class="nav-link" href="{{route('ExecutiveIntentionsAdmin')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            เจตจำนงสุจริตของผู้บริหาร
+                        </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">

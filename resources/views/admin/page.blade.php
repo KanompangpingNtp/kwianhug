@@ -26,6 +26,9 @@
                             <div class="modal-body" style="font-size: 15px;">
                                 <p><strong>รายการอัพเดทเมนูใหม่ สามารถคลิกเพื่อดูรายละเอียดได้ทันที</strong></p>
                                 <ul id="menuList">
+                                    <li class="mb-1"><a href="{{route('MessageFromPMAdmin')}}">สารจากนายก</a></li>
+                                    <li class="mb-1"><a href="{{route('ExecutiveIntentionsAdmin')}}">เจตจำนงสุจริตของผู้บริหาร</a></li>
+
                                     <li class="mb-1">เมนูพื้นฐาน
                                         <ul>
                                             <li class="mb-1"><a href="{{route('HistoryAdmin')}}">ประวัติความเป็นมา</a></li>
@@ -36,7 +39,7 @@
                                             <li class="mb-1"><a href="{{route('LandscapeGalleryAdmin')}}">แกลอรี่ภาพถ่ายภูมิทัศน์</a></li>
                                         </ul>
                                     </li>
-                                    <br>
+
                                     <li class="mb-1"><a href="{{route('AdminITAType')}}">การประเมินคุณธรรม (ITA)</a></li>
                                     <li class="mb-1"><a href="{{route('OrgStructureAdmin')}}">โครงสร้างองค์กร</a></li>
                                     <li class="mb-1"><a href="{{route('ManagePersonnel')}}">บุคลากร</a></li>
