@@ -196,4 +196,50 @@ class TemporaryController extends Controller
             'LawsRegsMenu',
         ));
     }
+
+    public function ReceiveComplaintsForm()
+    {
+        //เมนู
+        $personnelAgencies = PersonnelAgency::with('ranks')
+            ->whereIn('status', [1, 2, 3, 4, 5])
+            ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+            ->get();
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
+
+        return view('users.pages.menu_for_public.receive_complaints.page_form', compact(
+            'PerfResultsMenu',
+            'AuthorityMenu',
+            'OperationalPlanMenu',
+            'LawsRegsMenu',
+            'PublicMenus',
+            'personnelAgencies'
+        ));
+    }
+
+    public function SatisfactionForm ()
+    {
+        //เมนู
+        $personnelAgencies = PersonnelAgency::with('ranks')
+            ->whereIn('status', [1, 2, 3, 4, 5])
+            ->orderByRaw("FIELD(status, 1, 2, 3, 4, 5)")
+            ->get();
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
+
+        return view('users.pages.menu_for_public.survey.page_form',compact(
+            'PerfResultsMenu',
+            'AuthorityMenu',
+            'OperationalPlanMenu',
+            'LawsRegsMenu',
+            'PublicMenus',
+            'personnelAgencies'
+        ));
+    }
 }

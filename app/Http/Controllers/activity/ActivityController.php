@@ -31,7 +31,7 @@ class ActivityController extends Controller
             ->whereHas('postType', function ($query) {
                 $query->where('type_name', 'กิจกรรม');
             })
-            ->orderBy('created_at', 'desc')
+            ->orderBy('date', 'desc')
             ->paginate(14);;
 
         return view('users.pages.activity.show_data', compact(

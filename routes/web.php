@@ -72,6 +72,12 @@ Route::get('/e-service/child_development/page', [TemporaryController::class, 'ch
 Route::get('/e-service/child_development/surrender/page', [TemporaryController::class, 'surrender_pages'])->name('surrender_pages');
 Route::get('/e-service/child_development/register/page', [TemporaryController::class, 'register_pages'])->name('register_pages');
 
+//รับเรื่องราวร้องทุกข์
+Route::get('/ReceiveComplaints/form', [TemporaryController::class, 'ReceiveComplaintsForm'])->name('ReceiveComplaintsForm');
+
+//รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ
+Route::get('/Satisfaction/form', [TemporaryController::class, 'SatisfactionForm'])->name('SatisfactionForm');
+
 
 Route::get('/', [HomePageController::class, 'Home'])->name('Home');
 

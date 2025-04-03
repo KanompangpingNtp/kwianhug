@@ -395,9 +395,9 @@
                             <ul class="navbar-nav w-100 d-flex flex-wrap justify-content-evenly fw-bold">
                                 <!-- 0. หน้าแรก -->
                                 <li class="nav-item dropdown d-none d-xl-block">
-                                    <a class="nav-link dropdown-toggle d-flex flex-column align-items-center " href="{{route('Home')}}" id="basicInfoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <a class="nav-link d-flex flex-column align-items-center" href="{{ route('Home') }}" id="basicInfoDropdown">
                                         <img src="{{ asset('navbar/icon-menu/icon1.png') }}" alt="house" class="navbar-icon">
-                                        <div class="navbar-text ">หน้าแรก</div>
+                                        <div class="navbar-text">หน้าแรก</div>
                                     </a>
                                 </li>
                                 <!-- 1. ข้อมูลพื้นฐาน -->

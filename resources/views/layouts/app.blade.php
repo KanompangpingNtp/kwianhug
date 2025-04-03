@@ -500,9 +500,9 @@
                                 <ul class="navbar-nav w-100 d-flex flex-wrap justify-content-evenly fw-bold">
                                     <!-- 0. หน้าแรก -->
                                     <li class="nav-item dropdown d-none d-xl-block">
-                                        <a class="nav-link dropdown-toggle d-flex flex-column align-items-center " href="{{route('Home')}}" id="basicInfoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="nav-link d-flex flex-column align-items-center" href="{{ route('Home') }}" id="basicInfoDropdown">
                                             <img src="{{ asset('navbar/icon-menu/icon1.png') }}" alt="house" class="navbar-icon">
-                                            <div class="navbar-text ">หน้าแรก</div>
+                                            <div class="navbar-text">หน้าแรก</div>
                                         </a>
                                     </li>
                                     <!-- 1. ข้อมูลพื้นฐาน -->
@@ -612,11 +612,11 @@
                                             <div class="navbar-text">เมนูสำหรับประชาชน</div>
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="citizenMenuDropdown">
-                                            <li><a class="dropdown-item" href="#">รับเรื่องราวร้องทุกข์ </a>
+                                            <li><a class="dropdown-item" href="{{ route('ReceiveComplaintsForm') }}">รับเรื่องราวร้องทุกข์ </a>
                                             </li>
-                                            <li><a class="dropdown-item" href="#">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
+                                            <li><a class="dropdown-item" href="{{ route('SatisfactionForm') }}">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>
                                             </li>
-                                            <li><a class="dropdown-item" href="#">แบบสอบถามความพึงพอใจ </a></li>
+                                            {{-- <li><a class="dropdown-item" href="#">แบบสอบถามความพึงพอใจ </a></li> --}}
                                             @foreach ($PublicMenus as $detail)
                                             <li>
                                                 <a class="dropdown-item" href="{{ route('MenuForPublicSectionPages', ['id' => $detail->id]) }}">

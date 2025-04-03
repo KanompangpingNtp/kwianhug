@@ -30,6 +30,7 @@
 
 </head>
 <body>
+
     <style>
         body {
             font-size: 13px;
@@ -37,6 +38,7 @@
         }
 
     </style>
+
     @if ($message = Session::get('success'))
     <script>
         Swal.fire({
@@ -46,6 +48,7 @@
 
     </script>
     @endif
+
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
         <a class="navbar-brand ps-3" href="{{route('AdminIndex')}}"> <i class="fa-solid fa-database me-3"></i>ระบบจัดการข้อมูล</a>
@@ -82,7 +85,7 @@
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
-                    <div class="nav">
+                    <div class="nav mb-5">
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Content</div>
                         <a class="nav-link" href="{{route('NoticeBoardHome')}}">
                             <div class="sb-nav-link-icon">
