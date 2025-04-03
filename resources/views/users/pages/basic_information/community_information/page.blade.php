@@ -19,6 +19,50 @@
         background-color: #ffffff;
     }
 
+    .table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .table table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 2px solid #333;
+        font-family: Arial, sans-serif;
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid #666;
+        padding: 10px;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .table th {
+        background-color: #0056b3;
+        color: white;
+        font-weight: bold;
+    }
+
+    .table td p {
+        margin: 5px 0;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .table tbody tr:hover {
+        background-color: #e0e0e0;
+    }
+
+    .table td[colspan="3"] {
+        background-color: #0056b3;
+        color: white;
+        font-weight: bold;
+    }
+
 </style>
 <div class="bg py-5">
     <div class="container py-5 custom-gradient-shadow">

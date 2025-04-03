@@ -31,18 +31,14 @@
             {{-- แสดงไฟล์ PDF --}}
             @if ($detail->pdf->count() > 0)
             <h6>ไฟล์ PDF:</h6>
-            <ul>
-                @foreach ($detail->pdf as $pdf)
-                <li>
-                    <a href="{{ asset('storage/' . $pdf->pdf_file) }}" target="_blank">
-                        ดาวน์โหลด PDF
-                    </a>
-                </li>
-                @endforeach
-            </ul>
+            @foreach ($detail->pdf as $pdf)
+            <iframe src="{{ asset('storage/' . $pdf->pdf_file) }}" width="100%" height="1000px" style="border: none;"></iframe>
+            @endforeach
             @else
-            <p></p>
+            <p>ไม่มีไฟล์ PDF</p>
             @endif
+
+            <br>
 
             {{-- แสดงรูปภาพ --}}
             @if ($detail->images->count() > 0)
