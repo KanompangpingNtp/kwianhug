@@ -205,7 +205,7 @@
             <div class="col-xl-3 col-lg-12 mt-5 mt-xl-0">
                 <div class="row w-100">
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="https://www.admincourt.go.th/admincourt/site/09illustration.html" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/1.png') }}" alt="icon-banner" class="img-banner">
                             <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
@@ -219,7 +219,7 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="https://www.gprocurement.go.th/new_index.html" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/2.png') }}" alt="icon-banner" class="img-banner">
                             <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
@@ -234,7 +234,7 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="https://www.nacc.go.th/" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/3.png') }}" alt="icon-banner" class="img-banner">
                             <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
@@ -249,7 +249,7 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="https://www.dla.go.th/oss.htm" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/4.png') }}" alt="icon-banner" class="img-banner">
                             <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
@@ -264,7 +264,7 @@
 
                     </div>
                     <div class="col-xl-12 col-lg-4 col-md-6 col-12 mb-4">
-                        <a href="#" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
+                        <a href="https://infocenter.oic.go.th/" class="bg-banner-section2 p-2 d-flex flex-column justify-content-center align-items-center position-relative">
                             <img src="{{ asset('pages/home/section-2/5.png') }}" alt="icon-banner" class="img-banner">
                             <div class="lh-1 text-center text-black" style="text-shadow:
             3px 3px 5px rgba(255, 255, 255, 0.7),
