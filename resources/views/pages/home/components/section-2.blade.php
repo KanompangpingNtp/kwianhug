@@ -162,12 +162,12 @@
                 <div class="d-flex flex-column justify-content-center align-items-center">
                     <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal" style="height: 35rem;">
                     <div class="text-center lh-sm mt-4">
-                        <span class="fs-4 fw-bold">ปลัดเทศบาลตำบลเกวียนหัก</span><br>
+                        <span class="fs-4 fw-bold">นางสาวณัฐณิชา กล่ำแสง</span><br>
                         {{-- <span class="fw-bold">ตำบลเกวียนหัก</span><br> --}}
-                        <span>นางสาวณัฐณิชา กล่ำแสง</span>
-                        <a href="tel:+6639493194" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
+                        <span>ปลัดเทศบาลตำบลเกวียนหัก</span>
+                        <a href="tel:+66623295144" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
                             <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon" style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                            039-493-194
+                            062-329-5144
                         </a>
                     </div>
                 </div>
@@ -189,8 +189,7 @@
                             <div class="fs-4 fw-bold p-2 " style="background: linear-gradient(to right, #fe574e,#fc883e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
                                 เทศบาลตำบลเกวียนหัก
                             </div>
-                            <div class="bg-dark fw-bold text-white fs-6 p-2 lh-sm text-center underline-text" style="border-radius: 10px; white-space: nowrap;">
-                                <span>One Stop Service</span> <br>
+                            <div class="bg-dark fw-bold text-white fs-5 p-2 lh-sm text-center underline-text" style="border-radius: 10px; white-space: nowrap;">
                                 E-SERVICE
                             </div>
                         </div>

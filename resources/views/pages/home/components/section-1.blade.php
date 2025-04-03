@@ -101,11 +101,12 @@
             transform: translateX(-10px);
             /* เลื่อนรูปไปทางซ้ายเมื่อ hover */
         }
-        .mark-personal-img{
+
+        .mark-personal-img {
             height: 500px;
         }
 
-        .personal-img{
+        .personal-img {
             height: 400px;
         }
     </style>
@@ -123,10 +124,10 @@
                 <!-- Slide 1 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
-                        <div class="consultant-info lh-sm">
-                            <span class="fs-3 fw-bold">ที่ปรึกษา</span><br>
-                            <span class="fw-bold">ตำบลเกวียนหัก</span><br>
-                            <span>ชื่อ-นามสกุล</span>
+                        <div class="consultant-info lh-sm fs-5">
+                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                            <span>ที่ปรึกษา</span><br>
+                            <span>ตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -142,9 +143,9 @@
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
-                            <span class="fs-3 fw-bold">เลขา</span><br>
-                            <span class="fw-bold">ตำบลเกวียนหัก</span><br>
-                            <span>ชื่อ-นามสกุล</span>
+                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                            <span>เลขา</span><br>
+                            <span>ตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -159,26 +160,28 @@
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm" style="margin-right: -140px;">
-                            <span class="fs-3 fw-bold">ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี </span><br>
-                            <span class="fw-bold">ตำบลเกวียนหัก</span><br>
-                            <span>นางสาวณัฐณิชา กล่ำแสง</span>
-                            <a href="tel:+6639493194" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <span class="fs-5 fw-bold">นางสาวณัฐณิชา กล่ำแสง</span><br>
+                            <span>
+                                ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี
+                            </span><br>
+                            <span>ตำบลเกวียนหัก</span>
+                            <a href="tel:+66623295144" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                    039-493-194
+                                062-329-5144
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal3" class="mark-personal-img">
+                        <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal3"
+                            class="mark-personal-img">
                     </div>
                 </div>
                 <!-- Slide 4 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
-                            <span class="fs-3 fw-bold">รองนายก</span><br>
-                            <span class="fw-bold">ตำบลเกวียนหัก</span><br>
-                            <span>ชื่อ-นามสกุล</span>
+                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                            <span>รองนายก <br>ตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -193,9 +196,8 @@
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
-                            <span class="fs-3 fw-bold">รองนายก</span><br>
-                            <span class="fw-bold">ตำบลเกวียนหัก</span><br>
-                            <span>ชื่อ-นามสกุล</span>
+                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                            <span>รองนายก <br>ตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -210,48 +212,55 @@
         </div>
         <div class="row w-100 mt-5 justify-content-center align-items-center">
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="{{route('MessageFromPMPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1">
+                <a href="{{ route('MessageFromPMPage') }}"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1">
                     <img src="{{ asset('pages/home/section-1/logo1.png') }}" alt="icon">
                     สารจากนายก
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="{{route('ExecutiveIntentionsPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{ route('ExecutiveIntentionsPage') }}"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo2_coppy.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">เจตจำนงสุจริต <br> ของผู้บริหาร</span>
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="https://kwianhug.sosmartsolution.com/ReceiveComplaints/form"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:19px;">
                     <img src="{{ asset('pages/home/section-1/logo3.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับแจ้งเรื่องราวร้องทุกข์</span>
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="{{route('itaPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{ route('itaPage') }}"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo4.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">การประเมินคุณธรรม<br>และความโปร่งใส </span>
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="{{route('PerformanceEvaluationPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{ route('PerformanceEvaluationPage') }}"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
                     <img src="{{ asset('pages/home/section-1/logo5.png') }}" alt="icon">
                     <span style="padding-left: 4rem;"> การประเมิน <br>ประสิทธิภาพ <br> ภายใน(LPA)</span>
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="https://kwianhug.sosmartsolution.com/Satisfaction/form"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo6.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับเรื่องร้องเรียน <br> ทุจริตประพฤติมิชอบ</span>
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="{{route('LearningOrganizationPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{ route('LearningOrganizationPage') }}"
+                    class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo7.png') }}" alt="icon">
                     <span style="padding-left: 4rem;"> องค์กรแห่ง <br> การเรียนรู้ (KM)</span>
