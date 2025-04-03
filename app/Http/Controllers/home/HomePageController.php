@@ -146,4 +146,23 @@ class HomePageController extends Controller
             'LawsRegsMenu'
         ));
     }
+
+    public function BannserPages()
+    {
+        $personnelAgencies = PersonnelAgency::with('ranks')->get();
+        $PerfResultsMenu = PerfResultsType::all();
+        $AuthorityMenu = AuthorityType::all();
+        $OperationalPlanMenu = OperationalPlanType::all();
+        $LawsRegsMenu = LawsRegsType::all();
+        $PublicMenus = PublicMenusType::all();
+
+        return view('users.pages.banner-in.app', compact(
+            'PublicMenus',
+            'personnelAgencies',
+            'PerfResultsMenu',
+            'AuthorityMenu',
+            'OperationalPlanMenu',
+            'LawsRegsMenu'
+        ));
+    }
 }

@@ -175,6 +175,9 @@ Route::get('/learning_organization/ShowDetails/{id}', [LearningOrganizationContr
 Route::get('/tourist_attraction/ShowData', [TouristAttractionController::class, 'TouristAttractionShowData'])->name('TouristAttractionShowData');
 Route::get('/tourist_attraction/ShowDetails/{id}', [TouristAttractionController::class, 'TouristAttractionShowDetails'])->name('TouristAttractionShowDetails');
 
+
+Route::get('/Bannser/Pages', [HomePageController::class, 'BannserPages'])->name('BannserPages');
+
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
 
