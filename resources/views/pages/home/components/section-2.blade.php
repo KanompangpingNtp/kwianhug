@@ -158,14 +158,14 @@
         <div class="row w-100 align-items-center justify-content-center">
             <div class="col-xl-3 col-lg-6 ">
                 <div class="d-flex flex-column justify-content-center align-items-center">
-                    <img src="{{ asset('pages/home/section-1/3.png') }}" alt="personal">
+                    <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal" style="height: 35rem;">
                     <div class="text-center lh-sm mt-4">
-                        <span class="fs-3 fw-bold">ตำแหน่ง</span><br>
+                        <span class="fs-3 fw-bold">ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี</span><br>
                         <span class="fw-bold">ตำบลเกวียนหัก</span><br>
-                        <span>ชื่อ-นามสกุล</span>
-                        <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
+                        <span>นางสาวณัฐณิชา กล่ำแสง</span>
+                        <a href="tel:+6639493194" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
                             <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon" style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                            999-9999990
+                            039-493-194
                         </a>
                     </div>
                 </div>
@@ -242,7 +242,7 @@
             3px -3px 5px rgba(255, 255, 255, 0.7),
             -3px 3px 5px rgba(255, 255, 255, 0.7);
             margin-top:3rem; font-size:16px;">
-                                สำนักงานนคณะกรรมการการป้องกัน<br>
+                                สำนักงานคณะกรรมการการป้องกัน<br>
                                 และปราบปรามการทุจริตแห่งชาติ
                             </div>
                         </a>

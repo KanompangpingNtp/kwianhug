@@ -150,25 +150,21 @@
                 <div class="bg-orange-link-section8 p-1 mt-4">
                     <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3"
                         style="border-radius: 10px;">
-                        <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="text-decoration-none section8-link-orange">
+                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1554" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            หนังสือราชการของสถ.
+                            ข่าวประชาสัมพันธ์ สถ.
                         </a>
-                        <a href="https://www.dla.go.th/servlet/LawServlet?regType=1" class="text-decoration-none section8-link-orange">
+                        <a href="https://chanthaburilocal.go.th/public/dispatch/data/index/menu/1244" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            กฏหมาย ระเบียบ และมติ ก.กลาง
+                            หนังสือสั่งการจังหวัด
                         </a>
-                        <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="text-decoration-none section8-link-orange">
+                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1619" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            บทความที่น่าสนใจ
+                            สถานที่สำคัญ/แหล่งท่องเที่ยว
                         </a>
-                        <a href="https://www.dla.go.th/visit/it_royal.jsp" class="text-decoration-none section8-link-orange">
+                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1623" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            พรบ.และประกาศเกี่ยวกับ
-                        </a>
-                        <a href="#" class="text-decoration-none section8-link-orange">
-                            <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            เทคโนโลยีสารสนเทศ
+                            ติดต่อหน่วยงาน สถ.จังหวัด
                         </a>
                     </div>
                 </div>
@@ -180,25 +176,21 @@
                 <div class="bg-blue-link-section8 p-1 mt-4">
                     <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3"
                         style="border-radius: 10px;">
-                        <a href="#" class="text-decoration-none section8-link-blue">
+                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1554" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
-                            หนังสือราชการของสถ.
+                            ข่าวประชาสัมพันธ์ สถ.
                         </a>
-                        <a href="#" class="text-decoration-none section8-link-blue">
+                        <a href="https://chanthaburilocal.go.th/public/dispatch/data/index/menu/1244" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
-                            กฏหมาย ระเบียบ และมติ ก.กลาง
+                            หนังสือสั่งการจังหวัด
                         </a>
-                        <a href="#" class="text-decoration-none section8-link-blue">
+                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1619" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
-                            บทความที่น่าสนใจ
+                            สถานที่สำคัญ/แหล่งท่องเที่ยว
                         </a>
-                        <a href="#" class="text-decoration-none section8-link-blue">
+                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1623" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
-                            พรบ.และประกาศเกี่ยวกับ
-                        </a>
-                        <a href="#" class="text-decoration-none section8-link-blue">
-                            <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
-                            เทคโนโลยีสารสนเทศ
+                            ติดต่อหน่วยงาน สถ.จังหวัด
                         </a>
                     </div>
                 </div>

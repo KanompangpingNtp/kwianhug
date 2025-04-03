@@ -30,7 +30,7 @@
             flex-shrink: 0;
             margin-right: -40px;
             margin-bottom: 50px;
-            padding: 1rem 1.25rem;
+            padding: 1rem 3rem 1rem 1rem;
         }
 
         /* ทำให้สามารถเลื่อนได้ในแนวนอน */
@@ -101,6 +101,13 @@
             transform: translateX(-10px);
             /* เลื่อนรูปไปทางซ้ายเมื่อ hover */
         }
+        .mark-personal-img{
+            height: 500px;
+        }
+
+        .personal-img{
+            height: 400px;
+        }
     </style>
 </head>
 
@@ -151,18 +158,18 @@
                 <!-- Slide 3 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
-                        <div class="consultant-info lh-sm" style="margin-right: -70px;">
-                            <span class="fs-3 fw-bold">นายกเทศมนตรี</span><br>
+                        <div class="consultant-info lh-sm" style="margin-right: -140px;">
+                            <span class="fs-3 fw-bold">ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี </span><br>
                             <span class="fw-bold">ตำบลเกวียนหัก</span><br>
-                            <span>นายพราหมณ์ มุกดาสนิท</span>
-                            <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <span>นางสาวณัฐณิชา กล่ำแสง</span>
+                            <a href="tel:+6639493194" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                999-9999990
+                                    039-493-194
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-1/4.png') }}" alt="personal3" class="personal-img">
+                        <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal3" class="mark-personal-img">
                     </div>
                 </div>
                 <!-- Slide 4 -->
