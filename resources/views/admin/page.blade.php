@@ -28,6 +28,8 @@
                                 <ul id="menuList">
                                     <li class="mb-1"><a href="{{route('MessageFromPMAdmin')}}">สารจากนายก</a></li>
                                     <li class="mb-1"><a href="{{route('ExecutiveIntentionsAdmin')}}">เจตจำนงสุจริตของผู้บริหาร</a></li>
+                                    <li class="mb-1"><a href="{{route('PerformanceEvaluationAdmin')}}">การประเมินประสิทธิภาพภายใน (LPA)</a></li>
+                                    <li class="mb-1"><a href="{{route('LearningOrganizationAdmin')}}">องค์กรแห่งการเรียนรู้ (KM)</a></li>
 
                                     <li class="mb-1">เมนูพื้นฐาน
                                         <ul>
