@@ -25,6 +25,8 @@ class BasicInfoTypeSeeder extends Seeder
 
             ['type_name' => 'เจตจำนงสุจริตของผู้บริหาร'],
             ['type_name' => 'สารจากนายก'],
+            ['type_name' => 'LPA'],
+            ['type_name' => 'KM'],
         ];
 
         foreach ($data as $item) {

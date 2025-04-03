@@ -152,6 +152,18 @@
                             </div>
                             เจตจำนงสุจริตของผู้บริหาร
                         </a>
+                        <a class="nav-link" href="{{route('PerformanceEvaluationAdmin')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            การประเมินประสิทธิภาพ <br> ภายใน (LPA)
+                        </a>
+                        <a class="nav-link" href="{{route('LearningOrganizationAdmin')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            องค์กรแห่งการเรียนรู้ (KM)
+                        </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">

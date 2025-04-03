@@ -230,7 +230,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{route('PerformanceEvaluationPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
                     <img src="{{ asset('pages/home/section-1/logo5.png') }}" alt="icon">
                     <span style="padding-left: 4rem;"> การประเมิน <br>ประสิทธิภาพ <br> ภายใน(LPA)</span>
@@ -244,7 +244,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="{{route('LearningOrganizationPage')}}" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo7.png') }}" alt="icon">
                     <span style="padding-left: 4rem;"> องค์กรแห่ง <br> การเรียนรู้ (KM)</span>

@@ -51,6 +51,10 @@ use App\Http\Controllers\message_from_pm\AdminMessageFromPMController;
 use App\Http\Controllers\message_from_pm\MessageFromPMController;
 use App\Http\Controllers\executive_intentions\AdminExecutiveIntentionsController;
 use App\Http\Controllers\executive_intentions\ExecutiveIntentionsController;
+use App\Http\Controllers\performance_evaluation\AdminPerformanceEvaluationController;
+use App\Http\Controllers\performance_evaluation\PerformanceEvaluationController;
+use App\Http\Controllers\learning_organization\AdminLearningOrganizationController;
+use App\Http\Controllers\learning_organization\LearningOrganizationController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -157,6 +161,14 @@ Route::get('/message_from_pm/page', [MessageFromPMController::class, 'MessageFro
 
 //เจตจำนงสุจริตของผู้บริหาร
 Route::get('/executive_intentions/page', [ExecutiveIntentionsController::class, 'ExecutiveIntentionsPage'])->name('ExecutiveIntentionsPage');
+
+//LPA
+Route::get('/performance_evaluation/ShowData', [PerformanceEvaluationController::class, 'PerformanceEvaluationPage'])->name('PerformanceEvaluationPage');
+Route::get('/performance_evaluation/ShowDetails/{id}', [PerformanceEvaluationController::class, 'PerformanceEvaluationShowDetails'])->name('PerformanceEvaluationShowDetails');
+
+//KM
+Route::get('/learning_organization/ShowData', [LearningOrganizationController::class, 'LearningOrganizationPage'])->name('LearningOrganizationPage');
+Route::get('/learning_organization/ShowDetails/{id}', [LearningOrganizationController::class, 'LearningOrganizationShowDetails'])->name('LearningOrganizationShowDetails');
 
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
@@ -373,6 +385,24 @@ Route::middleware(['check.auth'])->group(function () {
     Route::get('/Admin/ExecutiveIntentions/page', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsAdmin'])->name('ExecutiveIntentionsAdmin');
     Route::post('/Admin/ExecutiveIntentions/create', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsCreate'])->name('ExecutiveIntentionsCreate');
     Route::delete('/Admin/ExecutiveIntentions/delete/{id}', [AdminExecutiveIntentionsController::class, 'ExecutiveIntentionsDelete'])->name('ExecutiveIntentionsDelete');
+
+    //PerformanceEvaluation
+    Route::get('/Admin/performance_evaluation/page', [AdminPerformanceEvaluationController::class, 'PerformanceEvaluationAdmin'])->name('PerformanceEvaluationAdmin');
+    Route::post('/Admin/performance_evaluation/create/name', [AdminPerformanceEvaluationController::class, 'PerformanceEvaluationNameCreate'])->name('PerformanceEvaluationNameCreate');
+    Route::delete('/Admin/performance_evaluation/{id}/delete', [AdminPerformanceEvaluationController::class, 'PerformanceEvaluationNameDelete'])->name('PerformanceEvaluationNameDelete');
+    Route::post('/Admin/performance_evaluation/{id}/update', [AdminPerformanceEvaluationController::class, 'PerformanceEvaluationNameUpdate'])->name('PerformanceEvaluationNameUpdate');
+    Route::get('/Admin/performance_evaluation/show/details/{id}', [AdminPerformanceEvaluationController::class, 'PerformanceEvaluationShowDertails'])->name('PerformanceEvaluationShowDertails');
+    Route::post('/Admin/performance_evaluation/show/details/{id}/create', [AdminPerformanceEvaluationController::class, 'PerformanceEvaluationDetailsCreate'])->name('PerformanceEvaluationDetailsCreate');
+    Route::delete('/Admin/performance_evaluation/show/details/{id}/delete', [AdminPerformanceEvaluationController::class, 'PerformanceEvaluationDetailsDelete'])->name('PerformanceEvaluationDetailsDelete');
+
+    //LearningOrganization
+    Route::get('/Admin/learning_organization/page', [AdminLearningOrganizationController::class, 'LearningOrganizationAdmin'])->name('LearningOrganizationAdmin');
+    Route::post('/Admin/learning_organization/create/name', [AdminLearningOrganizationController::class, 'LearningOrganizationNameCreate'])->name('LearningOrganizationNameCreate');
+    Route::delete('/Admin/learning_organization/{id}/delete', [AdminLearningOrganizationController::class, 'LearningOrganizationNameDelete'])->name('LearningOrganizationNameDelete');
+    Route::post('/Admin/learning_organization/{id}/update', [AdminLearningOrganizationController::class, 'LearningOrganizationNameUpdate'])->name('LearningOrganizationNameUpdate');
+    Route::get('/Admin/learning_organization/show/details/{id}', [AdminLearningOrganizationController::class, 'LearningOrganizationShowDertails'])->name('LearningOrganizationShowDertails');
+    Route::post('/Admin/learning_organization/show/details/{id}/create', [AdminLearningOrganizationController::class, 'LearningOrganizationDetailsCreate'])->name('LearningOrganizationDetailsCreate');
+    Route::delete('/Admin/learning_organization/show/details/{id}/delete', [AdminLearningOrganizationController::class, 'LearningOrganizationDetailsDelete'])->name('LearningOrganizationDetailsDelete');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
