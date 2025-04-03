@@ -746,7 +746,7 @@
 
         <div class="d-flex flex-column align-items-center justify-content-start">
             <video autoplay loop muted playsinline id="bg-video">
-                <source src="{{ asset('navbar/video/เทศบาลเกวียนหัก.mp4') }}" type="video/mp4">
+                <source src="{{ asset('navbar/video/เทศบาลเกวียนหัก.webm') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
 
