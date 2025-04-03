@@ -262,8 +262,6 @@
                     </div>
                 </div>
 
-
-
                 <div class="bg-white d-flex flex-column justify-content-center align-items-center p-3 my-3 my-xl-0" style="border-radius: 40px;">
                     <!-- หัวข้อ -->
                     <div class="d-flex justify-content-between align-items-center py-2 px-4 w-100" style="background: linear-gradient(to bottom, #fb6849, #f38e2e); border-radius: 40px;">
