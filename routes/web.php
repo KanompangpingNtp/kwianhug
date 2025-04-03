@@ -17,6 +17,7 @@ use App\Http\Controllers\procurement_report\ProcurementReportController;
 use App\Http\Controllers\notice_board\AdminNoticeBoardController;
 use App\Http\Controllers\notice_board\NoticeBoardController;
 use App\Http\Controllers\tourist_attractions\AdminTouristAttractionController;
+use App\Http\Controllers\tourist_attractions\TouristAttractionController;
 use App\Http\Controllers\awards_of_pride\AdminAwardsofPrideController;
 use App\Http\Controllers\personnel\AdminPersonnelController;
 use App\Http\Controllers\personnel\PersonnelAgencyController;
@@ -169,6 +170,10 @@ Route::get('/performance_evaluation/ShowDetails/{id}', [PerformanceEvaluationCon
 //KM
 Route::get('/learning_organization/ShowData', [LearningOrganizationController::class, 'LearningOrganizationPage'])->name('LearningOrganizationPage');
 Route::get('/learning_organization/ShowDetails/{id}', [LearningOrganizationController::class, 'LearningOrganizationShowDetails'])->name('LearningOrganizationShowDetails');
+
+//แนะนำสถานที่ท่องเที่ยว
+Route::get('/tourist_attraction/ShowData', [TouristAttractionController::class, 'TouristAttractionShowData'])->name('TouristAttractionShowData');
+Route::get('/tourist_attraction/ShowDetails/{id}', [TouristAttractionController::class, 'TouristAttractionShowDetails'])->name('TouristAttractionShowDetails');
 
 Route::middleware(['check.auth'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
