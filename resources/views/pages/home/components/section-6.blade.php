@@ -273,7 +273,7 @@
                         </a>
                     </div>
                 </div>
-                <a href="#" class="calendar-link mt-3">
+                <a href="https://calendar.google.com/calendar/u/0/r" class="calendar-link mt-3">
                     <img src="{{ asset('pages/home/section-6/ปฏืทิน.png') }}" alt="calendar" class="img-fluid">
                 </a>
             </div>

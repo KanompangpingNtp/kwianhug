@@ -322,7 +322,7 @@
                     <div class="text-title-nav lh-1 text-center text-md-start py-2 px-5">
                         <span class="me-1 maintitle-text">เทศบาลตำบลเกวียนหัก <br> อำเภอขลุง จังหวัดจันทบุรี
                             จังหวัดฉะเชิงเทรา</span><br>
-                        <span class="subtitle-text">Kwian Hak Subdistrict Municipality</span>
+                        <span class="subtitle-text">Kwian Hug Subdistrict Municipality</span>
                     </div>
                 </div>
                 <div class="d-flex gap-2">
