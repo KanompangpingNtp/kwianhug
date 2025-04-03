@@ -165,9 +165,9 @@
                         <span class="fs-4 fw-bold">ปลัดเทศบาลตำบลเกวียนหัก</span><br>
                         {{-- <span class="fw-bold">ตำบลเกวียนหัก</span><br> --}}
                         <span>นางสาวณัฐณิชา กล่ำแสง</span>
-                        <a href="tel:+6639493194" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
+                        <a href="tel:+66623295144" class="d-flex align-items-center text-white pe-2 mt-2" style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.4)); border-radius: 20px; text-decoration: none;">
                             <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon" style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                            039-493-194
+                            062-329-5144
                         </a>
                     </div>
                 </div>

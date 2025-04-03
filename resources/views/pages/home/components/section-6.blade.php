@@ -198,7 +198,7 @@
                     </a>
                 </div>
             </div>
-            {{-- <div class="col-xl-5 d-flex flex-column align-items-center justify-content-end mt-4 mt-xl-0">
+            <div class="col-xl-5 d-flex flex-column align-items-center justify-content-end mt-4 mt-xl-0">
                 <div class="row w-100 bg-black-opacity-section6 p-2 align-items-center justify-content-center">
                     <div class="col-xl-4 col-lg-3 col-md-6 my-3">
                         <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
@@ -276,7 +276,7 @@
                 <a href="#" class="calendar-link mt-3">
                     <img src="{{ asset('pages/home/section-6/ปฏืทิน.png') }}" alt="calendar" class="img-fluid">
                 </a>
-            </div> --}}
+            </div>
         </div>
     </div>
     <script>

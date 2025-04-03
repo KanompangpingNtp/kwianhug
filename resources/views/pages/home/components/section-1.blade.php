@@ -162,11 +162,11 @@
                             <span class="fs-3 fw-bold">ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี </span><br>
                             <span class="fw-bold">ตำบลเกวียนหัก</span><br>
                             <span>นางสาวณัฐณิชา กล่ำแสง</span>
-                            <a href="tel:+6639493194" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <a href="tel:+66623295144" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                    039-493-194
+                                    062-329-5144
                             </a>
                         </div>
                         <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal3" class="mark-personal-img">
@@ -223,7 +223,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="https://kwianhug.sosmartsolution.com/ReceiveComplaints/form" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:19px;">
                     <img src="{{ asset('pages/home/section-1/logo3.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับแจ้งเรื่องราวร้องทุกข์</span>
@@ -244,7 +244,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="#" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
+                <a href="https://kwianhug.sosmartsolution.com/Satisfaction/form" class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo6.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับเรื่องร้องเรียน <br> ทุจริตประพฤติมิชอบ</span>
