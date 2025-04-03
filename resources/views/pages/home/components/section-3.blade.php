@@ -272,7 +272,6 @@
                         </div>
                     </div>
 
-
                     <a href="{{route('NoticeBoardShowData')}}" class="bg-btn-section3">ดูทั้งหมด <img src="{{ asset('pages/home/section-3/icon-pointer.png') }}" alt="icon-pointer" style="width: 35px;"></a>
                 </div>
             </div>

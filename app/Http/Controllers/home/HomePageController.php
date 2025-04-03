@@ -50,8 +50,9 @@ class HomePageController extends Controller
             ->whereHas('postType', function ($query) {
                 $query->where('type_name', 'กิจกรรม');
             })
-            ->orderBy('date', 'desc')
+            ->orderByRaw("STR_TO_DATE(date, '%d-%m-%Y') DESC")
             ->get();
+
 
         //ประกาศจัดซื้อจัดจ้าง
         $procurement = PostDetail::with('postType', 'pdfs')
