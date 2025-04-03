@@ -507,7 +507,8 @@
                                         <div class="navbar-text">เมนูสำหรับประชาชน</div>
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="citizenMenuDropdown">
-                                        <li><a class="dropdown-item" href="{{ route('ReceiveComplaintsForm') }}">รับเรื่องราวร้องทุกข์
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('ReceiveComplaintsForm') }}">รับเรื่องราวร้องทุกข์
                                             </a>
                                         </li>
                                         <li><a class="dropdown-item" href="{{ route('SatisfactionForm') }}">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</a>

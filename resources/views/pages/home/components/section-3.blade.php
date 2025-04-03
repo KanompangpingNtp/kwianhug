@@ -302,7 +302,7 @@
                                 <img src="{{ asset('pages/home/section-3/บ4.png') }}" alt="icon">
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -20%;">หน่วยตรวจสอบ<br>ภายใน</p>
                             </a>
-                            <a href="#" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
+                            <a href="{{route('BannserPages')}}" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ5.png') }}" alt="icon">
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -20%;">ลิงค์ตรวจสอบ<br>ภายนอก</p>
                             </a>
