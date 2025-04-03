@@ -438,20 +438,65 @@
                                 <div class="d-flex flex-column justify-content-center align-items-center">
                                     <div class="d-flex justify-content-evenly align-items-center gap-2 button-img my-1">
                                         <div class="d-flex justify-content-start align-items-end button-img gap-1">
-                                            <img src="{{ asset('navbar/text-minus.png') }}" alt="text-minus">
-                                            <img src="{{ asset('navbar/text-normal.png') }}" alt="text-normal">
-                                            <img src="{{ asset('navbar/text-plus.png') }}" alt="text-plus">
+                                            <img src="{{ asset('navbar/text-minus.png') }}" alt="text-minus" data-action="decrease">
+                                            <img src="{{ asset('navbar/text-normal.png') }}" alt="text-normal" data-action="normal">
+                                            <img src="{{ asset('navbar/text-plus.png') }}" alt="text-plus" data-action="increase">
                                         </div>
-
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function() {
+                                                let defaultFontSize = 20; // ขนาดเริ่มต้น
+                                                const minFontSize = 10;
+                                                const maxFontSize = 40;
+                                                const step = 2;
+                
+                                                function updateFontSize(size) {
+                                                    document.querySelectorAll("*").forEach(el => {
+                                                        el.style.fontSize = size + "px";
+                                                    });
+                                                }
+                
+                                                document.querySelectorAll("img[data-action]").forEach(img => {
+                                                    img.addEventListener("click", function() {
+                                                        let action = this.getAttribute("data-action");
+                
+                                                        if (action === "decrease") {
+                                                            defaultFontSize = Math.max(minFontSize, defaultFontSize - step);
+                                                        } else if (action === "normal") {
+                                                            defaultFontSize = 20;
+                                                        } else if (action === "increase") {
+                                                            defaultFontSize = Math.min(maxFontSize, defaultFontSize + step);
+                                                        }
+                
+                                                        updateFontSize(defaultFontSize);
+                                                    });
+                                                });
+                                            });
+                                        </script>
                                     </div>
                                     <a class="button-blue" href="{{ route('Home') }}">
-                                        หน้าหลัก</a>
+                                        เข้าสู่ระบบ</a>
                                 </div>
                                 <div
                                     class="d-flex flex-column justify-content-center align-items-center gap-1 button-img">
                                     <img src="{{ asset('navbar/disability.png') }}" alt="btn-disability" width="40"
-                                        height="40">
-                                    <a class="button-blue" href="#"> เข้าสู่ระบบ</a>
+                                        height="40" id="toggleTheme">
+                                        <style>
+                                            .dark-mode * {
+                                                background-color: black !important;
+                                                color: white !important;
+                                            }
+                                        </style>
+                
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function() {
+                                                const toggleButton = document.getElementById("toggleTheme");
+                
+                                                toggleButton.addEventListener("click", function() {
+                                                    document.body.classList.toggle("dark-mode");
+                                                });
+                                            });
+                                        </script>
+                                    <a class="button-blue" href="#"> สมัครสมาชิก</a>
                                 </div>
 
                                 <a class="button-blue" href="#"> ติดต่อเรา</a>

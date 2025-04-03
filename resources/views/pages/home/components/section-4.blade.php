@@ -192,25 +192,7 @@
                         <img src="{{ asset('pages/home/section-4/book.png') }}" alt="book" style="width: 20rem;">
                     </div>
                     <div class="d-flex flex-column justify-content-start align-items-start">
-                        <a href="#" class="bg-orange-section4 text-decoration-none d-flex justify-content-center align-items-center  py-2 px-5 text-white lh-1 text-center mb-5">
-                            <div style="white-space: nowrap;">
-                                <span class="fs-2">ONE</span><span class="fs-6"> STOP SERVICE</span><br><span class="text-dark fs-6 fw-bold">ระบบบริการครบวงจร <br> เทศบาลตำบลเกวียนหัก</span>
-                            </div>
-
-                            <img src="{{ asset('pages/home/section-4/personal.png') }}" alt="icon">
-                        </a>
-                        <div class="bg-green-section4 d-flex justify-content-center align-items-center py-3 px-5">
-                            <div class="text-start" style="line-height: 0.9;">
-                                <span class="fs-3 fw-bold text-white" style="text-shadow:
-                2px 2px 2px rgba(0, 0, 0, 0.8),
-                -2px -2px 2px rgba(0, 0, 0, 0.8),
-                2px -2px 2px rgba(0, 0, 0, 0.8),
-                -2px 2px 2px rgba(0, 0, 0, 0.8);">เพิ่มเพื่อน
-                                    Line</span><br><span class="text-dark fs-6 fw-bold">เทศบาลตำบลเกวียนหัก <br>
-                                    @...................................................</span>
-                            </div>
-                            <img src="{{ asset('pages/home/section-4/qr-code.png') }}" alt="qr-code">
-                        </div>
+                        <img src="{{ asset('pages/home/section-4/line.png') }}" alt="line" class="img-fluid">
                     </div>
                 </div>
             </div>

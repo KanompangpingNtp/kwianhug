@@ -146,7 +146,9 @@
             height: 100%;
             border-radius: 10px;
         }
-
+        .underline-text span {
+    text-decoration: underline;
+}
     </style>
 </head>
 
@@ -188,7 +190,8 @@
                             <div class="fs-4 fw-bold p-2 " style="background: linear-gradient(to right, #fe574e,#fc883e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
                                 เทศบาลตำบลเกวียนหัก
                             </div>
-                            <div class="bg-dark fw-bold text-white fs-5 p-2" style="border-radius: 10px; white-space: nowrap;">
+                            <div class="bg-dark fw-bold text-white fs-6 p-2 lh-sm text-center underline-text" style="border-radius: 10px; white-space: nowrap;">
+                                <span>One Stop Service</span> <br>
                                 E-SERVICE
                             </div>
                         </div>

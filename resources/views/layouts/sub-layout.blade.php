@@ -338,11 +338,11 @@
 
                                 </div>
                                 <a class="button-blue" href="{{route('Home')}}">
-                                    หน้าหลัก</a>
+                                    เข้าสู่ระบบ</a>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center gap-1 button-img">
                                 <img src="{{ asset('navbar/disability.png') }}" alt="btn-disability" width="40" height="40">
-                                <a class="button-blue" href="#"> เข้าสู่ระบบ</a>
+                                <a class="button-blue" href="#"> สมัครสมาชิก</a>
                             </div>
 
                             <a class="button-blue" href="#"> ติดต่อเรา</a>
