@@ -320,8 +320,7 @@
                 <div class="d-flex justify-content-start align-items-center">
                     <img src="{{ asset('navbar/logo.png') }}" alt="logo" class="logo d-none d-md-block" style="margin-right:-35px; z-index: 3;">
                     <div class="text-title-nav lh-1 text-center text-md-start py-2 px-5">
-                        <span class="me-1 maintitle-text">เทศบาลตำบลเกวียนหัก <br> อำเภอขลุง จังหวัดจันทบุรี
-                            จังหวัดฉะเชิงเทรา</span><br>
+                        <span class="me-1 maintitle-text">เทศบาลตำบลเกวียนหัก <br> อำเภอขลุง จังหวัดจันทบุรี</span><br>
                         <span class="subtitle-text">Kwian Hug Subdistrict Municipality</span>
                     </div>
                 </div>
@@ -352,7 +351,7 @@
                             <div class="text-white d-none d-sm-block">
                                 เปลี่ยนภาษา
                             </div>
-                            <div id="google_translate_element"></div>
+                            {{-- <div id="google_translate_element"></div>
 
                             <script type="text/javascript">
                                 function googleTranslateElementInit() {
@@ -364,7 +363,7 @@
                                     }, 'google_translate_element');
                                 }
 
-                            </script>
+                            </script> --}}
                             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
                             </script>
 
