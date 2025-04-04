@@ -164,7 +164,7 @@
                             <span>
                                 ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี
                             </span><br>
-                            <span>เทศบาลตำบลเกวียนหัก</span>
+                            <span>ตำบลเกวียนหัก</span>
                             <a href="tel:+66623295144" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
