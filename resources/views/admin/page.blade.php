@@ -26,6 +26,7 @@
                             <div class="modal-body" style="font-size: 15px;">
                                 <p><strong>รายการอัพเดทเมนูใหม่ สามารถคลิกเพื่อดูรายละเอียดได้ทันที</strong></p>
                                 <ul id="menuList">
+                                    <li class="mb-1"><a href="{{route('EGPHome')}}">ประกาศ EGP</a></li>
                                     <li class="mb-1"><a href="{{route('MessageFromPMAdmin')}}">สารจากนายก</a></li>
                                     <li class="mb-1"><a href="{{route('ExecutiveIntentionsAdmin')}}">เจตจำนงสุจริตของผู้บริหาร</a></li>
                                     <li class="mb-1"><a href="{{route('PerformanceEvaluationAdmin')}}">การประเมินประสิทธิภาพภายใน (LPA)</a></li>
