@@ -14,24 +14,12 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        User::updateOrCreate(
-            ['email' => 'admin@example.com'], // เงื่อนไขตรวจซ้ำ
-            [
-                'name' => 'ผู้ดูแลระบบ',
-                'email_verified_at' => now(),
-                'password' => Hash::make('123456789'),
-                'remember_token' => null,
-            ]
-        );
-
-        User::updateOrCreate(
-            ['email' => 'admin@bangpluang.go.th'],
-            [
-                'name' => 'ผู้ดูแลระบบ',
-                'email_verified_at' => now(),
-                'password' => Hash::make('123456789'),
-                'remember_token' => null,
-            ]
-        );
+        User::create([
+            'name' => 'ผู้ดูแลระบบ',
+            'email' => 'admin@example.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('123456789'),
+            'remember_token' => null,
+        ]);
     }
 }
