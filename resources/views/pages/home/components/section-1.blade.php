@@ -126,8 +126,8 @@
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm fs-5">
                             <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
-                            <span>ที่ปรึกษา</span><br>
-                            <span>ตำบลเกวียนหัก</span>
+                            <span>ที่ปรึกษานายกเทศมนตรี</span><br>
+                            <span>เทศบาลตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -144,8 +144,8 @@
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
                             <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
-                            <span>เลขา</span><br>
-                            <span>ตำบลเกวียนหัก</span>
+                            <span>เลขานุการนายกเทศมนตรี</span><br>
+                            <span>เทศบาลตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -164,7 +164,7 @@
                             <span>
                                 ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี
                             </span><br>
-                            <span>ตำบลเกวียนหัก</span>
+                            <span>เทศบาลตำบลเกวียนหัก</span>
                             <a href="tel:+66623295144" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -181,7 +181,7 @@
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
                             <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
-                            <span>รองนายก <br>ตำบลเกวียนหัก</span>
+                            <span>รองนายกเทศมนตรี<br>เทศบาลตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
@@ -197,7 +197,7 @@
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
                             <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
-                            <span>รองนายก <br>ตำบลเกวียนหัก</span>
+                            <span>รองนายก <br>เทศบาลตำบลเกวียนหัก</span>
                             <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
