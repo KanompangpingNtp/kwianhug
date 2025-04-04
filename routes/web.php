@@ -70,6 +70,7 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 |
 */
 
+
 //eservice
 Route::get('/e-service/page', [TemporaryController::class, 'eservice_pages'])->name('eservice_pages');
 Route::get('/e-service/general_requests/page', [TemporaryController::class, 'general_requests_pages'])->name('general_requests_pages');
