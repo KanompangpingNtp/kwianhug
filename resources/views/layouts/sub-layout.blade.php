@@ -15,15 +15,16 @@
     <style>
         @font-face {
             font-family: 'PROMPT';
-            src: url('/fonts/PROMPT-LIGHT.ttf') format('woff2');
+            src: url('{{ asset('fonts/PROMPT-LIGHT.TTF') }}') format('truetype');
             font-weight: normal;
         }
 
         @font-face {
             font-family: 'PROMPT';
-            src: url('/fonts/PROMPT-SEMIBOLD.ttf') format('woff2');
+            src: url('{{ asset('fonts/PROMPT-SEMIBOLD.TTF') }}') format('truetype');
             font-weight: bold;
         }
+
 
         body {
             font-family: 'PROMPT', sans-serif;
