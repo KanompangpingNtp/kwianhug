@@ -43,7 +43,7 @@
 
    
         #bg-video {
-            margin-top: -30px;
+            margin-top: -35px;
             width: 100%;
             height: 100%;
             object-fit: cover;

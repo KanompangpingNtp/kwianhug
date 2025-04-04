@@ -287,11 +287,11 @@
                         <div class="row w-100 justify-content-center align-items-center">
                             <a href="https://kwianhug.sosmartsolution.com/Authority/show/detail/2" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ1.png') }}" alt="icon">
-                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">สำนักงานปลัด</p>
+                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">สำนักปลัด</p>
                             </a>
                             <a href="https://kwianhug.sosmartsolution.com/Authority/show/detail/5" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ2.png') }}" alt="icon">
-                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -20%;">กองศึกษาศาสนา<br>และวัฒนธรรม</p>
+                                <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -10%;">กองการศึกษา</p>
                             </a>
                             <a href="https://kwianhug.sosmartsolution.com/Authority/show/detail/3" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
                                 <img src="{{ asset('pages/home/section-3/บ3.png') }}" alt="icon">
