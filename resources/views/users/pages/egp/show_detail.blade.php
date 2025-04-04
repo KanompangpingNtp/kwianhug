@@ -63,6 +63,7 @@
         background: #fff;
         padding: 15px;
         border-top: 2px solid #46c700;
+        /* เส้นสีฟ้าที่ด้านบน */
     }
 
     .card-title {
@@ -81,59 +82,20 @@
 </style>
 <div class="bg py-5">
     <div class="container py-5 custom-gradient-shadow">
-        <div class=" d-flex flex-column justify-content-center align-items-center p-5 ">
-            <div class="fs-1 fw-bold mb-4 text-center">ประกาศของคลัง</div>
+        <div class=" d-flex flex-column justify-content-center p-5">
+            <div class="fs-1 fw-bold mb-4 text-center">ประกาศ EGP <br><span class="fs-3">{{$Egp->title_name}}</div>
 
-            <style>
-                .table td:hover {
-                    background-color: #53b2e6;
-                    color: white;
-                }
+            <p class="text-muted">วันที่เผยแพร่: {{ \Carbon\Carbon::parse($Egp->date)->format('d-m-Y') }}</p>
 
-                table {
-                    border-collapse: collapse;
-                }
-
-                table td,
-                table th {
-                    border: none;
-                }
-
-                table tr:nth-child(odd) {
-                    background-color: #7eccec;
-                }
-
-                table tr:nth-child(even) {
-                    background-color: #ffffff;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: #333;
-                }
-
-            </style>
-
-            <table class="table">
-
-                <tr>
-                    <td><a href="{{route('EGPShowData')}}">ประกาศ EGP</a></td>
-                </tr>
-                <tr>
-                    <td><a href="{{route('ProcurementShowData')}}">ประกาศจัดซื้อจัดจ้าง</a></td>
-                </tr>
-                <tr>
-                    <td><a href="{{route('ProcurementResultsShowData')}}">ผลประกาศจัดซื้อจัดจ้าง</a></td>
-                </tr>
-                <tr>
-                    <td><a href="{{route('AveragePriceShowData')}}">ประกาศราคากลาง</a></td>
-                </tr>
-                <tr>
-                    <td><a href="{{route('ProcurementReportShowData')}}">รายงานผลจัดซื้อจัดจ้าง</a></td>
-                </tr>
-
-            </table>
-
+            <!-- ไฟล์แนบ: PDF -->
+            @if ($Egp->pdfs->count() > 0)
+            <h5 class="text-secondary mt-4">ไฟล์เอกสาร</h5>
+            @foreach ($Egp->pdfs as $pdf)
+            <div class="mb-3">
+                <iframe src="{{ asset('storage/' . $pdf->post_pdf_file) }}" width="100%" height="700px"></iframe>
+            </div>
+            @endforeach
+            @endif
         </div>
     </div>
 </div>

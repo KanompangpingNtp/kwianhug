@@ -18,6 +18,7 @@ class PostTypeSeeder extends Seeder
             ['type_name' => 'กิจกรรม'],
             ['type_name' => 'ป้ายประกาศ'],
             ['type_name' => 'รางวัลแห่งความภาคภูมิใจ'],
+            ['type_name' => 'egp'],
             ['type_name' => 'ประกาศจัดซื้อจัดจ้าง'],
             ['type_name' => 'ผลประกาศจัดซื้อจัดจ้าง'],
             ['type_name' => 'ประกาศราคากลาง'],

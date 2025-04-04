@@ -110,6 +110,14 @@ class HomePageController extends Controller
             ->orderBy('date', 'desc')
             ->get();
 
+        //egp
+        $egp = PostDetail::with('postType', 'pdfs')
+            ->whereHas('postType', function ($query) {
+                $query->where('type_name', 'egp');
+            })
+            ->orderBy('date', 'desc')
+            ->get();
+
         return view('pages.home.app', compact(
             'PerfResultsMenu',
             'AuthorityMenu',
@@ -126,6 +134,7 @@ class HomePageController extends Controller
             'awardsPride',
             'noticeBoard',
             'touristattraction',
+            'egp'
         ));
     }
 

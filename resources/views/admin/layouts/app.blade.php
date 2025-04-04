@@ -122,6 +122,7 @@
                         </a>
                         <div class="collapse" id="collapseLayouts1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('EGPHome')}}">E-GP</a>
                                 <a class="nav-link" href="{{route('ProcurementHome')}}">ประกาศจัดซื้อจัดจ้าง</a>
                                 <a class="nav-link" href="{{route('ProcurementResultsHome')}}">ผลประกาศจัดซื้อจัดจ้าง</a>
                                 <a class="nav-link" href="{{route('AveragePriceHome')}}">ประกาศราคากลาง</a>

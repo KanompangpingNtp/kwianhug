@@ -56,6 +56,8 @@ use App\Http\Controllers\performance_evaluation\AdminPerformanceEvaluationContro
 use App\Http\Controllers\performance_evaluation\PerformanceEvaluationController;
 use App\Http\Controllers\learning_organization\AdminLearningOrganizationController;
 use App\Http\Controllers\learning_organization\LearningOrganizationController;
+use App\Http\Controllers\egp\AdminEGPController;
+use App\Http\Controllers\egp\EGPController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -152,6 +154,10 @@ Route::get('/AveragePrice/ShowData', [AveragePriceController::class, 'AveragePri
 //รายงานผลจัดซื้อจัดจ้าง
 Route::get('/ProcurementReport/detail/{id}', [ProcurementReportController::class, 'ProcurementReportDetail'])->name('ProcurementReportDetail');
 Route::get('/ProcurementReport/ShowData', [ProcurementReportController::class, 'ProcurementReportShowData'])->name('ProcurementReportShowData');
+
+//EGP
+Route::get('/EGP/detail/{id}', [EGPController::class, 'EGPDetail'])->name('EGPDetail');
+Route::get('/EGP/ShowData', [EGPController::class, 'EGPShowData'])->name('EGPShowData');
 
 //ป้ายประกาศ
 Route::get('/NoticeBoard/ShowData', [NoticeBoardController::class, 'NoticeBoardShowData'])->name('NoticeBoardShowData');
@@ -411,6 +417,12 @@ Route::middleware(['check.auth'])->group(function () {
     Route::get('/Admin/learning_organization/show/details/{id}', [AdminLearningOrganizationController::class, 'LearningOrganizationShowDertails'])->name('LearningOrganizationShowDertails');
     Route::post('/Admin/learning_organization/show/details/{id}/create', [AdminLearningOrganizationController::class, 'LearningOrganizationDetailsCreate'])->name('LearningOrganizationDetailsCreate');
     Route::delete('/Admin/learning_organization/show/details/{id}/delete', [AdminLearningOrganizationController::class, 'LearningOrganizationDetailsDelete'])->name('LearningOrganizationDetailsDelete');
+
+    //admin egp
+    Route::get('/egp/page', [AdminEGPController::class, 'EGPHome'])->name('EGPHome');
+    Route::post('/egp/create', [AdminEGPController::class, 'EGPCreate'])->name('EGPCreate');
+    Route::delete('/egp/delete{id}', [AdminEGPController::class, 'EGPDelete'])->name('EGPDelete');
+    Route::put('/egp/update/{id}', [AdminEGPController::class, 'EGPUpdate'])->name('EGPUpdate');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

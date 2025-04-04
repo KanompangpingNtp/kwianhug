@@ -1,11 +1,11 @@
 @php
-    $egp = [
-        ['id' => 1, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-24'],
-        ['id' => 2, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-23'],
-        ['id' => 3, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-22'],
-        ['id' => 4, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-21'],
-        ['id' => 5, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-20'],
-    ];
+    // $egp = [
+    //     ['id' => 1, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-24'],
+    //     ['id' => 2, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-23'],
+    //     ['id' => 3, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-22'],
+    //     ['id' => 4, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-21'],
+    //     ['id' => 5, 'title_name' => 'ประกาศ E-GP', 'date' => '2024-03-20'],
+    // ];
 
     // $procurement = [
     //     ['id' => 1, 'title_name' => 'ประกาศจัดซื้อจัดจ้าง 1', 'date' => '2024-03-22'],
@@ -162,7 +162,7 @@
                 <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mt-3">
                     <div id="btnEgpAnnouncement" class="bg-btn-egp p-2 py-3 text-center lh-sm text-nowrap active"
                         onclick="changeContent('egp', {{ json_encode($egp) }})"
-                        data-link="#">
+                        data-link="{{ route('EGPDetail', ['id' => ':id']) }}">
                         ประกาศ E-GP
                     </div>
                     <div id="btnProcurementAnnouncement" class="bg-btn-egp p-2 text-center lh-sm"
