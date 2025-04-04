@@ -80,6 +80,7 @@
             </div>
             <form action="{{ route('OperationalPlanUpdate', $details->id) }}" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="type_name-{{ $details->id }}" class="form-label">หัวข้อ</label>
