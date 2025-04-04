@@ -58,6 +58,7 @@ use App\Http\Controllers\learning_organization\AdminLearningOrganizationControll
 use App\Http\Controllers\learning_organization\LearningOrganizationController;
 use App\Http\Controllers\egp\AdminEGPController;
 use App\Http\Controllers\egp\EGPController;
+use App\Http\Controllers\forum\ForumController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -71,7 +72,7 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/forum/page', [ForumController::class, 'forum_pages'])->name('forum_pages');
 
 //eservice
 Route::get('/e-service/page', [TemporaryController::class, 'eservice_pages'])->name('eservice_pages');

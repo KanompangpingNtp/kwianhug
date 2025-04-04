@@ -51,7 +51,7 @@
         <div class="container p-5 custom-gradient-shadow">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-3">
                 <p class="fs-2 fw-bold text-center mb-0">กระดานกระทู้</p> <!-- แก้ไข mb-0 เพื่อไม่ให้มี margin ด้านล่าง -->
-                <a href="#" class="btn btn-success" data-bs-toggle="modal"
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal"
                     data-bs-target="#createForumModal">สร้างกระทู้</a>
             </div>
 
@@ -64,7 +64,7 @@
                         'title' => 'น้ำประปาไม่ไหลมาหลายวัน',
                         'description' => 'พื้นที่หมู่ 5 ไม่มีน้ำประปาใช้มานาน 3 วันแล้ว ช่วยตรวจสอบด้วยครับ',
                         'author' => 'สมชาย บ้านนา',
-                        'image' => 'images/section-5/logo.png',
+                        'image' => 'navbar/logo.png',
                         'comments_count' => 8,
                         'created_at' => '2025-03-05 14:30:00', // วันที่ตั้งกระทู้
                     ],
@@ -82,7 +82,7 @@
                         'title' => 'ถนนพังเป็นหลุมเยอะมาก',
                         'description' => 'ถนนเส้นหลักของหมู่บ้านมีหลุมบ่อเยอะ รถวิ่งลำบากมาก',
                         'author' => 'ลุงดำ',
-                        'image' => 'images/section-5/logo.png',
+                        'image' => 'navbar/logo.png',
                         'comments_count' => 20,
                         'created_at' => '2025-03-03 16:45:00', // วันที่ตั้งกระทู้
                     ],
@@ -100,7 +100,7 @@
 
 
             @foreach ($complaints as $forum)
-                <a href="{{route('forum_details_pages')}}" class="forum-card rounded mb-2">
+                <a href="#" class="forum-card rounded mb-2">
                     <div class="card p-3 shadow-sm">
                         <div class="d-flex flex-column flex-lg-row align-items-center">
                             <!-- แสดงรูปถ้ามี -->
