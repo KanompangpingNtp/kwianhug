@@ -87,6 +87,12 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav mb-5">
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Content</div>
+                        <a class="nav-link" href="{{route('AdminWebIntro')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="fa-solid fa-folder"></i>
+                            </div>
+                            จัดการอินโทรเว็บไซต์
+                        </a>
                         <a class="nav-link" href="{{route('NoticeBoardHome')}}">
                             <div class="sb-nav-link-icon">
                                 <i class="fa-solid fa-folder"></i>

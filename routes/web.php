@@ -59,6 +59,8 @@ use App\Http\Controllers\learning_organization\LearningOrganizationController;
 use App\Http\Controllers\egp\AdminEGPController;
 use App\Http\Controllers\egp\EGPController;
 use App\Http\Controllers\forum\ForumController;
+use App\Http\Controllers\web_intro\AdminWebIntroController;
+use App\Http\Controllers\web_intro\WebIntroController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -72,6 +74,7 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
 Route::get('/forum/page', [ForumController::class, 'forum_pages'])->name('forum_pages');
 
 //eservice
@@ -91,7 +94,10 @@ Route::get('/ReceiveComplaints/form', [TemporaryController::class, 'ReceiveCompl
 //รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ
 Route::get('/Satisfaction/form', [TemporaryController::class, 'SatisfactionForm'])->name('SatisfactionForm');
 
-Route::get('/', [HomePageController::class, 'Home'])->name('Home');
+
+
+Route::get('/', [WebIntroController::class, 'WebIntroPage'])->name('WebIntroPage');
+Route::get('/home', [HomePageController::class, 'Home'])->name('Home');
 
 //ข้อมูลพื้นฐาน
 Route::get('/history/page', [HistoryController::class, 'HistoryPage'])->name('HistoryPage');
@@ -425,6 +431,11 @@ Route::middleware(['check.auth'])->group(function () {
     Route::post('/egp/create', [AdminEGPController::class, 'EGPCreate'])->name('EGPCreate');
     Route::delete('/egp/delete{id}', [AdminEGPController::class, 'EGPDelete'])->name('EGPDelete');
     Route::put('/egp/update/{id}', [AdminEGPController::class, 'EGPUpdate'])->name('EGPUpdate');
+
+    //WebIntro
+    Route::get('/Admin/WebIntro/page', [AdminWebIntroController::class, 'AdminWebIntro'])->name('AdminWebIntro');
+    Route::post('/Admin/WebIntro/create', [AdminWebIntroController::class, 'WebIntroCreate'])->name('WebIntroCreate');
+    Route::delete('/Admin/WebIntro/delete/{id}', [AdminWebIntroController::class, 'WebIntroDelete'])->name('WebIntroDelete');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
