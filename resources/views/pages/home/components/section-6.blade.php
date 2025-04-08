@@ -228,7 +228,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-6 my-3">
-                        <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
+                        <a href="https://kwianhug.go.th/PerformanceResults/show/section/11" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-6/4.png') }}" alt="icon"
                                 class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
@@ -237,7 +237,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-6 my-3">
-                        <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
+                        <a href="https://kwianhug.go.th/OperationalPlan/show/section/13" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-6/5.png') }}" alt="icon"
                                 class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
@@ -255,7 +255,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-6 my-3">
-                        <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
+                        <a href="https://kwianhug.go.th/MenuForPublic/show/section/7" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-6/7.png') }}" alt="icon"
                                 class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
@@ -264,7 +264,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-6 my-3">
-                        <a href="#" class="text-decoration-none d-block position-relative link-section5-effect">
+                        <a href="https://kwianhug.go.th/PerformanceResults/show/section/4" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-6/8.png') }}" alt="icon"
                                 class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"

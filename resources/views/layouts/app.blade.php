@@ -425,7 +425,7 @@
                 <div
                     class="container d-flex flex-column flex-xxl-row justify-content-center justify-content-md-between align-items-center">
                     <div class="d-flex justify-content-start align-items-center">
-                        <img src="{{ asset('navbar/logo.png') }}" alt="logo" class="logo d-none d-md-block"
+                        <img src="{{ asset('navbar/logo-wink.gif') }}" alt="logo" class="logo d-none d-md-block"
                             style="margin-right:-35px; z-index: 3;">
                         <div class="text-title-nav lh-1 text-center text-md-start py-2 px-5">
                             <span class="me-1 maintitle-text">เทศบาลตำบลเกวียนหัก <br> อำเภอขลุง จังหวัดจันทบุรี

@@ -43,6 +43,7 @@
         }
         .bg-blue-section8 {
             background: linear-gradient(to bottom, #137dfd, #00cfd3);
+            font-size: 1.8rem;
             border-radius: 30px;
             box-shadow:
                 2px 2px 4px rgba(255, 255, 255, 0.5),
@@ -93,7 +94,7 @@
             align-items: center;
             gap: 10px;
             /* ระยะห่างระหว่างไอคอนกับข้อความ */
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             /* ขนาดตัวอักษร */
             font-weight: bold;
             /* ความหนาของตัวอักษร */
@@ -143,7 +144,7 @@
             หนังสือราชการ <br><span class="fs-4">เทศบาลตำบลเกวียนหัก</span>
         </div>
         <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5 gap-5">
-            <div class="d-flex flex-column justify-content-center align-items-center">
+            {{-- <div class="d-flex flex-column justify-content-center align-items-center">
                 <div class="bg-orange-section8 py-2 px-4 text-center text-white lh-sm">
                     หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น
                 </div>
@@ -168,10 +169,11 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <div class="bg-blue-section8 py-2 px-4 text-center text-white lh-sm">
-                    หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น
+                    {{-- หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น --}}
+                    หนังสือราชการจากกรม<br>ส่งเสริมท้องถิ่นจังหวัด
                 </div>
                 <div class="bg-blue-link-section8 p-1 mt-4">
                     <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3"

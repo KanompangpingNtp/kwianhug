@@ -189,7 +189,7 @@
                                 อ่านทั้งหมด
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-4/book.png') }}" alt="book" style="width: 20rem;">
+                        <img src="{{ asset('pages/home/section-4/books.png') }}" alt="book" style="width: 8rem;" class="mt-3">
                     </div>
                     <div class="d-flex flex-column justify-content-start align-items-start">
                         <img src="{{ asset('pages/home/section-4/line.png') }}" alt="line" class="img-fluid">

@@ -130,7 +130,7 @@
             <div class="col-xl-5 bg-blue-section10 p-2">
                 <div
                     class="container d-flex flex-column flex-lg-row justify-content-center justify-content-xl-end align-items-center gap-3">
-                    <img src="{{ asset('pages/home/section-10/logo.png') }}" alt="logo" style="width: 130px;">
+                    <img src="{{ asset('navbar/logo-wink.gif') }}" alt="logo" style="width: 130px;">
                     <div class="lh-sm fs-6 fw-bold">
                         <span class="title-section10">เทศบาลตำบลเกวียนหัก</span><br>
                         Kwian Hug Subdistrict Municipality <br>
