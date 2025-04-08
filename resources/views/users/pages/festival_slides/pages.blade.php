@@ -26,7 +26,6 @@
             width: 100vw;
             height: 100vh;
             position: relative;
-            /* ให้ปุ่มอ้างอิงตำแหน่งจากตรงนี้ */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -40,7 +39,6 @@
             top: 0;
             left: 0;
             z-index: 1;
-            /* ทำให้ภาพอยู่ล่างสุด */
         }
 
         @media (max-width: 1300px) {
@@ -70,13 +68,10 @@
             z-index: 2;
             display: flex;
             gap: 20px;
-            /* ปกติให้ห่าง 20px */
         }
 
-        /* เมื่อจอเล็กกว่า 1300px */
         @media (max-width: 1300px) {
             .button-container {
-                /* flex-direction: column; */
                 align-items: center;
                 gap: 5px;
             }
@@ -84,7 +79,6 @@
             .login-button {
                 width: 90%;
                 max-width: 280px;
-                /* ปรับขนาดปุ่มให้พอดี */
             }
         }
 
@@ -107,6 +101,7 @@
             align-items: center;
             text-decoration: none;
             position: relative;
+            font-size: 30px;
         }
 
         .login-button:hover {
@@ -114,6 +109,46 @@
             box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3),
                 -6px -6px 15px rgba(255, 255, 255, 0.6);
             transform: scale(1.05);
+        }
+
+        @media screen and (max-width: 1370px) and (max-height: 784px) {
+            .login-button {
+                margin-top: 580px;
+            }
+        }
+
+        @media screen and (max-width: 414px) and (max-height: 896px) {
+            .login-button {
+                margin-top: 300px !important;
+                width: 150px !important;
+                height: 30px !important;
+                font-size: 18px !important;
+                border-radius: 15px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .login-button strong {
+                font-size: 18px !important;
+            }
+        }
+
+        @media screen and (max-width: 440px) and (max-height: 932px) {
+            .login-button {
+                margin-top: 280px !important;
+                width: 150px !important;
+                height: 30px !important;
+                font-size: 18px !important;
+                border-radius: 15px !important;
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+
+            .login-button strong {
+                font-size: 18px !important;
+            }
         }
 
     </style>
