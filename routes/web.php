@@ -88,6 +88,17 @@ Route::get('/e-service/child_development/page', [TemporaryController::class, 'ch
 Route::get('/e-service/child_development/surrender/page', [TemporaryController::class, 'surrender_pages'])->name('surrender_pages');
 Route::get('/e-service/child_development/register/page', [TemporaryController::class, 'register_pages'])->name('register_pages');
 
+Route::get('/e-service/page/test1', [TemporaryController::class, 'test1'])->name('test1');
+Route::get('/e-service/page/test2', [TemporaryController::class, 'test2'])->name('test2');
+Route::get('/e-service/page/test3', [TemporaryController::class, 'test3'])->name('test3');
+Route::get('/e-service/page/test4', [TemporaryController::class, 'test4'])->name('test4');
+Route::get('/e-service/page/test5', [TemporaryController::class, 'test5'])->name('test5');
+Route::get('/e-service/page/test6', [TemporaryController::class, 'test6'])->name('test6');
+Route::get('/e-service/page/test7', [TemporaryController::class, 'test7'])->name('test7');
+Route::get('/e-service/page/test8', [TemporaryController::class, 'test8'])->name('test8');
+Route::get('/e-service/page/test9', [TemporaryController::class, 'test9'])->name('test9');
+Route::get('/e-service/page/test10', [TemporaryController::class, 'test10'])->name('test10');
+
 //รับเรื่องราวร้องทุกข์
 Route::get('/ReceiveComplaints/form', [TemporaryController::class, 'ReceiveComplaintsForm'])->name('ReceiveComplaintsForm');
 

@@ -115,43 +115,94 @@
             </style>
 
             <table class="table">
-                <tr>
-                    <td><a href="{{route('child_development_pages')}}">ใบสมัคร ศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
-                </tr>
-                <tr>
-                    <td><a href="{{route('general_requests_pages')}}">คำร้องยื่นเรื่องราวต่างๆ</a></td>
-                </tr>
-                <tr>
-                    <td><a href="{{route('disability_pages')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ ประจำปี งบประมาณ พ.ศ.2568</a></td>
-                </tr>
-                <tr>
-                    <td><a href="{{route('elderly_allowance_pages')}}">แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">(แบบ ศผส.01) แบบคำขอรับเงินสงเคราะห์ และรับรองผู้รับผิดชอบในการจัดการศพผู้สูงอายุตามประเพณี</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">(แบบ ศผส.02)แบบรับรองการมีคุณสมบัติตามโครงการลงทะเบียนเพื่อสวัสดิการแห่งรัฐ</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">(แบบ ดร.01) คำร้องขอลงทะเบียน เพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">(แบบ ดร.02) แบบรับรองสถานะของครัวเรือน ตารางแสดงจำนวนสมาชิกและรายได้ของครัวเรือน</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">แบบคำขอรับใบอนุญาต/ต่ออายุใบอนุญาต ประกอบกิจการ</a></td>
-                </tr>
-                <tr>
-                    <td><a href="#">แบบคำขอแจ้งจัดตั้งสถานที่จำหน่ายอาหารหรือสถานที่สะสมอาหาร</a></td>
-                </tr>
-                {{-- <tr>
-                    <td><a href="#">แบบแจ้งข้อมูลการรับเงินโอนผ่านระบบ KTB Corporat Online</a></td>
-                </tr> --}}
+                <thead>
+                    <tr>
+                        <th style="background-color: white;"><strong>สำนักปลัดเทศกาล</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('disability_pages')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('register_pages')}}">แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('elderly_allowance_pages')}}">แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test1')}}">แบบคำร้องขอทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test2')}}">คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test3')}}">คำขออนุญาตกิจการอันตรายต่อสุขภาพ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test4')}}">คำร้องขอแจ้งจำหน่ายหรือสะสมอาหาร</a></td>
+                    </tr>
+                </tbody>
+            </table>
 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="background-color: white;"><strong>กองคลัง</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="background-color: white;"><strong>กองช่าง</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test5')}}">คำขออนุญาตก่อสร้างอาคาร ดัดแปลงอาคาร หรือรื้อถอนอาคาร</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test6')}}">แบบฟอร์มการขออนุญาตขุดดินหรือถมดิน</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test7')}}">แบบคำร้องแจ้งซ่อมไฟฟ้าสาธารณะ</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test8')}}">แบบคำร้องขอหนังสือรับรองสิ่งปลูกสร้าง</a></td>
+                    </tr>
+                    {{-- <tr>
+                        <td><a href="{{route('test9')}}">แบบคำร้องขอหนังสือรับรองสิ่งปลูกสร้าง</a></td>
+                    </tr> --}}
+                </tbody>
+            </table>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="background-color: white;"><strong>กองการศึกษา</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="{{route('test10')}}">ใบสมัครศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
+                    </tr>
+                </tbody>
             </table>
 
             <div class="d-flex justify-content-center align-items-center text-center mt-5">
