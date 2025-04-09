@@ -1,7 +1,7 @@
 <head>
     <style>
         .bg-page-map {
-            background-image: url('{{ asset('pages/home/map/map.png') }}');
+            background-image: url('{{ asset('pages/home/map/map-very-very-version.png') }}');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
