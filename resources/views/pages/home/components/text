@@ -1,0 +1,46 @@
+<div class="box-map border">
+                
+
+                <!-- เนื้อหาหรือที่อยู่ -->
+                <div class="location-container-1">
+                    <img src="{{ asset('pages/home/map/โรงพยาบาลส่งเสริมสุขภาพ.png') }}" alt="โรงพยาบาลส่งเสริมสุขภาพ"
+                        class="main-image">
+                    <div class="location-label lh-1">โรงพยาบาลส่งเสริมสุขภาพ<br>ตำบลบ้านคานรู</div>
+                    <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image">
+                </div>
+                <div class="location-container-2">
+                    <img src="{{ asset('pages/home/map/ศูนย์การเรียนรู้ปูแป้น.png') }}" alt="ศูนย์การเรียนรู้ปูแป้น"
+                        class="main-image">
+                    <div class="location-label lh-1">ศูนย์การเรียนรู้ปูแป้น</div>
+                    <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image">
+                </div>
+                <div class="location-container-3">
+                    <img src="{{ asset('pages/home/map/วัดคานรูดสุวรรณบูรพาราม.png') }}" alt="วัดคานรูดสุวรรณบูรพาราม"
+                        class="main-image">
+                    <div class="location-label lh-1">วัดคานรูดสุวรรณบูรพาราม</div>
+                    <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image">
+                </div>
+                <div class="location-container-4">
+                    <img src="{{ asset('pages/home/map/ศาลเจ้าปึงเท่ากงคานรูด.png') }}" alt="ศาลเจ้าปึงเท่ากงคานรูด"
+                        class="main-image">
+                    <div class="location-label lh-1">ศาลเจ้าปึงเท่ากงคานรูด</div>
+                    <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image-4">
+                </div>
+                <div class="location-container-5">
+                    <img src="{{ asset('pages/home/map/สำนักงานเทศบาลตำบลเกวียนหัก.png') }}"
+                        alt="สำนักงานเทศบาลตำบลเกวียนหัก" class="main-image">
+                    <div class="location-label lh-1">สำนักงานเทศบาลตำบลเกวียนหัก</div>
+                    <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image-4">
+                </div>
+                <div class="location-container-6">
+                    <img src="{{ asset('pages/home/map/วัดเกวียนหัก.png') }}" alt="วัดเกวียนหัก" class="main-image">
+                    <div class="location-label lh-1">วัดเกวียนหัก</div>
+                    <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image-6">
+                </div>
+                <div class="location-container-6">
+                    <img src="{{ asset('pages/home/map/ศาลจ้าวขุนประสิทธิ์.png') }}" alt="ศาลจ้าวขุนประสิทธิ์"
+                        class="main-image">
+                    <div class="location-label lh-1">ศาลจ้าวขุนประสิทธิ์</div>
+                    <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image-6">
+                </div>
+            </div>
