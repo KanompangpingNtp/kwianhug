@@ -43,7 +43,6 @@
         }
         .bg-blue-section8 {
             background: linear-gradient(to bottom, #137dfd, #00cfd3);
-            font-size: 1.8rem;
             border-radius: 30px;
             box-shadow:
                 2px 2px 4px rgba(255, 255, 255, 0.5),
@@ -66,7 +65,7 @@
             align-items: center;
             gap: 10px;
             /* ระยะห่างระหว่างไอคอนกับข้อความ */
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             /* ขนาดตัวอักษร */
             font-weight: bold;
             /* ความหนาของตัวอักษร */
@@ -94,7 +93,7 @@
             align-items: center;
             gap: 10px;
             /* ระยะห่างระหว่างไอคอนกับข้อความ */
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             /* ขนาดตัวอักษร */
             font-weight: bold;
             /* ความหนาของตัวอักษร */
@@ -144,32 +143,36 @@
             หนังสือราชการ <br><span class="fs-4">เทศบาลตำบลเกวียนหัก</span>
         </div>
         <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5 gap-5">
-            {{-- <div class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex flex-column justify-content-center align-items-center">
                 <div class="bg-orange-section8 py-2 px-4 text-center text-white lh-sm">
                     หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น
                 </div>
                 <div class="bg-orange-link-section8 p-1 mt-4">
                     <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3"
                         style="border-radius: 10px;">
-                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1554" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            ข่าวประชาสัมพันธ์ สถ.
+                            หนังสือราชการ สถ.
                         </a>
-                        <a href="https://chanthaburilocal.go.th/public/dispatch/data/index/menu/1244" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/servlet/LawServlet?regType=1" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            หนังสือสั่งการจังหวัด
+                            กฏหมาย ระเบียบ และมติ ก.กลาง
                         </a>
-                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1619" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=4" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            สถานที่สำคัญ/แหล่งท่องเที่ยว
+                            บทความที่น่าสนใจ สถ.
                         </a>
-                        <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1623" class="text-decoration-none section8-link-orange">
+                        <a href="https://www.dla.go.th/servlet/" class="text-decoration-none section8-link-orange">
+                            <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
+                            พรบ.และประกาศเกี่ยวกับเทศโนโลยีสารสนเทศ
+                        </a>
+                        {{-- <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1623" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
                             ติดต่อหน่วยงาน สถ.จังหวัด
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
-            </div> --}}
+            </div>
             <div class="d-flex flex-column justify-content-center align-items-center">
                 <div class="bg-blue-section8 py-2 px-4 text-center text-white lh-sm">
                     {{-- หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น --}}
