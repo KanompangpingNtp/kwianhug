@@ -345,7 +345,7 @@
                                 <a class="button-blue" href="#"> สมัครสมาชิก</a>
                             </div>
 
-                            <a class="button-blue" href="#"> ติดต่อเรา</a>
+                            <a class="button-blue" href="{{route('contact')}}"> ติดต่อเรา</a>
                         </div>
 
                         <div class="bg-black-opacity d-flex justify-content-center align-items-center mt-2">

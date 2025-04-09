@@ -105,10 +105,9 @@ Route::get('/ReceiveComplaints/form', [TemporaryController::class, 'ReceiveCompl
 //รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ
 Route::get('/Satisfaction/form', [TemporaryController::class, 'SatisfactionForm'])->name('SatisfactionForm');
 
-
-
 Route::get('/', [WebIntroController::class, 'WebIntroPage'])->name('WebIntroPage');
 Route::get('/home', [HomePageController::class, 'Home'])->name('Home');
+Route::get('/contact', [HomePageController::class, 'contact'])->name('contact');
 
 //ข้อมูลพื้นฐาน
 Route::get('/history/page', [HistoryController::class, 'HistoryPage'])->name('HistoryPage');

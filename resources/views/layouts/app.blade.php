@@ -42,7 +42,7 @@
             padding-bottom: 0.1rem;
         }
 
-   
+
         #bg-video {
             margin-top: -35px;
             width: 100%;
@@ -449,17 +449,17 @@
                                                 const minFontSize = 10;
                                                 const maxFontSize = 40;
                                                 const step = 2;
-                
+
                                                 function updateFontSize(size) {
                                                     document.querySelectorAll("*").forEach(el => {
                                                         el.style.fontSize = size + "px";
                                                     });
                                                 }
-                
+
                                                 document.querySelectorAll("img[data-action]").forEach(img => {
                                                     img.addEventListener("click", function() {
                                                         let action = this.getAttribute("data-action");
-                
+
                                                         if (action === "decrease") {
                                                             defaultFontSize = Math.max(minFontSize, defaultFontSize - step);
                                                         } else if (action === "normal") {
@@ -467,7 +467,7 @@
                                                         } else if (action === "increase") {
                                                             defaultFontSize = Math.min(maxFontSize, defaultFontSize + step);
                                                         }
-                
+
                                                         updateFontSize(defaultFontSize);
                                                     });
                                                 });
@@ -487,11 +487,11 @@
                                                 color: white !important;
                                             }
                                         </style>
-                
+
                                         <script>
                                             document.addEventListener("DOMContentLoaded", function() {
                                                 const toggleButton = document.getElementById("toggleTheme");
-                
+
                                                 toggleButton.addEventListener("click", function() {
                                                     document.body.classList.toggle("dark-mode");
                                                 });
@@ -500,7 +500,7 @@
                                     <a class="button-blue" href="#"> สมัครสมาชิก</a>
                                 </div>
 
-                                <a class="button-blue" href="#"> ติดต่อเรา</a>
+                                <a class="button-blue" href="{{route('contact')}}"> ติดต่อเรา</a>
                             </div>
 
                             <div class="bg-black-opacity d-flex justify-content-center align-items-center mt-2">
