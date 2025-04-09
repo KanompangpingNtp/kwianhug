@@ -127,9 +127,9 @@
                     <tr>
                         <td><a href="{{route('disability_pages')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ</a></td>
                     </tr>
-                    {{-- <tr>
-                        <td><a href="{{route('child_development_pages')}}">ใบสมัคร ศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
-                    </tr> --}}
+                    <tr>
+                        <td><a href="{{route('register_pages')}}">แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ</a></td>
+                    </tr>
                     <tr>
                         <td><a href="{{route('elderly_allowance_pages')}}">แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ</a></td>
                     </tr>
