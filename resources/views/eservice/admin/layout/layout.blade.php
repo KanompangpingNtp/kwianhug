@@ -98,6 +98,14 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ
                         </a>
+                        <a class="nav-link" href="{{route('HealthHazardApplicationAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำขออนุญาตกิจการอันตรายต่อสุขภาพ
+                        </a>
+                        <a class="nav-link" href="{{route('FoodStorageLicenseShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำร้องขอแจ้งจำหน่ายหรือสะสมอาหาร
+                        </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองคลัง</div>
 

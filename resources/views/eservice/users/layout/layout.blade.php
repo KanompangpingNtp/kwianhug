@@ -148,6 +148,38 @@
                             </nav>
                         </div>
 
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office5" aria-expanded="false" aria-controls="secretariat_office5">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำขออนุญาตกิจการอันตรายต่อสุขภาพ
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="secretariat_office5" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('HealthHazardApplicationFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('HealthHazardApplicationShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office6" aria-expanded="false" aria-controls="secretariat_office6">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำร้องขอแจ้งจำหน่ายหรือสะสมอาหาร
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="secretariat_office6" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('FoodStorageLicenseFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('FoodStorageLicenseShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองคลัง</div>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองช่าง</div>

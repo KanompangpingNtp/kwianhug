@@ -140,7 +140,7 @@
                         <td><a href="{{route('test2')}}">คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test3')}}">คำขออนุญาตกิจการอันตรายต่อสุขภาพ</a></td>
+                        <td><a href="{{route('HealthHazardApplicationFormPage')}}">คำขออนุญาตกิจการอันตรายต่อสุขภาพ</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('test4')}}">คำร้องขอแจ้งจำหน่ายหรือสะสมอาหาร</a></td>
