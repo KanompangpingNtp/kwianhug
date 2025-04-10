@@ -20,14 +20,14 @@ class AdminGeneralRequestsController extends Controller
         return view('eservice.admin.municipal_office.general-requests.show-data', compact('forms'));
     }
 
-    // public function GeneralRequestsAdminExportPDF($id)
-    // {
-    //     $form = GeneralRequestsForm::find($id);
+    public function GeneralRequestsAdminExportPDF($id)
+    {
+        $form = GeneralRequestsForm::find($id);
 
-    //     $pdf = Pdf::loadView('users.ops.general-requests.pdf-form', compact('form'))->setPaper('A4', 'portrait');
+        $pdf = Pdf::loadView('eservice.users.municipal_office.general_requests.pdf-form', compact('form'))->setPaper('A4', 'portrait');
 
-    //     return $pdf->stream('แบบคำขอร้องทั่วไป' . $form->id . '.pdf');
-    // }
+        return $pdf->stream('แบบคำขอร้องทั่วไป' . $form->id . '.pdf');
+    }
 
     public function GeneralRequestsAdminReply(Request $request, $formId)
     {

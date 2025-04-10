@@ -89,7 +89,7 @@ class GeneralRequestsController extends Controller
     {
         $form = GeneralRequestsForm::find($id);
 
-        $pdf = Pdf::loadView('users.ops.general-requests.pdf-form', compact('form'))->setPaper('A4', 'portrait');
+        $pdf = Pdf::loadView('eservice.users.municipal_office.general_requests.pdf-form', compact('form'))->setPaper('A4', 'portrait');
 
         return $pdf->stream('แบบคำขอร้องทั่วไป' . $form->id . '.pdf');
     }

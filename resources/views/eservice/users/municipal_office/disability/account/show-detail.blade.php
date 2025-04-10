@@ -4,9 +4,9 @@
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 
 <div class="container">
-    <h2 class="text-center">คำร้องทั่วไป <br>
+    <h2 class="text-center">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ<br>
         <h3 class="text-center">ตารางแสดงข้อมูลฟอร์มที่ส่งเข้ามา</h3>
-    </h2> <br>
+    </h2><br>
 
     <table class="table table-bordered table-striped" id="data_table">
         <thead class="text-center">
@@ -32,11 +32,10 @@
                     @endif
                 </td>
                 <td>
-                    <a href="{{ route('GeneralRequestsUserShowFormEdit', $form->id) }}" class="btn btn-warning btn-sm text-white">
+                    <a href="{{route('DisabilityUserShowEdit',$form->id)}}" class="btn btn-warning btn-sm text-white">
                         <i class="bi bi-pencil-square"></i></a>
-                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                data-bs-target="#submitModal-{{ $form->id }}">
-                    <i class="bi bi-filetype-pdf"></i>
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#submitModal-{{ $form->id }}">
+                        <i class="bi bi-filetype-pdf"></i>
                     </button>
                     @if (!is_null($form->users_id))
                     <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#replyModal-{{ $form->id }}">
@@ -60,13 +59,13 @@
                 </div>
                 <div class="modal-body">
                     <span style="color: black;">preview</span>
-                    <a href="{{ route('GeneralRequestsUserExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
+                    <a href="{{ route('DisabilityUserExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
                         <i class="bi bi-file-earmark-pdf"></i>
                     </a>
                     <br>
                     <br>
                     <span style="color: black;">ไฟล์แนบ </span>
-                    @foreach ($form->grAttachments as $attachment)
+                    @foreach ($form->disabilityAttachments as $attachment)
                     <span class="d-inline me-2">
                         <a href="{{ asset('storage/' . $attachment->file_path) }}" target="_blank">{{ basename($attachment->file_path) }}</a>
                     </span>
@@ -80,7 +79,7 @@
     </div>
 
     <div class="modal fade" id="replyModal-{{ $form->id }}" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="replyModalLabel">ตอบกลับฟอร์ม</h5>
@@ -99,7 +98,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse($form->grReplies as $reply)
+                            @forelse($form->disabilityReplies as $reply)
                             <tr class="text-center">
                                 <td>{{ $reply->user->name ?? 'Unknown User' }}</td>
                                 <td>
@@ -116,7 +115,7 @@
                             @endforelse
                         </tbody>
                     </table>
-                    <form action="{{ route('GeneralRequestsUserReply', $form->id) }}" method="POST">
+                    <form action="{{ route('DisabilityUserReply', $form->id) }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="message" class="form-label">ข้อความตอบกลับ</label>
@@ -133,8 +132,10 @@
     </div>
     @endforeach
 
+    <script src="{{ asset('js/general_requests.js') }}"></script>
+    <script src="{{ asset('js/datatable.js') }}"></script>
+
 </div>
-<script src="{{ asset('js/datatable.js') }}"></script>
 @endsection
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

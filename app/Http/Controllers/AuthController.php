@@ -88,4 +88,14 @@ class AuthController extends Controller
 
         return redirect()->route('Home');
     }
+
+    public function logoutUserAccount(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('eservice_pages');
+    }
 }

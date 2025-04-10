@@ -57,6 +57,16 @@ return [
          */
         'font_cache' => storage_path('fonts'),
 
+        'custom_font_dir' => public_path('fonts/'), // ชี้ไปยังโฟลเดอร์ฟอนต์ใน public
+        'custom_font_data' => [
+            'sarabun' => [ // ชื่อฟอนต์ที่ต้องการเรียกใช้งานใน view
+                'R'  => 'THSarabunNew.ttf',         // Regular
+                'B'  => 'THSarabunNew-Bold.ttf',    // Bold
+                'I'  => 'THSarabunNew-Italic.ttf',  // Italic
+                'BI' => 'THSarabunNew-BoldItalic.ttf' // Bold Italic
+            ],
+        ],
+
         /**
          * The location of a temporary directory.
          *

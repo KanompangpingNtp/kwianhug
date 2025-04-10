@@ -125,13 +125,13 @@
                         <td><a href="{{route('GeneralRequestsFormPage')}}">คำร้องทั่วไป</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('disability_pages')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ</a></td>
+                        <td><a href="{{route('DisabilityFormPage')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('register_pages')}}">แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ</a></td>
+                        <td><a href="#">แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('elderly_allowance_pages')}}">แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ</a></td>
+                        <td><a href="{{route('ElderlyAllowanceFormPage')}}">แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('test1')}}">แบบคำร้องขอทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด</a></td>

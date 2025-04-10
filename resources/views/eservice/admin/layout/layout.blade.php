@@ -90,6 +90,14 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำร้องทั่วไป
                         </a>
+                        <a class="nav-link" href="{{route('DisabilityAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ
+                        </a>
+                        <a class="nav-link" href="{{route('ElderlyAllowanceAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ
+                        </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองคลัง</div>
 

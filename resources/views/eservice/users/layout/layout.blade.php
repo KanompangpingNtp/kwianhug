@@ -71,7 +71,7 @@
                     @auth
                     <!-- ถ้า login แล้ว ให้แสดงปุ่มออกจากระบบ -->
                     <li style="font-size: 14px;">
-                        <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+                        <form action="{{ route('logoutUserAccount') }}" method="POST" style="display: inline;">
                             @csrf
                             <button type="submit" class="dropdown-item">
                                 ออกจากระบบ <i class="fa-solid fa-right-from-bracket ms-5"></i>
@@ -113,6 +113,38 @@
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="{{route('GeneralRequestsFormPage')}}">ฟอร์ม</a>
                                 <a class="nav-link" href="{{route('GeneralRequestsShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office2" aria-expanded="false" aria-controls="secretariat_office2">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="secretariat_office2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('DisabilityFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('TableDisabilityUsersPages')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office4" aria-expanded="false" aria-controls="secretariat_office4">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="secretariat_office4" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('ElderlyAllowanceFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('ElderlyAllowanceShowDetails')}}">ประวัติการส่งฟอร์ม</a>
                             </nav>
                         </div>
 
