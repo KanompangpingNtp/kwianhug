@@ -58,6 +58,7 @@ use App\Http\Controllers\learning_organization\AdminLearningOrganizationControll
 use App\Http\Controllers\learning_organization\LearningOrganizationController;
 use App\Http\Controllers\egp\AdminEGPController;
 use App\Http\Controllers\egp\EGPController;
+use App\Http\Controllers\eservice\secretariat_office\digging\DiggingController;
 use App\Http\Controllers\forum\ForumController;
 use App\Http\Controllers\web_intro\AdminWebIntroController;
 use App\Http\Controllers\web_intro\WebIntroController;
@@ -96,6 +97,10 @@ Route::post('/disability/form/create', [DisabilityController::class, 'Disability
 //แบบยืนยันสิทธิผู้สูงอายุ
 Route::get('/elderly-allowance', [ElderlyAllowanceController::class, 'ElderlyAllowanceFormPage'])->name('ElderlyAllowanceFormPage');
 Route::post('/elderly-allowance/form/create', [ElderlyAllowanceController::class, 'ElderlyAllowanceFormCreate'])->name('ElderlyAllowanceFormCreate');
+
+//แบบคำร้องการขุดดินและถมดิน
+Route::get('/digging', [DiggingController::class, 'DiggingFormPage'])->name('DiggingFormPage');
+Route::post('/digging/form/create', [DiggingController::class, 'DiggingFormCreate'])->name('DiggingFormCreate');
 
 //แบบคำร้องใบอณุญาตประกอบกิจการที่เป็นอันตรายต่อสุขภาพ
 Route::get('/health_hazard_applications', [HealthHazardApplicationController::class, 'HealthHazardApplicationFormPage'])->name('HealthHazardApplicationFormPage');
@@ -551,6 +556,11 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/food_storage_license/export-pdf/{id}', [FoodStorageLicenseController::class, 'FoodStorageLicenseUserExportPDF'])->name('FoodStorageLicenseUserExportPDF');
     Route::post('/user-account/food_storage_license/reply/{id}', [FoodStorageLicenseController::class, 'FoodStorageLicenseUserReply'])->name('FoodStorageLicenseUserReply');
     Route::get('/user-account/food_storage_license/show-edit/{id}', [FoodStorageLicenseController::class, 'FoodStorageLicenseUserShowFormEdit'])->name('FoodStorageLicenseUserShowFormEdit');
+    
+    //แบบคำร้องการขุดดินและถมดิน
+    Route::get('/user-account/digging/show-details', [DiggingController::class, 'DiggingShowDetails'])->name('DiggingShowDetails');
+    Route::post('/user-account/digging/reply/{id}', [DiggingController::class, 'DiggingUserReply'])->name('DiggingUserReply');
+    Route::get('/user-account/digging/show-edit/{id}', [DiggingController::class, 'DiggingUserShowEdit'])->name('DiggingUserShowEdit');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

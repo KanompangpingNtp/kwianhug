@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -29,6 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
     <style>
@@ -36,16 +38,14 @@
             font-size: 13px;
             font-family: 'Bai Jamjuree', sans-serif;
         }
-
     </style>
 
     @if ($message = Session::get('success'))
     <script>
         Swal.fire({
-            icon: 'success'
-            , title: '{{ $message }}'
-        , })
-
+            icon: 'success',
+            title: '{{ $message }}',
+        })
     </script>
     @endif
 
@@ -183,6 +183,21 @@
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองคลัง</div>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองช่าง</div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#digging" aria-expanded="false" aria-controls="digging">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            แบบฟอร์มการขออนุญาตขุดดินหรือถมดิน
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="digging" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('DiggingFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('DiggingShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองการศึกษา</div>
                     </div>
@@ -208,4 +223,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="{{asset('dashboard/js/scripts.js')}}"></script>
 </body>
+
 </html>
