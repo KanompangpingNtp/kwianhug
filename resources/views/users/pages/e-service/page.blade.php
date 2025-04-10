@@ -122,7 +122,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                        <td><a href="{{route('GeneralRequestsFormPage')}}">คำร้องทั่วไป</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('disability_pages')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ</a></td>

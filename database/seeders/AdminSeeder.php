@@ -14,12 +14,37 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'name' => 'ผู้ดูแลระบบ',
-            'email' => 'admin@example.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('123456789'),
-            'remember_token' => null,
-        ]);
+        User::firstOrCreate(
+            ['email' => 'admin@example.com'], // เงื่อนไขตรวจซ้ำ
+            [
+                'name' => 'ผู้ดูแลระบบ',
+                'email_verified_at' => now(),
+                'password' => Hash::make('123456789'),
+                'remember_token' => null,
+                'status' => 1,
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'eservice@example.com'], // เพิ่มอีกคน
+            [
+                'name' => 'แอดมิน Eservice',
+                'email_verified_at' => now(),
+                'password' => Hash::make('123456789'),
+                'remember_token' => null,
+                'status' => 2,
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'user@example.com'], // เพิ่มอีกคน
+            [
+                'name' => 'ผู้ใช้งานทั่วไป',
+                'email_verified_at' => now(),
+                'password' => Hash::make('123456789'),
+                'remember_token' => null,
+                'status' => 3,
+            ]
+        );
     }
 }

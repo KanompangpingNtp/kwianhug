@@ -61,6 +61,8 @@ use App\Http\Controllers\egp\EGPController;
 use App\Http\Controllers\forum\ForumController;
 use App\Http\Controllers\web_intro\AdminWebIntroController;
 use App\Http\Controllers\web_intro\WebIntroController;
+use App\Http\Controllers\eservice\secretariat_office\general_requests\GeneralRequestsController;
+use App\Http\Controllers\eservice\secretariat_office\general_requests\AdminGeneralRequestsController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -74,6 +76,10 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//คำร้องทั่วไป
+Route::get('/general-requests', [GeneralRequestsController::class, 'GeneralRequestsFormPage'])->name('GeneralRequestsFormPage');
+Route::post('/general-requests/form/create', [GeneralRequestsController::class, 'GeneralRequestsFormCreate'])->name('GeneralRequestsFormCreate');
 
 Route::get('/forum/page', [ForumController::class, 'forum_pages'])->name('forum_pages');
 
@@ -202,7 +208,7 @@ Route::get('/tourist_attraction/ShowDetails/{id}', [TouristAttractionController:
 
 Route::get('/Bannser/Pages', [HomePageController::class, 'BannserPages'])->name('BannserPages');
 
-Route::middleware(['check.auth'])->group(function () {
+Route::middleware(['auth', 'check.auth:1'])->group(function () {
     Route::get('/admin', [AdminController::class, 'AdminIndex'])->name('AdminIndex');
 
     //admin Activity
@@ -446,6 +452,27 @@ Route::middleware(['check.auth'])->group(function () {
     Route::get('/Admin/WebIntro/page', [AdminWebIntroController::class, 'AdminWebIntro'])->name('AdminWebIntro');
     Route::post('/Admin/WebIntro/create', [AdminWebIntroController::class, 'WebIntroCreate'])->name('WebIntroCreate');
     Route::delete('/Admin/WebIntro/delete/{id}', [AdminWebIntroController::class, 'WebIntroDelete'])->name('WebIntroDelete');
+});
+
+Route::middleware(['auth', 'check.auth:2'])->group(function () {
+    Route::get('/admin/index', [TemporaryController::class, 'EserviceAdminAccount'])->name('EserviceAdminAccount');
+
+    //คำร้องทั่วไป
+    Route::get('/admin/general-requests/showdata', [AdminGeneralRequestsController::class, 'GeneralRequestsAdminShowData'])->name('GeneralRequestsAdminShowData');
+    Route::get('/admin/general-requests/export-pdf/{id}', [AdminGeneralRequestsController::class, 'GeneralRequestsAdminExportPDF'])->name('GeneralRequestsAdminExportPDF');
+    Route::post('/admin/general-requests/admin-reply/{id}', [AdminGeneralRequestsController::class, 'GeneralRequestsAdminReply'])->name('GeneralRequestsAdminReply');
+    Route::post('/admin/general-requests/update-status/{id}', [AdminGeneralRequestsController::class, 'GeneralRequestsUpdateStatus'])->name('GeneralRequestsUpdateStatus');
+});
+
+Route::middleware(['auth', 'check.auth:3'])->group(function () {
+    Route::get('/eservice-useraccount', [TemporaryController::class, 'EserviceUserAccount'])->name('EserviceUserAccount');
+
+    //คำร้องทั่วไป
+    Route::get('/user-account/general-requests/show-details', [GeneralRequestsController::class, 'GeneralRequestsShowDetails'])->name('GeneralRequestsShowDetails');
+    Route::get('/user-account/general-requests/export-pdf/{id}', [GeneralRequestsController::class, 'GeneralRequestsUserExportPDF'])->name('GeneralRequestsUserExportPDF');
+    Route::post('/user-account/general-requests/reply/{id}', [GeneralRequestsController::class, 'GeneralRequestsUserReply'])->name('GeneralRequestsUserReply');
+    Route::get('/user-account/general-requests/show-edit/{id}', [GeneralRequestsController::class, 'GeneralRequestsUserShowFormEdit'])->name('GeneralRequestsUserShowFormEdit');
+    Route::put('/user-account/general-requests/update-data/{id}', [GeneralRequestsController::class, 'GeneralRequestsUserUpdateForm'])->name('GeneralRequestsUserUpdateForm');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

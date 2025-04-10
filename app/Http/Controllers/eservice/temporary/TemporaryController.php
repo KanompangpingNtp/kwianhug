@@ -13,6 +13,16 @@ use App\Models\PublicMenusType;
 
 class TemporaryController extends Controller
 {
+    public function EserviceUserAccount()
+    {
+        return view('eservice.users.page');
+    }
+
+    public function EserviceAdminAccount()
+    {
+        return view('eservice.admin.page');
+    }
+
     public function eservice_pages()
     {
         $personnelAgencies = PersonnelAgency::with('ranks')
