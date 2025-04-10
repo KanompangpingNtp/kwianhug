@@ -16,8 +16,8 @@
 
         .location-container-1 {
             position: absolute;
-            top: 30%;
-            left: 50%;
+            top: 50%;
+            left: 30%;
             transform: translate(-50%, -50%);
             z-index: 10;
             text-align: center;
