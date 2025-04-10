@@ -58,6 +58,7 @@ use App\Http\Controllers\learning_organization\AdminLearningOrganizationControll
 use App\Http\Controllers\learning_organization\LearningOrganizationController;
 use App\Http\Controllers\egp\AdminEGPController;
 use App\Http\Controllers\egp\EGPController;
+use App\Http\Controllers\eservice\secretariat_office\digging\AdminDiggingController;
 use App\Http\Controllers\eservice\secretariat_office\digging\DiggingController;
 use App\Http\Controllers\forum\ForumController;
 use App\Http\Controllers\web_intro\AdminWebIntroController;
@@ -519,6 +520,13 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::get('/admin/food_storage_license/export-pdf/{id}', [AdminFoodStorageLicenseController::class, 'FoodStorageLicenseAdminExportPDF'])->name('FoodStorageLicenseAdminExportPDF');
     Route::post('/admin/food_storage_license/reply/{id}', [AdminFoodStorageLicenseController::class, 'FoodStorageLicenseAdminReply'])->name('FoodStorageLicenseAdminReply');
     Route::post('/admin/food_storage_license/update-status/{id}', [AdminFoodStorageLicenseController::class, 'FoodStorageLicenseUpdateStatus'])->name('FoodStorageLicenseUpdateStatus');
+
+    //แบบคำร้องการขุดดินและถมดิน
+    Route::get('/admin/digging/show-details', [AdminDiggingController::class, 'DiggingShowData'])->name('DiggingShowData');
+    Route::get('/admin/digging/export-pdf/{id}', [AdminDiggingController::class, 'DiggingAdminExportPDF'])->name('DiggingAdminExportPDF');
+    Route::post('/admin/digging/reply/{id}', [AdminDiggingController::class, 'DiggingAdminReply'])->name('DiggingAdminReply');
+    Route::post('/admin/digging/update-status/{id}', [AdminDiggingController::class, 'DiggingUpdateStatus'])->name('DiggingUpdateStatus');
+    Route::get('/admin/digging/show-edit/{id}', [AdminDiggingController::class, 'DiggingUserAdminShowEdit'])->name('DiggingUserAdminShowEdit');
 });
 
 Route::middleware(['auth', 'check.auth:3'])->group(function () {
@@ -556,7 +564,7 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/food_storage_license/export-pdf/{id}', [FoodStorageLicenseController::class, 'FoodStorageLicenseUserExportPDF'])->name('FoodStorageLicenseUserExportPDF');
     Route::post('/user-account/food_storage_license/reply/{id}', [FoodStorageLicenseController::class, 'FoodStorageLicenseUserReply'])->name('FoodStorageLicenseUserReply');
     Route::get('/user-account/food_storage_license/show-edit/{id}', [FoodStorageLicenseController::class, 'FoodStorageLicenseUserShowFormEdit'])->name('FoodStorageLicenseUserShowFormEdit');
-    
+
     //แบบคำร้องการขุดดินและถมดิน
     Route::get('/user-account/digging/show-details', [DiggingController::class, 'DiggingShowDetails'])->name('DiggingShowDetails');
     Route::post('/user-account/digging/reply/{id}', [DiggingController::class, 'DiggingUserReply'])->name('DiggingUserReply');
