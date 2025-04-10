@@ -17,7 +17,7 @@
         .location-container-1 {
             position: absolute;
             top: 50%;
-            left: 30%;
+            left: 60%;
             transform: translate(-50%, -50%);
             z-index: 10;
             text-align: center;
@@ -60,7 +60,7 @@
         <div class="location-container-1">
             <img src="{{ asset('pages/home/map/โรงพยาบาลส่งเสริมสุขภาพ.png') }}" alt="โรงพยาบาลส่งเสริมสุขภาพ"
                 class="main-image">
-            <div class="location-label lh-1">โรงพยาบาลส่งเสริมสุขภาพ<br>ตำบลบ้านคานรู</div>
+            <div class="location-label lh-1">โรงพยาบาลส่งเสริมสุขภาพ<br>ตำบลบ้านคานรูด</div>
             <img src="{{ asset('pages/home/map/หมุด.png') }}" alt="หมุด" class="pin-image">
         </div>
     </div>

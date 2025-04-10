@@ -39,6 +39,7 @@
 
         .bg-orange-link-section8 {
             background: linear-gradient(to bottom, #fb6849, #f38e2e);
+            width: 100%;
             border-radius: 10px;
         }
         .bg-blue-section8 {
@@ -58,6 +59,7 @@
         .bg-blue-link-section8 {
             background: linear-gradient(to bottom, #137dfd, #00cfd3);
             border-radius: 10px;
+            width: 100%;
         }
 
         .section8-link-orange {
@@ -142,13 +144,13 @@
         <div class="title-section8 text-center" style=" line-height: 0.8;">
             หนังสือราชการ <br><span class="fs-4">เทศบาลตำบลเกวียนหัก</span>
         </div>
-        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center mt-5 gap-5">
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <div class="bg-orange-section8 py-2 px-4 text-center text-white lh-sm">
+        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-start mt-5 gap-5 w-100">
+            <div class="d-flex flex-column justify-content-center align-items-center w-100">
+                <div class="bg-orange-section8 py-2 px-4 text-center text-white lh-sm w-100">
                     หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น
                 </div>
-                <div class="bg-orange-link-section8 p-1 mt-4">
-                    <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3"
+                <div class="bg-orange-link-section8 p-1 mt-4 w-100">
+                    <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3 w-100"
                         style="border-radius: 10px;">
                         <a href="https://www.dla.go.th/servlet/DocumentServlet?documentType=2&isSbpac=N" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
@@ -164,7 +166,7 @@
                         </a>
                         <a href="https://www.dla.go.th/servlet/" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
-                            พรบ.และประกาศเกี่ยวกับเทศโนโลยีสารสนเทศ
+                            พรบ.และประกาศเกี่ยวกับ <br>เทศโนโลยีสารสนเทศ
                         </a>
                         {{-- <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1623" class="text-decoration-none section8-link-orange">
                             <img src="{{ asset('pages/home/section-8/arrow-orange.png') }}" alt="arrow">
@@ -173,14 +175,14 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <div class="bg-blue-section8 py-2 px-4 text-center text-white lh-sm">
+            <div class="d-flex flex-column justify-content-center align-items-center w-100">
+                <div class="bg-blue-section8 fw-bold fs-4 py-3 mb-1 px-4 text-center text-white lh-sm w-100">
                     {{-- หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น --}}
-                    หนังสือราชการจากกรม<br>ส่งเสริมท้องถิ่นจังหวัด
+                    จากท้องถิ่นจังหวัด
                 </div>
-                <div class="bg-blue-link-section8 p-1 mt-4">
-                    <div class="bg-white ps-3 pe-5 py-4 d-flex flex-column justify-content-center align-items-start gap-3"
-                        style="border-radius: 10px;">
+                <div class="bg-blue-link-section8 p-1 mt-4 w-100">
+                    <div class="bg-white ps-3 pe-5 pt-4 d-flex flex-column justify-content-center align-items-start gap-4 w-100"
+                        style="border-radius: 10px; padding-bottom: 2rem;">
                         <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1554" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
                             ข่าวประชาสัมพันธ์ สถ.
