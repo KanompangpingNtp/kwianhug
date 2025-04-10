@@ -337,7 +337,7 @@
                                     </div>
 
                                 </div>
-                                <a class="button-blue" href="{{route('Home')}}">
+                                <a class="button-blue" href="{{route('showLoginForm')}}">
                                     เข้าสู่ระบบ</a>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center gap-1 button-img">

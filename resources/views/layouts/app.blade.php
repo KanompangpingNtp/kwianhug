@@ -474,7 +474,7 @@
                                             });
                                         </script>
                                     </div>
-                                    <a class="button-blue" href="{{ route('Home') }}">
+                                    <a class="button-blue" href="{{ route('showLoginForm') }}">
                                         เข้าสู่ระบบ</a>
                                 </div>
                                 <div
