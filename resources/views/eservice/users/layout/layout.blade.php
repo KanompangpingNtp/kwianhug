@@ -147,6 +147,22 @@
                                 <a class="nav-link" href="{{route('ElderlyAllowanceShowDetails')}}">ประวัติการส่งฟอร์ม</a>
                             </nav>
                         </div>
+                        
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#funeral" aria-expanded="false" aria-controls="funeral">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="funeral" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('FuneralFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('FuneralShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
 
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office5" aria-expanded="false" aria-controls="secretariat_office5">
                             <div class="sb-nav-link-icon">

@@ -59,7 +59,9 @@ use App\Http\Controllers\learning_organization\LearningOrganizationController;
 use App\Http\Controllers\egp\AdminEGPController;
 use App\Http\Controllers\egp\EGPController;
 use App\Http\Controllers\eservice\secretariat_office\digging\AdminDiggingController;
+use App\Http\Controllers\eservice\secretariat_office\digging\AdminFuneralController;
 use App\Http\Controllers\eservice\secretariat_office\digging\DiggingController;
+use App\Http\Controllers\eservice\secretariat_office\digging\FuneralController;
 use App\Http\Controllers\forum\ForumController;
 use App\Http\Controllers\web_intro\AdminWebIntroController;
 use App\Http\Controllers\web_intro\WebIntroController;
@@ -115,6 +117,9 @@ Route::post('/health_hazard_applications/form/create', [HealthHazardApplicationC
 Route::get('/food_storage_license', [FoodStorageLicenseController::class, 'FoodStorageLicenseFormPage'])->name('FoodStorageLicenseFormPage');
 Route::post('/food_storage_license/form/create', [FoodStorageLicenseController::class, 'FoodStorageLicenseFormCreate'])->name('FoodStorageLicenseFormCreate');
 
+//แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
+Route::get('/funeral', [FuneralController::class, 'FuneralFormPage'])->name('FuneralFormPage');
+Route::post('/funeral/form/create', [FuneralController::class, 'FuneralFormCreate'])->name('FuneralFormCreate');
 
 Route::get('/forum/page', [ForumController::class, 'forum_pages'])->name('forum_pages');
 //eservice
@@ -527,6 +532,13 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::post('/admin/digging/reply/{id}', [AdminDiggingController::class, 'DiggingAdminReply'])->name('DiggingAdminReply');
     Route::post('/admin/digging/update-status/{id}', [AdminDiggingController::class, 'DiggingUpdateStatus'])->name('DiggingUpdateStatus');
     Route::get('/admin/digging/show-edit/{id}', [AdminDiggingController::class, 'DiggingUserAdminShowEdit'])->name('DiggingUserAdminShowEdit');
+    
+    //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
+    Route::get('/admin/funeral/show-details', [AdminFuneralController::class, 'FuneralShowData'])->name('FuneralShowData');
+    Route::get('/admin/funeral/export-pdf/{id}', [AdminFuneralController::class, 'FuneralAdminExportPDF'])->name('FuneralAdminExportPDF');
+    Route::post('/admin/funeral/reply/{id}', [AdminFuneralController::class, 'FuneralAdminReply'])->name('FuneralAdminReply');
+    Route::post('/admin/funeral/update-status/{id}', [AdminFuneralController::class, 'FuneralUpdateStatus'])->name('FuneralUpdateStatus');
+    Route::get('/admin/funeral/show-edit/{id}', [AdminFuneralController::class, 'FuneralUserAdminShowEdit'])->name('FuneralUserAdminShowEdit');
 });
 
 Route::middleware(['auth', 'check.auth:3'])->group(function () {
@@ -569,6 +581,11 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/digging/show-details', [DiggingController::class, 'DiggingShowDetails'])->name('DiggingShowDetails');
     Route::post('/user-account/digging/reply/{id}', [DiggingController::class, 'DiggingUserReply'])->name('DiggingUserReply');
     Route::get('/user-account/digging/show-edit/{id}', [DiggingController::class, 'DiggingUserShowEdit'])->name('DiggingUserShowEdit');
+    
+    //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
+    Route::get('/user-account/funeral/show-details', [FuneralController::class, 'FuneralShowDetails'])->name('FuneralShowDetails');
+    Route::post('/user-account/funeral/reply/{id}', [FuneralController::class, 'FuneralUserReply'])->name('FuneralUserReply');
+    Route::get('/user-account/funeral/show-edit/{id}', [FuneralController::class, 'FuneralUserShowEdit'])->name('FuneralUserReply');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
