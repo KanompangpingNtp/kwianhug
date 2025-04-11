@@ -106,15 +106,23 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำร้องขอแจ้งจำหน่ายหรือสะสมอาหาร
                         </a>
-                        
+
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองคลัง</div>
-                        
+                        <a class="nav-link" href="{{route('FinanceGeneralAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำร้องทั่วไป
+                        </a>
+
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองช่าง</div>
+                        <a class="nav-link" href="{{route('EngineeringGeneralAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำร้องทั่วไป
+                        </a>
                         <a class="nav-link" href="{{route('DiggingShowData')}}">
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำร้องการขออนุญาตขุดดินหรือถมดิน
                         </a>
-                        
+
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองการศึกษา</div>
 
                     </div>

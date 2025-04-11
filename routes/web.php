@@ -75,6 +75,10 @@ use App\Http\Controllers\eservice\secretariat_office\health_hazard_applications\
 use App\Http\Controllers\eservice\secretariat_office\health_hazard_applications\AdminHealthHazardApplicationController;
 use App\Http\Controllers\eservice\secretariat_office\food_storage_license\FoodStorageLicenseController;
 use App\Http\Controllers\eservice\secretariat_office\food_storage_license\AdminFoodStorageLicenseController;
+use App\Http\Controllers\eservice\finance_department\general_requests\FinanceGeneralRequestsController;
+use App\Http\Controllers\eservice\finance_department\general_requests\AdminFinanceGeneralRequestsController;
+use App\Http\Controllers\eservice\engineering_department\general_requests\EngineeringGeneralController;
+use App\Http\Controllers\eservice\engineering_department\general_requests\AdminEngineeringGeneralController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -88,6 +92,14 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//คำร้องทั่วไป กองช่าง
+Route::get('/engineering_department/general-requests', [EngineeringGeneralController::class, 'EngineeringGeneralFormPage'])->name('EngineeringGeneralFormPage');
+Route::post('/engineering_department/general-requests/form/create', [EngineeringGeneralController::class, 'EngineeringGeneralFormCreate'])->name('EngineeringGeneralFormCreate');
+
+//คำร้องทั่วไป กองคลัง
+Route::get('/finance_department/general-requests', [FinanceGeneralRequestsController::class, 'FinanceGeneralFormPage'])->name('FinanceGeneralFormPage');
+Route::post('/finance_department/general-requests/form/create', [FinanceGeneralRequestsController::class, 'FinanceGeneralFormCreate'])->name('FinanceGeneralFormCreate');
 
 //คำร้องทั่วไป
 Route::get('/general-requests', [GeneralRequestsController::class, 'GeneralRequestsFormPage'])->name('GeneralRequestsFormPage');
@@ -104,10 +116,6 @@ Route::post('/elderly-allowance/form/create', [ElderlyAllowanceController::class
 //แบบคำร้องการขุดดินและถมดิน
 Route::get('/digging', [DiggingController::class, 'DiggingFormPage'])->name('DiggingFormPage');
 Route::post('/digging/form/create', [DiggingController::class, 'DiggingFormCreate'])->name('DiggingFormCreate');
-
-//แบบคำร้องใบอณุญาตประกอบกิจการที่เป็นอันตรายต่อสุขภาพ
-Route::get('/health_hazard_applications', [HealthHazardApplicationController::class, 'HealthHazardApplicationFormPage'])->name('HealthHazardApplicationFormPage');
-Route::post('/health_hazard_applications/form/create', [HealthHazardApplicationController::class, 'HealthHazardApplicationFormCreate'])->name('HealthHazardApplicationFormCreate');
 
 //แบบคำร้องใบอณุญาตประกอบกิจการที่เป็นอันตรายต่อสุขภาพ
 Route::get('/health_hazard_applications', [HealthHazardApplicationController::class, 'HealthHazardApplicationFormPage'])->name('HealthHazardApplicationFormPage');
@@ -532,13 +540,25 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::post('/admin/digging/reply/{id}', [AdminDiggingController::class, 'DiggingAdminReply'])->name('DiggingAdminReply');
     Route::post('/admin/digging/update-status/{id}', [AdminDiggingController::class, 'DiggingUpdateStatus'])->name('DiggingUpdateStatus');
     Route::get('/admin/digging/show-edit/{id}', [AdminDiggingController::class, 'DiggingUserAdminShowEdit'])->name('DiggingUserAdminShowEdit');
-    
+
     //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
     Route::get('/admin/funeral/show-details', [AdminFuneralController::class, 'FuneralShowData'])->name('FuneralShowData');
     Route::get('/admin/funeral/export-pdf/{id}', [AdminFuneralController::class, 'FuneralAdminExportPDF'])->name('FuneralAdminExportPDF');
     Route::post('/admin/funeral/reply/{id}', [AdminFuneralController::class, 'FuneralAdminReply'])->name('FuneralAdminReply');
     Route::post('/admin/funeral/update-status/{id}', [AdminFuneralController::class, 'FuneralUpdateStatus'])->name('FuneralUpdateStatus');
     Route::get('/admin/funeral/show-edit/{id}', [AdminFuneralController::class, 'FuneralUserAdminShowEdit'])->name('FuneralUserAdminShowEdit');
+
+    //คำร้องทั่วไป
+    Route::get('/admin/finance_department/general-requests/showdata', [AdminFinanceGeneralRequestsController::class, 'FinanceGeneralAdminShowData'])->name('FinanceGeneralAdminShowData');
+    Route::get('/admin/finance_department/general-requests/export-pdf/{id}', [AdminFinanceGeneralRequestsController::class, 'FinanceGeneralAdminExportPDF'])->name('FinanceGeneralAdminExportPDF');
+    Route::post('/admin/finance_department/general-requests/admin-reply/{id}', [AdminFinanceGeneralRequestsController::class, 'FinanceGeneralAdminReply'])->name('FinanceGeneralAdminReply');
+    Route::post('/admin/finance_department/general-requests/update-status/{id}', [AdminFinanceGeneralRequestsController::class, 'FinanceGeneralUpdateStatus'])->name('FinanceGeneralUpdateStatus');
+
+    //คำร้องทั่วไป
+    Route::get('/admin/engineering_department/general-requests/showdata', [AdminEngineeringGeneralController::class, 'EngineeringGeneralAdminShowData'])->name('EngineeringGeneralAdminShowData');
+    Route::get('/admin/engineering_department/general-requests/export-pdf/{id}', [AdminEngineeringGeneralController::class, 'EngineeringGeneralAdminExportPDF'])->name('EngineeringGeneralAdminExportPDF');
+    Route::post('/admin/engineering_department/general-requests/admin-reply/{id}', [AdminEngineeringGeneralController::class, 'EngineeringGeneralAdminReply'])->name('EngineeringGeneralAdminReply');
+    Route::post('/admin/engineering_department/general-requests/update-status/{id}', [AdminEngineeringGeneralController::class, 'EngineeringGeneralUpdateStatus'])->name('EngineeringGeneralUpdateStatus');
 });
 
 Route::middleware(['auth', 'check.auth:3'])->group(function () {
@@ -581,11 +601,24 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/digging/show-details', [DiggingController::class, 'DiggingShowDetails'])->name('DiggingShowDetails');
     Route::post('/user-account/digging/reply/{id}', [DiggingController::class, 'DiggingUserReply'])->name('DiggingUserReply');
     Route::get('/user-account/digging/show-edit/{id}', [DiggingController::class, 'DiggingUserShowEdit'])->name('DiggingUserShowEdit');
-    
+
     //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
     Route::get('/user-account/funeral/show-details', [FuneralController::class, 'FuneralShowDetails'])->name('FuneralShowDetails');
     Route::post('/user-account/funeral/reply/{id}', [FuneralController::class, 'FuneralUserReply'])->name('FuneralUserReply');
     Route::get('/user-account/funeral/show-edit/{id}', [FuneralController::class, 'FuneralUserShowEdit'])->name('FuneralUserReply');
+
+    //คำร้องทั่วไป (กองคลัง)
+    Route::get('/user-account/finance_department/general-requests/show-details', [FinanceGeneralRequestsController::class, 'FinanceGeneralShowDetails'])->name('FinanceGeneralShowDetails');
+    Route::get('/user-account/finance_department/general-requests/export-pdf/{id}', [FinanceGeneralRequestsController::class, 'FinanceGeneralUserExportPDF'])->name('FinanceGeneralUserExportPDF');
+    Route::post('/user-account/finance_department/general-requests/reply/{id}', [FinanceGeneralRequestsController::class, 'FinanceGeneralUserReply'])->name('FinanceGeneralUserReply');
+    Route::get('/user-account/finance_department/general-requests/show-edit/{id}', [FinanceGeneralRequestsController::class, 'FinanceGeneralUserShowFormEdit'])->name('FinanceGeneralUserShowFormEdit');
+    Route::put('/user-account/finance_department/general-requests/update-data/{id}', [FinanceGeneralRequestsController::class, 'FinanceGeneralUserUpdateForm'])->name('FinanceGeneralUserUpdateForm');
+
+    //คำร้องทั่วไป (กองช่าง)
+    Route::get('/user-account/engineering_department/general-requests/show-details', [EngineeringGeneralController::class, 'EngineeringGeneralShowDetails'])->name('EngineeringGeneralShowDetails');
+    Route::get('/user-account/engineering_department/general-requests/export-pdf/{id}', [EngineeringGeneralController::class, 'EngineeringGeneralUserExportPDF'])->name('EngineeringGeneralUserExportPDF');
+    Route::post('/user-account/engineering_department/general-requests/reply/{id}', [EngineeringGeneralController::class, 'EngineeringGeneralUserReply'])->name('EngineeringGeneralUserReply');
+    Route::get('/user-account/engineering_department/general-requests/show-edit/{id}', [EngineeringGeneralController::class, 'EngineeringGeneralUserShowFormEdit'])->name('EngineeringGeneralUserShowFormEdit');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

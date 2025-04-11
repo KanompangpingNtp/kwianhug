@@ -27,7 +27,7 @@
             <div class="col-md-6 col-lg-4">
                 <div class="card shadow-lg">
                     <div class="card-header text-white text-center py-4" style="background-color: rgb(8,124,252);">
-                        <h4 class="mb-2">สำหรับผู้ดูแลระบบ</h4>
+                        <h4 class="mb-2">ลงชื่อเข้าใช้งานระบบ</h4>
                         <h6>สำนักงานเทศบาลตำบลเกวียนหัก</h6>
                     </div>
                     <div class="card-body p-4">
