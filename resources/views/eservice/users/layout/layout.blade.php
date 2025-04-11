@@ -230,6 +230,22 @@
                             </nav>
                         </div>
 
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#engineering_department2" aria-expanded="false" aria-controls="engineering_department2">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำขออนุญาตก่อสร้างอาคารดัดแปลงอาคารหรือรื้อถอนอาคาร
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="engineering_department2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('BuildingChangeFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('BuildingChangeUsersPages')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#digging" aria-expanded="false" aria-controls="digging">
                             <div class="sb-nav-link-icon">
                                 <i class="bi bi-clipboard"></i>
@@ -246,7 +262,38 @@
                             </nav>
                         </div>
 
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#engineering_department3" aria-expanded="false" aria-controls="engineering_department3">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำขอรับรองสิ่งปลูกสร้างอาคาร
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="engineering_department3" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('UserCertificationFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('TableCertificationUsersPages')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองการศึกษา</div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#education_department1" aria-expanded="false" aria-controls="education_department1">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำร้องทั่วไป
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="education_department1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('EducationGeneralFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('EducationGeneralShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
                     </div>
                     @endauth
                 </div>

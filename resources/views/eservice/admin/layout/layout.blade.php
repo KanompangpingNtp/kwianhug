@@ -122,13 +122,24 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำร้องทั่วไป
                         </a>
+                        <a class="nav-link" href="{{route('TableBuildingChangeAdminPages')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำขออนุญาตก่อสร้างอาคารดัดแปลงอาคารหรือรื้อถอนอาคาร
+                        </a>
                         <a class="nav-link" href="{{route('DiggingShowData')}}">
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำร้องการขออนุญาตขุดดินหรือถมดิน
                         </a>
+                        <a class="nav-link" href="{{route('TableCertificationAdminPages')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำขอรับรองสิ่งปลูกสร้างอาคาร
+                        </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองการศึกษา</div>
-
+                        <a class="nav-link" href="{{route('EducationGeneralAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำร้องทั่วไป
+                        </a>
                     </div>
                 </div>
             </nav>
