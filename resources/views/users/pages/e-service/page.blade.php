@@ -143,7 +143,7 @@
                         <td><a href="{{route('HealthHazardApplicationFormPage')}}">คำขออนุญาตกิจการอันตรายต่อสุขภาพ</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test4')}}">คำร้องขอแจ้งจำหน่ายหรือสะสมอาหาร</a></td>
+                        <td><a href="{{route('FoodStorageLicenseFormPage')}}">คำร้องขอแจ้งจำหน่ายหรือสะสมอาหาร</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -156,7 +156,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                        <td><a href="{{route('FinanceGeneralFormPage')}}">คำร้องทั่วไป</a></td>
                     </tr>
                 </tbody>
             </table>

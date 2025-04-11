@@ -147,7 +147,7 @@
                                 <a class="nav-link" href="{{route('ElderlyAllowanceShowDetails')}}">ประวัติการส่งฟอร์ม</a>
                             </nav>
                         </div>
-                        
+
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#funeral" aria-expanded="false" aria-controls="funeral">
                             <div class="sb-nav-link-icon">
                                 <i class="bi bi-clipboard"></i>
@@ -213,8 +213,39 @@
                         </div>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองคลัง</div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#finance_department1" aria-expanded="false" aria-controls="finance_department1">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำร้องทั่วไป
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="finance_department1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('FinanceGeneralFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('FinanceGeneralShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">กองช่าง</div>
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#engineering_department1" aria-expanded="false" aria-controls="engineering_department1">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำร้องทั่วไป
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="engineering_department1" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('EngineeringGeneralFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('EngineeringGeneralShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#digging" aria-expanded="false" aria-controls="digging">
                             <div class="sb-nav-link-icon">
                                 <i class="bi bi-clipboard"></i>
