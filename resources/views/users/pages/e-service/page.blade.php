@@ -128,13 +128,13 @@
                         <td><a href="{{route('DisabilityFormPage')}}">แบบคำขอลงทะเบียนรับเงินเบี้ยความพิการ</a></td>
                     </tr>
                     <tr>
-                        <td><a href="#">แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ</a></td>
+                        <td><a href="{{route('FuneralFormPage')}}">แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('ElderlyAllowanceFormPage')}}">แบบยืนยันสิทธิการขอรับเงินเบี้ยยังชีพผู้สูงอายุ</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test1')}}">แบบคำร้องขอทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด</a></td>
+                        <td><a href="{{route('NewbornFormPage')}}">แบบคำร้องขอทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('test2')}}">คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค</a></td>
@@ -175,13 +175,13 @@
                         <td><a href="{{route('BuildingChangeFormPage')}}">คำขออนุญาตก่อสร้างอาคาร ดัดแปลงอาคาร หรือรื้อถอนอาคาร</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test6')}}">แบบฟอร์มการขออนุญาตขุดดินหรือถมดิน</a></td>
+                        <td><a href="{{route('DiggingFormPage')}}">แบบฟอร์มการขออนุญาตขุดดินหรือถมดิน</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test7')}}">แบบคำร้องแจ้งซ่อมไฟฟ้าสาธารณะ</a></td>
+                        <td><a href="{{route('GeneralElectricityRequestFormPage')}}">แบบคำร้องแจ้งซ่อมไฟฟ้าสาธารณะ</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test8')}}">แบบคำร้องขอหนังสือรับรองสิ่งปลูกสร้าง</a></td>
+                        <td><a href="{{route('UserCertificationFormPage')}}">แบบคำร้องขอหนังสือรับรองสิ่งปลูกสร้าง</a></td>
                     </tr>
                     {{-- <tr>
                         <td><a href="{{route('test9')}}">แบบคำร้องขอหนังสือรับรองสิ่งปลูกสร้าง</a></td>
