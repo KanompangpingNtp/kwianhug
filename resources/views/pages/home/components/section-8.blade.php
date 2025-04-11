@@ -178,14 +178,14 @@
             <div class="d-flex flex-column justify-content-center align-items-center w-100">
                 <div class="bg-blue-section8 fw-bold fs-4 py-3 mb-1 px-4 text-center text-white lh-sm w-100">
                     {{-- หนังสือราชการจากกรม <br>ส่งเสริมการปกครองท้องถิ่น --}}
-                    จากท้องถิ่นจังหวัด
+                    หนังสือราชการจากท้องถิ่นจังหวัด
                 </div>
                 <div class="bg-blue-link-section8 p-1 mt-4 w-100">
                     <div class="bg-white ps-3 pe-5 pt-4 d-flex flex-column justify-content-center align-items-start gap-4 w-100"
                         style="border-radius: 10px; padding-bottom: 2rem;">
                         <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1554" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
-                            ข่าวประชาสัมพันธ์ สถ.
+                            ข่าวประชาสัมพันธ์ สถ.จ.
                         </a>
                         <a href="https://chanthaburilocal.go.th/public/dispatch/data/index/menu/1244" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
@@ -197,7 +197,7 @@
                         </a>
                         <a href="https://chanthaburilocal.go.th/public/list/data/index/menu/1623" class="text-decoration-none section8-link-blue">
                             <img src="{{ asset('pages/home/section-8/arrow-blue.png') }}" alt="arrow">
-                            ติดต่อหน่วยงาน สถ.จังหวัด
+                            ติดต่อหน่วยงาน สถ.จ.
                         </a>
                     </div>
                 </div>
