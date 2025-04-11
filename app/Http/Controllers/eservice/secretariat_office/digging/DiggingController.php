@@ -9,11 +9,6 @@ use App\Models\DiggingFormReplies;
 use App\Models\DiggingInformations;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
-use App\Models\ElderlyAllowancePeople;
-use App\Models\ElderlyAllowancePersonsOptions;
-use App\Models\ElderlyAllowanceFiles;
-use App\Models\ElderlyAllowanceBank;
-use App\Models\ElderlyAllowanceReplies;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 
@@ -175,25 +170,25 @@ class DiggingController extends Controller
         return redirect()->back()->with('success', 'ตอบกลับสำเร็จแล้ว!');
     }
 
-    public function ElderlyAllowanceUserExportPDF($id)
-    {
-        $form = ElderlyAllowancePeople::with('personsOption', 'bank')->find($id);
+    // public function ElderlyAllowanceUserExportPDF($id)
+    // {
+    //     $form = ElderlyAllowancePeople::with('personsOption', 'bank')->find($id);
 
-        if ($form->personsOption->first() && $form->personsOption->first()->welfare_type) {
-            $welfareType = $form->personsOption->first()->welfare_type;
-            if (is_string($welfareType)) {
-                $form->personsOption->first()->welfare_type = json_decode($welfareType, true);
-            }
-        }
+    //     if ($form->personsOption->first() && $form->personsOption->first()->welfare_type) {
+    //         $welfareType = $form->personsOption->first()->welfare_type;
+    //         if (is_string($welfareType)) {
+    //             $form->personsOption->first()->welfare_type = json_decode($welfareType, true);
+    //         }
+    //     }
 
-        $documentType = $form->personsOption->first()->document_type ?? [];
-        if (is_string($documentType)) {
-            $documentType = json_decode($documentType, true);
-        }
+    //     $documentType = $form->personsOption->first()->document_type ?? [];
+    //     if (is_string($documentType)) {
+    //         $documentType = json_decode($documentType, true);
+    //     }
 
-        $pdf = Pdf::loadView('eservice.users.municipal_office.digging.pdf-form', compact('form', 'documentType'))
-            ->setPaper('A4', 'portrait');
+    //     $pdf = Pdf::loadView('eservice.users.municipal_office.digging.pdf-form', compact('form', 'documentType'))
+    //         ->setPaper('A4', 'portrait');
 
-        return $pdf->stream('แบบคำขอยืนยันสิทธิรับเงินเบี้ยยังชีพผู้สูงอายุ' . $form->id . '.pdf');
-    }
+    //     return $pdf->stream('แบบคำขอยืนยันสิทธิรับเงินเบี้ยยังชีพผู้สูงอายุ' . $form->id . '.pdf');
+    // }
 }
