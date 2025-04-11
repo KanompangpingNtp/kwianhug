@@ -81,6 +81,12 @@ use App\Http\Controllers\eservice\finance_department\general_requests\FinanceGen
 use App\Http\Controllers\eservice\finance_department\general_requests\AdminFinanceGeneralRequestsController;
 use App\Http\Controllers\eservice\engineering_department\general_requests\EngineeringGeneralController;
 use App\Http\Controllers\eservice\engineering_department\general_requests\AdminEngineeringGeneralController;
+use App\Http\Controllers\eservice\engineering_department\building_modification\BuildingChangeController;
+use App\Http\Controllers\eservice\engineering_department\building_modification\AdminBuildingChangeController;
+use App\Http\Controllers\eservice\engineering_department\construction_certification\ConstructionController;
+use App\Http\Controllers\eservice\engineering_department\construction_certification\AdminConstructionController;
+use App\Http\Controllers\eservice\education_department\general_requests\EducationGeneralController;
+use App\Http\Controllers\eservice\education_department\general_requests\AdminEducationGeneralController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -94,6 +100,18 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//คำขอรับรองสิ่งปลูกสร้างอาคาร
+Route::get('/Certification', [ConstructionController::class, 'UserCertificationFormPage'])->name('UserCertificationFormPage');
+Route::post('/Certification/form/create', [ConstructionController::class, 'CertificationFormCreate'])->name('CertificationFormCreate');
+
+//users BuildingChange
+Route::get('/BuildingChange', [BuildingChangeController::class, 'BuildingChangeFormPage'])->name('BuildingChangeFormPage');
+Route::post('/BuildingChange/form/create', [BuildingChangeController::class, 'BuildingChangeFormCreate'])->name('BuildingChangeFormCreate');
+
+//คำร้องทั่วไป กองการศึกษา
+Route::get('/education_department/general-requests', [EducationGeneralController::class, 'EducationGeneralFormPage'])->name('EducationGeneralFormPage');
+Route::post('/education_department/general-requests/form/create', [EducationGeneralController::class, 'EducationGeneralFormCreate'])->name('EducationGeneralFormCreate');
 
 //คำร้องทั่วไป กองช่าง
 Route::get('/engineering_department/general-requests', [EngineeringGeneralController::class, 'EngineeringGeneralFormPage'])->name('EngineeringGeneralFormPage');
@@ -572,6 +590,24 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::get('/admin/engineering_department/general-requests/export-pdf/{id}', [AdminEngineeringGeneralController::class, 'EngineeringGeneralAdminExportPDF'])->name('EngineeringGeneralAdminExportPDF');
     Route::post('/admin/engineering_department/general-requests/admin-reply/{id}', [AdminEngineeringGeneralController::class, 'EngineeringGeneralAdminReply'])->name('EngineeringGeneralAdminReply');
     Route::post('/admin/engineering_department/general-requests/update-status/{id}', [AdminEngineeringGeneralController::class, 'EngineeringGeneralUpdateStatus'])->name('EngineeringGeneralUpdateStatus');
+
+    //คำร้องทั่วไป กองการศึกษา
+    Route::get('/admin/education_department/general-requests/showdata', [AdminEducationGeneralController::class, 'EducationGeneralAdminShowData'])->name('EducationGeneralAdminShowData');
+    Route::get('/admin/education_department/general-requests/export-pdf/{id}', [AdminEducationGeneralController::class, 'EducationGeneralAdminExportPDF'])->name('EducationGeneralAdminExportPDF');
+    Route::post('/admin/education_department/general-requests/admin-reply/{id}', [AdminEducationGeneralController::class, 'EducationGeneralAdminReply'])->name('EducationGeneralAdminReply');
+    Route::post('/admin/education_department/general-requests/update-status/{id}', [AdminEducationGeneralController::class, 'EducationGeneralUpdateStatus'])->name('EducationGeneralUpdateStatus');
+
+    //admin BuildingChange
+    Route::get('/TablePages/BuildingChange', [AdminBuildingChangeController::class, 'TableBuildingChangeAdminPages'])->name('TableBuildingChangeAdminPages');
+    Route::get('/TablePages/BuildingChange/ExportPdf/{id}', [AdminBuildingChangeController::class, 'BuildingChangeAdminExportPDF'])->name('BuildingChangeAdminExportPDF');
+    Route::post('/TablePages/BuildingChange/AdminReply/{id}', [AdminBuildingChangeController::class, 'BuildingChangeAdminReply'])->name('BuildingChangeAdminReply');
+    Route::post('/TablePages/BuildingChange/{id}/update-status', [AdminBuildingChangeController::class, 'BuildingChangeUpdateStatus'])->name('BuildingChangeUpdateStatus');
+
+    //admin Certification
+    Route::get('/TablePages/Certification', [AdminConstructionController::class, 'TableCertificationAdminPages'])->name('TableCertificationAdminPages');
+    Route::get('/TablePages/Certification/ExportPdf/{id}', [AdminConstructionController::class, 'CertificationAdminExportPDF'])->name('CertificationAdminExportPDF');
+    Route::post('/TablePages/Certification/AdminReply/{id}', [AdminConstructionController::class, 'CertificationAdminReply'])->name('CertificationAdminReply');
+    Route::post('/TablePages/Certification/{id}/update-status', [AdminConstructionController::class, 'CertificationUpdateStatus'])->name('CertificationUpdateStatus');
 });
 
 Route::middleware(['auth', 'check.auth:3'])->group(function () {
@@ -637,6 +673,21 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/engineering_department/general-requests/export-pdf/{id}', [EngineeringGeneralController::class, 'EngineeringGeneralUserExportPDF'])->name('EngineeringGeneralUserExportPDF');
     Route::post('/user-account/engineering_department/general-requests/reply/{id}', [EngineeringGeneralController::class, 'EngineeringGeneralUserReply'])->name('EngineeringGeneralUserReply');
     Route::get('/user-account/engineering_department/general-requests/show-edit/{id}', [EngineeringGeneralController::class, 'EngineeringGeneralUserShowFormEdit'])->name('EngineeringGeneralUserShowFormEdit');
+
+    //คำร้องทั่วไป (กองการศึกษา)
+    Route::get('/user-account/education_department/general-requests/show-details', [EducationGeneralController::class, 'EducationGeneralShowDetails'])->name('EducationGeneralShowDetails');
+    Route::get('/user-account/education_department/general-requests/export-pdf/{id}', [EducationGeneralController::class, 'EducationGeneralUserExportPDF'])->name('EducationGeneralUserExportPDF');
+    Route::post('/user-account/education_department/general-requests/reply/{id}', [EducationGeneralController::class, 'EducationGeneralUserReply'])->name('EducationGeneralUserReply');
+
+    //users BuildingChange
+    Route::get('/user-account/BuildingChange/record', [BuildingChangeController::class, 'BuildingChangeUsersPages'])->name('BuildingChangeUsersPages');
+    Route::get('/user-account/BuildingChange/{id}/pdf', [BuildingChangeController::class, 'BuildingChangeUserExportPDF'])->name('BuildingChangeUserExportPDF');
+    Route::post('/user-account/BuildingChange/{form}/reply', [BuildingChangeController::class, 'BuildingChangeUserReply'])->name('BuildingChangeUserReply');
+
+    //คำขอรับรองสิ่งปลูกสร้างอาคาร
+    Route::get('/user/account/Certification/record', [ConstructionController::class, 'TableCertificationUsersPages'])->name('TableCertificationUsersPages');
+    Route::get('/user/account/Certification/{id}/pdf', [ConstructionController::class, 'CertificationUserExportPDF'])->name('CertificationUserExportPDF');
+    Route::post('/user/account/Certification/{form}/reply', [ConstructionController::class, 'CertificationUserReply'])->name('CertificationUserReply');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

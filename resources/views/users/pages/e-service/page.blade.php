@@ -169,10 +169,10 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                        <td><a href="{{route('EngineeringGeneralFormPage')}}">คำร้องทั่วไป</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test5')}}">คำขออนุญาตก่อสร้างอาคาร ดัดแปลงอาคาร หรือรื้อถอนอาคาร</a></td>
+                        <td><a href="{{route('BuildingChangeFormPage')}}">คำขออนุญาตก่อสร้างอาคาร ดัดแปลงอาคาร หรือรื้อถอนอาคาร</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('test6')}}">แบบฟอร์มการขออนุญาตขุดดินหรือถมดิน</a></td>
@@ -197,7 +197,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="{{route('general_requests_pages')}}">คำร้องทั่วไป</a></td>
+                        <td><a href="{{route('EducationGeneralFormPage')}}">คำร้องทั่วไป</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('test10')}}">ใบสมัครศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
