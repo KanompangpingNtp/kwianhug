@@ -117,7 +117,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="background-color: white;"><strong>สำนักปลัดเทศกาล</strong></th>
+                        <th style="background-color: white;"><strong>สำนักปลัดเทศบาล</strong></th>
                     </tr>
                 </thead>
                 <tbody>
