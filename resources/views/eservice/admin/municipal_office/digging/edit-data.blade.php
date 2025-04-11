@@ -1,4 +1,4 @@
-@extends('eservice.users.layout.layout')
+@extends('eservice.admin.layout.layout')
 @section('content')
 
 <div class="container">
@@ -14,9 +14,9 @@
                 <label for="salutation">คำนำหน้า :</label>
                 <select class="form-select" id="salutation" name="salutation" disabled>
                     <option value="" selected disabled>เลือกคำนำหน้า</option>
-                    <option value="นาย">นาย</option>
-                    <option value="นาง">นาง</option>
-                    <option value="นางสาว">นางสาว</option>
+                    <option value="นาย" {{ old('salutation', $form->salutation) == 'นาย' ? 'selected' : '' }}>นาย</option>
+                    <option value="นาง" {{ old('salutation', $form->salutation) == 'นาง' ? 'selected' : '' }}>นาง</option>
+                    <option value="นางสาว" {{ old('salutation', $form->salutation) == 'นางสาว' ? 'selected' : '' }}>นางสาว</option>
                 </select>
             </div>
             <div class="col-12 col-md-5">
@@ -69,11 +69,11 @@
             </div>
             <div class="col-12 col-md-4 mb-3">
                 <label for="postal_code">รหัสไปรษณีย์: </label>
-                <input type="text" id="postal_code" name="postal_code" class="form-control" value="{{ old('postal_code', $form->postal_code ?? '') }}" disabled>
+                <input type="text" id="postal_code" name="postal_code" class="form-control" value="{{ old('province', $form->province ?? '') }}" disabled>
             </div>
             <div class="col-12 col-md-4 mb-3">
                 <label for="phone_number">โทรศัพท์: </label>
-                <input type="text" id="phone_number" name="phone_number" class="form-control" value="{{ old('phone_number', $form->phone_number ?? '') }}" disabled>
+                <input type="text" id="phone_number" name="phone_number" class="form-control" value="{{ old('telephone', $form->telephone ?? '') }}" disabled>
             </div>
         </div>
         <hr>
