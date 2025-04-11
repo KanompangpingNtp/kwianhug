@@ -13,9 +13,9 @@
                 <label for="salutation_detail_1">คำนำหน้า :</label>
                 <select class="form-select" id="salutation_detail_1" name="salutation_detail_1" disabled>
                     <option value="" selected disabled>เลือกคำนำหน้า</option>
-                    <option value="นาย">นาย</option>
-                    <option value="นาง">นาง</option>
-                    <option value="นางสาว">นางสาว</option>
+                    <option value="นาย" {{ old('salutation_detail_1', $form['details']->salutation_detail_1) == 'นาย' ? 'selected' : '' }}>นาย</option>
+                    <option value="นาง" {{ old('salutation_detail_1', $form['details']->salutation_detail_1) == 'นาง' ? 'selected' : '' }}>นาง</option>
+                    <option value="นางสาว" {{ old('salutation_detail_1', $form['details']->salutation_detail_1) == 'นางสาว' ? 'selected' : '' }}>นางสาว</option>
                 </select>
             </div>
             <div class="col-12 col-md-10 mb-3">
@@ -146,9 +146,9 @@
                 <label for="salutation_detail_2">คำนำหน้า :</label>
                 <select class="form-select" id="salutation_detail_2" name="salutation_detail_2" disabled>
                     <option value="" selected disabled>เลือกคำนำหน้า</option>
-                    <option value="นาย">นาย</option>
-                    <option value="นาง">นาง</option>
-                    <option value="นางสาว">นางสาว</option>
+                    <option value="นาย" {{ old('salutation_detail_2', $form['details']->salutation_detail_2) == 'นาย' ? 'selected' : '' }}>นาย</option>
+                    <option value="นาง" {{ old('salutation_detail_2', $form['details']->salutation_detail_2) == 'นาง' ? 'selected' : '' }}>นาง</option>
+                    <option value="นางสาว" {{ old('salutation_detail_2', $form['details']->salutation_detail_2) == 'นางสาว' ? 'selected' : '' }}>นางสาว</option>
                 </select>
             </div>
             <div class="col-12 col-md-8 mb-3">
@@ -258,9 +258,9 @@
                 <label for="salutation_detail_3">คำนำหน้า :</label>
                 <select class="form-select" id="salutation_detail_3" name="salutation_detail_3" disabled>
                     <option value="" selected disabled>เลือกคำนำหน้า</option>
-                    <option value="นาย">นาย</option>
-                    <option value="นาง">นาง</option>
-                    <option value="นางสาว">นางสาว</option>
+                    <option value="นาย" {{ old('salutation_detail_3', $form['details']->salutation_detail_3) == 'นาย' ? 'selected' : '' }}>นาย</option>
+                    <option value="นาง" {{ old('salutation_detail_3', $form['details']->salutation_detail_3) == 'นาง' ? 'selected' : '' }}>นาง</option>
+                    <option value="นางสาว" {{ old('salutation_detail_3', $form['details']->salutation_detail_3) == 'นางสาว' ? 'selected' : '' }}>นางสาว</option>
                 </select>
             </div>
             <div class="col-12 col-md-6 mb-3">
