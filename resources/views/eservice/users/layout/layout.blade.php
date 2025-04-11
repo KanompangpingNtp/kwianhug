@@ -278,11 +278,27 @@
                             </nav>
                         </div>
 
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#engineering_department4" aria-expanded="false" aria-controls="engineering_department4">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            แบบคำร้องแจ้งซ่อมไฟฟ้าสาธารณะ
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="engineering_department4" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('GeneralElectricityRequestFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('GeneralElectricityRequestShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#engineering_department3" aria-expanded="false" aria-controls="engineering_department3">
                             <div class="sb-nav-link-icon">
                                 <i class="bi bi-clipboard"></i>
                             </div>
-                            คำขอรับรองสิ่งปลูกสร้างอาคาร
+                            แบบคำร้องขอหนังสือรับรองสิ่งปลูกสร้าง
                             <div class="sb-sidenav-collapse-arrow">
                                 <i class="fas fa-angle-down"></i>
                             </div>

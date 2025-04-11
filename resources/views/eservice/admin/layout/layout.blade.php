@@ -134,6 +134,10 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำร้องการขออนุญาตขุดดินหรือถมดิน
                         </a>
+                        <a class="nav-link" href="{{route('GeneralElectricityRequestAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            แบบคำร้องแจ้งซ่อมไฟฟ้าสาธารณะ
+                        </a>
                         <a class="nav-link" href="{{route('TableCertificationAdminPages')}}">
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำขอรับรองสิ่งปลูกสร้างอาคาร
