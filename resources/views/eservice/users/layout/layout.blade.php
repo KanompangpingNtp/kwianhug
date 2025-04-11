@@ -164,6 +164,22 @@
                             </nav>
                         </div>
 
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#newborn" aria-expanded="false" aria-controls="funeral">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="newborn" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('NewbornFormPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('NewbornShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office5" aria-expanded="false" aria-controls="secretariat_office5">
                             <div class="sb-nav-link-icon">
                                 <i class="bi bi-clipboard"></i>
