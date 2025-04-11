@@ -184,7 +184,7 @@
                     <a href="#" class="bg-btn-view-all-video py-2 px-5 mt-3">
                         <i class="fas fa-video text-dark"></i> VDO เพิ่มเติม
                     </a>
-                    <a href="{{route('eservice_pages')}}" class="bg-eservice p-2 mt-5">
+                    <a href="#" class="bg-eservice p-2 mt-5">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="fs-4 fw-bold p-2 " style="background: linear-gradient(to right, #fe574e,#fc883e, #a7c37e36); border-radius: 10px; white-space: nowrap; flex-grow: 1;">
                                 เทศบาลตำบลเกวียนหัก
