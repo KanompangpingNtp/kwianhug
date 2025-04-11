@@ -85,6 +85,8 @@ use App\Http\Controllers\eservice\engineering_department\building_modification\B
 use App\Http\Controllers\eservice\engineering_department\building_modification\AdminBuildingChangeController;
 use App\Http\Controllers\eservice\engineering_department\construction_certification\ConstructionController;
 use App\Http\Controllers\eservice\engineering_department\construction_certification\AdminConstructionController;
+use App\Http\Controllers\eservice\engineering_department\general_electricity_request\GeneralElectricityRequestController;
+use App\Http\Controllers\eservice\engineering_department\general_electricity_request\AdminGeneralElectricityRequestController;
 use App\Http\Controllers\eservice\education_department\general_requests\EducationGeneralController;
 use App\Http\Controllers\eservice\education_department\general_requests\AdminEducationGeneralController;
 
@@ -100,6 +102,10 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//แบบคำร้องแจ้งซ่อมไฟฟ้าสาธารณะ
+Route::get('/general-electricity-request', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestFormPage'])->name('GeneralElectricityRequestFormPage');
+Route::post('/general-electricity-request/form/create', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestFormCreate'])->name('GeneralElectricityRequestFormCreate');
 
 //คำขอรับรองสิ่งปลูกสร้างอาคาร
 Route::get('/Certification', [ConstructionController::class, 'UserCertificationFormPage'])->name('UserCertificationFormPage');
@@ -571,7 +577,7 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::post('/admin/funeral/reply/{id}', [AdminFuneralController::class, 'FuneralAdminReply'])->name('FuneralAdminReply');
     Route::post('/admin/funeral/update-status/{id}', [AdminFuneralController::class, 'FuneralUpdateStatus'])->name('FuneralUpdateStatus');
     Route::get('/admin/funeral/show-edit/{id}', [AdminFuneralController::class, 'FuneralUserAdminShowEdit'])->name('FuneralUserAdminShowEdit');
-    
+
     //แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด
     Route::get('/admin/newborn/show-details', [AdminNewbornController::class, 'NewbornShowData'])->name('NewbornShowData');
     Route::get('/admin/newborn/export-pdf/{id}', [AdminNewbornController::class, 'NewbornAdminExportPDF'])->name('NewbornAdminExportPDF');
@@ -608,6 +614,12 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::get('/TablePages/Certification/ExportPdf/{id}', [AdminConstructionController::class, 'CertificationAdminExportPDF'])->name('CertificationAdminExportPDF');
     Route::post('/TablePages/Certification/AdminReply/{id}', [AdminConstructionController::class, 'CertificationAdminReply'])->name('CertificationAdminReply');
     Route::post('/TablePages/Certification/{id}/update-status', [AdminConstructionController::class, 'CertificationUpdateStatus'])->name('CertificationUpdateStatus');
+
+     //คำร้องทั่วไป (แจ้งเรื่องไฟฟ้า)
+     Route::get('/admin/general-electricity-request/showdata', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminShowData'])->name('GeneralElectricityRequestAdminShowData');
+     Route::get('/admin/general-electricity-request/export-pdf/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminExportPDF'])->name('GeneralElectricityRequestAdminExportPDF');
+     Route::post('/admin/general-electricity-request/admin-reply/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminReply'])->name('GeneralElectricityRequestAdminReply');
+     Route::post('/admin/general-electricity-request/update-status/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestUpdateStatus'])->name('GeneralElectricityRequestUpdateStatus');
 });
 
 Route::middleware(['auth', 'check.auth:3'])->group(function () {
@@ -655,7 +667,7 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/funeral/show-details', [FuneralController::class, 'FuneralShowDetails'])->name('FuneralShowDetails');
     Route::post('/user-account/funeral/reply/{id}', [FuneralController::class, 'FuneralUserReply'])->name('FuneralUserReply');
     Route::get('/user-account/funeral/show-edit/{id}', [FuneralController::class, 'FuneralUserShowEdit'])->name('FuneralUserShowEdit');
-    
+
     //แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด
     Route::get('/user-account/newborn/show-details', [NewbornController::class, 'NewbornShowDetails'])->name('NewbornShowDetails');
     Route::post('/user-account/newborn/reply/{id}', [NewbornController::class, 'NewbornUserReply'])->name('NewbornUserReply');
@@ -688,6 +700,13 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user/account/Certification/record', [ConstructionController::class, 'TableCertificationUsersPages'])->name('TableCertificationUsersPages');
     Route::get('/user/account/Certification/{id}/pdf', [ConstructionController::class, 'CertificationUserExportPDF'])->name('CertificationUserExportPDF');
     Route::post('/user/account/Certification/{form}/reply', [ConstructionController::class, 'CertificationUserReply'])->name('CertificationUserReply');
+
+    //คำร้องทั่วไป (แจ้งเรื่องไฟฟ้า)
+    Route::get('/user-account/general-electricity-request/show-details', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestShowDetails'])->name('GeneralElectricityRequestShowDetails');
+    Route::get('/user-account/general-electricity-request/export-pdf/{id}', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestUserExportPDF'])->name('GeneralElectricityRequestUserExportPDF');
+    Route::post('/user-account/general-electricity-request/reply/{id}', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestUserReply'])->name('GeneralElectricityRequestUserReply');
+    Route::get('/user-account/general-electricity-request/show-edit/{id}', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestUserShowFormEdit'])->name('GeneralElectricityRequestUserShowFormEdit');
+    Route::put('/user-account/general-electricity-request/update-data/{id}', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestUserUpdateForm'])->name('GeneralElectricityRequestUserUpdateForm');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
