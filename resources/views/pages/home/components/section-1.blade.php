@@ -227,7 +227,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="https://kwianhug.sosmartsolution.com/ReceiveComplaints/form"
+                <a href="https://kwianhug.go.th/ReceiveComplaints/form"
                     class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:19px;">
                     <img src="{{ asset('pages/home/section-1/logo3.png') }}" alt="icon">
@@ -251,7 +251,7 @@
                 </a>
             </div>
             <div class="col-lg-6 col-xl-3 px-4 my-4 my-lg-3">
-                <a href="https://kwianhug.sosmartsolution.com/Satisfaction/form"
+                <a href="https://kwianhug.go.th/Satisfaction/form"
                     class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:18px;">
                     <img src="{{ asset('pages/home/section-1/logo6.png') }}" alt="icon">
