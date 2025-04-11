@@ -75,6 +75,8 @@ use App\Http\Controllers\eservice\secretariat_office\health_hazard_applications\
 use App\Http\Controllers\eservice\secretariat_office\health_hazard_applications\AdminHealthHazardApplicationController;
 use App\Http\Controllers\eservice\secretariat_office\food_storage_license\FoodStorageLicenseController;
 use App\Http\Controllers\eservice\secretariat_office\food_storage_license\AdminFoodStorageLicenseController;
+use App\Http\Controllers\eservice\secretariat_office\newborn\AdminNewbornController;
+use App\Http\Controllers\eservice\secretariat_office\newborn\NewbornController;
 use App\Http\Controllers\eservice\finance_department\general_requests\FinanceGeneralRequestsController;
 use App\Http\Controllers\eservice\finance_department\general_requests\AdminFinanceGeneralRequestsController;
 use App\Http\Controllers\eservice\engineering_department\general_requests\EngineeringGeneralController;
@@ -146,6 +148,10 @@ Route::post('/food_storage_license/form/create', [FoodStorageLicenseController::
 //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
 Route::get('/funeral', [FuneralController::class, 'FuneralFormPage'])->name('FuneralFormPage');
 Route::post('/funeral/form/create', [FuneralController::class, 'FuneralFormCreate'])->name('FuneralFormCreate');
+
+//แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด
+Route::get('/newborn', [NewbornController::class, 'NewbornFormPage'])->name('NewbornFormPage');
+Route::post('/newborn/form/create', [NewbornController::class, 'NewbornFormCreate'])->name('NewbornFormCreate');
 
 Route::get('/forum/page', [ForumController::class, 'forum_pages'])->name('forum_pages');
 //eservice
@@ -565,6 +571,13 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::post('/admin/funeral/reply/{id}', [AdminFuneralController::class, 'FuneralAdminReply'])->name('FuneralAdminReply');
     Route::post('/admin/funeral/update-status/{id}', [AdminFuneralController::class, 'FuneralUpdateStatus'])->name('FuneralUpdateStatus');
     Route::get('/admin/funeral/show-edit/{id}', [AdminFuneralController::class, 'FuneralUserAdminShowEdit'])->name('FuneralUserAdminShowEdit');
+    
+    //แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด
+    Route::get('/admin/newborn/show-details', [AdminNewbornController::class, 'NewbornShowData'])->name('NewbornShowData');
+    Route::get('/admin/newborn/export-pdf/{id}', [AdminNewbornController::class, 'NewbornAdminExportPDF'])->name('NewbornAdminExportPDF');
+    Route::post('/admin/newborn/reply/{id}', [AdminNewbornController::class, 'NewbornAdminReply'])->name('NewbornAdminReply');
+    Route::post('/admin/newborn/update-status/{id}', [AdminNewbornController::class, 'NewbornUpdateStatus'])->name('NewbornUpdateStatus');
+    Route::get('/admin/newborn/show-edit/{id}', [AdminNewbornController::class, 'NewbornUserAdminShowEdit'])->name('NewbornUserAdminShowEdit');
 
     //คำร้องทั่วไป
     Route::get('/admin/finance_department/general-requests/showdata', [AdminFinanceGeneralRequestsController::class, 'FinanceGeneralAdminShowData'])->name('FinanceGeneralAdminShowData');
@@ -641,6 +654,12 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
     Route::get('/user-account/funeral/show-details', [FuneralController::class, 'FuneralShowDetails'])->name('FuneralShowDetails');
     Route::post('/user-account/funeral/reply/{id}', [FuneralController::class, 'FuneralUserReply'])->name('FuneralUserReply');
+    Route::get('/user-account/funeral/show-edit/{id}', [FuneralController::class, 'FuneralUserShowEdit'])->name('FuneralUserShowEdit');
+    
+    //แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด
+    Route::get('/user-account/newborn/show-details', [NewbornController::class, 'NewbornShowDetails'])->name('NewbornShowDetails');
+    Route::post('/user-account/newborn/reply/{id}', [NewbornController::class, 'NewbornUserReply'])->name('NewbornUserReply');
+    Route::get('/user-account/newborn/show-edit/{id}', [NewbornController::class, 'NewbornUserShowEdit'])->name('NewbornUserShowEdit');
     Route::get('/user-account/funeral/show-edit/{id}', [FuneralController::class, 'FuneralUserShowEdit'])->name('FuneralUserReply');
 
     //คำร้องทั่วไป (กองคลัง)
