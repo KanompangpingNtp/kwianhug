@@ -187,7 +187,7 @@
             // ตรวจสอบว่ามีรูปภาพหรือไม่
             $imagePath = $item->photos->isNotEmpty()
                 ? asset('storage/' . $item->photos->first()->post_photo_file)
-                : asset('pages/home/section-4/Logo.png');
+                : asset('pages/home/section-4/logo copy.png');
 
             // ตัดข้อความเนื้อหา
             $text = isset($item->details) ? $item->details : '';

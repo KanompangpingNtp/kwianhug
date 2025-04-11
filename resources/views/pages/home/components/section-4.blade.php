@@ -155,7 +155,7 @@
                     <a href="{{route('ActivityShowDetails',$item->id )}}" class="col-xl-6 d-flex flex-column flex-sm-row justify-content-center align-items-center align-items-sm-start gap-1 mb-2 p-2 text-decoration-none text-dark hover-card-section4" style="border-radius: 10px;">
                         <div class="bg-white" style="border-radius: 10px;">
                             <!-- ตรวจสอบว่า $item->photos[0] มีข้อมูลหรือไม่ -->
-                            <img src="{{ $item->photos->where('post_photo_status', 1)->isNotEmpty() ? asset('storage/' . $item->photos->where('post_photo_status', 1)->first()->post_photo_file) : asset('pages/home/section-4/Logo.png') }}"
+                            <img src="{{ $item->photos->where('post_photo_status', 1)->isNotEmpty() ? asset('storage/' . $item->photos->where('post_photo_status', 1)->first()->post_photo_file) : asset('pages/home/section-4/logo copy.png') }}"
                             alt="logo" style="border-radius: 10px; width: 150px; height: 110px; object-fit: contianer;">
                         </div>
 
