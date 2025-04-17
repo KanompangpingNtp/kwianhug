@@ -665,6 +665,7 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
 
     //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
     Route::get('/user-account/funeral/show-details', [FuneralController::class, 'FuneralShowDetails'])->name('FuneralShowDetails');
+    Route::get('/user-account/funeral/export-pdf/{id}', [FuneralController::class, 'FuneralUserExportPDF'])->name('FuneralUserExportPDF');
     Route::post('/user-account/funeral/reply/{id}', [FuneralController::class, 'FuneralUserReply'])->name('FuneralUserReply');
     Route::get('/user-account/funeral/show-edit/{id}', [FuneralController::class, 'FuneralUserShowEdit'])->name('FuneralUserShowEdit');
 
