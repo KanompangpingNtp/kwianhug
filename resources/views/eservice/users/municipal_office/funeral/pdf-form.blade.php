@@ -40,7 +40,7 @@
 
         .box_text {
             border: 1px solid rgb(255, 255, 255);
-            text-align: center;
+            text-align: start;
         }
 
         .box_text span {
@@ -64,9 +64,8 @@
             padding-left: 5px;
             padding-right: 5px;
             margin-bottom: 5px;
-            border: 2px solid black;
+            border: 1px solid black;
             text-align: left;
-            ;
         }
 
         .box_text_border span {
@@ -94,17 +93,203 @@
             overflow-wrap: break-word;
             /* รองรับ browser อื่น */
         }
-
     </style>
 </head>
 
 <body>
-    <div class="title_doc">
-        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('images/pdf/ครุฑ.png'))) }}"
-            alt="Logo" height="120"> <br>
-            <strong>แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ</strong>
+    <div style="width: 100%; position: relative; ">
+        <div class="box_text_border" style="float: right; padding:5px;">
+            แบบ ผศผ. 01
+        </div>
     </div>
 
+    <div class="title_doc">
+        <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('images/pdf/ครุฑ.png'))) }}"
+            alt="Logo" height="100" style="margin-left:4rem;"> <br>
+        <strong>แบบคำขอรับเงินสงเคราะห์ และรับรองผู้รับผิดชอบในการจัดการศพผู้สูงอายุตามประเพณี</strong>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:5px;"><span>เขียนที่</span>
+        <span class="dotted-line" style="width: 25%; text-align: center;">
+        </span>
+        <div>
+            <span>วันที่</span><span class="dotted-line" style="width: 5%; text-align: center;">
+            </span><span>เดือน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span><span>พ.ศ.</span><span class="dotted-line" style="width: 10%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <span style="font-weight: bold; text-decoration: underline;">ส่วนที่ 1</span>
+        <span>:สำหรับผู้ยื่นขอรับเงินสงเคราะห์ค่าจัดการศพผู้สูงอายุตามประเพณี</span>
+        <div style="margin-left: 3rem;">
+            <span>ข้าพเจ้า (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 33%; text-align: center;">
+            </span><span>อายุ</span><span class="dotted-line" style="width: 10%; text-align: center;">
+            </span><span>ปี เลขบัตรประชาชน</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            </span>
+        </div>
+        <div>
+            <span>ออกให้โดย</span><span class="dotted-line" style="width: 22.5%; text-align: center;">
+            </span><span>วันออกบัตร</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span><span>วันหมดอายุ</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>อาชีพ</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            </span>
+            <span>โทรศัพท์</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            </span>
+            <span>โทรศัพท์มือถือ</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ตามทะเบียนบ้าน</span>
+        <div >
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ปัจจุบัน</span><span style="margin-left:10px; font-weight: bold;"> (<input type="checkbox"> ตรงกับที่อยู่ตามทะเบียนบ้าน)</span>
+        <div >
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem; font-weight: bold;">
+        <div >
+            <span style="margin-left: 3rem;">มีความเกี่ยวข้องกับผู้สูงอายุที่ตายในฐานะเป็น</span><span class="dotted-line" style="width: 33%; text-align: center;">
+            </span><span>และเป็นผู้รับผิดชอบในการจัดการศพผู้สูงอายุ</span><span>โดยได้รับความยินยอมจากบิดา/มารดา/บุตร/พี่น้อง/เครือญาติ/ของผู้สูงอายุที่ตายเป็นผู้รับเงินสงเคราะห์ค่าจัดการศพของผู้สูงอายุที่ตาย</span>
+        </div>
+        
+    </div>
+    <div class="box_text">
+        <span>ชื่อ (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 65%; text-align: center;">
+        </span><span>อายุ</span><span class="dotted-line" style="width: 15%; text-align: center;">
+        </span><span>ปี </span><span>เลขบัตรประจำตัวประชาชน</span><span class="dotted-line" style="width: 82%; text-align: center;">
+        </span>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ตามทะเบียนบ้าน</span>
+        <div >
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ปัจจุบัน</span><span style="margin-left:10px; font-weight: bold;"> (<input type="checkbox"> ตรงกับที่อยู่ตามทะเบียนบ้าน)</span>
+        <div >
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <div >
+            <span style="font-weight: bold;">ถึงแก่กรรมด้วยสาเหตุ</span><span class="dotted-line" style="width: 36%; text-align: center;">
+            </span><span>เมื่อวันที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span><span>เดือน</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span>
+            <span>พ.ศ.</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span>
+            <span style="font-weight: bold;">ตามใบมรณบัตรเลขที่</span><span class="dotted-line" style="width: 36%; text-align: center;">
+            </span><span>เมื่อวันที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span><span>เดือน</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span>
+            <span>พ.ศ.</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <div style="margin-left: 3rem; font-weight: bold;">
+            ข้าพเจ้าขอรับรองว่าข้อความและเอกสารที่ได้ยื่นนี้เป็นความจริงทุกประการ และข้าพเจ้าไม่เคยได้รับเงินสงเคราะห์ในการจัดการศพผู้สูงอายุราย
+        </div>
+        <div style=" font-weight: bold;">
+            นี้มาก่อน หากข้อความและเอกสารที่ยื่นเรื่องนี้เป็นเท็จ ข้าพเจ้ายินยอมให้ดำเนินการตามกฏหมาย
+        </div>
+        <div style="margin-left: 3rem; font-weight: bold;">
+            ข้าพเจ้าตกลงยินยอมให้เปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้าและข้อมูลในบัตรประชาชนพร้อมภาพใบหน้าของข้าพเจ้าไปใช้แก่ห่วยงานของรัฐและ    
+        </div>
+        <div style=" font-weight: bold;">
+            ยินยอมให้ห่วยงานของรัฐร้องขอ สอบถามและใช้ข้อมูลส่วนบุคคลของข้าพเจ้าแก่หน่วยงานของรัฐที่เกี่ยวข้อง เพื่อประโยชน์ในการพิจารณาจัดสรรสวัสดิ
+        </div>
+        <div style=" font-weight: bold;">
+            การและหรือเพื่อประโยชน์ในการดำเนินตามกฏหมายชองรัฐ และหรือเพื่อประโยชน์ในการวางแผนให้ความช่วยเหลือของหน่วยงานที่เกี่ยวข้องโดยให้ถือว่า
+        </div>
+        <div style=" font-weight: bold;">
+           คู่ฉบับและบรรดาสำเนา ภาพถ่ายข้อมูลอิเล็กทรอนิกส์ หรือโทรสารที่ทำขึ้นจากหนังสือให้ความยินยอมฉบับนี้ เป็นหลักฐานในการให้ความยินยอมของข้าพ
+        </div>
+        <div style=" font-weight: bold;">
+            เจ้าเช่นเดียวกัน
+        </div>
+
+    </div>
+    <div class="box_text" style="text-align: right;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center;">
+        </span><span>ผู้ยื่นคำขอ</span>
+        <div style="margin-right: 40px;">
+            <span>(</span>
+            <span class="dotted-line"
+                style="width: 30%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+        <div style="margin-right: 50px;">
+            <span>วันที่</span><span class="dotted-line" style="width: 8%; text-align: center;">
+            </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
+            </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
+            </span>
+        </div>
+    </div>
+    <div style="position: absolute; bottom: -20px; right: -10px;  font-weight: bold;">
+        มีต่อหน้า 2
+    </div>
 </body>
+
 
 </html>
