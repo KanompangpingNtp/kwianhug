@@ -16,20 +16,6 @@ class AuthController extends Controller
 
     public function authenticate(Request $request)
     {
-        // $request->validate([
-        //     'email' => 'required|email',
-        //     'password' => 'required',
-        // ]);
-
-        // if (Auth::attempt($request->only('email', 'password'))) {
-        //     $request->session()->regenerate();
-
-        //     return redirect()->route('AdminIndex');
-        // }
-
-        // return back()->withErrors([
-        //     'email' => 'Invalid credentials.',
-        // ]);
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
@@ -48,7 +34,7 @@ class AuthController extends Controller
                 return redirect()->route('EserviceUserAccount');
             } else {
                 Auth::logout(); // ถ้าสถานะไม่ตรงตามที่กำหนด ให้ออกจากระบบ
-                return redirect()->route('login')->withErrors(['status' => 'ไม่มีสิทธิ์เข้าถึงระบบ']);
+                return redirect()->route('showLoginForm')->withErrors(['status' => 'ไม่มีสิทธิ์เข้าถึงระบบ']);
             }
         }
 
@@ -76,7 +62,7 @@ class AuthController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        return redirect('/login')->with('success', 'ลงทะเบียนสำเร็จ! กรุณาเข้าสู่ระบบ');
+        return redirect()->route('showLoginForm')->with('success', 'ลงทะเบียนสำเร็จ! กรุณาเข้าสู่ระบบ');
     }
 
     public function logout(Request $request)
