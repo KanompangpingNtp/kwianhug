@@ -146,7 +146,11 @@ class FuneralController extends Controller
 
     public function FuneralUserExportPDF($id)
     {
-        $pdf = Pdf::loadView('eservice.users.municipal_office.funeral.pdf-form')
+        $forms = FuneralInformations::with(['user', 'details', 'replies'])
+            ->where('id', $id)
+            ->orderBy('created_at', 'desc')
+            ->first();
+        $pdf = Pdf::loadView('eservice.users.municipal_office.funeral.pdf-form', compact('forms'))
             ->setPaper('A4', 'portrait');
 
         return $pdf->stream('pdf');

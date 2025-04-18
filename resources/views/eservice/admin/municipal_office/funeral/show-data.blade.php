@@ -59,9 +59,9 @@
                 </div>
                 <div class="modal-body">
                     <span style="color: black;">preview</span>
-                    {{-- <a href="{{ route('FuneralUserExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
+                    <a href="{{ route('FuneralAdminExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
                         <i class="bi bi-file-earmark-pdf"></i>
-                    </a> --}}
+                    </a>
                     {{-- <br>
                     <br>
                     <span style="color: black;">ไฟล์แนบ </span>
