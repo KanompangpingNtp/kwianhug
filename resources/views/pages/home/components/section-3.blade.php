@@ -286,19 +286,19 @@
                     <div class="bg-white p-3" style="border-radius:20px;">
                         <div class="row w-100 justify-content-center align-items-center">
                             <a href="https://kwianhug.go.th/Authority/show/detail/2" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
-                                <img src="{{ asset('pages/home/section-3/บ0.png') }}" alt="icon">
+                                <img src="{{ asset('pages/home/section-3/บ1.png') }}" alt="icon">
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">สำนักปลัด</p>
                             </a>
                             <a href="https://kwianhug.go.th/Authority/show/detail/5" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
-                                <img src="{{ asset('pages/home/section-3/บ0.png') }}" alt="icon">
+                                <img src="{{ asset('pages/home/section-3/บ2.png') }}" alt="icon">
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -10%;">กองการศึกษา</p>
                             </a>
                             <a href="https://kwianhug.go.th/Authority/show/detail/3" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
-                                <img src="{{ asset('pages/home/section-3/บ0.png') }}" alt="icon">
+                                <img src="{{ asset('pages/home/section-3/บ3.png') }}" alt="icon">
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">กองคลัง</p>
                             </a>
                             <a href="https://kwianhug.go.th/Authority/show/detail/6" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
-                                <img src="{{ asset('pages/home/section-3/บ0.png') }}" alt="icon">
+                                <img src="{{ asset('pages/home/section-3/บ4.png') }}" alt="icon">
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -20%;">หน่วยตรวจสอบ<br>ภายใน</p>
                             </a>
                             <a href="{{route('BannserPages')}}" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
@@ -306,7 +306,7 @@
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -20%;">ลิงค์ตรวจสอบ<br>ภายนอก</p>
                             </a>
                             <a href="https://kwianhug.go.th/Authority/show/detail/4" class="hover-effect text-decoration-none col-xl-4 col-lg-6 d-flex flex-column justify-content-center align-items-center position-relative">
-                                <img src="{{ asset('pages/home/section-3/บ0.png') }}" alt="icon">
+                                <img src="{{ asset('pages/home/section-3/บ6.png') }}" alt="icon">
                                 <p class="hover-text text-center mt-2 position-absolute text-detail-banner lh-1" style="bottom: -11%;">กองช่าง</p>
                             </a>
                         </div>

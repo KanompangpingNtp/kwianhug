@@ -230,7 +230,7 @@
                 <a href="https://kwianhug.go.th/ReceiveComplaints/form"
                     class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:19px;">
-                    <img src="{{ asset('pages/home/section-1/logo.png') }}" alt="icon">
+                    <img src="{{ asset('pages/home/section-1/logo3.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับแจ้งเรื่องราว <br>ร้องทุกข์</span>
                 </a>
             </div>
@@ -254,7 +254,7 @@
                 <a href="https://kwianhug.go.th/Satisfaction/form"
                     class="bg-btn-section1 d-flex justify-content-center align-items-center p-3 lh-1"
                     style="font-size:16px;">
-                    <img src="{{ asset('pages/home/section-1/logo.png') }}" alt="icon">
+                    <img src="{{ asset('pages/home/section-1/logo6.png') }}" alt="icon">
                     <span style="padding-left: 4rem;">รับเรื่องร้องเรียน <br> ทุจริตประพฤติมิ <br>ชอบ</span>
                 </a>
             </div>
