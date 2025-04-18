@@ -186,8 +186,8 @@
             </div>
 
             <div class="col-md-3 mb-3">
-                <label for="village" class="col-sm-3 col-form-label">หมู่: <span class="text-danger">*</span></label>
-                <input type="text" id="village" name="village" class="form-control" required>
+                <label for="village" class="col-sm-3 col-form-label">หมู่: </label>
+                <input type="text" id="village" name="village" class="form-control">
             </div>
 
             <div class="col-md-3 mb-3">

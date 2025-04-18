@@ -9,13 +9,13 @@
         @csrf
 
         <div class="mb-3">
-            <label for="written_at"> เขียนที่</label>
-            <input type="text" name="written_at" id="written_at" class="form-control">
+            <label for="written_at"> เขียนที่ <span class="text-danger">*</span></label>
+            <input type="text" name="written_at" id="written_at" class="form-control" required>
         </div>
 
         <div class="mb-3">
-            <label for="full_name"> ชื่อ-นามสกุล </label>
-            <input type="text" name="full_name" id="full_name" class="form-control">
+            <label for="full_name"> ชื่อ-นามสกุล <span class="text-danger">*</span></label>
+            <input type="text" name="full_name" id="full_name" class="form-control" required>
         </div>
 
         <div class="row">

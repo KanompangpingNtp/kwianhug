@@ -176,17 +176,17 @@
 
             <div class="col-md-3">
                 <label for="details_subdistrict" class="form-label">ตำบล/แขวง</label>
-                <input type="text" class="form-control" id="details_subdistrict" name="details_subdistrict" value="คลองอุดมชลจร">
+                <input type="text" class="form-control" id="details_subdistrict" name="details_subdistrict">
             </div>
 
             <div class="col-md-3">
                 <label for="details_district" class="form-label">อำเภอ</label>
-                <input type="text" class="form-control" id="details_district" name="details_district" value="เมืองฉะเชิงเทรา">
+                <input type="text" class="form-control" id="details_district" name="details_district">
             </div>
 
             <div class="col-md-3">
                 <label for="details_province" class="form-label">จังหวัด</label>
-                <input type="text" class="form-control" id="details_province" name="details_province" value="ฉะเชิงเทรา">
+                <input type="text" class="form-control" id="details_province" name="details_province">
             </div>
 
             <div class="col-md-3">

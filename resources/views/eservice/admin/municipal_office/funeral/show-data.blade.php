@@ -51,7 +51,6 @@
     @foreach ($forms as $form)
     <div class="modal fade" id="submitModal-{{ $form->id }}" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <!-- เพิ่มคลาส modal-dialog-centered -->
             <div class="modal-content">
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="submitModalLabel">แสดงข้อมูล</h1>
@@ -59,7 +58,7 @@
                 </div>
                 <div class="modal-body">
                     <span style="color: black;">preview</span>
-                    <a href="{{ route('FuneralUserExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
+                    <a href="{{ route('FuneralAdminExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
                         <i class="bi bi-file-earmark-pdf"></i>
                     </a>
                     <br>
