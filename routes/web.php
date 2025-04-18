@@ -89,6 +89,8 @@ use App\Http\Controllers\eservice\engineering_department\general_electricity_req
 use App\Http\Controllers\eservice\engineering_department\general_electricity_request\AdminGeneralElectricityRequestController;
 use App\Http\Controllers\eservice\education_department\general_requests\EducationGeneralController;
 use App\Http\Controllers\eservice\education_department\general_requests\AdminEducationGeneralController;
+use App\Http\Controllers\eservice\education_department\child_apply\ChildApplyController;
+use App\Http\Controllers\eservice\education_department\child_apply\AdminChildApplyController;
 
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
@@ -102,6 +104,9 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+//User ChildApply
+Route::get('/ChildApply', [ChildApplyController::class, 'ChildApplyPage'])->name('ChildApplyPage');
+Route::post('/ChildApply/form/create', [ChildApplyController::class, 'ChildApplyFormCreate'])->name('ChildApplyFormCreate');
 
 //แบบคำร้องแจ้งซ่อมไฟฟ้าสาธารณะ
 Route::get('/general-electricity-request', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestFormPage'])->name('GeneralElectricityRequestFormPage');
@@ -673,6 +678,7 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/newborn/show-details', [NewbornController::class, 'NewbornShowDetails'])->name('NewbornShowDetails');
     Route::post('/user-account/newborn/reply/{id}', [NewbornController::class, 'NewbornUserReply'])->name('NewbornUserReply');
     Route::get('/user-account/newborn/show-edit/{id}', [NewbornController::class, 'NewbornUserShowEdit'])->name('NewbornUserShowEdit');
+    Route::get('/user-account/newborn/export-pdf/{id}', [NewbornController::class, 'NewbornUserExportPDF'])->name('NewbornUserExportPDF');
 
     //คำร้องทั่วไป (กองคลัง)
     Route::get('/user-account/finance_department/general-requests/show-details', [FinanceGeneralRequestsController::class, 'FinanceGeneralShowDetails'])->name('FinanceGeneralShowDetails');
@@ -708,6 +714,14 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::post('/user-account/general-electricity-request/reply/{id}', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestUserReply'])->name('GeneralElectricityRequestUserReply');
     Route::get('/user-account/general-electricity-request/show-edit/{id}', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestUserShowFormEdit'])->name('GeneralElectricityRequestUserShowFormEdit');
     Route::put('/user-account/general-electricity-request/update-data/{id}', [GeneralElectricityRequestController::class, 'GeneralElectricityRequestUserUpdateForm'])->name('GeneralElectricityRequestUserUpdateForm');
+
+    //users ChildApply
+    Route::get('/user/account/ChildApply', [ChildApplyController::class, 'ChildApplyFormPage'])->name('ChildApplyFormPage');
+    Route::get('/user/account/ChildApply/record', [ChildApplyController::class, 'TableChildApplyUsersPages'])->name('TableChildApplyUsersPages');
+    Route::get('/user/account/ChildApply/{id}/edit', [ChildApplyController::class, 'ChildApplyUserShowFormEdit'])->name('ChildApplyUserShowFormEdit');
+    Route::put('/user/account/ChildApply/{id}/Update', [ChildApplyController::class, 'updateChildInformation'])->name('updateChildInformation');
+    Route::get('/user/account/ChildApply/{id}/pdf', [ChildApplyController::class, 'ChildApplyUserExportPDF'])->name('ChildApplyUserExportPDF');
+    Route::post('/user/account/ChildApply/{form}/reply', [ChildApplyController::class, 'ChildApplyUserReply'])->name('ChildApplyUserReply');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');

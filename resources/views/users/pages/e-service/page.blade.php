@@ -200,7 +200,7 @@
                         <td><a href="{{route('EducationGeneralFormPage')}}">คำร้องทั่วไป</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test10')}}">ใบสมัครศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
+                        <td><a href="{{route('ChildApplyPage')}}">ใบสมัครศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก</a></td>
                     </tr>
                 </tbody>
             </table>
