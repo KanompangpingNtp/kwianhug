@@ -1,12 +1,12 @@
 @extends('eservice.admin.layout.layout')
 @section('content')
-
 <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 
+
 <div class="container">
-    <h2 class="text-center">คำร้องการขออนุญาตขุดดินหรือถมดิน <br>
-        <h3 class="text-center">ตารางแสดงข้อมูลฟอร์มที่ส่งเข้ามา</h3>
-    </h2> <br>
+    <h3 class="text-center">ประวัติการส่งฟอร์ม<br>
+        <h2 class="text-center">ศูนย์พัฒนาเด็กเล็กองค์การบริหารส่วนตำบลคลองบ้านโพธิ์</h2>
+    </h3>
 
     <table class="table table-bordered table-striped" id="data_table">
         <thead class="text-center">
@@ -25,15 +25,14 @@
                 <td>{{ $form->user ? $form->user->name : 'ผู้ใช้งานทั่วไป' }}</td>
                 <td>{{ $form->admin_name_verifier }}</td>
                 <td>
-                    @if ($form->form_status == 1)
+                    @if ($form->status == 1)
                     <p> - </p>
-                    @elseif($form->form_status == 2)
+                    @elseif($form->status == 2)
                     <p style="font-size: 20px; color:blue;"><i class="bi bi-check-circle"></i></p>
                     @endif
                 </td>
                 <td>
-                    <a href="{{ route('DiggingUserAdminShowEdit', $form->id) }}" class="btn btn-warning btn-sm text-white">
-                        <i class="bi bi-pencil-square"></i></a>
+                    <a href="{{ route('ChildApplyUserShowFormEdit', $form->id) }}" class="btn btn-warning btn-sm text-white"><i class="bi bi-pencil-square"></i></a>
                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#submitModal-{{ $form->id }}">
                         <i class="bi bi-filetype-pdf"></i>
                     </button>
@@ -59,21 +58,21 @@
                 </div>
                 <div class="modal-body">
                     <span style="color: black;">preview</span>
-                    <a href="{{ route('DiggingAdminExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
+                    <a href="{{ route('ChildApplyAdminExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
                         <i class="bi bi-file-earmark-pdf"></i>
                     </a>
-                    {{-- <br>
+                    <br>
                     <br>
                     <span style="color: black;">ไฟล์แนบ </span>
-                    @foreach($form->disabilityAttachments as $attachment)
+                    @foreach ($form->attachments as $attachment)
                     <span class="d-inline me-2">
                         <a href="{{ asset('storage/' . $attachment->file_path) }}" target="_blank">{{ basename($attachment->file_path) }}</a>
                     </span>
-                    @endforeach --}}
+                    @endforeach
                 </div>
                 <div class="modal-footer d-flex justify-content-between">
                     <span class="text-start" style="color: black;">รับฟอร์ม</span>
-                    <form action="{{ route('DisabilityUpdateStatus', $form->id) }}" method="POST">
+                    <form action="{{ route('ChildApplyUpdateStatus', $form->id) }}" method="POST">
                     @csrf
                     <button type="submit" class="btn btn-primary btn-sm" @if($form->status == 2) disabled @endif>
                         กดรับแบบฟอร์ม
@@ -85,7 +84,7 @@
     </div>
 
     <div class="modal fade" id="replyModal-{{ $form->id }}" tabindex="-1" aria-labelledby="replyModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="replyModalLabel">ตอบกลับฟอร์ม</h5>
@@ -121,7 +120,7 @@
                             @endforelse
                         </tbody>
                     </table>
-                    <form action="{{ route('DiggingAdminReply', $form->id) }}" method="POST">
+                    <form action="{{ route('ChildApplyUserReply', $form->id) }}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="message" class="form-label">ข้อความตอบกลับ</label>
@@ -138,8 +137,9 @@
     </div>
     @endforeach
 
+    <script src="{{ asset('js/datatable.js') }}"></script>
+
 </div>
-<script src="{{ asset('js/datatable.js') }}"></script>
 @endsection
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

@@ -40,6 +40,11 @@ class FuneralInformations extends Model
         return $this->hasOne(FuneralFormDetails::class, 'funeral_id');
     }
 
+    public function files()
+    {
+        return $this->hasMany(FuneralFormFiles::class, 'funeral_id');
+    }
+
     public function replies()
     {
         return $this->hasMany(FuneralFormReplies::class, 'funeral_id');

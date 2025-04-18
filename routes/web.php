@@ -620,11 +620,17 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::post('/TablePages/Certification/AdminReply/{id}', [AdminConstructionController::class, 'CertificationAdminReply'])->name('CertificationAdminReply');
     Route::post('/TablePages/Certification/{id}/update-status', [AdminConstructionController::class, 'CertificationUpdateStatus'])->name('CertificationUpdateStatus');
 
-     //คำร้องทั่วไป (แจ้งเรื่องไฟฟ้า)
-     Route::get('/admin/general-electricity-request/showdata', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminShowData'])->name('GeneralElectricityRequestAdminShowData');
-     Route::get('/admin/general-electricity-request/export-pdf/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminExportPDF'])->name('GeneralElectricityRequestAdminExportPDF');
-     Route::post('/admin/general-electricity-request/admin-reply/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminReply'])->name('GeneralElectricityRequestAdminReply');
-     Route::post('/admin/general-electricity-request/update-status/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestUpdateStatus'])->name('GeneralElectricityRequestUpdateStatus');
+    //คำร้องทั่วไป (แจ้งเรื่องไฟฟ้า)
+    Route::get('/admin/general-electricity-request/showdata', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminShowData'])->name('GeneralElectricityRequestAdminShowData');
+    Route::get('/admin/general-electricity-request/export-pdf/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminExportPDF'])->name('GeneralElectricityRequestAdminExportPDF');
+    Route::post('/admin/general-electricity-request/admin-reply/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestAdminReply'])->name('GeneralElectricityRequestAdminReply');
+    Route::post('/admin/general-electricity-request/update-status/{id}', [AdminGeneralElectricityRequestController::class, 'GeneralElectricityRequestUpdateStatus'])->name('GeneralElectricityRequestUpdateStatus');
+
+    //admin ChildApply
+    Route::get('/TablePages/ChildApply', [AdminChildApplyController::class, 'TableChildApplyAdminPages'])->name('TableChildApplyAdminPages');
+    Route::get('/TablePages/ChildApply/ExportPdf/{id}', [AdminChildApplyController::class, 'ChildApplyAdminExportPDF'])->name('ChildApplyAdminExportPDF');
+    Route::post('/TablePages/ChildApply/AdminReply/{id}', [AdminChildApplyController::class, 'ChildApplyAdminReply'])->name('ChildApplyAdminReply');
+    Route::post('/TablePages/ChildApply/{id}/update-status', [AdminChildApplyController::class, 'ChildApplyUpdateStatus'])->name('ChildApplyUpdateStatus');
 });
 
 Route::middleware(['auth', 'check.auth:3'])->group(function () {
@@ -667,6 +673,7 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/digging/show-details', [DiggingController::class, 'DiggingShowDetails'])->name('DiggingShowDetails');
     Route::post('/user-account/digging/reply/{id}', [DiggingController::class, 'DiggingUserReply'])->name('DiggingUserReply');
     Route::get('/user-account/digging/show-edit/{id}', [DiggingController::class, 'DiggingUserShowEdit'])->name('DiggingUserShowEdit');
+    Route::get('/user-account/digging/export-pdf/{id}', [DiggingController::class, 'DiggingUserExportPDF'])->name('DiggingUserExportPDF');
 
     //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
     Route::get('/user-account/funeral/show-details', [FuneralController::class, 'FuneralShowDetails'])->name('FuneralShowDetails');

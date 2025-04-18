@@ -44,16 +44,16 @@
                 <input type="text" name="house_number" id="house_number" class="form-control" maxlength="50" required>
             </div>
             <div class="col-md-3">
-                <label for="village" class="form-label">หมู่ <span class="text-danger">*</span></label>
-                <input type="text" name="village" id="village" class="form-control" maxlength="50" required>
+                <label for="village" class="form-label">หมู่</label>
+                <input type="text" name="village" id="village" class="form-control">
             </div>
             <div class="col-md-3">
-                <label for="alley" class="form-label">ซอย <span class="text-danger">*</span></label>
-                <input type="text" name="alley" id="alley" class="form-control" maxlength="50" required>
+                <label for="alley" class="form-label">ซอย</label>
+                <input type="text" name="alley" id="alley" class="form-control">
             </div>
             <div class="col-md-3">
-                <label for="road" class="form-label">ถนน <span class="text-danger">*</span></label>
-                <input type="text" name="road" id="road" class="form-control" maxlength="50" required>
+                <label for="road" class="form-label">ถนน</label>
+                <input type="text" name="road" id="road" class="form-control">
             </div>
         </div>
 

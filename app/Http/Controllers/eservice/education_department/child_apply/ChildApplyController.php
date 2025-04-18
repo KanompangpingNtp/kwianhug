@@ -516,7 +516,7 @@ class ChildApplyController extends Controller
         $pdf = Pdf::loadView('eservice.users.education_department.child_apply.pdf-form', compact('form', 'selectedOptions'))
             ->setPaper('A4', 'portrait');
 
-        return $pdf->stream('ศูนย์พัฒนาเด็กเล็กองค์การบริหารส่วนตำบลคลองบ้านโพธิ์' . $form->id . '.pdf');
+        return $pdf->stream('ศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก' . $form->id . '.pdf');
     }
 
     public function ChildApplyUserReply(Request $request, $formId)
