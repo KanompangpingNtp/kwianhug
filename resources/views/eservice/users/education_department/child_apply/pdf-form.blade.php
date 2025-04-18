@@ -22,7 +22,7 @@
 
         body {
             font-family: 'sarabun', 'sarabun-bold', sans-serif;
-            font-size: 20px;
+            font-size: 18px;
             margin: 0;
             padding: 0;
             line-height: 1;
@@ -342,7 +342,7 @@
             <span>)</span>
         </div>
     </div>
-    <div class="box_text" style="text-align: right; margin-top:3rem;">
+    {{-- <div class="box_text" style="text-align: right; margin-top:3rem;">
         <span>ลงชื่อ</span>
         <span class="dotted-line" style="width: 35%; text-align: center; border-bottom: 2px dotted black; margin-top:20px;"> </span>
         <span>ผู้รับสมัคร</span>
@@ -350,8 +350,8 @@
             <span style="text-align: start;">( นางสาวประทุมรัตน์ ศักดิ์ประดิษฐ์ )</span>
             <div style="margin-right: 90px;">ครู</div>
         </div>
-    </div>
-    <div style="text-align: left; display: inline-block; margin-top:2rem; font-size:23px; font-weight: bold; font-family: 'sarabun-bold', sans-serif;">
+    </div> --}}
+    {{-- <div style="text-align: left; display: inline-block; margin-top:2rem; font-size:23px; font-weight: bold; font-family: 'sarabun-bold', sans-serif;">
         หมายเหตุ <span style="margin-left: 2rem;">เอกสาร/หลักฐานที่ใช้ในการสมัครเรียน </span>
     </div>
     <div class="box_text" style="text-align: left; ">
@@ -363,7 +363,7 @@
         </div>
         <div style="margin-left: 6rem;"> ๖. สำเนาสมุดบันทึกสุขภาพ (สีชมพู)
         </div>
-    </div>
+    </div> --}}
     {{-- new page --}}
     <div style="page-break-before: always;"></div>
     <div class="title_doc" style="text-align:center;">
