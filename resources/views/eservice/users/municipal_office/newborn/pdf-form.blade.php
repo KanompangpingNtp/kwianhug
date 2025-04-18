@@ -99,6 +99,81 @@
         }
     </style>
 </head>
+<?php
+function DateTimeThai($strDate)
+{
+    $strYear = date("Y", strtotime($strDate)) + 543;
+    $strMonth = date("n", strtotime($strDate));
+    $strDay = date("j", strtotime($strDate));
+    $time = date("H:i", strtotime($strDate));
+    $strMonthCut = array("", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
+    $strMonthThai = $strMonthCut[$strMonth];
+    return "$strDay $strMonthThai $strYear";
+}
+
+function convertMonthsToThai($date)
+{
+    $string = date('m', strtotime($date));
+    if (!$string) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $months = array(
+        '01' => 'มกราคม',
+        '02' => 'กุมภาพันธ์',
+        '03' => 'มีนาคม',
+        '04' => 'เมษายน',
+        '05' => 'พฤษภาคม',
+        '06' => 'มิถุนายน',
+        '07' => 'กรกฎาคม',
+        '08' => 'สิงหาคม',
+        '09' => 'กันยายน',
+        '10' => 'ตุลาคม',
+        '11' => 'พฤศจิกายน',
+        '12' => 'ธันวาคม'
+    );
+    $monthThai = $months[$string];
+    return $monthThai;
+}
+
+function convertDay($date)
+{
+    $day = date('d', strtotime($date));
+    if (!$day) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $day = $day;
+
+    $dayThai = $day;
+    return $dayThai;
+}
+
+function convertYear($date)
+{
+    $day = date('Y', strtotime($date)) + 543;
+    if (!$day) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $day = $day;
+
+    $dayThai = $day;
+    return $dayThai;
+}
+function convertYearPlus($date)
+{
+    $day = date('Y', strtotime($date)) + 544;
+    if (!$day) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $day = $day;
+
+    $dayThai = $day;
+    return $dayThai;
+}
+?>
 
 <body>
     <div style="width: 100%; position: relative; ">
@@ -112,17 +187,16 @@
         <div class="box_text" style="text-align: center; margin-top:5px;">
             <div style="font-weight: bold;">
                 <span>แบบคำร้องขอลงทะเบียน</span><br>
-                </span><span>เพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด ปีงบประมาณ</span><span
-                    class="dotted-line" style="width: 8%; text-align: center;">
+                </span><span>เพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด ปีงบประมาณ</span><span class="dotted-line" style="width: 8%; text-align: center;">{{convertYear($form->created_at)}}
                 </span>
             </div>
         </div>
     </div>
     <div class="box_text_border" style=" margin-left: auto; text-align: right; width: 18rem;">
         <span>หน่วยงานรับลงทะเบียน</span><span class="dotted-line" style="width: 60%; text-align: center;">
-        </span><br><span>วันที่</span><span class="dotted-line" style="width: 25%; text-align: center;">
-        </span><span>เดือน</span><span class="dotted-line" style="width: 25%; text-align: center;">
-        </span><span>พ.ศ.</span><span class="dotted-line" style="width: 25%; text-align: center;">
+        </span><br><span>วันที่</span><span class="dotted-line" style="width: 25%; text-align: center;">{{convertDay($form->created_at)}}
+        </span><span>เดือน</span><span class="dotted-line" style="width: 25%; text-align: center;">{{convertMonthsToThai($form->created_at)}}
+        </span><span>พ.ศ.</span><span class="dotted-line" style="width: 25%; text-align: center;">{{convertYear($form->created_at)}}
         </span>
     </div>
     <div class="box_text" style="margin-top: -25px;">
@@ -133,133 +207,126 @@
         <input type="checkbox"><span>เป็นนผู้ลงทะเบียนตามโคงการเพื่อสวัสดิการแห่งรัฐ</span>
         <input type="checkbox"><span>ไม่เป็นนผู้ลงทะเบียนตามโคงการเพื่อสวัสดิการแห่งรัฐ</span>
         <div style="margin-left: 3rem;">
-            <span>1.1</span><input type="checkbox"><span>บิดา</span>
-            <input type="checkbox"><span>มารดา</span>
-            <input type="checkbox"><span>ผู้ปกครอง ความสัมพันธ์กับเด็กแรกเกิด ระบุ</span><span class="dotted-line"
-                style="width: 46%; text-align: center;">
+            <span>1.1</span><input type="checkbox" {{($form['details']->relationship == 1) ? 'checked' : ''}}><span>บิดา</span>
+            <input type="checkbox" {{($form['details']->relationship == 2) ? 'checked' : ''}}><span>มารดา</span>
+            <input type="checkbox" {{($form['details']->relationship == 3) ? 'checked' : ''}}><span>ผู้ปกครอง ความสัมพันธ์กับเด็กแรกเกิด ระบุ</span><span class="dotted-line" style="width: 46%; text-align: center;">{{$form['details']->relationship_detail}}
             </span>
             <span>1.2</span><input type="checkbox"><span>เด็กชาย</span>
-            <input type="checkbox"><span>เด็กหญิง</span>
-            <input type="checkbox"><span>นาย</span>
-            <input type="checkbox"><span>นาง</span>
-            <input type="checkbox"><span>นางสาว</span><span class="dotted-line" style="width: 52%; text-align: center;">
+            <input type="checkbox" {{($form['details']->salutation_parent == 'เด็กหญิง') ? 'checked' : ''}}><span>เด็กหญิง</span>
+            <input type="checkbox" {{($form['details']->salutation_parent == 'นาย') ? 'checked' : ''}}><span>นาย</span>
+            <input type="checkbox" {{($form['details']->salutation_parent == 'นาง') ? 'checked' : ''}}><span>นาง</span>
+            <input type="checkbox" {{($form['details']->salutation_parent == 'นางสาว') ? 'checked' : ''}}><span>นางสาว</span><span class="dotted-line" style="width: 52%; text-align: center;">{{$form['details']->fullname_parent}}
             </span>
-            <span>1.3 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 80%; text-align: center;">
+            <span>1.3 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 80%; text-align: center;">{{$form['details']->idcard_parent}}
             </span>
-            <span>1.4 เกิดเมื่อวันที่</span><span class="dotted-line" style="width: 19%; text-align: center;">
-            </span><span>เดือน</span><span class="dotted-line" style="width: 19%; text-align: center;">
-            </span><span>พ.ศ.</span><span class="dotted-line" style="width: 19%; text-align: center;">
-            </span><span>อายุ</span><span class="dotted-line" style="width: 19%; text-align: center;">
+            <span>1.4 เกิดเมื่อวันที่</span><span class="dotted-line" style="width: 19%; text-align: center;">{{convertDay($form['details']->birthday_parent)}}
+            </span><span>เดือน</span><span class="dotted-line" style="width: 19%; text-align: center;">{{convertMonthsToThai($form['details']->birthday_parent)}}
+            </span><span>พ.ศ.</span><span class="dotted-line" style="width: 19%; text-align: center;">{{convertYear($form['details']->birthday_parent)}}
+            </span><span>อายุ</span><span class="dotted-line" style="width: 19%; text-align: center;">-
             </span><span>ปี</span>
-            <span>1.5 สัญชาติ</span><span class="dotted-line" style="width: 91%; text-align: center;">
+            <span>1.5 สัญชาติ</span><span class="dotted-line" style="width: 91%; text-align: center;">{{$form['details']->nationality_parent}}
             </span>
             <span>1.6 ที่อยู่ตามทะเบียนบ้าน</span>
             <div style="margin-left: 1rem;">
-                <span>บ้านเลขที่</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>หมู่ที่</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>อาคาร/ตึก</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>ชั้น</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>เลขที่ห้อง</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>หมู่บ้าน</span><span class="dotted-line" style="width: 15.5%; text-align: center;">
+                <span>บ้านเลขที่</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->address_parent}}
+                </span><span>หมู่ที่</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->village_parent}}
+                </span><span>อาคาร/ตึก</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->building_parent}}
+                </span><span>ชั้น</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->floor}}
+                </span><span>เลขที่ห้อง</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->room}}
+                </span><span>หมู่บ้าน</span><span class="dotted-line" style="width: 15.5%; text-align: center;">{{$form['details']->village_name_parent}}
                 </span>
-                <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 26%; text-align: center;">
+                <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 26%; text-align: center;">{{$form['details']->alley_parent}}
                 </span>
-                <span>ถนน</span><span class="dotted-line" style="width: 26%; text-align: center;">
+                <span>ถนน</span><span class="dotted-line" style="width: 26%; text-align: center;">{{$form['details']->road_parent}}
                 </span>
-                <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 26%; text-align: center;">
+                <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 26%; text-align: center;">{{$form['details']->subdistrict_parent}}
                 </span>
-                <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 25.5%; text-align: center;">
+                <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 25.5%; text-align: center;">{{$form['details']->district_parent}}
                 </span>
-                <span>จังหวัด</span><span class="dotted-line" style="width: 25.5%; text-align: center;">
+                <span>จังหวัด</span><span class="dotted-line" style="width: 25.5%; text-align: center;">{{$form['details']->province_parent}}
                 </span>
-                <span>รหัสไปรษณี</span><span class="dotted-line" style="width: 25.5%; text-align: center;">
+                <span>รหัสไปรษณี</span><span class="dotted-line" style="width: 25.5%; text-align: center;">{{$form['details']->postal_code_parent}}
                 </span>
-                <span>โทรศัพท์บ้าน</span><span class="dotted-line" style="width: 39.5%; text-align: center;">
+                <span>โทรศัพท์บ้าน</span><span class="dotted-line" style="width: 39.5%; text-align: center;">{{$form['details']->phone_house_parent}}
                 </span>
-                <span>โทรศัพท์มือถือ</span><span class="dotted-line" style="width: 39.5%; text-align: center;">
+                <span>โทรศัพท์มือถือ</span><span class="dotted-line" style="width: 39.5%; text-align: center;">{{$form['details']->phone_number_parent}}
                 </span>
             </div>
             <span>1.7 ที่อยู่ปัจุบัน <input type="checkbox"><span>ใช้ที่อยู่ตามทะเบียนบ้าน</span></span>
             <div style="margin-left: 1rem;">
-                <span>บ้านเลขที่</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>หมู่ที่</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>อาคาร/ตึก</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>ชั้น</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>เลขที่ห้อง</span><span class="dotted-line" style="width: 10%; text-align: center;">
-                </span><span>หมู่บ้าน</span><span class="dotted-line" style="width: 15.5%; text-align: center;">
+                <span>บ้านเลขที่</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->address_parent}}
+                </span><span>หมู่ที่</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->village_parent}}
+                </span><span>อาคาร/ตึก</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->building_parent}}
+                </span><span>ชั้น</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->floor}}
+                </span><span>เลขที่ห้อง</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$form['details']->room}}
+                </span><span>หมู่บ้าน</span><span class="dotted-line" style="width: 15.5%; text-align: center;">{{$form['details']->village_name_parent}}
                 </span>
-                <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 26%; text-align: center;">
+                <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 26%; text-align: center;">{{$form['details']->alley_parent}}
                 </span>
-                <span>ถนน</span><span class="dotted-line" style="width: 26%; text-align: center;">
+                <span>ถนน</span><span class="dotted-line" style="width: 26%; text-align: center;">{{$form['details']->road_parent}}
                 </span>
-                <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 26%; text-align: center;">
+                <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 26%; text-align: center;">{{$form['details']->subdistrict_parent}}
                 </span>
-                <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 25.5%; text-align: center;">
+                <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 25.5%; text-align: center;">{{$form['details']->district_parent}}
                 </span>
-                <span>จังหวัด</span><span class="dotted-line" style="width: 25.5%; text-align: center;">
+                <span>จังหวัด</span><span class="dotted-line" style="width: 25.5%; text-align: center;">{{$form['details']->province_parent}}
                 </span>
-                <span>รหัสไปรษณี</span><span class="dotted-line" style="width: 25.5%; text-align: center;">
+                <span>รหัสไปรษณี</span><span class="dotted-line" style="width: 25.5%; text-align: center;">{{$form['details']->postal_code_parent}}
                 </span>
-                <span>โทรศัพท์บ้าน</span><span class="dotted-line" style="width: 39.5%; text-align: center;">
+                <span>โทรศัพท์บ้าน</span><span class="dotted-line" style="width: 39.5%; text-align: center;">{{$form['details']->phone_house_parent}}
                 </span>
-                <span>โทรศัพท์มือถือ</span><span class="dotted-line" style="width: 39.5%; text-align: center;">
+                <span>โทรศัพท์มือถือ</span><span class="dotted-line" style="width: 39.5%; text-align: center;">{{$form['details']->phone_number_parent}}
                 </span>
             </div>
-            <span>1.8 อาชีพ</span><input type="checkbox"><span>ไม่ได้ประกอบอาชีพ</span><input
-                type="checkbox"><span>ประกอบอาชีพ ระบุ</span><span class="dotted-line"
-                style="width: 57%; text-align: center;"></span>
-            <span>1.9 การศึกษา</span><input type="checkbox"><span>ไม่ได้รับการศึกษา</span><input
-                type="checkbox"><span>กำลังศึกษา</span><span class="dotted-line"
-                style="width: 62%; text-align: center;"></span>
-            <input type="checkbox" style="margin-left: 1rem;"><span>จบการศึกษา (สูงสุด)</span><span
-                class="dotted-line" style="width: 79%; text-align: center;"></span>
+            <span>1.8 อาชีพ</span><input type="checkbox" {{($form['details']->occupation_parent == 1) ? 'checked' : ''}}><span>ไม่ได้ประกอบอาชีพ</span><input type="checkbox" {{($form['details']->occupation_parent == 2) ? 'checked' : ''}}><span>ประกอบอาชีพ ระบุ</span><span class="dotted-line" style="width: 57%; text-align: center;">{{$form['details']->occupation_detail}}</span>
+            <span>1.9 การศึกษา</span><input type="checkbox" {{($form['details']->education_mother == 1) ? 'checked' : ''}}><span>ไม่ได้รับการศึกษา</span><input type="checkbox" {{($form['details']->education_mother == 2) ? 'checked' : ''}}><span>กำลังศึกษา</span><span class="dotted-line" style="width: 62%; text-align: center;">{{($form['details']->education_mother == 2) ? $form['details']->education_detail_mother : ''}}</span>
+            <input type="checkbox" style="margin-left: 1rem;" {{($form['details']->education_mother == 3) ? 'checked' : ''}}><span>จบการศึกษา (สูงสุด)</span><span class="dotted-line" style="width: 79%; text-align: center;">{{($form['details']->education_mother == 3) ? $form['details']->education_detail_mother : ''}}</span>
         </div>
         <div class="box_text" style="margin-top: -11px;">
             <span style="font-weight: bold;">2. ข้อมูลเด็ก (ตามสูติบัตร)</span>
             <div style="margin-left: 3rem;">
                 <span>2.1 ชื่อ-นามสกุล</span>
-                <input type="checkbox"><span>เด็กชาย</span>
-                <input type="checkbox"><span>เด็กหญิง</span>
-                <span class="dotted-line" style="width: 67%; text-align: center;">
+                <input type="checkbox" {{($form['details']->salutation_children == 'เด็กชาย') ? 'checked' : ''}}><span>เด็กชาย</span>
+                <input type="checkbox" {{($form['details']->salutation_children == 'เด็กหญิง') ? 'checked' : ''}}><span>เด็กหญิง</span>
+                <span class="dotted-line" style="width: 67%; text-align: center;">{{$form['details']->fullname_children}}
                 </span>
-                <span>2.2 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 80%; text-align: center;">
+                <span>2.2 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 80%; text-align: center;">{{$form['details']->idcard_children}}
                 </span>
-                <span>2.3 เกิดเมื่อวันที่</span><span class="dotted-line" style="width: 19%; text-align: center;">
-                </span><span>เดือน</span><span class="dotted-line" style="width: 19%; text-align: center;">
-                </span><span>พ.ศ.</span><span class="dotted-line" style="width: 19%; text-align: center;"></span>
+                <span>2.3 เกิดเมื่อวันที่</span><span class="dotted-line" style="width: 19%; text-align: center;">{{convertDay($form['details']->birthday_children)}}
+                </span><span>เดือน</span><span class="dotted-line" style="width: 19%; text-align: center;">{{convertMonthsToThai($form['details']->birthday_children)}}
+                </span><span>พ.ศ.</span><span class="dotted-line" style="width: 19%; text-align: center;">{{convertYear($form['details']->birthday_children)}}</span>
                 <div style="margin-left: -0.5rem;">
                     <span style="text-decoration: underline;">ข้อมูลมารดา</span>
                     <input type="checkbox"><span>เป็นนผู้ลงทะเบียนตามโคงการเพื่อสวัสดิการแห่งรัฐ</span>
                     <input type="checkbox"><span>ไม่เป็นนผู้ลงทะเบียนตามโคงการเพื่อสวัสดิการแห่งรัฐ</span>
                 </div>
                 <span>2.4</span>
-                <input type="checkbox"><span>เด็กหญิง</span>
-                <input type="checkbox"><span>นาง</span>
-                <input type="checkbox"><span>นางสาว</span>
-                <span class="dotted-line" style="width: 68%; text-align: center;"></span>
-                <span>2.5 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 80%; text-align: center;">
+                <input type="checkbox" {{($form['details']->salutation_mother == 'เด็กหญิง') ? 'checked' : ''}}><span>เด็กหญิง</span>
+                <input type="checkbox" {{($form['details']->salutation_mother == 'นาง') ? 'checked' : ''}}><span>นาง</span>
+                <input type="checkbox" {{($form['details']->salutation_mother == 'นางสาว') ? 'checked' : ''}}><span>นางสาว</span>
+                <span class="dotted-line" style="width: 68%; text-align: center;">{{$form['details']->fullname_mother}}</span>
+                <span>2.5 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 80%; text-align: center;">{{$form['details']->idcard_mother}}
                 </span>
-                <span>2.6 อายุ</span><span class="dotted-line"
-                    style="width: 14%; text-align: center;"></span><span>ปี</span>
-                <span>2.7 สัญญาติ</span><span class="dotted-line" style="width: 14%; text-align: center;"></span>
-                <span>2.8 ประกอบอาชีพ</span><span class="dotted-line" style="width: 14%; text-align: center;"></span>
-                <span>2.9 จบการศึกษา</span><span class="dotted-line" style="width: 14%; text-align: center;"></span>
+                <span>2.6 อายุ</span><span class="dotted-line" style="width: 14%; text-align: center;">{{$form['details']->age_mother}}</span><span>ปี</span>
+                <span>2.7 สัญญาติ</span><span class="dotted-line" style="width: 14%; text-align: center;">{{$form['details']->nationality_mother}}</span>
+                <span>2.8 ประกอบอาชีพ</span><span class="dotted-line" style="width: 14%; text-align: center;">{{$form['details']->occupation_detail_mother}}</span>
+                <span>2.9 จบการศึกษา</span><span class="dotted-line" style="width: 14%; text-align: center;">{{$form['details']->education_detail_mother}}</span>
                 <div style="margin-left: -0.5rem;">
                     <span style="text-decoration: underline;">ข้อมูลบิดา</span>
                     <input type="checkbox"><span>เป็นนผู้ลงทะเบียนตามโคงการเพื่อสวัสดิการแห่งรัฐ</span>
                     <input type="checkbox"><span>ไม่เป็นนผู้ลงทะเบียนตามโคงการเพื่อสวัสดิการแห่งรัฐ</span>
                 </div>
                 <input type="checkbox"><span>ไม่ปรากฏบิดา</span> <br>
-                <span>2.10</span><input type="checkbox"><span>เด็กชาย</span>
-                <input type="checkbox"><span>นาย</span>
+                <span>2.10</span><input type="checkbox" {{($form['details']->salutation_father == 'เด็กชาย') ? 'checked' : ''}}><span>เด็กชาย</span>
+                <input type="checkbox" {{($form['details']->salutation_father == 'นาย') ? 'checked' : ''}}><span>นาย</span>
                 <span class="dotted-line" style="width: 78%; text-align: center;"></span>
-                <span>2.11 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 79%; text-align: center;">
+                <span>2.11 เลขประจำตัวประชาชน</span><span class="dotted-line" style="width: 79%; text-align: center;">{{$form['details']->idcard_father}}
                 </span>
                 <span>2.12 อายุ</span><span class="dotted-line"
-                    style="width: 13%; text-align: center;"></span><span>ปี</span>
-                <span>2.13 สัญญาติ</span><span class="dotted-line" style="width: 13%; text-align: center;"></span>
-                <span>2.14 ประกอบอาชีพ</span><span class="dotted-line" style="width: 13%; text-align: center;"></span>
-                <span>2.15 จบการศึกษา</span><span class="dotted-line" style="width: 13%; text-align: center;"></span>
+                    style="width: 13%; text-align: center;">{{$form['details']->idcard_father}}</span><span>ปี</span>
+                <span>2.13 สัญญาติ</span><span class="dotted-line" style="width: 13%; text-align: center;">{{$form['details']->age_father}}</span>
+                <span>2.14 ประกอบอาชีพ</span><span class="dotted-line" style="width: 13%; text-align: center;">{{$form['details']->occupation_detail_father}}</span>
+                <span>2.15 จบการศึกษา</span><span class="dotted-line" style="width: 13%; text-align: center;">{{$form['details']->education_detail_father}}</span>
 
             </div>
         </div>
@@ -275,12 +342,12 @@
             <input type="checkbox"><span>ผูกพร้อมเพย์ด้วยเลขบัตรประชาชนนนเท่านั้น</span>
             <span style="font-weight: bold;">3.2 ผู้ยื่นคำร้องขอลงทะเบียนที่ไม่มีสัญชาติไทย เลือกเพียง 1 ธนาคาร</span>
             <div style="margin-left: -0.5rem;">
-                <input type="checkbox"><span>ธนาคารกรุงไทย ประเภทบัญชี ออมทรัพย์</span>
-                <input type="checkbox"><span>ธนาคาร ธ.ภ.ส.ประเภทบัญชี ออมทรัพย์</span>
-                <input type="checkbox"><span>ธนาคาร ออมสิน.ประเภทบัญชี เงินฝากเผื่อเรียก</span>
+                <input type="checkbox" {{($form['details']->account == 1) ? 'checked' : ''}}><span>ธนาคารกรุงไทย ประเภทบัญชี ออมทรัพย์</span>
+                <input type="checkbox" {{($form['details']->account == 2) ? 'checked' : ''}}><span>ธนาคาร ธ.ภ.ส.ประเภทบัญชี ออมทรัพย์</span>
+                <input type="checkbox" {{($form['details']->account == 3) ? 'checked' : ''}}><span>ธนาคาร ออมสิน.ประเภทบัญชี เงินฝากเผื่อเรียก</span>
             </div>
-            <span>ชื่อบัญชี</span><span class="dotted-line" style="width: 30%; text-align: center;"></span>
-            <span>เลขที่บัญชี</span><span class="dotted-line" style="width: 30%; text-align: center;"></span>
+            <span>ชื่อบัญชี</span><span class="dotted-line" style="width: 30%; text-align: center;">{{$form['details']->account_name}}</span>
+            <span>เลขที่บัญชี</span><span class="dotted-line" style="width: 30%; text-align: center;">{{$form['details']->account_id}}</span>
         </div>
         <span style="font-weight: bold;">4. ยื่นเอกสารหลักฐานประกอบการลงทะเบียน ดังนี้ (สำรหับเจ้าหน้าที่)</span>
         <div style="margin-left: 3rem;">
@@ -309,11 +376,11 @@
         <div style="margin-left: 40px;">
             <span>(</span>
             <span class="dotted-line"
-                style="width: 60%; text-align: center;"></span>
+                style="width: 60%; text-align: center;">{{$form['details']->fullname_parent}}</span>
             <span>)</span>
-        </div> 
-        <div >
-            <span>วันที่ลงทะเบียน</span><span class="dotted-line" style="width: 60%; text-align: center;">
+        </div>
+        <div>
+            <span>วันที่ลงทะเบียน</span><span class="dotted-line" style="width: 60%; text-align: center;">{{DateTimeThai($form->created_at)}}
             </span>
         </div>
     </div>
@@ -329,10 +396,10 @@
         </div>
         <div style="margin-right: 40px;">
             <span>ตำแหน่ง</span>
-        <span class="dotted-line" style="width: 64%; text-align: center;">
-        </span>
+            <span class="dotted-line" style="width: 64%; text-align: center;">
+            </span>
         </div>
-        
+
         <div style="margin-right: 32px;">
             <span>วันที่ลงทะเบียน</span><span class="dotted-line" style="width: 70%; text-align: center;">
             </span>
@@ -341,7 +408,7 @@
     <div style="border-bottom: 1px dotted black; padding-bottom: 4px; margin-bottom: 8px; text-align:center;">
         ตัดตามรอยประ
     </div>
-    
+
 </body>
 
 </html>

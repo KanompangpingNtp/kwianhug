@@ -62,4 +62,13 @@ class AdminNewbornController extends Controller
 
         return view('eservice.admin.municipal_office.newborn.edit-data', compact('form'));
     }
+
+    public function NewbornAdminExportPDF($id)
+    {
+        $form = NewbornInformations::with('details')->findOrFail($id);
+        $pdf = Pdf::loadView('eservice.users.municipal_office.newborn.pdf-form', compact('form'))
+            ->setPaper('A4', 'portrait');
+
+        return $pdf->stream('แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด.pdf');
+    }
 }

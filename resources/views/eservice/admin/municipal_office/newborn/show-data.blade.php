@@ -32,8 +32,11 @@
                     @endif
                 </td>
                 <td>
-                    <a href="{{ route('NewbornUserAdminShowEdit', $form->id) }}" class="btn btn-warning btn-sm text-white">
-                        <i class="bi bi-pencil-square"></i></a>
+                    <!-- <a href="{{ route('NewbornUserAdminShowEdit', $form->id) }}" class="btn btn-warning btn-sm text-white">
+                        <i class="bi bi-pencil-square"></i></a> -->
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#submitModal-{{ $form->id }}">
+                        <i class="bi bi-filetype-pdf"></i>
+                    </button>
                     @if (!is_null($form->users_id))
                     <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#replyModal-{{ $form->id }}">
                         <i class="bi bi-reply"></i>
@@ -46,6 +49,26 @@
     </table>
 
     @foreach ($forms as $form)
+    <div class="modal fade" id="submitModal-{{ $form->id }}" tabindex="-1" aria-labelledby="submitModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="submitModalLabel">แสดงข้อมูล</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <span style="color: black;">preview</span>
+                    <a href="{{ route('NewbornAdminExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
+                        <i class="bi bi-file-earmark-pdf"></i>
+                    </a>
+                    <br>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="modal fade" id="replyModal-{{ $form->id }}" tabindex="-1" aria-labelledby="replyModalLabel"
         aria-hidden="true">
