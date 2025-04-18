@@ -68,10 +68,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    {{-- <span style="color: black;">preview</span>
+                    <span style="color: black;">preview</span>
                     <a href="{{ route('GeneralRequestsAdminExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
                         <i class="bi bi-file-earmark-pdf"></i>
-                    </a> --}}
+                    </a>
                     {{-- <br>
                     <br> --}}
                     <span style="color: black;">ไฟล์แนบ </span>
