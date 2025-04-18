@@ -93,6 +93,12 @@
             overflow-wrap: break-word;
             /* รองรับ browser อื่น */
         }
+
+        .page-break {
+    border-top: 2px dashed #000; /* เส้นประสีดำ */
+    margin-top: 20px; /* ระยะห่างจากด้านบน */
+    margin-bottom: 20px; /* ระยะห่างจากด้านบน */
+}
     </style>
 </head>
 
@@ -288,6 +294,76 @@
     </div>
     <div style="position: absolute; bottom: -20px; right: -10px;  font-weight: bold;">
         มีต่อหน้า 2
+    </div>
+    <div style="page-break-before: always;"></div>
+    <div style="width: 100%; position: relative; ">
+        <div class="box_text_border" style="float: right; padding:5px;">
+            แบบ ผศผ. 01
+        </div>
+    </div>
+
+    <div class="title_doc">
+        <strong>- 2 -</strong>
+    </div>
+    <div class="box_text" style="margin-top: 0.1rem;">
+        <span style="font-weight: bold; text-decoration: underline;">ส่วนที่ 1</span>
+        <span>:ข้อมูลผู้ให้การรับรองผู้รับผิดชอบในการจัดการศพผู้สูงอายุตามประเพณี</span>
+        <div >
+            <span>ข้าพเจ้า (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 38%; text-align: center;">
+            </span><span>ตำแหน่ง</span><span class="dotted-line" style="width: 38%; text-align: center;">
+            </span><span>สังกัดหน่วยงาน</span><span class="dotted-line" style="width: 39%; text-align: center;">
+            </span><span>เลขบัตรประชาชน</span><span class="dotted-line" style="width: 39%; text-align: center;">
+            </span>
+        </div>
+        <div>
+            <span>ออกให้โดย</span><span class="dotted-line" style="width: 33%; text-align: center;">
+            </span><span>วันออกบัตร</span><span class="dotted-line" style="width: 22%; text-align: center;">
+            </span><span>วันหมดอายุ</span><span class="dotted-line" style="width: 22%; text-align: center;">
+            </span>
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span>
+            <span>หมู่ที่</span><span class="dotted-line" style="width: 10%; text-align: center;">
+            </span>
+            <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            </span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 19%; text-align: center;">
+            </span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            </span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            </span>
+            <span>โทรศัพท์</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            </span><span>ขอรับรองว่าผู้ยื่นคำขอดังกล่าวเป็นผู้รับผิดชอบในการจัดการศพผู้สูงอายุรายนี้จริง</span>
+        </div>
+        <div class="box_text" style="text-align: right;">
+            <span>(ลงชื่อ)</span>
+            <span class="dotted-line" style="width: 30%; text-align: center;">
+            </span><span>ผู้ยื่นคำขอ</span>
+            <div style="margin-right: 40px;">
+                <span>(</span>
+                <span class="dotted-line"
+                    style="width: 30%; text-align: center;"></span>
+                <span>)</span>
+            </div>
+            <div style="margin-right: 40px;">
+                <span>ตำแหน่ง</span>
+            <span class="dotted-line" style="width: 30%; text-align: center;">
+            </span>
+            </div>
+            
+            <div style="margin-right: 50px;">
+                <span>วันที่</span><span class="dotted-line" style="width: 8%; text-align: center;">
+                </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
+                </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
+                </span>
+            </div>
+            
+        </div>
+        <div class="page-break"></div>
     </div>
 </body>
 
