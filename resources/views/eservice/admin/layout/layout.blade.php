@@ -148,6 +148,10 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำร้องทั่วไป
                         </a>
+                        <a class="nav-link" href="{{route('TableChildApplyAdminPages')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            ใบสมัครศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก
+                        </a>
                     </div>
                 </div>
             </nav>
