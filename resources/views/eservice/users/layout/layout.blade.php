@@ -326,6 +326,22 @@
                                 <a class="nav-link" href="{{route('EducationGeneralShowDetails')}}">ประวัติการส่งฟอร์ม</a>
                             </nav>
                         </div>
+
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#education_department2" aria-expanded="false" aria-controls="education_department2">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            ใบสมัครศูนย์พัฒนาเด็กเล็กเทศบาลตำบลเกวียนหัก
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="education_department2" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('ChildApplyPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('TableChildApplyUsersPages')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
                     </div>
                     @endauth
                 </div>
