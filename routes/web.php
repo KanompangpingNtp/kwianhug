@@ -678,6 +678,7 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/newborn/show-details', [NewbornController::class, 'NewbornShowDetails'])->name('NewbornShowDetails');
     Route::post('/user-account/newborn/reply/{id}', [NewbornController::class, 'NewbornUserReply'])->name('NewbornUserReply');
     Route::get('/user-account/newborn/show-edit/{id}', [NewbornController::class, 'NewbornUserShowEdit'])->name('NewbornUserShowEdit');
+    Route::get('/user-account/newborn/export-pdf/{id}', [NewbornController::class, 'NewbornUserExportPDF'])->name('NewbornUserExportPDF');
 
     //คำร้องทั่วไป (กองคลัง)
     Route::get('/user-account/finance_department/general-requests/show-details', [FinanceGeneralRequestsController::class, 'FinanceGeneralShowDetails'])->name('FinanceGeneralShowDetails');

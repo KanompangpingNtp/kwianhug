@@ -124,25 +124,10 @@ class NewbornController extends Controller
         return redirect()->back()->with('success', 'ตอบกลับสำเร็จแล้ว!');
     }
 
-    // public function ElderlyAllowanceUserExportPDF($id)
-    // {
-    //     $form = ElderlyAllowancePeople::with('personsOption', 'bank')->find($id);
+    public function NewbornUserExportPDF($id)
+    {
+        $pdf = Pdf::loadView('eservice.users.municipal_office.newborn.pdf-form')->setPaper('A4', 'portrait');
 
-    //     if ($form->personsOption->first() && $form->personsOption->first()->welfare_type) {
-    //         $welfareType = $form->personsOption->first()->welfare_type;
-    //         if (is_string($welfareType)) {
-    //             $form->personsOption->first()->welfare_type = json_decode($welfareType, true);
-    //         }
-    //     }
-
-    //     $documentType = $form->personsOption->first()->document_type ?? [];
-    //     if (is_string($documentType)) {
-    //         $documentType = json_decode($documentType, true);
-    //     }
-
-    //     $pdf = Pdf::loadView('eservice.users.municipal_office.funeral.pdf-form', compact('form', 'documentType'))
-    //         ->setPaper('A4', 'portrait');
-
-    //     return $pdf->stream('แบบคำขอยืนยันสิทธิรับเงินเบี้ยยังชีพผู้สูงอายุ' . $form->id . '.pdf');
-    // }
+        return $pdf->stream('แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด.pdf');
+    }
 }
