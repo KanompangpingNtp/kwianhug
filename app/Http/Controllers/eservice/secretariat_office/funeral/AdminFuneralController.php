@@ -15,7 +15,7 @@ class AdminFuneralController extends Controller
 {
     public function FuneralShowData()
     {
-        $forms = FuneralInformations::with(['user', 'details', 'replies'])
+        $forms = FuneralInformations::with(['user', 'details', 'replies', 'files'])
             ->orderBy('created_at', 'desc')
             ->get();
 
