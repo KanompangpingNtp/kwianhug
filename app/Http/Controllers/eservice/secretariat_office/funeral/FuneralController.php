@@ -8,6 +8,7 @@ use App\Models\DiggingFormFiles;
 use App\Models\DiggingFormReplies;
 use App\Models\DiggingInformations;
 use App\Models\FuneralFormDetails;
+use App\Models\FuneralFormFiles;
 use App\Models\FuneralFormReplies;
 use App\Models\FuneralInformations;
 use Illuminate\Http\Request;
@@ -102,12 +103,24 @@ class FuneralController extends Controller
             'phone_number_detail_3' => $request->phone_number_detail_3,
         ]);
 
+        if ($request->hasFile('attachments')) {
+            foreach ($request->file('attachments') as $optionKey => $file) {
+                $filename = time() . '_' . $file->getClientOriginalName();
+                $path = $file->storeAs('attachments', $filename, 'public');
+                FuneralFormFiles::create([
+                    'funeral_id' => $FuneralInformations->id,
+                    'file_path' => $path,
+                    'file_type' => $file->getClientMimeType(),
+                ]);
+            }
+        }
+
         return redirect()->back()->with('success', 'ฟอร์มถูกส่งเรียบร้อยแล้ว');
     }
 
     public function FuneralShowDetails()
     {
-        $forms = FuneralInformations::with(['user', 'replies', 'details'])
+        $forms = FuneralInformations::with(['user', 'replies', 'details','files'])
             ->where('users_id', Auth::id())
             ->get();
 
@@ -146,7 +159,11 @@ class FuneralController extends Controller
 
     public function FuneralUserExportPDF($id)
     {
-        $pdf = Pdf::loadView('eservice.users.municipal_office.funeral.pdf-form')
+        $forms = FuneralInformations::with(['user', 'details', 'replies'])
+            ->where('id', $id)
+            ->orderBy('created_at', 'desc')
+            ->first();
+        $pdf = Pdf::loadView('eservice.users.municipal_office.funeral.pdf-form', compact('forms'))
             ->setPaper('A4', 'portrait');
 
         return $pdf->stream('pdf');

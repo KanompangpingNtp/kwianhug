@@ -33,7 +33,7 @@
                 </td>
                 <td>
                     {{-- <a href="{{ route('FuneralUserAdminShowEdit', $form->id) }}" class="btn btn-warning btn-sm text-white">
-                        <i class="bi bi-pencil-square"></i></a> --}}
+                    <i class="bi bi-pencil-square"></i></a> --}}
                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#submitModal-{{ $form->id }}">
                         <i class="bi bi-filetype-pdf"></i>
                     </button>
@@ -59,17 +59,17 @@
                 </div>
                 <div class="modal-body">
                     <span style="color: black;">preview</span>
-                    {{-- <a href="{{ route('FuneralUserExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
+                    <a href="{{ route('FuneralUserExportPDF', $form->id) }}" class="btn btn-danger btn-sm" target="_blank">
                         <i class="bi bi-file-earmark-pdf"></i>
-                    </a> --}}
-                    {{-- <br>
+                    </a>
+                    <br>
                     <br>
                     <span style="color: black;">ไฟล์แนบ </span>
-                    @foreach ($form->grAttachments as $attachment)
+                    @foreach ($form->files as $attachment)
                     <span class="d-inline me-2">
                         <a href="{{ asset('storage/' . $attachment->file_path) }}" target="_blank">{{ basename($attachment->file_path) }}</a>
                     </span>
-                    @endforeach --}}
+                    @endforeach
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

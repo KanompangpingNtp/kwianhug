@@ -362,7 +362,17 @@
 
             <p>6. ผู้ยื่นคำขอและผู้รับรองต้องไม่เป็นบุคคลเดียวกัน</p>
         </div>
+        <hr>
 
+        <div>
+            <h4>แนบไฟล์ เอกสาร (สามารถกดแนบไฟล์พร้อมกันได้มากกว่า 1ไฟล์)</h4>
+            <input type="file" class="form-control" id="attachments" name="attachments[]" multiple>
+            <small class="text-muted">ประเภทไฟล์ที่รองรับ: jpg, jpeg, png, pdf (ขนาดไม่เกิน 2MB)</small>
+            <!-- แสดงรายการไฟล์ที่แนบ -->
+            <div id="file-list" class="mt-1">
+                <div class="d-flex flex-wrap gap-3"></div>
+            </div>
+        </div>
         <hr>
 
         <div class="text-center w-full border">

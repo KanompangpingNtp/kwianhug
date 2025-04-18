@@ -95,12 +95,90 @@
         }
 
         .page-break {
-    border-top: 2px dashed #000; /* เส้นประสีดำ */
-    margin-top: 20px; /* ระยะห่างจากด้านบน */
-    margin-bottom: 20px; /* ระยะห่างจากด้านบน */
-}
+            border-top: 2px dashed #000;
+            /* เส้นประสีดำ */
+            margin-top: 20px;
+            /* ระยะห่างจากด้านบน */
+            margin-bottom: 20px;
+            /* ระยะห่างจากด้านบน */
+        }
     </style>
 </head>
+<?php
+function DateTimeThai($strDate)
+{
+    $strYear = date("Y", strtotime($strDate)) + 543;
+    $strMonth = date("n", strtotime($strDate));
+    $strDay = date("j", strtotime($strDate));
+    $time = date("H:i", strtotime($strDate));
+    $strMonthCut = array("", "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม");
+    $strMonthThai = $strMonthCut[$strMonth];
+    return "$strDay $strMonthThai $strYear";
+}
+
+function convertMonthsToThai($date)
+{
+    $string = date('m', strtotime($date));
+    if (!$string) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $months = array(
+        '01' => 'มกราคม',
+        '02' => 'กุมภาพันธ์',
+        '03' => 'มีนาคม',
+        '04' => 'เมษายน',
+        '05' => 'พฤษภาคม',
+        '06' => 'มิถุนายน',
+        '07' => 'กรกฎาคม',
+        '08' => 'สิงหาคม',
+        '09' => 'กันยายน',
+        '10' => 'ตุลาคม',
+        '11' => 'พฤศจิกายน',
+        '12' => 'ธันวาคม'
+    );
+    $monthThai = $months[$string];
+    return $monthThai;
+}
+
+function convertDay($date)
+{
+    $day = date('d', strtotime($date));
+    if (!$day) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $day = $day;
+
+    $dayThai = $day;
+    return $dayThai;
+}
+
+function convertYear($date)
+{
+    $day = date('Y', strtotime($date)) + 543;
+    if (!$day) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $day = $day;
+
+    $dayThai = $day;
+    return $dayThai;
+}
+function convertYearPlus($date)
+{
+    $day = date('Y', strtotime($date)) + 544;
+    if (!$day) {
+        return "วันที่ไม่ถูกต้อง";
+    }
+
+    $day = $day;
+
+    $dayThai = $day;
+    return $dayThai;
+}
+?>
 
 <body>
     <div style="width: 100%; position: relative; ">
@@ -118,140 +196,140 @@
         <span class="dotted-line" style="width: 25%; text-align: center;">
         </span>
         <div>
-            <span>วันที่</span><span class="dotted-line" style="width: 5%; text-align: center;">
-            </span><span>เดือน</span><span class="dotted-line" style="width: 15%; text-align: center;">
-            </span><span>พ.ศ.</span><span class="dotted-line" style="width: 10%; text-align: center;">
+            <span>วันที่</span><span class="dotted-line" style="width: 5%; text-align: center;">{{convertDay($forms->created_at)}}
+            </span><span>เดือน</span><span class="dotted-line" style="width: 15%; text-align: center;">{{convertMonthsToThai($forms->created_at)}}
+            </span><span>พ.ศ.</span><span class="dotted-line" style="width: 10%; text-align: center;">{{convertYear($forms->created_at)}}
             </span>
         </div>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
+    <div class="box_text" style="margin-top: 0rem;">
         <span style="font-weight: bold; text-decoration: underline;">ส่วนที่ 1</span>
         <span>:สำหรับผู้ยื่นขอรับเงินสงเคราะห์ค่าจัดการศพผู้สูงอายุตามประเพณี</span>
         <div style="margin-left: 3rem;">
-            <span>ข้าพเจ้า (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 33%; text-align: center;">
-            </span><span>อายุ</span><span class="dotted-line" style="width: 10%; text-align: center;">
-            </span><span>ปี เลขบัตรประชาชน</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            <span>ข้าพเจ้า (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 33%; text-align: center;">{{$forms['details']->salutation_detail_1}} {{$forms['details']->fullname_detail_1}}
+            </span><span>อายุ</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$forms['details']->age_detail_1}}
+            </span><span>ปี เลขบัตรประชาชน</span><span class="dotted-line" style="width: 20%; text-align: center;">{{$forms['details']->idcard_detail_1}}
             </span>
         </div>
         <div>
-            <span>ออกให้โดย</span><span class="dotted-line" style="width: 22.5%; text-align: center;">
-            </span><span>วันออกบัตร</span><span class="dotted-line" style="width: 15%; text-align: center;">
-            </span><span>วันหมดอายุ</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ออกให้โดย</span><span class="dotted-line" style="width: 22.5%; text-align: center;">{{$forms['details']->idcard_out_detail_1}}
+            </span><span>วันออกบัตร</span><span class="dotted-line" style="width: 15%; text-align: center;">{{DateTimeThai($forms['details']->idcard_date_detail_1)}}
+            </span><span>วันหมดอายุ</span><span class="dotted-line" style="width: 15%; text-align: center;">{{DateTimeThai($forms['details']->idcard_end_detail_1)}}
             </span>
-            <span>อาชีพ</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            <span>อาชีพ</span><span class="dotted-line" style="width: 20%; text-align: center;">{{$forms['details']->occupation_detail_1}}
             </span>
-            <span>โทรศัพท์</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            <span>โทรศัพท์</span><span class="dotted-line" style="width: 20%; text-align: center;">{{$forms['details']->phone_number_detail_1}}
             </span>
-            <span>โทรศัพท์มือถือ</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            <span>โทรศัพท์มือถือ</span><span class="dotted-line" style="width: 20%; text-align: center;">{{$forms['details']->mobile_number_detail_1}}
             </span>
         </div>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
+    <div class="box_text" style="margin-top: 0rem;">
         <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ตามทะเบียนบ้าน</span>
-        <div >
-            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
-            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+        <div>
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">{{$forms['details']->address_detail_1}}
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">{{$forms['details']->village_detail_1}}
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->alley_detail_1}}
             </span>
-            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->road_detail_1}}
             </span>
-            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->subdistrict_detail_1}}
             </span>
-            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->district_detail_1}}
             </span>
-            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->province_detail_1}}
             </span>
-            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->postal_code_detail_1}}
             </span>
         </div>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
+    <div class="box_text" style="margin-top: 0rem;">
         <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ปัจจุบัน</span><span style="margin-left:10px; font-weight: bold;"> (<input type="checkbox"> ตรงกับที่อยู่ตามทะเบียนบ้าน)</span>
-        <div >
-            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
-            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+        <div>
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">{{$forms['details']->address_current_detail_1}}
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">{{$forms['details']->village_current_detail_1}}
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->alley_current_detail_1}}
             </span>
-            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->road_current_detail_1}}
             </span>
-            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->subdistrict_current_detail_1}}
             </span>
-            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->district_current_detail_1}}
             </span>
-            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->province_current_detail_1}}
             </span>
-            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->postal_code_current_detail_1}}
             </span>
         </div>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem; font-weight: bold;">
-        <div >
-            <span style="margin-left: 3rem;">มีความเกี่ยวข้องกับผู้สูงอายุที่ตายในฐานะเป็น</span><span class="dotted-line" style="width: 33%; text-align: center;">
+    <div class="box_text" style="margin-top: 0rem; font-weight: bold;">
+        <div>
+            <span style="margin-left: 3rem;">มีความเกี่ยวข้องกับผู้สูงอายุที่ตายในฐานะเป็น</span><span class="dotted-line" style="width: 33%; text-align: center;">{{$forms['details']->related_detail_1}}
             </span><span>และเป็นผู้รับผิดชอบในการจัดการศพผู้สูงอายุ</span><span>โดยได้รับความยินยอมจากบิดา/มารดา/บุตร/พี่น้อง/เครือญาติ/ของผู้สูงอายุที่ตายเป็นผู้รับเงินสงเคราะห์ค่าจัดการศพของผู้สูงอายุที่ตาย</span>
         </div>
-        
+
     </div>
     <div class="box_text">
-        <span>ชื่อ (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 65%; text-align: center;">
-        </span><span>อายุ</span><span class="dotted-line" style="width: 15%; text-align: center;">
-        </span><span>ปี </span><span>เลขบัตรประจำตัวประชาชน</span><span class="dotted-line" style="width: 82%; text-align: center;">
+        <span>ชื่อ (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 65%; text-align: center;">{{$forms['details']->salutation_detail_2}} {{$forms['details']->fullname_detail_2}}
+        </span><span>อายุ</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->age_detail_2}}
+        </span><span>ปี </span><span>เลขบัตรประจำตัวประชาชน</span><span class="dotted-line" style="width: 82%; text-align: center;">{{$forms['details']->idcard_detail_2}}
         </span>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
+    <div class="box_text" style="margin-top: 0rem;">
         <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ตามทะเบียนบ้าน</span>
-        <div >
-            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
-            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+        <div>
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">{{$forms['details']->address_detail_2}}
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">{{$forms['details']->village_detail_2}}
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->alley_detail_2}}
             </span>
-            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->road_detail_2}}
             </span>
-            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->subdistrict_detail_2}}
             </span>
-            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->district_detail_2}}
             </span>
-            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->province_detail_2}}
             </span>
-            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->postal_code_detail_2}}
             </span>
         </div>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
+    <div class="box_text" style="margin-top: 0rem;">
         <span style="font-weight: bold; text-decoration: underline;">ที่อยู่ปัจจุบัน</span><span style="margin-left:10px; font-weight: bold;"> (<input type="checkbox"> ตรงกับที่อยู่ตามทะเบียนบ้าน)</span>
-        <div >
-            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">
-            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+        <div>
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 11%; text-align: center;">{{$forms['details']->address_current_detail_2}}
+            </span><span>หมู่ที่</span><span class="dotted-line" style="width: 12%; text-align: center;">{{$forms['details']->village_current_detail_2}}
+            </span><span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->alley_current_detail_2}}
             </span>
-            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->road_current_detail_2}}
             </span>
-            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->subdistrict_current_detail_2}}
             </span>
-            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->district_current_detail_2}}
             </span>
-            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>จังหวัด</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->province_current_detail_2}}
             </span>
-            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">
-            </span>
-        </div>
-    </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
-        <div >
-            <span style="font-weight: bold;">ถึงแก่กรรมด้วยสาเหตุ</span><span class="dotted-line" style="width: 36%; text-align: center;">
-            </span><span>เมื่อวันที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span><span>เดือน</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span>
-            <span>พ.ศ.</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span>
-            <span style="font-weight: bold;">ตามใบมรณบัตรเลขที่</span><span class="dotted-line" style="width: 36%; text-align: center;">
-            </span><span>เมื่อวันที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span><span>เดือน</span><span class="dotted-line" style="width: 12%; text-align: center;">
-            </span>
-            <span>พ.ศ.</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->postal_code_current_detail_2}}
             </span>
         </div>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
+    <div class="box_text" style="margin-top: 0rem;">
+        <div>
+            <span style="font-weight: bold;">ถึงแก่กรรมด้วยสาเหตุ</span><span class="dotted-line" style="width: 36%; text-align: center;">{{$forms['details']->dead_remake_detail_2}}
+            </span><span>เมื่อวันที่</span><span class="dotted-line" style="width: 12%; text-align: center;">{{convertDay($forms['details']->dead_date_detail_2)}}
+            </span><span>เดือน</span><span class="dotted-line" style="width: 12%; text-align: center;">{{convertMonthsToThai($forms['details']->dead_date_detail_2)}}
+            </span>
+            <span>พ.ศ.</span><span class="dotted-line" style="width: 12%; text-align: center;">{{convertYear($forms['details']->dead_date_detail_2)}}
+            </span>
+            <span style="font-weight: bold;">ตามใบมรณบัตรเลขที่</span><span class="dotted-line" style="width: 36%; text-align: center;">{{$forms['details']->certificate_detail_2}}
+            </span><span>เมื่อวันที่</span><span class="dotted-line" style="width: 12%; text-align: center;">{{convertDay($forms['details']->certificate_date_detail_2)}}
+            </span><span>เดือน</span><span class="dotted-line" style="width: 12%; text-align: center;">{{convertMonthsToThai($forms['details']->certificate_date_detail_2)}}
+            </span>
+            <span>พ.ศ.</span><span class="dotted-line" style="width: 12%; text-align: center;">{{convertYear($forms['details']->certificate_date_detail_2)}}
+            </span>
+        </div>
+    </div>
+    <div class="box_text" style="margin-top: 0rem;">
         <div style="margin-left: 3rem; font-weight: bold;">
             ข้าพเจ้าขอรับรองว่าข้อความและเอกสารที่ได้ยื่นนี้เป็นความจริงทุกประการ และข้าพเจ้าไม่เคยได้รับเงินสงเคราะห์ในการจัดการศพผู้สูงอายุราย
         </div>
@@ -259,7 +337,7 @@
             นี้มาก่อน หากข้อความและเอกสารที่ยื่นเรื่องนี้เป็นเท็จ ข้าพเจ้ายินยอมให้ดำเนินการตามกฏหมาย
         </div>
         <div style="margin-left: 3rem; font-weight: bold;">
-            ข้าพเจ้าตกลงยินยอมให้เปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้าและข้อมูลในบัตรประชาชนพร้อมภาพใบหน้าของข้าพเจ้าไปใช้แก่ห่วยงานของรัฐและ    
+            ข้าพเจ้าตกลงยินยอมให้เปิดเผยข้อมูลส่วนบุคคลของข้าพเจ้าและข้อมูลในบัตรประชาชนพร้อมภาพใบหน้าของข้าพเจ้าไปใช้แก่ห่วยงานของรัฐและ
         </div>
         <div style=" font-weight: bold;">
             ยินยอมให้ห่วยงานของรัฐร้องขอ สอบถามและใช้ข้อมูลส่วนบุคคลของข้าพเจ้าแก่หน่วยงานของรัฐที่เกี่ยวข้อง เพื่อประโยชน์ในการพิจารณาจัดสรรสวัสดิ
@@ -268,7 +346,7 @@
             การและหรือเพื่อประโยชน์ในการดำเนินตามกฏหมายชองรัฐ และหรือเพื่อประโยชน์ในการวางแผนให้ความช่วยเหลือของหน่วยงานที่เกี่ยวข้องโดยให้ถือว่า
         </div>
         <div style=" font-weight: bold;">
-           คู่ฉบับและบรรดาสำเนา ภาพถ่ายข้อมูลอิเล็กทรอนิกส์ หรือโทรสารที่ทำขึ้นจากหนังสือให้ความยินยอมฉบับนี้ เป็นหลักฐานในการให้ความยินยอมของข้าพ
+            คู่ฉบับและบรรดาสำเนา ภาพถ่ายข้อมูลอิเล็กทรอนิกส์ หรือโทรสารที่ทำขึ้นจากหนังสือให้ความยินยอมฉบับนี้ เป็นหลักฐานในการให้ความยินยอมของข้าพ
         </div>
         <div style=" font-weight: bold;">
             เจ้าเช่นเดียวกัน
@@ -281,14 +359,13 @@
         </span><span>ผู้ยื่นคำขอ</span>
         <div style="margin-right: 40px;">
             <span>(</span>
-            <span class="dotted-line"
-                style="width: 30%; text-align: center;"></span>
+            <span class="dotted-line" style="width: 30%; text-align: center;">{{$forms['details']->salutation_detail_1}} {{$forms['details']->fullname_detail_1}}</span>
             <span>)</span>
         </div>
         <div style="margin-right: 50px;">
-            <span>วันที่</span><span class="dotted-line" style="width: 8%; text-align: center;">
-            </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
-            </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
+            <span>วันที่</span><span class="dotted-line" style="width: 8%; text-align: center;">{{convertDay($forms->created_at)}}
+            </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">{{convertMonthsToThai($forms->created_at)}}
+            </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">{{convertYear($forms->created_at)}}
             </span>
         </div>
     </div>
@@ -305,38 +382,38 @@
     <div class="title_doc">
         <strong>- 2 -</strong>
     </div>
-    <div class="box_text" style="margin-top: 0.1rem;">
+    <div class="box_text" style="margin-top: 0rem;">
         <span style="font-weight: bold; text-decoration: underline;">ส่วนที่ 1</span>
         <span>:ข้อมูลผู้ให้การรับรองผู้รับผิดชอบในการจัดการศพผู้สูงอายุตามประเพณี</span>
-        <div >
-            <span>ข้าพเจ้า (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 38%; text-align: center;">
-            </span><span>ตำแหน่ง</span><span class="dotted-line" style="width: 38%; text-align: center;">
-            </span><span>สังกัดหน่วยงาน</span><span class="dotted-line" style="width: 39%; text-align: center;">
-            </span><span>เลขบัตรประชาชน</span><span class="dotted-line" style="width: 39%; text-align: center;">
+        <div>
+            <span>ข้าพเจ้า (นาย/นาง/นางสาว)</span><span class="dotted-line" style="width: 38%; text-align: center;">{{$forms['details']->salutation_detail_3}} {{$forms['details']->fullname_detail_3}}
+            </span><span>ตำแหน่ง</span><span class="dotted-line" style="width: 38%; text-align: center;">{{$forms['details']->positon_detail_3}}
+            </span><span>สังกัดหน่วยงาน</span><span class="dotted-line" style="width: 39%; text-align: center;">{{$forms['details']->org_detail_3}}
+            </span><span>เลขบัตรประชาชน</span><span class="dotted-line" style="width: 39%; text-align: center;">{{$forms['details']->idcard_detail_3}}
             </span>
         </div>
         <div>
-            <span>ออกให้โดย</span><span class="dotted-line" style="width: 33%; text-align: center;">
-            </span><span>วันออกบัตร</span><span class="dotted-line" style="width: 22%; text-align: center;">
-            </span><span>วันหมดอายุ</span><span class="dotted-line" style="width: 22%; text-align: center;">
+            <span>ออกให้โดย</span><span class="dotted-line" style="width: 33%; text-align: center;">{{$forms['details']->idcard_out_detail_3}}
+            </span><span>วันออกบัตร</span><span class="dotted-line" style="width: 22%; text-align: center;">{{$forms['details']->idcard_date_detail_3}}
+            </span><span>วันหมดอายุ</span><span class="dotted-line" style="width: 22%; text-align: center;">{{$forms['details']->idcard_end_detail_3}}
             </span>
-            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 12%; text-align: center;">{{$forms['details']->address_detail_3}}
             </span>
-            <span>หมู่ที่</span><span class="dotted-line" style="width: 10%; text-align: center;">
+            <span>หมู่ที่</span><span class="dotted-line" style="width: 10%; text-align: center;">{{$forms['details']->village_detail_3}}
             </span>
-            <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->alley_detail_3}}
             </span>
-            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ถนน</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->road_detail_3}}
             </span>
-            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 15%; text-align: center;">{{$forms['details']->subdistrict_detail_3}}
             </span>
-            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 19%; text-align: center;">
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 19%; text-align: center;">{{$forms['details']->district_detail_3}}
             </span>
-            <span>จังหวัด</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            <span>จังหวัด</span><span class="dotted-line" style="width: 20%; text-align: center;">{{$forms['details']->province_detail_3}}
             </span>
-            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 12%; text-align: center;">
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 12%; text-align: center;">{{$forms['details']->postal_code_detail_3}}
             </span>
-            <span>โทรศัพท์</span><span class="dotted-line" style="width: 20%; text-align: center;">
+            <span>โทรศัพท์</span><span class="dotted-line" style="width: 20%; text-align: center;">{{$forms['details']->phone_number_detail_3}}
             </span><span>ขอรับรองว่าผู้ยื่นคำขอดังกล่าวเป็นผู้รับผิดชอบในการจัดการศพผู้สูงอายุรายนี้จริง</span>
         </div>
         <div class="box_text" style="text-align: right;">
@@ -345,29 +422,28 @@
             </span><span>ผู้ยื่นคำขอ</span>
             <div style="margin-right: 40px;">
                 <span>(</span>
-                <span class="dotted-line"
-                    style="width: 30%; text-align: center;"></span>
+                <span class="dotted-line" style="width: 30%; text-align: center;">{{$forms['details']->salutation_detail_3}} {{$forms['details']->fullname_detail_3}}</span>
                 <span>)</span>
             </div>
             <div style="margin-right: 40px;">
                 <span>ตำแหน่ง</span>
-            <span class="dotted-line" style="width: 30%; text-align: center;">
-            </span>
-            </div>
-            
-            <div style="margin-right: 50px;">
-                <span>วันที่</span><span class="dotted-line" style="width: 8%; text-align: center;">
-                </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
-                </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">
+                <span class="dotted-line" style="width: 30%; text-align: center;">{{$forms['details']->org_detail_3}}
                 </span>
             </div>
-            
+
+            <div style="margin-right: 50px;">
+                <span>วันที่</span><span class="dotted-line" style="width: 8%; text-align: center;">{{convertDay($forms->created_at)}}
+                </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">{{convertMonthsToThai($forms->created_at)}}
+                </span><span>/</span><span class="dotted-line" style="width: 8%; text-align: center;">{{convertYear($forms->created_at)}}
+                </span>
+            </div>
+
         </div>
         <div class="page-break"></div>
         <div style=" font-weight: bold;">
             คำชี้แจง
         </div>
-        <div  class="box_text" style="text-align: left;">
+        <div class="box_text" style="text-align: left;">
             <span>1. ผู้ยื่นคำขอรับเงินสงเคราะห์ค่าจัดการศพผู้สูงอายุ หมายถึง ผู้รับผิดชอบในการจัดการศพผู้สูงอายุที่ถึงแก่กรรม เช่น บิดา มารดา สามี ภรรยา บุตร ญาติพี่น้อง</span>
             <span>ของผู้สูงอายุที่ถึงแก่กรรม ในกรณีที่ผู้สูงอายุไม่มีญาติ บุคคลที่รับผิดชอบใการจัดการศพผู้สูงอายุเป็นผู้ยื่นคำขอ รับเงินค่าจัดการศพ เช่น ผู้ให้การดูแล ผู้นำชุมชน </span>
             <span>กำนัน ผู้ใหญ่บ้าน เป็นต้น รวมทั้งมูลนิธิ สมาคม วัด มัสยิด โบสถ์</span>
