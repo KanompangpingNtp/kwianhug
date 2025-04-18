@@ -667,6 +667,7 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::get('/user-account/digging/show-details', [DiggingController::class, 'DiggingShowDetails'])->name('DiggingShowDetails');
     Route::post('/user-account/digging/reply/{id}', [DiggingController::class, 'DiggingUserReply'])->name('DiggingUserReply');
     Route::get('/user-account/digging/show-edit/{id}', [DiggingController::class, 'DiggingUserShowEdit'])->name('DiggingUserShowEdit');
+    Route::get('/user-account/digging/export-pdf/{id}', [DiggingController::class, 'DiggingUserExportPDF'])->name('DiggingUserExportPDF');
 
     //แบบคำร้องขอเงินค่าจัดการศพผู้สูงอายุ
     Route::get('/user-account/funeral/show-details', [FuneralController::class, 'FuneralShowDetails'])->name('FuneralShowDetails');
