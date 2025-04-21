@@ -187,7 +187,7 @@
             class="dotted-line" style="width: 19%; text-align: center;">{{ $form->phone }}</span>
     </div>
     <div class="box_text" style="text-align: left; margin-left:5rem">
-        <span>เรื่องที่ร้องต่อองค์การบริหารส่วนตำบลคลองอุดชลจร กรณี</span><span class="dotted-line"
+        <span>เรื่องที่ร้องต่อเทศบาลตำบลเกวียนหัก กรณี</span><span class="dotted-line"
             style="min-width: 50%; text-align: start;">{{ $form->request_details }}</span>
     </div>
     <div class="box_text" style="text-align: left; margin-left:5rem">

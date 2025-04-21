@@ -188,7 +188,7 @@
             class="dotted-line" style="width: 19%; text-align: center;">{{ $form->phone }}</span>
     </div>
     <div class="box_text" style="text-align: left; margin-left:5rem">
-        <span>เรื่องที่ร้องต่อองค์การบริหารส่วนตำบลคลองอุดชลจร กรณี</span><span class="dotted-line"
+        <span>เรื่องที่ร้องต่อเทศบาลตำบลเกวียนหัก กรณี</span><span class="dotted-line"
             style="min-width: 50%; text-align: start;">{{ $form->request_details }}</span>
     </div>
     <div class="box_text" style="text-align: left;">
@@ -217,13 +217,13 @@
             <span>ผู้ยื่นคำร้อง</span>
         </div>
     </div>
-    <div class="box_text" style="text-align: left; margin-top:2rem; margin-bottom:2rem;">
+    {{-- <div class="box_text" style="text-align: left; margin-top:2rem; margin-bottom:2rem;">
         <span style="line-height: 0.7;">
             สำนักปลัด อบต. <br>
             โทร/โทรสาร ๐-๓๘๐๙-๓๙๐๘ ต่อ ๑๐๒ <br>
             https://khlongudomchonlajorn.go.th/
         </span>
-    </div>
+    </div> --}}
     <div class="footer font-sarabun-bold">
         <p>"ซื่อสัตย์สุจริต มุ่งสัมฤทธิ์ของงาน ยืดมั่นมาตรฐาน บริการด้วยใจเป็นธรรม"</p>
     </div>
