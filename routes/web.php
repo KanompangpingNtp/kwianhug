@@ -75,6 +75,8 @@ use App\Http\Controllers\eservice\secretariat_office\health_hazard_applications\
 use App\Http\Controllers\eservice\secretariat_office\health_hazard_applications\AdminHealthHazardApplicationController;
 use App\Http\Controllers\eservice\secretariat_office\food_storage_license\FoodStorageLicenseController;
 use App\Http\Controllers\eservice\secretariat_office\food_storage_license\AdminFoodStorageLicenseController;
+use App\Http\Controllers\eservice\secretariat_office\water_consumption\WaterConsumptionController;
+use App\Http\Controllers\eservice\secretariat_office\water_consumption\AdminWaterConsumptionController;
 use App\Http\Controllers\eservice\secretariat_office\newborn\AdminNewbornController;
 use App\Http\Controllers\eservice\secretariat_office\newborn\NewbornController;
 use App\Http\Controllers\eservice\finance_department\general_requests\FinanceGeneralRequestsController;
@@ -91,7 +93,7 @@ use App\Http\Controllers\eservice\education_department\general_requests\Educatio
 use App\Http\Controllers\eservice\education_department\general_requests\AdminEducationGeneralController;
 use App\Http\Controllers\eservice\education_department\child_apply\ChildApplyController;
 use App\Http\Controllers\eservice\education_department\child_apply\AdminChildApplyController;
-
+use App\Http\Controllers\VisitorsController;
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
 /*
@@ -104,6 +106,11 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//น้ำเพื่อการบริโภค
+Route::get('/WaterConsumption', [WaterConsumptionController::class, 'WaterConsumptionPage'])->name('WaterConsumptionPage');
+Route::post('/WaterConsumption/form/create', [WaterConsumptionController::class, 'WaterConsumptionFormCreate'])->name('WaterConsumptionFormCreate');
+
 //User ChildApply
 Route::get('/ChildApply', [ChildApplyController::class, 'ChildApplyPage'])->name('ChildApplyPage');
 Route::post('/ChildApply/form/create', [ChildApplyController::class, 'ChildApplyFormCreate'])->name('ChildApplyFormCreate');
@@ -631,6 +638,12 @@ Route::middleware(['auth', 'check.auth:2'])->group(function () {
     Route::get('/TablePages/ChildApply/ExportPdf/{id}', [AdminChildApplyController::class, 'ChildApplyAdminExportPDF'])->name('ChildApplyAdminExportPDF');
     Route::post('/TablePages/ChildApply/AdminReply/{id}', [AdminChildApplyController::class, 'ChildApplyAdminReply'])->name('ChildApplyAdminReply');
     Route::post('/TablePages/ChildApply/{id}/update-status', [AdminChildApplyController::class, 'ChildApplyUpdateStatus'])->name('ChildApplyUpdateStatus');
+
+    //WaterConsumption
+    Route::get('/admin/WaterConsumption/showdata', [AdminWaterConsumptionController::class, 'WaterConsumptionAdminShowData'])->name('WaterConsumptionAdminShowData');
+    Route::get('/admin/WaterConsumption/ExportPdf/{id}', [AdminWaterConsumptionController::class, 'WaterConsumptionAdminExportPDF'])->name('WaterConsumptionAdminExportPDF');
+    Route::post('/admin/WaterConsumption/AdminReply/{id}', [AdminWaterConsumptionController::class, 'WaterConsumptionAdminReply'])->name('WaterConsumptionAdminReply');
+    Route::post('/admin/WaterConsumption/{id}/update-status', [AdminWaterConsumptionController::class, 'WaterConsumptionUpdateStatus'])->name('WaterConsumptionUpdateStatus');
 });
 
 Route::middleware(['auth', 'check.auth:3'])->group(function () {
@@ -729,6 +742,11 @@ Route::middleware(['auth', 'check.auth:3'])->group(function () {
     Route::put('/user/account/ChildApply/{id}/Update', [ChildApplyController::class, 'updateChildInformation'])->name('updateChildInformation');
     Route::get('/user/account/ChildApply/{id}/pdf', [ChildApplyController::class, 'ChildApplyUserExportPDF'])->name('ChildApplyUserExportPDF');
     Route::post('/user/account/ChildApply/{form}/reply', [ChildApplyController::class, 'ChildApplyUserReply'])->name('ChildApplyUserReply');
+
+    //คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค
+    Route::get('/user-account/WaterConsumption/show-details', [WaterConsumptionController::class, 'WaterConsumptionShowDetails'])->name('WaterConsumptionShowDetails');
+    Route::get('/user-account/WaterConsumption/{id}/pdf', [WaterConsumptionController::class, 'WaterConsumptionUserExportPDF'])->name('WaterConsumptionUserExportPDF');
+    Route::post('/user-account/WaterConsumption/{form}/reply', [WaterConsumptionController::class, 'WaterConsumptionUserReply'])->name('WaterConsumptionUserReply');
 });
 
 Route::get('/showLoginForm', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
@@ -737,3 +755,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/showRegistrationForm', [AuthController::class, 'showRegistrationForm'])->name('showRegistrationForm');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/logout/user-account', [AuthController::class, 'logoutUserAccount'])->name('logoutUserAccount');
+
+Route::get('/visitor-stats', [VisitorsController::class, 'getVisitorStats']);
