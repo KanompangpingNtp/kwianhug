@@ -46,5 +46,16 @@ class AdminSeeder extends Seeder
                 'status' => 3,
             ]
         );
+
+        User::firstOrCreate(
+            ['email' => 'admin@kwianhug.go.th'],
+            [
+                'name' => 'ผู้ดูแลระบบเว็บไซต์',
+                'email_verified_at' => now(),
+                'password' => Hash::make('123456789'),
+                'remember_token' => null,
+                'status' => 1,
+            ]
+        );
     }
 }
