@@ -180,6 +180,22 @@
                             </nav>
                         </div>
 
+                        <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office7" aria-expanded="false" aria-controls="secretariat_office7">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="collapse" id="secretariat_office7" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{route('WaterConsumptionPage')}}">ฟอร์ม</a>
+                                <a class="nav-link" href="{{route('WaterConsumptionShowDetails')}}">ประวัติการส่งฟอร์ม</a>
+                            </nav>
+                        </div>
+
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#secretariat_office5" aria-expanded="false" aria-controls="secretariat_office5">
                             <div class="sb-nav-link-icon">
                                 <i class="bi bi-clipboard"></i>

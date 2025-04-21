@@ -137,7 +137,7 @@
                         <td><a href="{{route('NewbornFormPage')}}">แบบคำร้องขอทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด</a></td>
                     </tr>
                     <tr>
-                        <td><a href="{{route('test2')}}">คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค</a></td>
+                        <td><a href="{{route('WaterConsumptionPage')}}">คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค</a></td>
                     </tr>
                     <tr>
                         <td><a href="{{route('HealthHazardApplicationFormPage')}}">คำขออนุญาตกิจการอันตรายต่อสุขภาพ</a></td>

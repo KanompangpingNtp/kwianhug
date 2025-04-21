@@ -106,6 +106,10 @@
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             แบบคำร้องขอลงทะเบียนเพื่อขอรับสิทธิเงินอุดหนุนเพื่อการเลี้ยงดูเด็กแรกเกิด
                         </a>
+                        <a class="nav-link" href="{{route('WaterConsumptionAdminShowData')}}">
+                            <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
+                            คำร้องขอสนับสนุนน้ำเพื่ออุปโภค-บริโภค
+                        </a>
                         <a class="nav-link" href="{{route('HealthHazardApplicationAdminShowData')}}">
                             <div class="sb-nav-link-icon"><i class="bi bi-clipboard"></i></div>
                             คำขออนุญาตกิจการอันตรายต่อสุขภาพ
