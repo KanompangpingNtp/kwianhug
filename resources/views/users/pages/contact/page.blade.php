@@ -30,16 +30,16 @@
                         <span class="text-muted fs-4">
                             111 หมู่ 4 ตำบลเกวียนหัก<br>
                             อำเภอขลุง จังหวัดจันทบุรี <br>
-                            รหัสไปรษณีย์ : 22110
+                            รหัสไปรษณีย์ 22110
                         </span>
                 </div>
                 <br>
                 <div class="d-flex flex-column justify-content-center align-items-center lh-1 my-3">
                     <div class="d-flex justify-content-center align-items-start gap-2 mb-1">
-                        <div>เบอร์ติดต่อ : 039493194</div>
+                        <div><strong>เบอร์ติดต่อ :</strong> 039493194</div>
                     </div>
                     <div class="d-flex justify-content-center align-items-start gap-2 mb-1">
-                        <div>Email : kwianhug1@gmail.com , saraban@kwianhug.go.th
+                        <div><strong>Email :</strong> kwianhug1@gmail.com , saraban@kwianhug.go.th , admin@kwianhug.go.th
                         </div>
                     </div>
                 </div>
