@@ -219,7 +219,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-lg-3 col-md-6 my-3">
-                        <a href="https://kwianhug.sosmartsolution.com/PerformanceResults/show/section/topic/38" class="text-decoration-none d-block position-relative link-section5-effect">
+                        <a href="https://kwianhug.go.th/PerformanceResults/show/section/topic/38" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-6/3.png') }}" alt="icon"
                                 class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1"
