@@ -103,26 +103,46 @@
                         <span class="fw-bold fs-3">จำนวนผู้เข้าชมเว็บไซต์</span> <br>
                         number of website visitors
                     </div>
-                    <div class="text-center text-nowrap  px-5 border-right-gradient">
-                        <span class="fs-2">1</span><br>
+                    <div class="text-center text-nowrap px-5 border-right-gradient">
+                        <span class="fs-2" id="online_users">0</span><br>
                         <span class="fw-bold">ขณะนี้</span>
                     </div>
-                    <div class="text-center text-nowrap  px-5 border-right-gradient">
-                        <span class="fs-2">1</span><br>
+                    <div class="text-center text-nowrap px-5 border-right-gradient">
+                        <span class="fs-2" id="today_users">0</span><br>
                         <span class="fw-bold">วันนี้</span>
                     </div>
-                    <div class="text-center text-nowrap  px-5 border-right-gradient">
-                        <span class="fs-2">1</span><br>
+                    <div class="text-center text-nowrap px-5 border-right-gradient">
+                        <span class="fs-2" id="month_users">0</span><br>
                         <span class="fw-bold">เดือนนี้</span>
                     </div>
-                    <div class="text-center text-nowrap  px-5 border-right-gradient">
-                        <span class="fs-2">1</span><br>
+                    <div class="text-center text-nowrap px-5 border-right-gradient">
+                        <span class="fs-2" id="year_users">0</span><br>
                         <span class="fw-bold">ปีนี้</span>
                     </div>
-                    <div class="text-center text-nowrap px-5 ">
-                        <span class="fs-2">1</span><br>
+                    <div class="text-center text-nowrap px-5">
+                        <span class="fs-2" id="all_users">0</span><br>
                         <span class="fw-bold">ทั้งหมด</span>
                     </div>
+
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            fetchVisitorStats();
+                        });
+
+                        function fetchVisitorStats() {
+                            fetch('/visitor-stats')
+                                .then(response => response.json())
+                                .then(data => {
+                                    document.getElementById('online_users').innerText = data.online_users;
+                                    document.getElementById('today_users').innerText = data.today_users;
+                                    document.getElementById('month_users').innerText = data.month_users;
+                                    document.getElementById('year_users').innerText = data.year_users;
+                                    document.getElementById('all_users').innerText = data.all_users;
+                                })
+                                .catch(error => console.error('Error fetching visitor stats:', error));
+                        }
+                    </script>
+
                 </div>
             </div>
         </div>
@@ -147,8 +167,8 @@
                             ช่องทางติดต่อ
                         </div>
                         <div class="lh-sm fs-6 mt-2">
-                            เมล์ : kwianhug1@gmail.com <br>
-                            เบอร์ติดต่อ : 039493194
+                            เมล์ : kwianhug1@gmail.com , admin@kwianhug.go.th <br>
+                            เบอร์ติดต่อ : 039-493194
                         </div>
                     </div>
                     <div class="d-flex flex-column justify-content-center align-items-center ">
@@ -156,7 +176,7 @@
                             ตัวช่วยเพิ่มเติม
                         </div>
                         <div class="d-flex justify-content-center align-items-center gap-2 fs-6 ">
-                            <a href="#">ตรวจสอบอีเมล์</a>
+                            <a href="http://webmail.kwianhug.go.th/">ตรวจสอบอีเมล์</a>
                             <a href="#">เว็บเพื่อนบ้าน</a>
 
                         </div>
@@ -176,12 +196,12 @@
 
                         </div>
                         <div class="d-flex justify-content-center align-items-center gap-2 fs-6">
-                            <a href="#">ติดต่อ</a>
+                            <a href="{{route('contact')}}">ติดต่อ</a>
                             <a href="#">แผนผังเว็บไซต์</a>
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
                 <div class="text-center fw-bold mt-2" style="font-size: 13px;">Copyright © บริษัท So Smart Solution สงวนสิทธิ์ 2025</div>
             </div>

@@ -91,7 +91,7 @@ use App\Http\Controllers\eservice\education_department\general_requests\Educatio
 use App\Http\Controllers\eservice\education_department\general_requests\AdminEducationGeneralController;
 use App\Http\Controllers\eservice\education_department\child_apply\ChildApplyController;
 use App\Http\Controllers\eservice\education_department\child_apply\AdminChildApplyController;
-
+use App\Http\Controllers\VisitorsController;
 use App\Http\Controllers\eservice\temporary\TemporaryController;
 
 /*
@@ -737,3 +737,5 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/showRegistrationForm', [AuthController::class, 'showRegistrationForm'])->name('showRegistrationForm');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/logout/user-account', [AuthController::class, 'logoutUserAccount'])->name('logoutUserAccount');
+
+Route::get('/visitor-stats', [VisitorsController::class, 'getVisitorStats']);
