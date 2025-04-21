@@ -314,7 +314,7 @@
         </div>
     </div>
     <div class="footer font-sarabun-bold">
-        <p>องค์การบริหารส่วนตำบลคลองบ้านโพธิ์ https://public.es.demo.gmskysmartcity.com/</p>
+        <p>องค์การบริหารส่วนเทศบาลตำบลเกวียนหักิ์ เทศบาลตำบลเกวียนหัก</p>
     </div>
     {{-- new page --}}
     <div style="page-break-before: always;"></div>
@@ -397,7 +397,7 @@
         </span>
     </div>
     {{-- <div class="footer font-sarabun-bold">
-        <p>องค์การบริหารส่วนตำบลคลองบ้านโพธิ์ https://public.es.demo.gmskysmartcity.com/</p>
+        <p>องค์การบริหารส่วนเทศบาลตำบลเกวียนหักิ์ เทศบาลตำบลเกวียนหัก</p>
     </div> --}}
     {{-- new page --}}
     {{-- <div style="page-break-before: always;"></div>
@@ -478,7 +478,7 @@
         </div>
     </div>
     <div class="footer font-sarabun-bold">
-        <p>องค์การบริหารส่วนตำบลคลองบ้านโพธิ์ https://public.es.demo.gmskysmartcity.com/</p>
+        <p>องค์การบริหารส่วนเทศบาลตำบลเกวียนหักิ์ เทศบาลตำบลเกวียนหัก</p>
     </div>
 </body>
 
