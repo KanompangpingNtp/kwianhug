@@ -144,7 +144,7 @@
     </div> --}}
     <div class="box_text" style="text-align: right;">
         <span style="line-height: 0.7;">
-            องค์การบริหารส่วนตำบลคลองอุดมชลจร <br>
+            เทศบาลตำบลเกวียนหัก <br>
             ๙/๙ หมู่ที่ ๔ ตำบลคลองอุดมชลจร <br>
             อำเภอเมือง จังหวัดฉะเชิงเทรา ๒๔๐๐๐
         </span>
@@ -161,7 +161,7 @@
         <span>เรื่อง</span><span style="min-width: 95%; text-align: start; margin-left: 10px;">แจ้งเรื่องไฟฟ้า</span>
     </div>
     <div class="box_text" style="text-align: left;">
-        <span>เรียน นายกองค์การบริหารส่วนตำบลคลองอุดมชลจร</span>
+        <span>เรียน นายกเทศบาลตำบลเกวียนหัก</span>
     </div>
     <div class="box_text" style="text-align: left;">
         <span>สิ่งที่ส่งมาด้วย</span><span class="dotted-line"
@@ -191,7 +191,7 @@
             style="min-width: 50%; text-align: start;">{{ $form->request_details }}</span>
     </div>
     <div class="box_text" style="text-align: left; margin-left:5rem">
-        <span>ข้าพเจ้าขอความอนุเคราะห์ให้องค์การบริหารส่วนตำบลคลองอุดมชลจร ดำเนินการ</span><span class="dotted-line"
+        <span>ข้าพเจ้าขอความอนุเคราะห์ให้เทศบาลตำบลเกวียนหัก ดำเนินการ</span><span class="dotted-line"
             style="min-width: 30%; text-align: start;">{{ $form->proceedings }}</span>
     </div>
     <div class="box_text" style="text-align: center; margin-left:2rem">
