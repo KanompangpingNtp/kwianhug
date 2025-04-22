@@ -21,6 +21,7 @@ class AdminWebIntroController extends Controller
             'files_path' => 'file|mimes:jpg,jpeg,png',
             'button_name' => 'nullable|string',
             'button_link' => 'nullable|url',
+            'datetime' => 'required|date|after:now'
         ]);
 
         // dd( $request);
@@ -37,6 +38,7 @@ class AdminWebIntroController extends Controller
                 'files_type' => $fileType,
                 'button_name' => $request->button_name,
                 'button_link' => $request->button_link,
+                'datetime' => $request->datetime,
             ]);
         }
 

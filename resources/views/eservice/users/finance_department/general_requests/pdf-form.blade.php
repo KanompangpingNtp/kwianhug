@@ -107,40 +107,41 @@
             padding: 5px 0;
             /* เพิ่มพื้นที่ด้านบนและล่างให้กับ footer */
         }
+
     </style>
 </head>
 
 <body>
 
     @php
-        use Carbon\Carbon;
-        $date = Carbon::parse($form->date);
-        $day = $date->day;
-        $month = $date->locale('th')->translatedFormat('F');
-        $year = $date->year + 543;
+    use Carbon\Carbon;
+    $date = Carbon::parse($form->date);
+    $day = $date->day;
+    $month = $date->locale('th')->translatedFormat('F');
+    $year = $date->year + 543;
 
-        $birthday = Carbon::parse($form->birth_day);
-        $birthday_day = $birthday->day;
-        $birthday_month = $birthday->locale('th')->translatedFormat('F');
-        $birthday_year = $birthday->year + 543;
+    $birthday = Carbon::parse($form->birth_day);
+    $birthday_day = $birthday->day;
+    $birthday_month = $birthday->locale('th')->translatedFormat('F');
+    $birthday_year = $birthday->year + 543;
 
-        $citizen_c_id = $form->citizen_id;
-        $formatted_id =
-            substr($citizen_c_id, 0, 1) .
-            '-' .
-            substr($citizen_c_id, 1, 4) .
-            '-' .
-            substr($citizen_c_id, 5, 5) .
-            '-' .
-            substr($citizen_c_id, 10, 2) .
-            '-' .
-            substr($citizen_c_id, 12, 1);
+    $citizen_c_id = $form->citizen_id;
+    $formatted_id =
+    substr($citizen_c_id, 0, 1) .
+    '-' .
+    substr($citizen_c_id, 1, 4) .
+    '-' .
+    substr($citizen_c_id, 5, 5) .
+    '-' .
+    substr($citizen_c_id, 10, 2) .
+    '-' .
+    substr($citizen_c_id, 12, 1);
     @endphp
 
     <div class="title_doc">
         {{-- <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('images/pdf/logo.png'))) }}"
-            alt="Logo" height="120"> <br> --}}
-            <strong>แบบฟอร์มคำร้องทั่วไป</strong>
+        alt="Logo" height="120"> <br> --}}
+        <strong>แบบฟอร์มคำร้องทั่วไป</strong>
     </div>
     <div class="box_text" style="text-align: right;">
         <span style="line-height: 0.7;">
@@ -158,43 +159,30 @@
         </div>
     </div>
     <div class="box_text" style="text-align: left;">
-        <span>เรื่อง</span><span class="dotted-line"
-            style="min-width: 95%; text-align: start; margin-left: 10px;">{{ $form->subject }}</span>
+        <span>เรื่อง</span><span class="dotted-line" style="min-width: 95%; text-align: start; margin-left: 10px;">{{ $form->subject }}</span>
     </div>
     <div class="box_text" style="text-align: left;">
         <span>เรียน นายกองค์การบริหารส่วนเทศบาลตำบลเกวียนหัก</span>
     </div>
     <div class="box_text" style="text-align: left;">
-        <span>สิ่งที่ส่งมาด้วย</span><span class="dotted-line"
-            style="min-width: 88%; text-align: start; margin-left: 10px;">{{$form->included}}</span><br>
+        <span>สิ่งที่ส่งมาด้วย</span><span class="dotted-line" style="min-width: 88%; text-align: start; margin-left: 10px;">{{$form->included}}</span><br>
     </div>
 
     <div class="box_text" style="text-align: left; margin-left:50px;">
-        <span style="margin-left:2rem;">ข้าพเจ้า</span><span class="dotted-line"
-            style="width: 87%; text-align: start; margin-left: 10px;">{{ $form->salutation }}{{ $form->name }}</span>
+        <span style="margin-left:2rem;">ข้าพเจ้า</span><span class="dotted-line" style="width: 87%; text-align: start; margin-left: 10px;">{{ $form->salutation }}{{ $form->name }}</span>
     </div>
     <div class="box_text" style="text-align: left; ">
-        <span>อาศัยอยู่บ้านเลขที่</span><span class="dotted-line"
-            style="width: 16%; text-align: center;">{{ $form->house_number }}</span><span>หมู่ที่</span><span
-            class="dotted-line" style="width: 17%; text-align: center;">{{ $form->village }}</span>
+        <span>อาศัยอยู่บ้านเลขที่</span><span class="dotted-line" style="width: 16%; text-align: center;">{{ $form->house_number }}</span><span>หมู่ที่</span><span class="dotted-line" style="width: 17%; text-align: center;">{{ $form->village }}</span>
         <span>ซอย</span><span class="dotted-line" style="width: 20%; text-align: center;">{{ $form->village }}</span>
         <span>ถนน</span><span class="dotted-line" style="width: 20%; text-align: center;">{{ $form->village }}</span>
-        <span>ตำบล</span><span class="dotted-line"
-            style="width: 18%; text-align: center;">{{ $form->subdistrict }}</span><span>อำเภอ</span><span
-            class="dotted-line"
-            style="width: 18%; text-align: center;">{{ $form->district }}</span><span>จังหวัด</span><span
-            class="dotted-line"
-            style="width: 18%; text-align: center;">{{ $form->province }}</span><span>เบอร์โทรติดต่อ</span><span
-            class="dotted-line" style="width: 19%; text-align: center;">{{ $form->phone }}</span>
+        <span>ตำบล</span><span class="dotted-line" style="width: 18%; text-align: center;">{{ $form->subdistrict }}</span><span>อำเภอ</span><span class="dotted-line" style="width: 18%; text-align: center;">{{ $form->district }}</span><span>จังหวัด</span><span class="dotted-line" style="width: 18%; text-align: center;">{{ $form->province }}</span><span>เบอร์โทรติดต่อ</span><span class="dotted-line" style="width: 19%; text-align: center;">{{ $form->phone }}</span>
     </div>
     <div class="box_text" style="text-align: left; margin-left:5rem">
-        <span>เรื่องที่ร้องต่อเทศบาลตำบลเกวียนหัก กรณี</span><span class="dotted-line"
-            style="min-width: 50%; text-align: start;">{{ $form->request_details }}</span>
+        <span>เรื่องที่ร้องต่อเทศบาลตำบลเกวียนหัก กรณี</span><span class="dotted-line" style="min-width: 50%; text-align: start;">{{ $form->request_details }}</span>
     </div>
     <div class="box_text" style="text-align: left;">
         <span style="margin-left:5rem;">ข้าพเจ้าขอความอนุเคราะห์ให้องค์การบริหารส่วนเทศบาลตำบลเกวียนหัก ดำเนินการ</span>
-        <span class="dotted-line"
-            style="min-width: 30%; text-align: start;">{{ $form->proceedings }}</span>
+        <span class="dotted-line" style="min-width: 30%; text-align: start;">{{ $form->proceedings }}</span>
     </div>
     <div class="box_text" style="text-align: center; ">
         <span style="margin-left:2rem;">จึงเรียนมาเพื่อโปรดพิจารณาให้ความอนุเคราะห์ในเรื่อง ดังกล่าว จักขอบคุณยิ่ง</span>
@@ -209,8 +197,7 @@
         </span>
         <div style="margin-left: 30px;">
             <span>(</span>
-            <span class="dotted-line"
-                style="width: 35%; text-align: center;">{{ $form->salutation }}{{ $form->name }}</span>
+            <span class="dotted-line" style="width: 35%; text-align: center;">{{ $form->salutation }}{{ $form->name }}</span>
             <span>)</span>
         </div>
         <div style="margin-left: 30px;">
@@ -227,3 +214,5 @@
     <div class="footer font-sarabun-bold">
         <p>"ซื่อสัตย์สุจริต มุ่งสัมฤทธิ์ของงาน ยืดมั่นมาตรฐาน บริการด้วยใจเป็นธรรม"</p>
     </div>
+</body>
+</html>

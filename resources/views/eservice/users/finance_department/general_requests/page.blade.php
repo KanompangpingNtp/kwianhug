@@ -1,7 +1,7 @@
 @extends('eservice.users.layout.layout')
 @section('content')
 <div class="container">
-    <h2 class="text-center mb-4">ฟอร์มส่งคำร้องทั่วไป</h2>
+    <h2 class="text-center mb-4">ฟอร์มส่งคำร้องทั่วไป (กองคลัง)</h2>
 
     <form action="{{route('FinanceGeneralFormCreate')}}" method="POST" enctype="multipart/form-data">
         @csrf
