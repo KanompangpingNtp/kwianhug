@@ -67,7 +67,7 @@
             margin-bottom: 5px;
             border: 2px solid black;
             text-align: left;
-            ;
+
         }
 
         .box_text_border span {
@@ -95,7 +95,6 @@
             overflow-wrap: break-word;
             /* รองรับ browser อื่น */
         }
-
     </style>
 </head>
 
@@ -558,9 +557,262 @@
             </td>
         </tr>
     </table>
-    
-    
-    
+    <div style="page-break-before: always;"></div>
+    <div style="width: 100%; position: relative; ">
+        <div class="box_text_border" style="float: right; padding:2px 15px;">
+            <strong>ด.๒</strong>
+        </div>
+    </div>
+
+    <div class="title_doc" style="margin-top: 2rem;">
+        <strong>ใบรับแจ้งการขุดดิน ตามพระราชบัญญัติการขุดดินและถมดิน พ.ศ.๒๕๔๓</strong>
+    </div>
+    <div class="box_text" style="text-align: right; margin-right:2rem;">
+        <span>เลขที่</span><span class="dotted-line" style="width: 10%; text-align: center;"></span>
+        <span>/</span><span class="dotted-line" style="width: 10%; text-align: center;"></span>
+    </div>
+    <div class="box_text" style="margin-left:3rem;">
+        <span>เจ้าพนักงานท้องถิ่นได้รับแจ้งจาก</span><span class="dotted-line" style="width: 77%; text-align: center;"></span>
+        <div style="margin-left: -3rem;">
+            <span>เจ้าของที่ดิน/ผู้รับมอบอำนาจ ว่ามีความประสงค์จะทำการขุดดิน/ถมดิน /ลึก/สูง</span><span class="dotted-line" style="width: 36.5%; text-align: center;"></span>
+        <span>เมตร พื้นที่ปากบ่อ/</span><span>ดินถม</span><span class="dotted-line" style="width: 23.5%; text-align: center;"></span>
+        <span>ตาราเมตร ในโฉนดที่ดิน/น.ส.๓/น.ส.๓/ส.ค.๑ เลขที่</span><span class="dotted-line" style="width: 23.5%; text-align: center;"></span>
+        <span>หรือเอกสารสิทธิ์ในที่ดิน</span><span>ที่มีชื่อเรียกอย่างอื่น</span><span class="dotted-line" style="width: 49%; text-align: center;"></span>
+        <span>ที่ถนน</span><span class="dotted-line" style="width: 30%; text-align: center;"></span><span>หมู่ที่</span>
+        <span class="dotted-line" style="width: 16%; text-align: center;"></span><span>ตำบล/แขวง</span>
+        <span class="dotted-line" style="width: 16%; text-align: center;"></span><span>อำเภอ/เขต</span>
+        <span class="dotted-line" style="width: 19%; text-align: center;"></span><span>จังหวัด</span>
+        <span class="dotted-line" style="width: 19%; text-align: center;"></span><span>ซึ่งอยู่ในเขต</span>
+        <span>องค์การบริหารส่วนตำบล</span><span class="dotted-line" style="width: 25%; text-align: center;"></span>
+        <span>โดย</span><span class="dotted-line" style="width: 45%; text-align: center;"></span><span>เป็นเจ้าของที่ดิน</span>
+        <span>กำหนดแล้วเสร็จ</span><span class="dotted-line" style="width: 17.3%; text-align: center;"></span><span>วัน มี</span>
+        <span class="dotted-line" style="width: 47.5%; text-align: center;"></span><span>เป็นผู้ออกแบบและคำนวณ และ</span>
+        <span class="dotted-line" style="width: 50%; text-align: center;"></span><span>เป็นผู้ควบคุมงาน</span><br>
+        <span>พร้อมเอกสารหลักฐานต่างๆแล้ว</span>
+        </div>
+        <div style="margin-left: 1rem;">
+            <strong>เจ้าพนักงานท้องถิ่นได้ตรวจสอบปรากฏว่า</strong><br>
+            <div class="box_text" style="margin-left: 1rem;">
+                <span>๑.</span><input type="checkbox"><span>ไม่ถูกต้อง ให้ผู้แจ้งแก้ไขให้ถูกต้องภายในเจ็ดวัน นับแต่วันที่ผู้แจ้งได้รับแจ้งให้แก้ไขจากเจ้าพนักงานท้องถิ่น หากไม่สามารถแก้ไขภาย</span>
+                <div style="margin-left: -5rem; margin-top:-0.5rem;">
+                    <span>ในกำหนดจะเสียสิทธิ์การนับระยะเวลาที่เจ้าพนักงานท้องถิ่นที่จะต้องปฎิบัติตามมาตรา ๑๗ วรรคหนึ่ง</span><br>
+                    <span>โดยมีการแก้ไขดังนี้</span><span class="dotted-line" style="width: 87.5%; text-align: center;"></span>
+                    <span class="dotted-line" style="width: 100%; text-align: center;">space</span>
+                </div>
+            </div>
+            <div class="box_text" style="margin-left: 1rem;">
+                <span>๒.</span><input type="checkbox"><span>ถูกต้อง ให้ผู้แจ้งเริ่มต้นทำการขุดดิน/ถม ได้ตั้งแต่วันที่</span>
+                <span class="dotted-line" style="width: 25%; text-align: center;"></span><span>เดือน</span>
+                <span class="dotted-line" style="width: 25%; text-align: center;"></span>
+                <div style="margin-left: -5rem; margin-top:-0.2rem;">
+                    <span>พ.ศ.</span>
+                    <span class="dotted-line" style="width: 18.7%; text-align: center;"></span><span>จนถึงวันที่</span>
+                    <span class="dotted-line" style="width: 18.7%; text-align: center;"></span><span>เดือน</span>
+                    <span class="dotted-line" style="width: 18.7%; text-align: center;"></span><span>พ.ศ.</span>
+                    <span class="dotted-line" style="width: 18.7%; text-align: center;"></span><span>และได้รับ</span>
+                    <span>ค่าธรรมเนียม</span><span class="dotted-line" style="width: 22.5%; text-align: center;"></span>
+                    <span>บาท ค่าใช้จ่าย</span><span class="dotted-line" style="width: 22.5%; text-align: center;"></span>
+                    <span>บาท รวมทั้งสิ้น</span><span class="dotted-line" style="width: 22.5%; text-align: center;"></span><span>บาท</span>
+                    <span>(</span><span class="dotted-line" style="width: 60%; text-align: center;"></span><span>)</span>
+                </div>
+            </div>
+            <div class="box_text" style="text-align: center; margin-top:1rem;">
+                <span>ออกให้ ณ วันที่</span><span class="dotted-line" style="width: 10%; text-align: center;"></span>
+                <span>เดือน</span><span class="dotted-line" style="width: 20%; text-align: center;"></span>
+                <span>พ.ศ.</span><span class="dotted-line" style="width: 10%; text-align: center;"></span>
+            </div>
+            <div class="box_text" style="text-align: right; margin-top:1.5rem;">
+                <span>(ลงมือชื่อ)</span>
+                <span class="dotted-line" style="width: 40%; text-align: center; ">
+                </span>
+                <div style="margin-right: 0.3rem;">
+                    <span>(</span>
+                    <span class="dotted-line" style="width: 35%; text-align: center;"></span>
+                    <span>)</span>
+                </div>
+                <div style="margin-right: 3rem;">
+                    <span>นายกเทศมนตรีตำบลวงฆ้อง</span>
+                </div>
+            </div>
+        </div>
+        <div class="box_text" style="margin-left:-3rem;">
+            <span>๑.ข้อความใดไม่ใช้ให้ขีดฆ่า</span><br>
+            <span>๒.ใส่เครื่องหมาย / ในช่อง</span><input type="checkbox">
+        </div>
+        <div class="box_text" style="text-align:right;">
+            <span>(พลิก)</span>
+        </div>
+        <div class="box_text" style="margin-left:-3rem;">
+            <span style="font-weight: bold; text-decoration: underline; margin-right:10px;">คำเตือน</span><span>ผู้ขุดดิน/ถมดิน หรือเจ้าของที่ดินมีหน้าที่ที่จะต้องปฏิบัติ ดังนี้</span><br>
+            <div style="margin-left: 3rem;">
+                <span>(๑) ตามแผนผังบริเวณ แบบแปลน และรายการประกอบแบบแปลน</span><br>
+                <span>(๒) ตามมาตรา ๑๙ มาตรา ๒๐ มาตรา ๒๑ และมาตรา ๒๕</span><br>
+                <span>(๓) ตามคำสั่งของเจ้าพนักงานท้องถิ่น/พนักงานเจ้าหน้าที่</span><br>
+                <span>(๔) การฝ่าฝืน (๑)-(๓) อาจมีโทษปรับ โทษจำ หรือทั้งจำทั้งปรับแล้วแต่กรณี</span>
+            </div>
+        </div>
+    </div>
+    <div style="page-break-before: always;"></div>
+    <div style="text-align: right;">
+        <strong style="margin-right: 2.5rem;">ด.๔</strong><br>
+        <div class="box_text_border" style="float: right; padding:15px 15px 0xp 15px; text-align:center;">
+            <span>ติดอากร</span> <br>
+            <span>แสตมป์ 5 บาท</span>
+        </div>
+    </div>
+    <div class="title_doc" style="margin-top: 5rem;">
+        <strong>หนังสือรับรอง</strong><br>
+        <strong>(ใช้ในกรณีผู้แจ้งการขุดดิน/ถมดิน ให้บุคคลอื่นยื่นใบแจ้งการขุดดิน/ถมดินต่อเจ้าพนักงานท้องถิ่น)</strong>
+    </div>
+    <div class="box_text" style="margin-left: 3rem; margin-top:1rem;">
+        <span>ข้าพเจ้า</span><span class="dotted-line" style="width: 94%; text-align: center; "></span>
+        <div style="margin-left: -3rem;">
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 26.5%; text-align: center; "></span>
+            <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 26.5%; text-align: center; "></span>
+            <span>ถนน</span><span class="dotted-line" style="width: 26.6%; text-align: center; "></span>
+            <span>หมู่ที่</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>โทรศัพท์</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span><br>
+            <span>ขอมอบอำนาจให้นาย</span><span class="dotted-line" style="width: 86%; text-align: center; "></span>
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 26.5%; text-align: center; "></span>
+            <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 26.5%; text-align: center; "></span>
+            <span>ถนน</span><span class="dotted-line" style="width: 27%; text-align: center; "></span>
+            <span>หมู่ที่</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>โทรศัพท์</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>เป็นผู้นำส่งใบแจ้งการขุดดิน/ถมดิน หรือติดต่อกับเจ้าหน้าที่ขององค์กร</span>
+            <span>ปกครองส่วนท้องถิ่นในเรื่องที่เกี่ยวข้องกับการแจ้งการขุดดิน/ถมดินต่อเจ้าพนักงานท้องถิ่นโดยให้ถือว่าการกระทำใดๆตามข้อความข้างต้นของ</span>
+            <span>นาย</span><span class="dotted-line" style="width: 40%; text-align: center; "></span>
+            <span>เสมือนหนึ่งเป็นการกระทำของข้าพเจ้า</span>
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:7rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 55px;">ผู้มอบอำนาจ</span>
+        <div style="margin-right: 120px;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 30%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:2rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 55px;">ผู้มอบอำนาจ</span>
+        <div style="margin-right: 120px;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 30%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:2rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 80px;">พยาน</span>
+        <div style="margin-right: 120px;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 30%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:2rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 80px;">พยาน</span>
+        <div style="margin-right: 120px;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 30%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
+    <div style="page-break-before: always;"></div>
+    <div style="text-align: right;">
+        <strong>ด.๕</strong><br>
+    </div>
+    <div class="title_doc" style="margin-top: 1rem;">
+        <strong>หนังสือรับรองของผู้ประกอบวิชาชีพวิศวกรรมควบคุม</strong>
+    </div>
+    <div class="box_text" style="margin-left: 3rem; margin-top:1rem;">
+        <span>ข้าพเจ้า</span><span class="dotted-line" style="width: 94%; text-align: center; "></span>
+        <div style="margin-left: -3rem;">
+            <span>อยู่บ้านเลขที่</span><span class="dotted-line" style="width: 26.5%; text-align: center; "></span>
+            <span>ตรอก/ซอย</span><span class="dotted-line" style="width: 26.5%; text-align: center; "></span>
+            <span>ถนน</span><span class="dotted-line" style="width: 26.6%; text-align: center; "></span>
+            <span>หมู่ที่</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>รหัสไปรษณีย์</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>โทรศัพท์</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span><br>
+            <span>ได้รับใบอนุญาตเป็นผู้ประกอบวิชาชีพวิศวกรรมควบคุม ประเภท</span><span class="dotted-line" style="width: 25%; text-align: center; "></span>
+            <span>เลขทะเบียน</span><span class="dotted-line" style="width: 25%; text-align: center; "></span>
+            <span>ตั้งแต่วันที่</span><span class="dotted-line" style="width: 11.6%; text-align: center; "></span>
+            <span>เดือน</span><span class="dotted-line" style="width: 11.6%; text-align: center; "></span>
+            <span>พ.ศ.</span><span class="dotted-line" style="width: 11.6%; text-align: center; "></span>
+            <span>ถึง วันที่</span><span class="dotted-line" style="width: 11.6%; text-align: center; "></span>
+            <span>เดือน</span><span class="dotted-line" style="width: 11.6%; text-align: center; "></span>
+            <span>พ.ศ.</span><span class="dotted-line" style="width: 12.4%; text-align: center; "></span>
+            <span>เป็นผู้ออกแบบและคำนวณ/ผู้ควบคุมงาน การขุดดิน/ถมดิน ลึก/สูง</span><span class="dotted-line" style="width: 50%; text-align: center; "></span>
+            <span>เมตร พื่้นที่</span><span>ปากบ่อ/ถมดิน</span><span class="dotted-line" style="width: 15%; text-align: center; "></span>
+            <span>ตารางเมตรในโฉนดที่ดิน/น.ส.๓/น.ส.๓ก/ส.ค.๑ เลขที่</span><span class="dotted-line" style="width: 40%; text-align: center; "></span>
+            <span>หรือเอกสารสิทธิ์ในที่ดินที่มีชื่อเรียกอย่างอื่น</span><span class="dotted-line" style="width: 72%; text-align: center; "></span>
+            <span>ที่ถนน</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>หมู่ที่</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>ตำบล/แขวง</span><span class="dotted-line" style="width: 18.5%; text-align: center; "></span>
+            <span>อำเภอ/เขต</span><span class="dotted-line" style="width: 19%; text-align: center; "></span>
+            <span>จังหวัด</span><span class="dotted-line" style="width: 20%; text-align: center; "></span>
+            <span>ซึ่งอยู่ในเขต</span><span class="dotted-line" style="width: 67%; text-align: center; "></span>
+            <span>ให้กับ</span><span class="dotted-line" style="width: 96%; text-align: center; "></span>
+            
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:7rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 55px;">ผู้ออกแบบและคำนวณ/ผู้ควบคุมงาน</span>
+        <div style="margin-right: 13rem;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 43%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:2rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 12rem;">ผู้แจ้ง</span>
+        <div style="margin-right: 13rem;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 43%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:2rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 12rem;">พยาน</span>
+        <div style="margin-right: 13rem;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 43%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
+    <div class="box_text" style="text-align: right; margin-top:2rem;">
+        <span>(ลงชื่อ)</span>
+        <span class="dotted-line" style="width: 30%; text-align: center; ">
+        </span><span style="margin-right: 12rem;">พยาน</span>
+        <div style="margin-right: 13rem;">
+            <span>(</span>
+            <span class="dotted-line" style="width: 43%; text-align: center;"></span>
+            <span>)</span>
+        </div>
+    </div>
 </body>
 
 </html>
