@@ -35,6 +35,7 @@
                     </div>
 
                     <button type="button" id="addButton" class="btn btn-primary btn-sm">เพิ่มปุ่ม</button>
+                    <button type="button" id="addDateTime" class="btn btn-primary btn-sm">เพิ่มเวลานับถอยหลัง</button>
 
                     <div id="buttonContainer" style="display: none;">
                         <div class="mb-3 mt-3">
@@ -45,6 +46,13 @@
                         <div class="mb-3">
                             <label for="button_link" class="form-label">แนบลิงค์</label>
                             <input type="url" class="form-control" id="button_link" name="button_link" placeholder="https://example.com">
+                        </div>
+                    </div>
+
+                    <div id="buttonContainerDatetime" style="display: none;">
+                        <div class="mb-3 mt-3">
+                            <label for="datetime" class="form-label">วันเวลานับถอยหลัง</label>
+                            <input type="datetime-local" class="form-control" id="datetime" name="datetime">
                         </div>
                     </div>
 
@@ -82,7 +90,14 @@
         var container = document.getElementById("buttonContainer");
         container.style.display = (container.style.display === "none") ? "block" : "none";
     });
-    </script>
+
+    document.getElementById("addDateTime").addEventListener("click", function() {
+        var container = document.getElementById("buttonContainerDatetime");
+        container.style.display = (container.style.display === "none") ? "block" : "none";
+    });
+
+
+</script>
 
 
 @endsection
