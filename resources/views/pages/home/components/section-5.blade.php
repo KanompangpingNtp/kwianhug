@@ -241,7 +241,7 @@
                         </a>
                     </div>
                     <div class="col-xl-4 col-md-6 d-flex justify-content-center align-items-center mb-4">
-                        <a href="https://kwianhug.sosmartsolution.com/PerformanceResults/show/section/topic/38" class="text-decoration-none d-block position-relative link-section5-effect">
+                        <a href="https://www.kwianhug.go.th/OperationalPlan/show/section/3" class="text-decoration-none d-block position-relative link-section5-effect">
                             <img src="{{ asset('pages/home/section-5/4.png') }}" alt="icon" class="d-block mx-auto">
                             <p class="position-absolute start-50 translate-middle text-center text-dark bloom-white mb-0 py-2 lh-1" style="white-space: nowrap; overflow: visible; text-overflow: clip;">
                                 แผนจัดซื้อจัดจ้าง</p>
