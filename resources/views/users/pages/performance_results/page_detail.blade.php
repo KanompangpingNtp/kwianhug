@@ -90,11 +90,25 @@
             <!-- ไฟล์แนบ: PDF -->
             @if ($PerfResultsFile->count() > 0)
             @foreach ($PerfResultsFile as $details)
+            @php
+            $extension = pathinfo($details->files_path, PATHINFO_EXTENSION);
+            $isDisplayable = in_array(strtolower($extension), ['pdf']);
+            @endphp
+
             <div class="mb-3">
+                @if ($isDisplayable)
                 <iframe src="{{ asset('storage/' . $details->files_path) }}" width="100%" height="800px"></iframe>
+                @else
+                <p>ไฟล์ประเภท {{ strtoupper($extension) }} ไม่สามารถแสดงตัวอย่างได้</p>
+                <a href="{{ asset('storage/' . $details->files_path) }}" class="btn btn-primary btn-sm" target="_blank">
+                    ดาวน์โหลดไฟล์ {{ strtoupper($extension) }}
+                </a>
+                @endif
             </div>
             @endforeach
             @endif
+
+
 
             @foreach ($PerfResultsFile as $details)
             <p class="text-muted">วันที่เผยแพร่: {{ \Carbon\Carbon::parse($details->created_at)->format('d-m-Y') }}</p>
