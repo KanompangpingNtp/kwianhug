@@ -63,6 +63,7 @@ use App\Http\Controllers\eservice\secretariat_office\digging\DiggingController;
 use App\Http\Controllers\eservice\secretariat_office\funeral\AdminFuneralController;
 use App\Http\Controllers\eservice\secretariat_office\funeral\FuneralController;
 use App\Http\Controllers\forum\ForumController;
+use App\Http\Controllers\forum\AdminForumController;
 use App\Http\Controllers\web_intro\AdminWebIntroController;
 use App\Http\Controllers\web_intro\WebIntroController;
 use App\Http\Controllers\eservice\secretariat_office\general_requests\GeneralRequestsController;
@@ -106,6 +107,12 @@ use App\Http\Controllers\eservice\temporary\TemporaryController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+//Forum
+Route::get('/forum/pages', [ForumController::class, 'ForumPages'])->name('forum_pages');
+Route::post('/forum/create/form', [ForumController::class, 'ForumFormCreate'])->name('ForumFormCreate');
+Route::get('/forum/details/{id}', [ForumController::class, 'ForumDeatils'])->name('ForumDeatils');
+Route::post('/forum/create/comments/{id}', [ForumController::class, 'ForumCommentsCreate'])->name('ForumCommentsCreate');
 
 //น้ำเพื่อการบริโภค
 Route::get('/WaterConsumption', [WaterConsumptionController::class, 'WaterConsumptionPage'])->name('WaterConsumptionPage');
@@ -171,7 +178,6 @@ Route::post('/funeral/form/create', [FuneralController::class, 'FuneralFormCreat
 Route::get('/newborn', [NewbornController::class, 'NewbornFormPage'])->name('NewbornFormPage');
 Route::post('/newborn/form/create', [NewbornController::class, 'NewbornFormCreate'])->name('NewbornFormCreate');
 
-Route::get('/forum/page', [ForumController::class, 'forum_pages'])->name('forum_pages');
 //eservice
 Route::get('/e-service/page', [TemporaryController::class, 'eservice_pages'])->name('eservice_pages');
 Route::get('/e-service/general_requests/page', [TemporaryController::class, 'general_requests_pages'])->name('general_requests_pages');
@@ -541,6 +547,12 @@ Route::middleware(['auth', 'check.auth:1'])->group(function () {
     Route::get('/Admin/WebIntro/page', [AdminWebIntroController::class, 'AdminWebIntro'])->name('AdminWebIntro');
     Route::post('/Admin/WebIntro/create', [AdminWebIntroController::class, 'WebIntroCreate'])->name('WebIntroCreate');
     Route::delete('/Admin/WebIntro/delete/{id}', [AdminWebIntroController::class, 'WebIntroDelete'])->name('WebIntroDelete');
+
+    //Forum
+    Route::get('/Admin/Forum/page', [AdminForumController::class, 'ForumAdminPages'])->name('ForumAdminPages');
+    Route::get('/Admin/Forum/details/{id}', [AdminForumController::class, 'ForumAdminDeatils'])->name('ForumAdminDeatils');
+    Route::post('/Admin/Forum/comments/{id}', [AdminForumController::class, 'ForumAdminCommentsCreate'])->name('ForumAdminCommentsCreate');
+    Route::delete('/Admin/Forum/delete/{id}', [AdminForumController::class, 'ForumAdminDetailsDelete'])->name('ForumAdminDetailsDelete');
 });
 
 Route::middleware(['auth', 'check.auth:2'])->group(function () {

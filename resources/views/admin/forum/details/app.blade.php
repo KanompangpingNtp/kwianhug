@@ -1,24 +1,7 @@
-@extends('layouts.sub-layout')
+@extends('admin.layouts.app')
 @section('content')
+
 <style>
-    .bg {
-        background-image: url('{{ asset('pages/home/section-5/bg-5.png') }}');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        padding: 2rem 0px;
-    }
-
-    .custom-gradient-shadow {
-        border-radius: 30px;
-        box-shadow:
-            0 4px 15px rgba(0, 123, 255, 0.3),
-            0 0 50px -10px rgba(0, 198, 255, 0.8),
-            0 0 50px -10px rgba(102, 204, 255, 0.8);
-        background-color: #ffffff;
-    }
-
     .forum-card {
         border: 1px solid #1dac01;
         transition: transform 0.2s, box-shadow 0.2s;
@@ -68,8 +51,8 @@
 
 </style>
 
-<div class="bg py-5">
-    <div class="container p-5  custom-gradient-shadow">
+<div class="flex justify-center items-center h-screen">
+    <div class="container">
         <p class="fs-2 fw-bold text-center mb-4">หัวข้อกระทู้: {{$forumDeatils->title}}</p>
 
         <!-- ส่วนเนื้อหากระทู้ -->
@@ -157,7 +140,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{route('ForumCommentsCreate',$forumDeatils->id)}}" method="POST">
+                    <form action="{{route('ForumAdminCommentsCreate',$forumDeatils->id)}}" method="POST">
                         @csrf
 
                         <div class="mb-3">
@@ -219,6 +202,5 @@
         }
 
     </style>
-
 </div>
 @endsection

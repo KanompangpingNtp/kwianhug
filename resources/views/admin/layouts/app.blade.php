@@ -171,6 +171,12 @@
                             </div>
                             องค์กรแห่งการเรียนรู้ (KM)
                         </a>
+                        <a class="nav-link" href="{{route('ForumAdminPages')}}">
+                            <div class="sb-nav-link-icon">
+                                <i class="bi bi-clipboard"></i>
+                            </div>
+                            ข้อมูลกระดานกระทู้
+                        </a>
 
                         <div class="sb-sidenav-menu-heading" style="font-size: 10px;">Menu</div>
                         <a class="nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseLayouts2" aria-expanded="false" aria-controls="collapseLayouts2">

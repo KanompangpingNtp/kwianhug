@@ -2,7 +2,7 @@
 @section('title', 'หน้าหลัก')
 @section('content')
 
-<style>
+{{-- <style>
     a {
         text-decoration: none;
         color: black;
@@ -12,7 +12,6 @@
     <div class="col-md-12">
         <div class="x_panel">
             <div class="x_title">
-                {{-- <h4>Dashboard</h4> --}}
                 <div class="clearfix"></div>
             </div>
             <div class="x_content">
@@ -71,6 +70,6 @@
         $('#welcomeModal').modal('show');
     });
 
-</script>
+</script> --}}
 
 @endsection
