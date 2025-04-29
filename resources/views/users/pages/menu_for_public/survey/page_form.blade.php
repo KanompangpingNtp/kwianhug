@@ -63,7 +63,7 @@
 <div class="bg py-5">
     <div class="container py-5 custom-gradient-shadow">
         <div class=" d-flex flex-column justify-content-center p-5">
-            <div class="fs-1 fw-bold mb-4 text-center">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ</div>
+            <div class="fs-1 fw-bold mb-4 text-center">รับแจ้งร้องเรียนทุจริตประพฤติมิชอบ <br> <h4>( เป็นช่องทางที่มีการคุ้มครองของมูลผู้แจ้งเบาะแส )</h4> </div>
 
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
