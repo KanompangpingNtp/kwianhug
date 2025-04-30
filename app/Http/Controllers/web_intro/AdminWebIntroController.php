@@ -17,14 +17,14 @@ class AdminWebIntroController extends Controller
 
     public function WebIntroCreate(Request $request)
     {
+        // dd($request->all());
+
         $request->validate([
-            'files_path' => 'file|mimes:jpg,jpeg,png',
+            'files_path' => 'required|file|mimes:jpg,jpeg,png,gif',
             'button_name' => 'nullable|string',
             'button_link' => 'nullable|url',
-            'datetime' => 'required|date|after:now'
+            'datetime' => 'nullable|date|after:now'
         ]);
-
-        // dd( $request);
 
         if ($request->hasFile('files_path')) {
             $file = $request->file('files_path');

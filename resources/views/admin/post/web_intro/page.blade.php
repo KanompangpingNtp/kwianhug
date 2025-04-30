@@ -31,7 +31,7 @@
                     <div class="mb-3">
                         <label for="files_path" class="form-label">แนบไฟล์ภาพพื้นหลัง</label>
                         <input type="file" class="form-control" id="files_path" name="files_path">
-                        <small class="text-muted">ประเภทไฟล์ที่รองรับ: jpg, jpeg, png</small>
+                        <small class="text-muted">ประเภทไฟล์ที่รองรับ: jpg, jpeg, png, gif</small>
                     </div>
 
                     <button type="button" id="addButton" class="btn btn-primary btn-sm">เพิ่มปุ่ม</button>
