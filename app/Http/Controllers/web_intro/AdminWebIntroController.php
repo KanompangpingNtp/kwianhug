@@ -20,7 +20,7 @@ class AdminWebIntroController extends Controller
         // dd($request->all());
 
         $request->validate([
-            'files_path' => 'required|file|mimes:jpg,jpeg,png,gif',
+            'files_path' => 'required|file|mimes:jpg,jpeg,png,gif,webm',
             'button_name' => 'nullable|string',
             'button_link' => 'nullable|url',
             'datetime' => 'nullable|date|after:now'
