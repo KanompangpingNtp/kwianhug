@@ -187,12 +187,22 @@
             font-size: 25px;
             color: white;
         }
-
     </style>
 
     <div class="fullscreen-image">
         @foreach($Image as $item)
+        @php
+        $extension = pathinfo($item->files_path, PATHINFO_EXTENSION);
+        @endphp
+
+        @if(in_array(strtolower($extension), ['jpg', 'jpeg', 'png', 'gif']))
         <img id="background-image" src="{{ asset('storage/' . $item->files_path) }}" alt="รูปภาพอินโทร">
+        @elseif(strtolower($extension) === 'webm')
+        <video id="background-image" autoplay muted loop>
+            <source src="{{ asset('storage/' . $item->files_path) }}" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        @endif
         @endforeach
 
         @if($Button && $item->datetime)

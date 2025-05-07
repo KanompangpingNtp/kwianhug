@@ -85,38 +85,39 @@
             <div class="fs-1 fw-bold mb-4 text-center">
                 {{ $PerfResultsSection->type->type_name }} <br>
                 <span style="font-size: 30px;">{{ $PerfResultsSection->section_name }}
-                    </span>
-                </div>
+                </span>
+            </div>
 
-                <style>
-                    .table td:hover {
-                        background-color: #53b2e6;
-                        color: white;
-                    }
+            <style>
+                .table td:hover {
+                    background-color: #53b2e6;
+                    color: white;
+                }
 
-                    table {
-                        border-collapse: collapse;
-                    }
+                table {
+                    border-collapse: collapse;
+                }
 
-                    table td,
-                    table th {
-                        border: none;
-                    }
+                table td,
+                table th {
+                    border: none;
+                }
 
-                    table tr:nth-child(odd) {
-                        background-color: #7eccec;
-                    }
+                table tr:nth-child(odd) {
+                    background-color: #7eccec;
+                }
 
-                    table tr:nth-child(even) {
-                        background-color: #ffffff;
-                    }
+                table tr:nth-child(even) {
+                    background-color: #ffffff;
+                }
 
-                    a {
-                        text-decoration: none;
-                        color: #333;
-                    }
+                a {
+                    text-decoration: none;
+                    color: #333;
+                }
 
-                </style>
+            </style>
+
             <table class="table">
                 @foreach($PerfResultsSubTopic as $detail)
                 <tr>
