@@ -60,24 +60,24 @@ class PerformanceResultsController extends Controller
         $LawsRegsMenu = LawsRegsType::all();
         $PublicMenus = PublicMenusType::all();
 
-        // $PerfResultsSection = PerfResultsSection::with('type')->findOrFail($id);
-        // $PerfResultsSubTopic = PerfResultsSubTopic::where('section_id', $id)
-        // ->orderBy('created_at', 'desc')
-        // ->paginate(14);
-
         $PerfResultsSection = PerfResultsSection::with('type')->findOrFail($id);
+        $PerfResultsSubTopic = PerfResultsSubTopic::where('section_id', $id)
+        ->orderBy('created_at', 'desc')
+        ->paginate(14);
 
-        $sortSections = ['เอกสารทั่วไป', 'คำสั่งสภาเทศบาล', 'ประกาศสภาเทศบาล'];
+        // $PerfResultsSection = PerfResultsSection::with('type')->findOrFail($id);
 
-        if (in_array($PerfResultsSection->section_name, $sortSections)) {
-            $PerfResultsSubTopic = PerfResultsSubTopic::where('section_id', $id)
-                ->orderBy('created_at', 'asc')
-                ->paginate(14);
-        } else {
-            $PerfResultsSubTopic = PerfResultsSubTopic::where('section_id', $id)
-                ->orderBy('created_at', 'desc')
-                ->paginate(14);
-        }
+        // $sortSections = ['เอกสารทั่วไป', 'คำสั่งสภาเทศบาล', 'ประกาศสภาเทศบาล'];
+
+        // if (in_array($PerfResultsSection->section_name, $sortSections)) {
+        //     $PerfResultsSubTopic = PerfResultsSubTopic::where('section_id', $id)
+        //         ->orderBy('created_at', 'asc')
+        //         ->paginate(14);
+        // } else {
+        //     $PerfResultsSubTopic = PerfResultsSubTopic::where('section_id', $id)
+        //         ->orderBy('created_at', 'desc')
+        //         ->paginate(14);
+        // }
 
         return view('users.pages.performance_results.page_sub_topic', compact(
             'PerfResultsSection',
