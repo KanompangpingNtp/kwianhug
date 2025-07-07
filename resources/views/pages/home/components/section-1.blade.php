@@ -125,14 +125,14 @@
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm fs-5">
-                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                            <span class="fs-5 fw-bold">นายเชาวฤทธิ์  ศิริวาลย์</span><br>
                             <span>ที่ปรึกษานายกเทศมนตรี</span><br>
                             <span>ตำบลเกวียนหัก</span>
-                            <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <a href="tel:+66625494951" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                999-9999990
+                                062-549-4951
                             </a>
                         </div>
                         <img src="{{ asset('pages/home/section-1/5.png') }}" alt="personal1" class="personal-img">
@@ -143,14 +143,14 @@
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
-                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                            <span class="fs-5 fw-bold">นางสาวพฤกษา  โชคธนุทรัพย์</span><br>
                             <span>เลขานุการนายกเทศมนตรี</span><br>
                             <span>ตำบลเกวียนหัก</span>
-                            <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <a href="tel:+66647822265" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                999-9999990
+                                064-782-2265
                             </a>
                         </div>
                         <img src="{{ asset('pages/home/section-1/2.png') }}" alt="personal2" class="personal-img">
@@ -159,20 +159,20 @@
                 <!-- Slide 3 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
-                        <div class="consultant-info lh-sm" style="margin-right: -140px;">
-                            <span class="fs-5 fw-bold">นางสาวณัฐณิชา กล่ำแสง</span><br>
+                        <div class="consultant-info lh-sm" style="margin-right: -50px;">
+                            <span class="fs-5 fw-bold">นายพราหมณ์ มุกดาสนิท</span><br>
                             <span>
-                                ปลัดเทศบาลปฏิบัติ <br> หน้าที่นายกเทศมนตรี
+                                นายกเทศมนตรี
                             </span><br>
                             <span>ตำบลเกวียนหัก</span>
-                            <a href="tel:+66623295144" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <a href="tel:+66898328590" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                062-329-5144
+                                089-832-8590
                             </a>
                         </div>
-                        <img src="{{ asset('pages/home/section-1/ปลัดเกวียนหักNew.gif') }}" alt="personal3"
+                        <img src="{{ asset('pages/home/section-1/2.png') }}" alt="personal3"
                             class="mark-personal-img">
                     </div>
                 </div>
@@ -180,13 +180,13 @@
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
                         <div class="consultant-info lh-sm">
-                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                            <span class="fs-5 fw-bold">นายสุรพงษ์  โพธิพงษ์</span><br>
                             <span>รองนายกเทศมนตรี<br>ตำบลเกวียนหัก</span>
-                            <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <a href="tel:+66876111889" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                999-9999990
+                                087-611-1889
                             </a>
                         </div>
                         <img src="{{ asset('pages/home/section-1/1.png') }}" alt="personal4" class="personal-img">
@@ -195,14 +195,14 @@
                 <!-- Slide 5 -->
                 <div class="scroll-item">
                     <div class="d-flex flex-row align-items-end">
-                        <div class="consultant-info lh-sm">
-                            <span class="fs-5 fw-bold">ชื่อ-นามสกุล</span><br>
+                        <div class="consultant-info lh-sm" style="margin-right: -50px;">
+                            <span class="fs-5 fw-bold">นางสาวเสาวลักษณ์  แสนเสนาะ</span><br>
                             <span>รองนายกเทศมนตรี<br>ตำบลเกวียนหัก</span>
-                            <a href="tel:9999999990" class="d-flex align-items-center text-white pe-2 mt-2"
+                            <a href="tel:+66899915496" class="d-flex align-items-center text-white pe-2 mt-2"
                                 style="font-size:17px; background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.2)); border-radius: 20px; text-decoration: none;">
                                 <img src="{{ asset('pages/home/section-1/icon-phone.png') }}" alt="icon"
                                     style="margin-right: 5px; margin-left:-5px; margin-top:-15px;">
-                                999-9999990
+                                089-991-5496
                             </a>
                         </div>
                         <img src="{{ asset('pages/home/section-1/3.png') }}" alt="personal5" class="personal-img">
